@@ -21,6 +21,7 @@ The recommended way for users (not developers) to install and use Xmipp is via t
 
     XmippField/Releases-scipion-em-xmipp/index
     XmippField/Releases-xmipp-program/index
+    XmippField/ListOfPublications/index
 
 
 .. _Installation-docs:
