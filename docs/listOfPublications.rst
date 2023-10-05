@@ -1,5 +1,8 @@
 .. _listOfPublications:
 
+List of publications
+====================
+
 .. [1] V. Abrishami, A. Zaldívar-Peraza, J. M. de la Rosa-Trevín, J. Vargas, J. Otón, R. Marabini, Y. Shkolnisky, J. M. Carazo, C. O. S. Sorzano, "A pattern matching approach to the automatic selection of particles from low-contrast electron micrographs," *Bioinformatics*, vol. 29, no. 19, pp. 2460-2468, 2013. DOI: http://dx.doi.org/10.1093/bioinformatics/btt429
 
 .. [2] V. Abrishami, J. Vargas, X. Li, Y. Cheng, R. Marabini, C. Óscar Sánchez Sorzano, J. María Carazo, "Alignment of direct detection device micrographs using a robust Optical Flow approach," *Journal of Structural Biology*, vol. 189, no. 3, pp. 163-176, 2015. DOI: http://dx.doi.org/10.1016/j.jsb.2015.02.001
