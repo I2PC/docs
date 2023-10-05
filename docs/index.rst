@@ -63,4 +63,3 @@ The recommended way for users (not developers) to install and use Xmipp is via t
     
     contact
     license
-    listOfPublications

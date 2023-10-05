@@ -1,7 +1,10 @@
 Releases xmipp program
 =========================
 
-| ## Release 3.23.07 - Morpheus ### Xmipp Programs - New programs -
+## Release 3.23.07 - Morpheus 
+------------------------
+
+### Xmipp Programs - New programs -
   image_peak_high_contrast(for detecting high contrast regions in
   tomographic reconstruction) - misaligment_detection (to detect
   misalignment in tomographic reconstructions from high-contrast
@@ -29,7 +32,11 @@ MultidimArray performance - Added support for half precision floating
 point numbers in MRCs - Assign tiff to gain files - adding half maps
 labels
 
-## Release 3.23.03 - Kratos ### Xmipp Programs
+
+## Release 3.23.03 - Kratos 
+------------------------
+
+### Xmipp Programs
 
 -  New programs: tomo_confidence_map, tomo_extract_particlestacks,
    tomo_extract_subtomograms, tomo_tiltseries_dose_filter,
@@ -88,6 +95,8 @@ library - Fixed memory pinning CUDA bug - Fixed compilation errors on
 CUDA 9
 
 ## Release 3.22.11 - Iris
+------------------------
+
 
 ### Xmipp Programs - Speeding up iterations in some xmipp programs
 (xmipp_ctf_group, xmipp_image_histogram,
