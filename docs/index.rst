@@ -24,6 +24,7 @@ The recommended way for users (not developers) to install and use Xmipp is via t
     Installation/Requirements/index
     Installation/Standlone-installation/index
 
+.. _Utils-docs:
 
   .. toctree::
     :maxdepth: 1
@@ -33,6 +34,7 @@ The recommended way for users (not developers) to install and use Xmipp is via t
     Utils/Deprecating-programs-and-protocols/index
     Utils/List-deprecated/index
 
+.. _Developers-docs:
 
   .. toctree::
     :maxdepth: 1
