@@ -32,6 +32,8 @@ The recommended way for users (not developers) to install and use Xmipp is via t
     :hidden:
     :caption: Utils
 
+    Utils/Deprecating-programs-and-protocols
+
 
   .. toctree::
     :maxdepth: 1
