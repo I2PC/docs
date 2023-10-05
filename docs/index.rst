@@ -51,5 +51,6 @@ The recommended way for users (not developers) to install and use Xmipp is via t
     :hidden:
     :caption: Others
     
+    listOfPublications
     contact
     license
