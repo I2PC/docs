@@ -16,3 +16,33 @@ The Xmipp project is divided into four repositories: `xmipp <https://github.com/
 Getting started
 ----------------
 The recommended way for users (not developers) to install and use Xmipp is via the Scipion framework, where you can use Xmipp with other Cryo-EM-related software. Xmipp will be installed during Scipion installation (pay attemption on the -noXmipp flag). The Scipion installer should take care of all dependencies for you, however, you can make its life easier if you have your compiler, CUDA and HDF5 library ready and available in the standard paths. Read the installation page for more details about these softwares requirements. Follow the official installation guide of Scipion for more details.
+
+
+
+.. toctree::
+    :maxdepth: 1
+    :hidden:
+    :caption: Installation
+
+    Installation/Installation with Scipion/index
+    Installation/Requirements/index
+    Installation/Standlone installation/index
+
+
+  .. toctree::
+    :maxdepth: 1
+    :hidden:
+    :caption: Utils
+
+
+  .. toctree::
+    :maxdepth: 1
+    :hidden:
+    :caption: Developers
+
+  .. toctree::
+    :maxdepth: 1
+    :hidden:
+    :caption: Others
+    contact
+    license
