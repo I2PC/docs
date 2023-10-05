@@ -1,3 +1,5 @@
+Visit also: `List of deprecated programs and protocols<https://i2pc.github.io/docs/Utils/List-deprecated/index.html>`_
+
 Deprecating programs
 -----------------------
 
