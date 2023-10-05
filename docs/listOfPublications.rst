@@ -1,7 +1,7 @@
 .. _listOfPublications:
 
 Abrishami2013
--------------------------
+^^^^^^^^^^^^^
 
 ::
 
@@ -16,7 +16,7 @@ Abrishami2013
    - journal = Bioinformatics
 
 Abrishami2015
--------------------------
+^^^^^^^^^^^^^
 
 ::
 
@@ -37,7 +37,7 @@ Abrishami2015
    - keywords = Electron microscopy 
 
 Chen2013
-----------------
+^^^^^^^^
 
 ::
 
@@ -57,7 +57,7 @@ Chen2013
    - keywords = Spherical harmonics 
 
 Cherian2013
--------------------
+^^^^^^^^^^
 
 ::
 
@@ -71,7 +71,7 @@ Cherian2013
    - author = Cherian A. and Sra S. and Banerjee A. and Papanikolopoulos N.
 
 delaRosaTrevin2013
-------------------------------
+^^^^^^^^^^^^^^^
 
 ::
 
@@ -88,7 +88,7 @@ delaRosaTrevin2013
    - keywords = Electron microscopy Single particles analysis Image processing Software package 
 
 Jin2014
--------
+^^^^
 
 ::
 
@@ -103,7 +103,7 @@ Jin2014
    - keywords = Normal mode analysis NMA 
 
 Jonic2005
------------------
+^^^^^^^^^
 
 -  title = Spline-based image-to-volume registration for
    three-dimensional electron microscopy
@@ -121,7 +121,7 @@ Jonic2005
 -  keywords = 2D/3D registration Splines 3DEM Angular assignment
 
 Nogales2013
--------------------
+^^^^^^^^^^
 
 ::
 
@@ -133,7 +133,7 @@ Nogales2013
    - doi=http://dx.doi.org/10.1093/nar/gkt385
 
 Otsu1979
-----------------
+^^^^^^^^
 
 ::
 
@@ -148,7 +148,7 @@ Otsu1979
    - author = Otsu N.
 
 Pascual2000
--------------------
+^^^^^^^^^^
 
 ::
 
@@ -166,7 +166,7 @@ Pascual2000
    - keywords = Image processing Cluster analysis Neural networks Self-organizing maps Fuzzy logic 
 
 PascualMontano2001
-------------------------------
+^^^^^^^^^^^^^^^
 
 ::
 
@@ -183,7 +183,7 @@ PascualMontano2001
    - keywords = classification cryo-EM image processing neural networks self-organizing maps probability density function kernel functions
 
 PascualMontano2002
-------------------------------
+^^^^^^^^^^^^^^^
 
 ::
 
@@ -201,7 +201,7 @@ PascualMontano2002
    - keywords = Classification Electron tomography Image processing Neural networks Self-organizing maps Probability density function Kernel functions Actin Myosin Muscle proteins 
 
 Rosenthal2003
--------------------------
+^^^^^^^^^^^^^
 
 -  Author=Rosenthal P. B. and Henderson R.
 -  Title=Optimal determination of particle orientation absolute hand and
@@ -216,7 +216,7 @@ Rosenthal2003
 -  doi=http://dx.doi.org/10.1016/j.jmb.2003.07.013
 
 Scheres2005a
---------------------
+^^^^^^^^^^
 
 ::
 
@@ -233,7 +233,7 @@ Scheres2005a
    - keywords = maximum-likelihood multi-reference refinement single-particles 2D-alignment classification 
 
 Scheres2005b
---------------------
+^^^^^^^^^^
 
 -  author = Scheres Sjors H.W. and Valle Mikel and Carazo José-María
 -  title = Fast maximum-likelihood refinement of electron microscopy
@@ -251,7 +251,7 @@ Scheres2005b
    Reproducibility of Results; Sensitivity and Specificity
 
 Scheres2007a
---------------------
+^^^^^^^^^^
 
 ::
 
@@ -262,7 +262,7 @@ Scheres2007a
    - journal = Nature Methods
    - year = 2007
    - volume = 4
-   - pages = 27--29
+   - pages = 27^29
    - number = 1
    - month = Jan
    - doi = http://dx.doi.org/10.1038/nmeth992
@@ -272,7 +272,7 @@ Scheres2007a
    Sensitivity and Specificity; Simian virus 40
 
 Scheres2007b
---------------------
+^^^^^^^^^^
 
 ::
 
@@ -284,7 +284,7 @@ Scheres2007b
    - journal = Structure
    - year = 2007
    - volume = 15
-   - pages = 1167--1177
+   - pages = 1167^1177
    - number = 10
    - month = Oct
    - doi = http://dx.doi.org/10.1016/j.str.2007.09.003
@@ -297,7 +297,7 @@ Scheres2007b
    Ribosomes chemistry/ultrastructure
 
 Scheres2009b
---------------------
+^^^^^^^^^^
 
 ::
 
@@ -307,7 +307,7 @@ Scheres2009b
    - journal = Acta Crystallogr D Biol Crystallogr
    - year = 2009
    - volume = 65
-   - pages = 672--678
+   - pages = 672^678
    - number = Pt 7
    - month = Jul
    - doi = http://dx.doi.org/10.1107/S0907444909012049
@@ -317,7 +317,7 @@ Scheres2009b
    G chemistry/ultrastructure; Protein Structure Tertiary
 
 Scheres2009c
---------------------
+^^^^^^^^^^
 
 ::
 
@@ -326,13 +326,13 @@ Scheres2009c
    - journal = Structure
    - year = 2009
    - volume = 17
-   - pages = 1563--1572
+   - pages = 1563^1572
    - number = 12
    - month = Dec
    - doi = http://dx.doi.org/10.1016/j.str.2009.10.009
 
 Sorzano2004b
---------------------
+^^^^^^^^^^
 
 ::
 
@@ -349,7 +349,7 @@ Sorzano2004b
    - author = Sorzano C.O.S. and S. Jonic and C. El-Bez and J.M. Carazo and S. De Carlo and P. Thevenaz and M. Unser
 
 Sorzano2007a
---------------------
+^^^^^^^^^^
 
 ::
 
@@ -357,13 +357,13 @@ Sorzano2007a
    - Author                   = Sorzano C. O. S. and Jonic S. and N\'u\\-nez-Ram\'irez R. and Boisset N. and Carazo J. M.
    - Journal                  = J. Structural Biology
    - Year                     = 2007
-   - Pages                    = 249--262
+   - Pages                    = 249^262
    - Volume                   = 160
    - doi = http://dx.doi.org/10.1016/j.jsb.2007.08.013
    - url = http://www.sciencedirect.com/science/article/pii/S104784770700202X
 
 Sorzano2009d
---------------------
+^^^^^^^^^^
 
 ::
 
@@ -379,7 +379,7 @@ Sorzano2009d
    - keywords = Downsampling Single Particles Electron microscopy
 
 Sorzano2010a
---------------------
+^^^^^^^^^^
 
 ::
 
@@ -397,7 +397,7 @@ Sorzano2010a
    - keywords = Single-particle analysis 2D analysis Multireference analysis Electron microscopy
 
 Sorzano2013
--------------------
+^^^^^^^^^^
 
 ::
 
@@ -415,7 +415,7 @@ Sorzano2013
    - pages = 171-193
 
 Sorzano2014
--------------------
+^^^^^^^^^^
 
 ::
 
@@ -427,7 +427,7 @@ Sorzano2014
    - doi                      = http://biocomp.cnb.csic.es/-coss/Articulos/Sorzano2014.pdf
 
 Sorzano2015
--------------------
+^^^^^^^^^^
 
 ::
 
@@ -440,7 +440,7 @@ Sorzano2015
    - doi = http://dx.doi.org/10.1016/j.jsb.2015.01.009
 
 Vargas2013a
--------------------
+^^^^^^^^^^
 
 ::
 
@@ -452,12 +452,12 @@ Vargas2013a
    - doi = http://dx.doi.org/10.1016/j.jsb.2012.12.006
    - year = 2013
    - volume = 181
-   - pages = 136--148
+   - pages = 136^148
    - number = 2
    - month = Feb
 
 Vargas2013b
--------------------
+^^^^^^^^^^
 
 ::
 
@@ -475,7 +475,7 @@ Vargas2013b
    - keywords = Electron microscopy Particle picking Machine learning Single particle analysis
 
 Vargas2014
-------------------
+^^^^^^^^^
 
 ::
 
@@ -492,7 +492,7 @@ Vargas2014
    - journal = Bioinformatics
 
 Vilas2016
------------------
+^^^^^^^^^
 
 ::
 
@@ -506,7 +506,7 @@ Vilas2016
    - url                      = http://www.sciencedirect.com/science/article/pii/S104784771630212X
 
 zhao2013
-----------------
+^^^^^^^^
 
 ::
 
@@ -514,7 +514,7 @@ zhao2013
    - title = Fourier-Bessel rotational invariant eigenimages
    - volume = 30
    - number = 5
-   - pages = 871--877
+   - pages = 871^877
    - year = 2013
    - doi = http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3711886/pdf/nihms484949.pdf
    - abstract =
@@ -523,7 +523,7 @@ zhao2013
    - journal = Journal of the Optical Society of America. A Optics image science and vision
 
 ponce2011
------------------
+^^^^^^^^^
 
 ::
 
@@ -531,7 +531,7 @@ ponce2011
    - title = Computing Steerable Principal Components of a Large Set of Images and Their Rotations
    - volume = 20
    - number = 11
-   - pages = 3051--3062
+   - pages = 3051^3062
    - year = 2011
    - doi = http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3719433/pdf/nihms485040.pdf
    - abstract =
@@ -540,7 +540,7 @@ ponce2011
    - journal = IEEE Trans Image Process
 
 Radermacher1987
----------------------------
+^^^^^^^^^^^^^^
 
 ::
 
@@ -557,7 +557,7 @@ Radermacher1987
    - journal = Journal of Microscopy
 
 Vargas2014a
--------------------
+^^^^^^^^^^
 
 ::
 
@@ -575,7 +575,7 @@ Vargas2014a
    - keywords = Validation
 
 Marabini2014a
--------------------------
+^^^^^^^^^^^^^
 
 ::
 
@@ -593,7 +593,7 @@ Marabini2014a
    - keywords = Contrast transfer function
 
 B.Heymann2015
--------------------------
+^^^^^^^^^^^^^
 
 ::
 
@@ -611,7 +611,7 @@ B.Heymann2015
    - keywords =
 
 Sorzano2016
--------------------
+^^^^^^^^^^
 
 ::
 
@@ -629,7 +629,7 @@ Sorzano2016
    - keywords =
 
 Sorzano2015b
---------------------
+^^^^^^^^^^
 
 ::
 
@@ -643,7 +643,7 @@ Sorzano2015b
    - url                      = http://dx.doi.org/10.1038/srep14290
 
 Vilas2018
------------------
+^^^^^^^^^
 
 ::
 
@@ -651,13 +651,13 @@ Vilas2018
    - author                   = Vilas J. L. and et al
    - year                     = 2018
    - journal                  = Structure
-   - pages                    = 337--344
+   - pages                    = 337^344
    - volume                   = 26
    - doi = 10.1016/j.str.2017.12.018
    - url = http://doi.org/10.1016/j.str.2017.12.018
 
 strelak2020flexalign
---------------------------------
+^^^^^^^^^^^^^^^^
 
 ::
 
@@ -673,7 +673,7 @@ strelak2020flexalign
    - DOI = http://doi.org/10.3390/electronics9061040
 
 Vilas2023
------------------
+^^^^^^^^^
 
 ::
 
@@ -684,10 +684,10 @@ Vilas2023
    - YEAR = 2023
    - NUMBER = X
    - ARTICLE-NUMBER = in press
-   - URL = https://github.com/I2PC/xmipp/wiki/FSO---Fourier-Shell-Occupancy
+   - URL = https://github.com/I2PC/xmipp/wiki/FSO^^Fourier-Shell-Occupancy
 
 Fernandez-Gimenez2021
------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 ::
 
@@ -703,7 +703,7 @@ Fernandez-Gimenez2021
    P. Conesa and J.M. Carazo and C.O.S. Sorzano
 
 Strelak2021
--------------------
+^^^^^^^^^^
 
 ::
 
