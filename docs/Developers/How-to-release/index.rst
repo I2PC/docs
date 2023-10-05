@@ -1,3 +1,6 @@
+How to release
+---------------
+
 Let's assume that we want to make a new Xmipp version from the 'devel' branch with a version name **X.YY.ZZ** where **X=3** (to keep the main version number to be able to sort the version as usual. Also to keep the name *xmipp3*), **YY=Year** of the release, **ZZ=Month** of release. Also, we name the version following Greek gods/goddess ([Apollo, Boreas...](https://www.gods-and-monsters.com/list-of-greek-gods-goddesses.html)), see the [TAGging section below](https://github.com/I2PC/scipion-em-xmipp/wiki/How-to-release-a-new-Xmipp-version#making-a-git-tag-and-promoting-the-code-to-master).
 
 Create the release notes
