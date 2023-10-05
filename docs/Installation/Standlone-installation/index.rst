@@ -1,5 +1,5 @@
 Standalone installation
-^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------
 Standalone installation of Xmipp is recommended for researchers and
 developers. This installation allows you to use Xmipp without Scipion,
 however, in the next section it is explained how to link it with
