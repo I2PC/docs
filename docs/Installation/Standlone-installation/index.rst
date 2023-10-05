@@ -14,7 +14,7 @@ Next is to compile Xmipp. There are two possibilities, and in both, you will be 
 It is important to highlight that this step only compiles Xmipp, but it does not link to Scipion. The linking to Scipion is explained in the next section.
 
 Linking Xmipp standalone to Scipion
-------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once the Standalone version has been installed, the user can link such installation to Scipion to have the possibility of using Xmipp inside Scipion. Linking with Scipion requires the repository of `scipion-em-xmipp`, which can be found in the folder `src/scipion-em-xmipp`. This repository contains the files that Scipion needs to execute Xmipp programs. However, it remains to link the Xmipp binaries with Scipion. To do that, we need Scipion installed (see `Scipion installation web page <https://scipion-em.github.io/docs/docs/scipion-modes/how-to-install.html#>`_) and just launch the next command to link the binaries:
 
