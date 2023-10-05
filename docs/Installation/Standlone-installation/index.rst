@@ -1,5 +1,6 @@
 Standalone installation
 ------------------------
+
 Standalone installation of Xmipp is recommended for researchers and
 developers. This installation allows you to use Xmipp without Scipion,
 however, in the next section it is explained how to link it with
@@ -33,6 +34,7 @@ next section.
 
 Linking Xmipp standalone to Scipion
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 Once the Standalone version has been installed, the user can link such
 installation to Scipion to have the posibility of use Xmipp inside
 Scipion. Linking with Scipion requires to the repository of
