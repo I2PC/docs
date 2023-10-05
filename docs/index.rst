@@ -42,7 +42,8 @@ The recommended way for users (not developers) to install and use Xmipp is via t
     :hidden:
     :caption: Developers
 
-    Developers/Checkout-to-specific-date/index
+    Developers/Checkout-specific-date/index
+    Developers/How-to-release/index
     
 
   .. toctree::
