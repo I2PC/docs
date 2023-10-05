@@ -9,9 +9,7 @@ Welcome to Xmipp documentation!
 Xmipp is a suite of image processing programs, primarily aimed at single-particle 3D electron microscopy, 
 designed and managed by the `Biocomputing Unit <http://biocomputingunit.es/>`_ located in Madrid, Spain.
 
-The Xmipp project is divided into four repositories: `xmipp <https://github.com/I2PC/xmipp>`_,
- `xmippCore <https://github.com/I2PC/xmipp>`_, `scipion-em-xmipp <https://github.com/I2PC/scipion-em-xmipp>`_ and `xmippVix <https://github.com/I2PC/xmippViz>`_, 
- are automatically downloaded during the installation process.
+The Xmipp project is divided into four repositories: `xmipp <https://github.com/I2PC/xmipp>`_, `xmippCore <https://github.com/I2PC/xmipp>`_, `scipion-em-xmipp <https://github.com/I2PC/scipion-em-xmipp>`_ and `xmippVix <https://github.com/I2PC/xmippViz>`_,  are automatically downloaded during the installation process.
 
 Getting started
 ----------------
@@ -44,5 +42,6 @@ The recommended way for users (not developers) to install and use Xmipp is via t
     :maxdepth: 1
     :hidden:
     :caption: Others
+    
     contact
     license
