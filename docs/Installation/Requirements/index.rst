@@ -50,3 +50,39 @@ We sometimes see issues regarding the HDF5 dependency. Please visit the `HDF5 Tr
 
 Full list of dependencies
 ^^^^^^^^^^^^^^^^^^^^^^^^^
+Installation requirements
+-------------------------
+
+Before installing Xmipp, you need to ensure that your system meets certain requirements. Here are the necessary packages and dependencies:
+
+- `libfftw3-dev`: FFTW3 library development files.
+- `libopenmpi-dev`: OpenMPI development files.
+- `libhdf5-dev`: HDF5 library development files.
+- `python3-numpy`: NumPy library for Python 3.
+- `python3-dev`: Python 3 development headers.
+- `libtiff5-dev`: LibTIFF development files.
+- `libsqlite3-dev`: SQLite3 development files.
+- `default-jdk`: Default Java Development Kit.
+- `git`: Version control system for source code management.
+- `cmake`: Cross-platform build system.
+
+You can install these packages on Ubuntu-based systems using the following command:
+
+.. code-block:: bash
+
+   sudo apt install -y libfftw3-dev libopenmpi-dev libhdf5-dev python3-numpy python3-dev libtiff5-dev libsqlite3-dev default-jdk git cmake
+
+Additionally, you need to install `scons` in the environment where Xmipp will be compiled. If you plan to run Xmipp within Scipion, you should install it in your Scipion3 environment. You can install `scons` using `pip`:
+
+.. code-block:: bash
+
+   pip install scons
+
+Finally, make sure to have a compatible compiler installed. You can install GCC 10 and G++ 10 using the following command:
+
+.. code-block:: bash
+
+   sudo apt install gcc-10 g++-10
+
+These requirements will ensure that your system is ready for installing and using Xmipp.
+
