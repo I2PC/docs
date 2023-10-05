@@ -1,3 +1,6 @@
+Deprecating programs
+-----------------------
+
 We have a "legacy" folder with programs and code that is outdated. Some of the reasons we did this are uninteresting code, programs that do not have a protocol and are not used, and programs that are not used and are difficult to maintain. You can `visit the issue <https://github.com/I2PC/xmipp/issues/681>`_ with more information and the list of deprecated programs and protocols can be found `here <https://github.com/I2PC/xmipp/wiki/List-of-deprecated-programs-and-protocols>`_.
 
 We managed to speed up the installation time by 25%, and we were also able to reduce the lines of code to maintain and the number of code smells that were reported by `SonarCloud <https://sonarcloud.io/project/issues?id=Xmipp&languages=cpp&resolved=false&rules=cpp%3AS1172&types=CODE_SMELL>`_.
