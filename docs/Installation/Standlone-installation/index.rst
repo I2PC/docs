@@ -1,5 +1,5 @@
 Standalone installation
-------------------------
+-----------------------
 
 Standalone installation of Xmipp is recommended for researchers and
 developers. This installation allows you to use Xmipp without Scipion,
@@ -33,7 +33,7 @@ does not link to Scipion. The linking to Scipion is explained in the
 next section.
 
 Linking Xmipp standalone to Scipion
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once the Standalone version has been installed, the user can link such
 installation to Scipion to have the posibility of use Xmipp inside
