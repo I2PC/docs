@@ -1,8 +1,8 @@
-Installation requirements
--------------------------
+Requirements
+=======================
 
 Supported OS
-^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 We have tested Xmipp compilation on the following operating systems:
 - `Ubuntu 18.04 <https://github.com/I2PC/xmipp/wiki/Installing-Xmipp-on-Ubuntu-18.04>`_
@@ -50,8 +50,6 @@ We sometimes see issues regarding the HDF5 dependency. Please visit the `HDF5 Tr
 
 Full list of dependencies
 ^^^^^^^^^^^^^^^^^^^^^^^^^
-Installation requirements
--------------------------
 
 Before installing Xmipp, you need to ensure that your system meets certain requirements. Here are the necessary packages and dependencies:
 

@@ -43,6 +43,7 @@ The recommended way for users (not developers) to install and use Xmipp is via t
     :caption: Developers
 
     Developers/Checkout-to-specific-date/index
+    
 
   .. toctree::
     :maxdepth: 1
