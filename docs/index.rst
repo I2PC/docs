@@ -1,5 +1,3 @@
-.. _docs-chem_introduction:
-
 .. figure:: ../_static/images/xmipp_noBackground.png
    :alt: xmipp logo
    :width: 400
