@@ -49,7 +49,7 @@ The recommended way for users (not developers) to install and use Xmipp is via t
 
     Developers/Guidelines/index
     Developers/Checkout-specific-date/index
-    Developers/PArallelPrograming/index
+    Developers/ParallelPrograming/index
     Developers/xmipp-Binding/index
     Developers/testing-with-google-C++/index
     Developers/UsefulScripts/index

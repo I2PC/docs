@@ -84,7 +84,7 @@ any extra library. ## General Rules
 -  Test are part of the software development cycle and should be written
    BEFORE and not AFTER the creation of new routines.
 
-Case 1: Adding a test to an existing file
+Adding a test to an existing file
 ^^^^^^^^^^^^^^^^^
 
 In this section we will assume that you want to add a test for a class
