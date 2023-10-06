@@ -7,7 +7,7 @@ Welcome to Xmipp documentation!
 Xmipp is a suite of image processing programs, primarily aimed at single-particle 3D electron microscopy, 
 designed and managed by the `Biocomputing Unit <http://biocomputingunit.es/>`_ located in Madrid, Spain.
 
-The Xmipp project is form by the xmipp programs, mainly written in C++, the **scipion-em-xmipp plugin**, where all the protocols of SPA  are located and the **scipion-em-xmippTomo** plugin, where all the protocols of tomography are located . 
+The Xmipp project is form by the xmipp programs, mainly written in C++, the **scipion-em-xmipp** plugin, where all the protocols of SPA  are located and the **scipion-em-xmippTomo** plugin, where all the protocols of tomography are located . 
 
 Getting started
 ----------------
