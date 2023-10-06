@@ -109,8 +109,7 @@ Jonic2005
 ^^^^^^^^^
 ::
 
--  title = Spline-based image-to-volume registration for
-   three-dimensional electron microscopy
+-  title = Spline-based image-to-volume registration for three-dimensional electron microscopy
 -  journal = Ultramicroscopy
 -  volume = 103
 -  number = 4
@@ -118,10 +117,8 @@ Jonic2005
 -  year = 2005
 -  issn = 0304-3991
 -  doi = http://dx.doi.org/10.1016/j.ultramic.2005.02.002
--  url =
-   http://www.sciencedirect.com/science/article/pii/S0304399105000173
--  author = Jonic S. and C.O.S. Sorzano and P. Thevenaz and C. El-Bez
-   and S. De Carlo and M. Unser
+-  url =   http://www.sciencedirect.com/science/article/pii/S0304399105000173
+-  author = Jonic S. and C.O.S. Sorzano and P. Thevenaz and C. El-Bez   and S. De Carlo and M. Unser
 -  keywords = 2D/3D registration Splines 3DEM Angular assignment
 
 Nogales2013
@@ -209,8 +206,7 @@ Rosenthal2003
 ::
 
 -  Author=Rosenthal P. B. and Henderson R.
--  Title=Optimal determination of particle orientation absolute hand and
-   contrast loss in single-particle electron cryomicroscopy
+-  Title=Optimal determination of particle orientation absolute hand and   contrast loss in single-particle electron cryomicroscopy
 -  Journal=J. Mol. Biol.
 -  Year=2003
 -  Volume=333
@@ -225,8 +221,7 @@ Scheres2005a
 
 ::
 
-   - title = Maximum-likelihood Multi-reference Refinement for Electron Microscopy Images 
-      Journal=J. Mol. Biol.
+   - title = Maximum-likelihood Multi-reference Refinement for Electron Microscopy Images       Journal=J. Mol. Biol.
    - volume = 348
    - number = 1
    - pages = 139 - 149
