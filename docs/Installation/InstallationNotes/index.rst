@@ -343,28 +343,27 @@ https://www.anaconda.com/blog/a-faster-conda-for-a-growing-community
 List environments
 ^^^^^^^^^^^^^^^^^^^
 
--  xmipp_DLTK_v0.3 > \* Protocols ussing it: screen_deeplearning,
-   deep_denoising, resolution_deepres, screen_deepConsensus > \*
-   python=3.7 > \* scikit-image=0.14 > \* tensorflow=1.15 > \* keras=2.2
-   > \* scikit-learn=0.22 > \* pip > \* numpy==1.21 > \* h5py==2.10.0
+-  xmipp_DLTK_v0.3: Protocols ussing it screen_deeplearning,
+   deep_denoising, resolution_deepres, screen_deepConsensus,
+   python=3.7, scikit-image=0.14, tensorflow=1.15, keras=2.2, 
+   scikit-learn=0.22, pip, numpy==1.21, h5py==2.10.0
 
--  xmipp_DLTK_v1.0 > \* Protocols ussing it: deep_misalingment_detection
-   > \* python=3.8 > \* tensorflow=2.7 > \* keras=2.7 > \* pip > \*
+-  xmipp_DLTK_v1.0, Protocols ussing it: deep_misalingment_detection
+  , python=3.8, tensorflow=2.7, keras=2.7, pip,
    numpy==1.23
 
--  xmipp_MicCleaner > \* Protocols ussing it: deepMicrographScreen > \*
-   python=3.6 > \* micrograph-cleaner-em=0.35
+-  xmipp_MicCleaner, Protocols ussing it: deepMicrographScreen,
+   python=3.6, micrograph-cleaner-em=0.35
 
--  xmipp_deepEMhancer > \* Protocols ussing it: protocol_deepEMhancer >
-   \* python=3.6 > \* deepemhancer=0.12 > \* numba=0.45
+-  xmipp_deepEMhancer, Protocols ussing it: protocol_deepEMhancer,
+   python=3.6, deepemhancer=0.12, numba=0.45
 
--  xmipp_pyTorch > \* Protocols ussing it: deepHand > \* python=3.8 > \*
-   numpy=1.23 > \* mrcfile=1.4.3 > \* kornia=0.6.12 > \* starfile=0.4.12
-   > \* pytorch==1.11 > \* pytorch-cuda=11.7 > \* torchvision=0.12
+-  xmipp_pyTorch, Protocols ussing it: deepHand, python=3.8,
+   numpy=1.23, mrcfile=1.4.3, kornia=0.6.12, starfile=0.4.12
+  , pytorch==1.11, pytorch-cuda=11.7, torchvision=0.12
 
 Troubleshooting
 ^^^^^^^^^^^^^^^^^^^
-
 Visit:
 `troubleshooting <https://github.com/I2PC/xmipp/wiki/DeepLearningToolkit-troubleshooting>`__
 
@@ -373,15 +372,112 @@ Troubleshooting
 -----------------
 Cmake troubleshooting
 ~~~~~~~~~~~~~~~~~~~~~
+Typing ``cmake --version`` or trying to compile Xmipp appears:
 
+**cmake: libstdc++.so.6: version \`GLIBCXX_3.4.30’ not found (required
+by cmake)** (or similar)
+
+That appears in new versions of Cmake with older versions of the
+enviroment Scipion created with gcc-10. To solve it, you may add the
+path of the conda lib in the LD_LIBRARY_PATH to avoid that the new Cmake
+tries to read older \*.so files. Write the next line in the .bashrc
+file:
+
+``export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/:$LD_LIBRARY_PATH``
+
+Could also be necessary to add */path/To/Conda/lib* at the beginning of
+the LD_LIBRARY_PATH.
+
+``export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/:/path/To/Conda/lib:$LD_LIBRARY_PATH``
+
+Other solutions \* Reinstall the library libstdcxx on the base
+enviroment of Conda ``conda install -c anaconda libstdcxx-ng`` and add
+the path of the base enviroment on
+LD_LIBRARY_PATH\ ``export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/path/to/conda/lib``
+\* If your Conda was compiled with an older version of gcc you could try
+to compile Xmipp with an older version of gcc (limitation: we require
+gcc >=8) \* You could reinstall your Conda, but you may need to
+reinstall Scipion and all the plugins of Scipion that require
+environments
 
 DeepLearningToolkit troubleshooting
 ~~~~~~~~~~~~~~~~~~~~~
+Error message:
+``InvalidVersionSpec: Invalid version '5.11.3imageio>=2.5.0': invalid character(s)``
 
+The package *pyvistaqt* installed by an old version of the plugin
+*flexutils* or *tomoviz* in the enviroment *scipion3* has a bug in the
+version *pyvistaqt*\ =0.3.0. To fix it and be able to install *DLTK*
+run:
+
+``conda activate scipion3``
+
+``pip uninstall pyvistaqt``
+
+``pip install pyvistaqt==0.4.0``
+
+If there is any plugin that require *pyvistaqt*
+(`scipion-em-tomoviz <https://github.com/scipion-em/scipion-em-tomoviz>`__),
+please update it
 
 Linking Xmipp to Scipion troubleshooting
 ~~~~~~~~~~~~~~~~~~~~~
+Once the Standalone version has been installed, the user can link such
+installation to Scipion to have the posibility of use Xmipp inside
+Scipion. Linking with Scipion requires to the repository of
+``scipion-em-xmipp`` which can be found in the folder
+``src/scipion-em-xmipp``. This repository contains the files that
+Scipion needs to execute Xmipp programs. However, it remains to link the
+Xmipp binaries with Scipion. To do that we need Scipion installed (`see
+Scipion installation web
+page <https://scipion-em.github.io/docs/docs/scipion-modes/how-to-install.html#>`__)
+and just launch the next command to link the binaries
 
+``scipion3 installp -p ~/scipion-em-xmipp --devel``
+
+where ``scipion-em-xmipp`` is the folder of the repository, it means
+``src/scipion-em-xmipp``. This command should work in most of the cases.
+However, if you do this and Scipion does not find Xmipp, you can link
+Scipion and Xmipp manually by editting the config file of Scipion. This
+file is located in ``scipion/config/scipion.conf``, and it should looks
+like
+
+::
+
+   [PYWORKFLOW]
+   CONDA_ACTIVATION_CMD = eval "$(/home/username/opt/miniconda3/bin/conda shell.bash hook)"
+   SCIPION_FONT_SIZE = 6
+
+   [PLUGINS]
+   EM_ROOT = software/em
+   MAXIT_HOME = %(EM_ROOT)s/maxit-10.1
+   XMIPP_HOME = /home/username/xmipp-bundle/build
+
+The link between Scipion and Xmipp consist in the last line.
+``XMIPP_HOME = /home/username/xmipp-bundle/build``. If this line does
+not exist, it must be added.
 
 HDF5 troubleshooting
 ~~~~~~~~~~~~~~~~~~~~~
+We sometimes see issues regarding the HDF5 dependency. We recommend
+removing all hdf5 versions and install just hdf5-devel. To do that
+(Ubuntu-Debian systems):
+
+::
+
+   sudo apt remove hdf5
+   sudo apt remove hdf5-devel
+   pip uninstall h5py
+
+Remove all files related to hdf5 in: \* ``_/usr/lib64/libhdf5*_`` \*
+``_/usr/include/hdf5*_`` \* ``_/usr/lib/x86_64-linux-gnu/hdf5_*`` \*
+``_.../anaconda3/include/H5*.h_`` \* ``_.../anaconda3/include/hdf5*.h_``
+\* ``_.../anaconda3/lib/libhdf5*_`` \*
+``_.../anaconda3/envs/.../libhdf5*_``
+
+We strongy recommend you to install it via your default package manager:
+``sudo apt-get install libhdf5-dev`` If you install it using other
+package management system (such as Conda), it might lead to compile/link
+time issues caused by incompatible version being fetched. Other option
+is to run”scipion3 installb xmippSrc” to force the xmipp install its own
+HDF5 into its desired directory.
