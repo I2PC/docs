@@ -38,7 +38,9 @@ The recommended way for users (not developers) to install and use Xmipp is via t
     :caption: Utils
 
     Utils/Deprecated-programs/index
-    Utils/List-deprecated/index
+    Utils/ConfigurationF/index
+    Utils/xmippStructure/index
+
 
 .. _Developers-docs:
 
