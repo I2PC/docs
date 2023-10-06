@@ -23,7 +23,7 @@ The recommended way for users (not developers) to install and use Xmipp is via t
 .. toctree::
     :maxdepth: 1
     :hidden:
-    :caption: Installation
+    :caption: Installing Xmipp
 
     Installation/Installation-with-Scipion/index
     Installation/Requirements/index

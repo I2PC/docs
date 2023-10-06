@@ -1,6 +1,6 @@
 .. _listOfPublications:
 
-List of listOfPublications
+List of Publications
 ===========================
 
 Abrishami2013
