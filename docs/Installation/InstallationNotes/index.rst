@@ -362,16 +362,11 @@ List environments
    numpy=1.23, mrcfile=1.4.3, kornia=0.6.12, starfile=0.4.12
   , pytorch==1.11, pytorch-cuda=11.7, torchvision=0.12
 
-Troubleshooting
-^^^^^^^^^^^^^^^^^^^
-Visit:
-`troubleshooting <https://github.com/I2PC/xmipp/wiki/DeepLearningToolkit-troubleshooting>`__
-
 
 Troubleshooting
 -----------------
 Cmake troubleshooting
-~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^
 Typing ``cmake --version`` or trying to compile Xmipp appears:
 
 **cmake: libstdc++.so.6: version \`GLIBCXX_3.4.30’ not found (required
@@ -401,7 +396,7 @@ reinstall Scipion and all the plugins of Scipion that require
 environments
 
 DeepLearningToolkit troubleshooting
-~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^
 Error message:
 ``InvalidVersionSpec: Invalid version '5.11.3imageio>=2.5.0': invalid character(s)``
 
@@ -421,7 +416,7 @@ If there is any plugin that require *pyvistaqt*
 please update it
 
 Linking Xmipp to Scipion troubleshooting
-~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^
 Once the Standalone version has been installed, the user can link such
 installation to Scipion to have the posibility of use Xmipp inside
 Scipion. Linking with Scipion requires to the repository of
@@ -458,7 +453,7 @@ The link between Scipion and Xmipp consist in the last line.
 not exist, it must be added.
 
 HDF5 troubleshooting
-~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^
 We sometimes see issues regarding the HDF5 dependency. We recommend
 removing all hdf5 versions and install just hdf5-devel. To do that
 (Ubuntu-Debian systems):
