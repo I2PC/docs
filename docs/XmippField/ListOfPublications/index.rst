@@ -107,6 +107,7 @@ Jin2014
 
 Jonic2005
 ^^^^^^^^^
+::
 
 -  title = Spline-based image-to-volume registration for
    three-dimensional electron microscopy
@@ -205,6 +206,7 @@ PascualMontano2002
 
 Rosenthal2003
 ^^^^^^^^^^^^^
+::
 
 -  Author=Rosenthal P. B. and Henderson R.
 -  Title=Optimal determination of particle orientation absolute hand and
@@ -238,6 +240,8 @@ Scheres2005a
 Scheres2005b
 ^^^^^^^^^^
 
+::
+   
 -  author = Scheres Sjors H.W. and Valle Mikel and Carazo José-María
 -  title = Fast maximum-likelihood refinement of electron microscopy
    images.
