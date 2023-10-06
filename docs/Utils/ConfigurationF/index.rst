@@ -1,3 +1,5 @@
+Configuration file
+===============
 Reviewed for version 20.07
 
 The main command ``./xmipp`` will try to make the properly configuration
