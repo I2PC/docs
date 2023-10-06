@@ -1,7 +1,7 @@
 Releases scipion-em-xmipp
 =========================
 
-Release 3.23.07 - Morpheus
+3.23.07 - Morpheus
 --------------------------
 
 -  New protocols
@@ -64,7 +64,7 @@ Release 3.23.07 - Morpheus
    -  monores_viewer: fix histogram
    -  viewer_structure_map: Change the label for each volume
 
-Release 3.23.03 - Kratos
+3.23.03 - Kratos
 ------------------------
 
 -  New protocol status: beta, new, production and updated. Will appear
@@ -89,17 +89,17 @@ Release 3.23.03 - Kratos
    protocol_metaprotocol_discrete_heterogeneity_scheduler
 
 Hot fix 3.22.11.2
------------------
+^^^^^^^^^^^^^^^^^
 
 -  Align volume and particles works in the absence of tomo plugin.
 
 Hot fix 3.22.11.1
------------------
+^^^^^^^^^^^^^^^^^
 
 -  Align volume and particles adapted to tomography. Defines possible
    outputs. Optimized. Test more exhaustive for matrices
 
-Release 3.22.11 - Iris
+3.22.11 - Iris
 ----------------------
 
 -  Protocol_cl2d_align: The input can now be a set of averages or a set
@@ -138,7 +138,7 @@ Release 3.22.11 - Iris
 
 -  Fixed TestHighres test
 
-Release 3.22.07 - Helios
+3.22.07 - Helios
 ------------------------
 
 -  rotate_volume: New protocol
@@ -164,7 +164,7 @@ Release 3.22.07 - Helios
 -  Excluded tests: test_protocols_zernike3d,
    test_protocols_metaprotocol_heterogeneity
 
-Release 3.22.04 - Gaia
+3.22.04 - Gaia
 ----------------------
 
 -  protocol_core_analysis: New protocol
@@ -183,12 +183,12 @@ Release 3.22.04 - Gaia
    trainging and streaming mode
 -  protocol_shift_particles: apply transform is now optional
 
-Release 3.22.01 - Eris
+3.22.01 - Eris
 ----------------------
 
--  Visit changeLog.md of xmipp
+-  `Visit release xmipp <https://i2pc.github.io/docs/XmippField/Releases-xmipp-program/index.html#release-3-22-01-eris>`_
 
-Release 3.21.06 - Caerus
+3.21.06 - Caerus
 ------------------------
 
 -  CUDA-11 support
@@ -200,7 +200,7 @@ Release 3.21.06 - Caerus
 -  Multiple bug fixes
 -  Improved documentation
 
-Release 3.20.07 - Boreas
+3.20.07 - Boreas
 ------------------------
 
 -  New Protocol: MicrographCleaner is a new algorithm that removes
@@ -254,7 +254,7 @@ Release 3.20.07 - Boreas
 -  Change the plugin to the new Scipion structure
 -  Migrating the code to python3
 
-Release 3.19.04 -
+3.19.04 
 -----------------
 
 -  Highres can now take a global alignment performed by any other method
