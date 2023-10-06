@@ -17,7 +17,6 @@ The recommended way for users (not developers) to install and use Xmipp is via t
 
 
 
-
 .. _Installation-docs:
 
 .. toctree::
