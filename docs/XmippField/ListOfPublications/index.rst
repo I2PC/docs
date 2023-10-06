@@ -422,12 +422,12 @@ Sorzano2014
 
 ::
 
-   - title                    = Outlier detection for single particle analysis in Electron Microscopy
-   - author                   = Sorzano C. O. S. and Vargas J. and de la Rosa-Trevín J. M. and Zaldívar-Peraza A. and Otón J. and Abrishami V. and Foche I. and Marabini R. and Caffarena G. and Carazo J. M.
-   - journal                  = Proc. Intl. Work-Conference on Bioinformatics and Biomedical Engineering IWBBIO
-   - year                     = 2014
-   - pages                    = 950
-   - doi                      = http://biocomp.cnb.csic.es/-coss/Articulos/Sorzano2014.pdf
+   - title  = Outlier detection for single particle analysis in Electron Microscopy
+   - author  = Sorzano C. O. S. and Vargas J. and de la Rosa-Trevín J. M. and Zaldívar-Peraza A. and Otón J. and Abrishami V. and Foche I. and Marabini R. and Caffarena G. and Carazo J. M.
+   - journal = Proc. Intl. Work-Conference on Bioinformatics and Biomedical Engineering IWBBIO
+   - year = 2014
+   - pages = 950
+   - doi = http://biocomp.cnb.csic.es/-coss/Articulos/Sorzano2014.pdf
 
 Sorzano2015
 ^^^^^^^^^^
@@ -499,14 +499,14 @@ Vilas2016
 
 ::
 
-   - title                    = Fast and automatic identification of particle tilt pairs based on Delaunay triangulation.
-   - author                   = Vilas J. L. and Navas J. and Gomez-Blanco J. and de la Rosa-Trevin J. M. and Melero and Peschiera I. and Ferlenghi. I and Cuenca J. and Marabini R. and Carazo J. M. and Vargas J. and Sorzano C. O. S.
-   - journal                  = Journal of Structural Biology
-   - year                     = 2016
-   - pages                    = 525-533
-   - volume                   = 196
-   - doi                      = http://dx.doi.org/10.1016/j.jsb.2016.10.007
-   - url                      = http://www.sciencedirect.com/science/article/pii/S104784771630212X
+   - title = Fast and automatic identification of particle tilt pairs based on Delaunay triangulation.
+   - author = Vilas J. L. and Navas J. and Gomez-Blanco J. and de la Rosa-Trevin J. M. and Melero and Peschiera I. and Ferlenghi. I and Cuenca J. and Marabini R. and Carazo J. M. and Vargas J. and Sorzano C. O. S.
+   - journal = Journal of Structural Biology
+   - year = 2016
+   - pages = 525-533
+   - volume = 196
+   - doi = http://dx.doi.org/10.1016/j.jsb.2016.10.007
+   - url = http://www.sciencedirect.com/science/article/pii/S104784771630212X
 
 zhao2013
 ^^^^^^^^
@@ -636,26 +636,26 @@ Sorzano2015b
 
 ::
 
-   - title                    = Cryo-EM and the elucidation of new macromolecular structures: Random Conical Tilt revisited.
-   - author                   = Sorzano C O S. and Alcorlo M. and de la Rosa-Trevín J. M. and Melero R. and Foche I. and Zaldívar-Peraza A. and del Cano L. and Vargas J. and Abrishami V. and Otón J. and Marabini R. and Carazo J. M.
-   - journal                  = Scientific Reports
-   - year                     = 2015
-   - pages                    = 14290
-   - volume                   = 5
-   - doi                      = http://dx.doi.org/10.1038/srep14290
-   - url                      = http://dx.doi.org/10.1038/srep14290
+   - title = Cryo-EM and the elucidation of new macromolecular structures: Random Conical Tilt revisited.
+   - author = Sorzano C O S. and Alcorlo M. and de la Rosa-Trevín J. M. and Melero R. and Foche I. and Zaldívar-Peraza A. and del Cano L. and Vargas J. and Abrishami V. and Otón J. and Marabini R. and Carazo J. M.
+   - journal = Scientific Reports
+   - year = 2015
+   - pages = 14290
+   - volume = 5
+   - doi = http://dx.doi.org/10.1038/srep14290
+   - url = http://dx.doi.org/10.1038/srep14290
 
 Vilas2018
 ^^^^^^^^^
 
 ::
 
-   - title                    = MonoRes: Automatic and Accurate Estimation of Local Resolution for Electron Microscopy Maps
-   - author                   = Vilas J. L. and et al
-   - year                     = 2018
-   - journal                  = Structure
-   - pages                    = 337^344
-   - volume                   = 26
+   - title = MonoRes: Automatic and Accurate Estimation of Local Resolution for Electron Microscopy Maps
+   - author = Vilas J. L. and et al
+   - year = 2018
+   - journal = Structure
+   - pages = 337-344
+   - volume = 26
    - doi = 10.1016/j.str.2017.12.018
    - url = http://doi.org/10.1016/j.str.2017.12.018
 
@@ -702,8 +702,7 @@ Fernandez-Gimenez2021
    - issn = 1047-8477
    - doi = https://doi.org/10.1016/j.jsb.2021.107780
    - url = https://www.sciencedirect.com/science/article/pii/S104784772100085X
-   - author = E. Fernández-Giménez and M. Martínez and R. Sánchez-García and R. Marabini and E. Ramírez-Aportela and
-   P. Conesa and J.M. Carazo and C.O.S. Sorzano
+   - author = E. Fernández-Giménez and M. Martínez and R. Sánchez-García and R. Marabini and E. Ramírez-Aportela and P. Conesa and J.M. Carazo and C.O.S. Sorzano
 
 Strelak2021
 ^^^^^^^^^^

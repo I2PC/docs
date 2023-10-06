@@ -88,6 +88,10 @@ Releases scipion-em-xmipp
    protocol_metaprotocol_create_output,
    protocol_metaprotocol_discrete_heterogeneity_scheduler
 
+
+3.22.11 - Iris
+----------------------
+
 Hot fix 3.22.11.2
 ^^^^^^^^^^^^^^^^^
 
@@ -99,8 +103,8 @@ Hot fix 3.22.11.1
 -  Align volume and particles adapted to tomography. Defines possible
    outputs. Optimized. Test more exhaustive for matrices
 
-3.22.11 - Iris
-----------------------
+3.22.11.0
+^^^^^^^^^^^^^^^^^
 
 -  Protocol_cl2d_align: The input can now be a set of averages or a set
    of 2D classes
