@@ -49,7 +49,8 @@ The recommended way for users (not developers) to install and use Xmipp is via t
     Developers/Checkout-specific-date/index
     Developers/How-to-release/index
     
-.. _Releases:
+.. _Releases-docs:
+
   .. toctree::
     :maxdepth: 1
     :hidden:
@@ -58,6 +59,7 @@ The recommended way for users (not developers) to install and use Xmipp is via t
     Releases/Releases-xmipp-program/index
     Releases/Releases-scipion-em-xmipp/index
     Releases/Releases-scipion-em-xmippTomo/index
+
 
   .. toctree::
     :maxdepth: 1
