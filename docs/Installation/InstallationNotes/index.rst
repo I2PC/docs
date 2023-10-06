@@ -1,13 +1,10 @@
 Installation Notes
 ==================
 
-Installing on OS
------------------
-
-Ubuntu 18.04
+Installing on Ubuntu 18.04
 ~~~~~~~~~~~~~
 Required dependencies
----------------------
+^^^^^^^^^^^^^^^^^^^^
 
 **Compiler**
 
@@ -24,7 +21,7 @@ Required dependencies
 ``sudo apt install -y scons libfftw3-dev libopenmpi-dev libhdf5-dev python3-numpy python3-dev libtiff5-dev libsqlite3-dev default-jdk git cmake``
 
 Optional dependencies
----------------------
+^^^^^^^^^^^^^^^^^^^^
 
 **CUDA** Follow official `install
 instructions <https://developer.nvidia.com/cuda-toolkit-archive>`__
@@ -32,15 +29,15 @@ instructions <https://developer.nvidia.com/cuda-toolkit-archive>`__
 **OpenCV** ``sudo apt install libopencv-dev``
 
 Installation
-------------
+^^^^^^^^^^^^^^^^^^^^
 
 ``git clone https://github.com/I2PC/xmipp.git && cd xmipp && ./xmipp``
 
 
-Ubuntu 20.04
-~~~~~~~~~~~~~
+Installing on Ubuntu 20.04
+-----------------------------
 Required dependencies
----------------------
+^^^^^^^^^^^^^^^^^^^^
 
 **Compiler (when using CUDA 10.2)**
 
@@ -63,7 +60,7 @@ Required dependencies
 ``pip install scons numpy``
 
 Optional dependencies
----------------------
+^^^^^^^^^^^^^^^^^^^^
 
 **CUDA** Follow official `install
 instructions <https://developer.nvidia.com/cuda-toolkit-archive>`__. We
@@ -74,15 +71,15 @@ recommend you to follow the guide for installation of CUDA 11.4 (deb
 https://github.com/I2PC/xmipp/issues/436 for details.
 
 Installation
-------------
+^^^^^^^^^^^^^^^^^^^^
 
 ``git clone https://github.com/I2PC/xmipp.git && cd xmipp && ./xmipp``
 
 
-Ubuntu 22.04
-~~~~~~~~~~~~~
+Installing on Ubuntu 22.04
+-----------------------------
 Required dependencies
----------------------
+^^^^^^^^^^^^^^^^^^^^
 
 **Compiler**
 
@@ -106,7 +103,7 @@ use gcc-10 or older
 ``pip install scons numpy``
 
 Optional dependencies
----------------------
+^^^^^^^^^^^^^^^^^^^^
 
 **CUDA**
 
@@ -121,7 +118,7 @@ recommend you to follow the guide for installation of CUDA 11.4 (deb
 https://github.com/I2PC/xmipp/issues/436 for details.
 
 Installation
-------------
+^^^^^^^^^^^^^^^^^^^^
 
 ``git clone https://github.com/I2PC/xmipp.git && cd xmipp && ./xmipp``
 
