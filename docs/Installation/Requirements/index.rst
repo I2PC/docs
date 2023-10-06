@@ -78,11 +78,11 @@ Additionally, you need to install `scons` in the environment where Xmipp will be
 
    pip install scons
 
-Finally, make sure to have a compatible compiler installed. You can install GCC 10 and G++ 10 using the following command:
+Finally, make sure to have a compatible compiler installed. You can install GCC 8 and G++ 8 using the following command:
 
 .. code-block:: bash
 
-   sudo apt install gcc-10 g++-10
+   sudo apt install gcc-8 g++-8
 
 These requirements will ensure that your system is ready for installing and using Xmipp.
 

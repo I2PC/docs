@@ -125,6 +125,10 @@ Installation
 
 Installing on Centos-7 
 ---------------------------
+
+.. note::
+   Not recommended though, installations there tend to get way more complicated
+
 Required dependencies
 ^^^^^^^^^^^^^^^^^^^^
 
