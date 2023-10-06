@@ -210,11 +210,76 @@ Installation
 
 Cmake
 --------
+Xmipp requires a Cmake version 3.16 or above. To update and install it follow these steps.
 
+Ubuntu and Debian
+^^^^^^^^^^^^^^^^^^^^
+
+If you have not installed cmake please
+
+``sudo apt-get install -y cmake cmake-data``
+
+If you have an older version, to install the newest:
+
+-  ``sudo apt remove -y cmake cmake-data``
+-  ``hash -r``
+-  ``sudo apt-get install -y cmake cmake-data``
+-  ``hash -r``
+
+Centos
+^^^^^^^^^^^^^^^^^^^^
+
+To uninstall cmake \* Go to the cmake directory
+(``cd / && find . -type d -name "*cmake*"``) \* ``sudo make uninstall``
+\* ``cd .. && rm -rf path/to/cmake``
+
+To install cmake \*
+``wget https://github.com/Kitware/CMake/releases/download/v3.17.3/cmake-3.17.3.tar.gz``
+\* ``tar -zxvf cmake-3.17.3.tar.gz`` \* ``cd cmake-3.17.3`` \*
+``./bootstrap`` \* ``make`` \* ``sudo make install`` \* Verify the
+installed version by typing ``sudo --version``
+
+Older Ubuntu (18.0.4)
+^^^^^^^^^^^^^^^^^^^^
+
+To update gcc from v7 \* ``sudo apt-get remove gcc-7`` \*
+``sudo apt-get install gcc-8`` \*
+``sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 800 --slave /usr/bin/g++ g++ /usr/bin/g++-8``
+
+To Update Cmake
+
+-  ``wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | sudo apt-key add -``
+
+-  ``sudo apt-add-repository 'deb https://apt.kitware.com/ubuntu/ bionic main'``
+
+-  ``sudo apt-get update``
 
 Compiler
 ---------
+Xmipp consists of multiple standalone programs written primarily in C++.
+For that reason, the Xmipp suite has to be compiled before its use. The
+compilation process is driven by the xmipp script located in this
+repository. Xmipp requires C++17 compatible compiler. We recommend
+either GCC or CLANG, in the newest version possible. We have good
+experience with GCC-8 and bad experience with GCC-7, in any case a
+version > 6 is required. If use GCC-11 and experience issues, `please
+visit this. <https://github.com/I2PC/xmipp/issues/583>`__
 
+We strongly recommend you to have this compiler linked to ``gcc`` and
+``g++``. Otherwise it might not be properly picked up by wrappers, such
+as MPI’s wrapper. We have good experince with using ``alternatives``:
+
+::
+
+   sudo apt install gcc-8 g++-8
+   sudo update-alternatives --remove-all gcc
+   sudo update-alternatives --remove-all g++
+   sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 50
+   sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-8 50
+
+**Note:** If you compiled Xmipp with a GCC/G++ version, and you change
+the compiler version, you will need to run ``./xmipp cleanAll`` before
+compiling again in case you need to.
 
 Compiling with Matlab
 ---------
