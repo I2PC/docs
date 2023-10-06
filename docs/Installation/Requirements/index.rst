@@ -37,6 +37,9 @@ Xmipp supports Cuda 8 through 11.7. CUDA is optional but highly recommended. We 
 
 To install CUDA for your operating system, follow the `official install guide <https://developer.nvidia.com/cuda-toolkit-archive>`_.
 
+.. note::
+   `CUDA 11.5 is not compatible with GCC - 9 <https://forums.developer.nvidia.com/t/cuda-11-5-samples-throw-multiple-error-attribute-malloc-does-not-take-arguments/192750/12>`_, please change one of these.
+
 OpenCV
 ^^^^^^
 
