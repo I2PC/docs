@@ -60,28 +60,28 @@ However, you can bypass this automatic setting by exporting them
 (e.g. ``export CXX=icc``) prior to launch the command or, even, you can
 update the resulting ``xmipp.conf`` file, once created.
 
-| · **``CC``**: C compiler. ``gcc`` by default.
-| · **``CCFLAGS``**: Flags to add during C compilations. ``-std=c99`` by
+| · **CC**: C compiler. gcc`` by default.
+| · **CCFLAGS**: Flags to add during C compilations. ``-std=c99`` by
   default
 
-| · **``CXX``**: C++ compiler. ``g++`` by default.
-| · **``CXXFLAGS``**: Flags to add during C++ compilations.
+| · CXX C++ compiler. ``g++`` by default.
+| · **CXXFLAGS**: Flags to add during C++ compilations.
   ``-mtune=native -march=native -std=c++11 -O3`` by default.
-| · **``INCDIRFLAGS``**: Flags to add headers directories. See note
+| · **INCDIRFLAGS**: Flags to add headers directories. See note
   below.
-| · **``LIBDIRFLAGS``**: Flags to add libraries directories. See note
+| · **LIBDIRFLAGS**: Flags to add libraries directories. See note
   below.
 
-| · **``LINKERFORPROGRAMS``**: C++ linker. ``g++`` by default.
-| · **``LINKFLAGS``**: Flags to add while linking. Empty by default.
+| · **LINKERFORPROGRAMS**: C++ linker. ``g++`` by default.
+| · **LINKFLAGS**: Flags to add while linking. Empty by default.
 
-| · **``PYTHON_LIB``**: Python library to make the python binding. Xmipp
-  automatically discovers the current python (e.g. ``python3.5m``).
-| · **``PYTHONINCFLAGS``**: Flags to add during the binding compilation.
+| · **PYTHON_LIB**: Python library to make the python binding. Xmipp
+  automatically discovers the current python (e.g. ``python3.5m).
+| · **PYTHONINCFLAGS**: Flags to add during the binding compilation.
   Usually to include the python header and the numpy header
   (e.g. ``-I/usr/include/python3.5m -I/home/david/scipion3/.scipion3env/lib/python3.5/site-packages/numpy/core/include``)
 
--  Note regarding **``INCDIRFLAGS``** and **``LIBDIRFLAGS``**
+-  Note regarding **INCDIRFLAGS** and **LIBDIRFLAGS**
 
    Xmipp adds the ``include`` and ``lib`` from the current environ
    (using the python function ``sysconfig.get_path('data')``) in order
@@ -138,15 +138,15 @@ bypass this automatic setting by exporting them
 (e.g. ``export MPI_CXX=mpi2-intel``) prior to launch the command or,
 even, you can update the resulting ``xmipp.conf`` file, once created.
 
-| · **``MPI_RUN``**: Executor to run MPI programs. ``mpirun`` by
+| · **MPI_RUN**: Executor to run MPI programs. ``mpirun`` by
   default.
-| · **``MPI_CC``**: MPI compiler for C code. ``mpicc`` by default.
-| · **``MPI_CXX``**: MPI compiler for C++ code. ``mpicxx`` by default.
-| · **``MPI_CXXFLAGS``**: Flags to add during the MPI compilation. Empty
+| · **MPI_CC**: MPI compiler for C code. ``mpicc`` by default.
+| · **MPI_CXX**: MPI compiler for C++ code. ``mpicxx`` by default.
+| · **MPI_CXXFLAGS**: Flags to add during the MPI compilation. Empty
   by default.
-| · **``MPI_LINKERFORPROGRAMS``**: MPI compiler to link C++ libraries.
+| · **MPI_LINKERFORPROGRAMS**: MPI compiler to link C++ libraries.
   ``mpicxx`` by default.
-| · **``MPI_LINKFLAGS``**: Flags to add during the MPI linking. Empty by
+| · **MPI_LINKFLAGS**: Flags to add during the MPI linking. Empty by
   default.
 
 Java configuration
@@ -164,14 +164,14 @@ bypass this automatic setting by exporting them
 (e.g. ``export JAVA_HOME=/my/own/java``) prior to launch the command or,
 even, you can update the resulting ``xmipp.conf`` file, once created.
 
-| · **``JAVA_HOME``**: Path where java is loacated.
+| · **JAVA_HOME**: Path where java is loacated.
   ``dirname $(dirname $(realpath $(which javac)))`` by default
   (``jre/bin`` is pull out if present).
-| · **``JAVA_BINDIR``**: Path where ``jar`` and ``javac`` are located.
+| · **JAVA_BINDIR**: Path where ``jar`` and ``javac`` are located.
   ``%(JAVA_HOME)s/bin`` by default.
-| · **``JAVAC``**: JavaC compiler. ``%(JAVA_BIN)s/javac`` by default.
-| · **``JAR``**: Jar compiler. ``%(JAVA_BIN)s/jar`` by default.
-| · **``JNI_CPPPATH``**: Include paths during the Java compilation.
+| · **JAVAC**: JavaC compiler. ``%(JAVA_BIN)s/javac`` by default.
+| · **JAR**: Jar compiler. ``%(JAVA_BIN)s/jar`` by default.
+| · **JNI_CPPPATH**: Include paths during the Java compilation.
   ``%(JAVA_HOME)s/include:%(JAVA_HOME)s/include/linux`` by default.
 
 Cuda configuration
@@ -208,19 +208,19 @@ exporting them (e.g. ``export NVCC=/my/own/cuda/bin/nvcc``) prior to
 launch the command or, even, you can update the resulting ``xmipp.conf``
 file, once created.
 
-| · **``CUDA``**: Main flag to enable/disable CUDA compilation, set to
+| · **CUDA**: Main flag to enable/disable CUDA compilation, set to
   ``True``/``False`` accordingly. By default, it is set to ``True`` if a
   ``nvcc`` is found.
-| · **``NVCC``**: Path to the Cuda compiler (it can be just the command
+| · **NVCC**: Path to the Cuda compiler (it can be just the command
   if it is in the PATH). ``nvcc`` (or the real path to it) by default.
-| · **``CXX_CUDA``**: C++ compiler to compile Cuda code. Notice that
+| · **CXX_CUDA**: C++ compiler to compile Cuda code. Notice that
   Cuda-8.0 is incompatible with ``g++>5``, then this can be set to
   ``g++-5``, whereas the main C++ compiler still ``g++-8``. By default,
   it is ``g++`` (if compatible).
-| · **``NVCC_CXXFLAGS``**: Cuda compilation flags.
+| · **NVCC_CXXFLAGS**: Cuda compilation flags.
   ``--x cu -D_FORCE_INLINES -Xcompiler -fPIC -ccbin %(CXX_CUDA)s -std=c++11 --expt-extended-lambda -gencode=arch=compute_30,code=compute_30 -gencode=arch=compute_35,code=compute_35 -gencode=arch=compute_50,code=compute_50 -gencode=arch=compute_60,code=compute_60 -gencode=arch=compute_61,code=compute_61``,
   by default.
-| · **``NVCC_LINKFLAGS``**: Cuda linking flags.
+| · **NVCC_LINKFLAGS**: Cuda linking flags.
   ``-L/usr/local/cuda-X.Y/targets/x86_64-linux/lib -L/usr/local/cuda-X.Y/targets/x86_64-linux/lib/stubs``
   by default.
 
@@ -255,10 +255,10 @@ However, you can bypass this automatic setting by exporting them
 or, even, you can update the resulting ``xmipp.conf`` file, once
 created.
 
-| · **``MATLAB``**: Main flag to enable/disable Matlab compilation, set
+| · **MATLAB**: Main flag to enable/disable Matlab compilation, set
   to ``True``/``False`` accordingly. By default is set to ``True`` if a
   ``matlab`` is found in the PATH.
-| · **``MATLAB_DIR``**: Matlab home directory where ``bin/mex`` is
+| · **MATLAB_DIR**: Matlab home directory where ``bin/mex`` is
   expected to compile Matlab code.
   ``dirname $(dirname $(which matlab))`` by default.
 
@@ -274,14 +274,14 @@ However, you can bypass this automatic setting by exporting them
 (e.g. ``export OPENCV=False``) prior to launch the command or, even, you
 can update the resulting ``xmipp.conf`` file, once created.
 
-| · **``OPENCV``**: Main flag to enable/disable OpenCV compilation, set
+| · **OPENCV**: Main flag to enable/disable OpenCV compilation, set
   to ``True``/``False`` accordingly. By default, it is set to ``True``
   if a basic code including the ``opencv2/core/core.hpp`` header
   compiles.
-| · **``OPENCV3``**: Flag to indicate if openCV-v3 is present, set to
+| · **OPENCV3**: Flag to indicate if openCV-v3 is present, set to
   ``True``/``False`` accordingly. By default, it is set to ``True`` if
   the ``CV_MAJOR_VERSION >= 3`` in the ``opencv2/core/version.hpp``.
-| · **``OPENCVSUPPORTSCUDA``**: Flag to enable/disable OpenCV
+| · **OPENCVSUPPORTSCUDA**: Flag to enable/disable OpenCV
   compilation against CUDA, set to ``True``/``False`` accordingly. By
   default, it is set to ``True`` if a basic code including the
   ``cudaoptflow.hpp`` header compiles (if OpenCV-v3 is used, the
@@ -290,13 +290,13 @@ can update the resulting ``xmipp.conf`` file, once created.
 Others
 ------
 
-| · **``VERIFIED``**: Firstly, it is set to ``False`` and, then
+| · **VERIFIED**: Firstly, it is set to ``False`` and, then
   ``./xmipp check_config`` swaps it to ``True`` (if checks passes). This
   prevents to check the configuration twice.
-| · **``CONFIG_VERSION``**: Config generator’s (``xmipp`` script) hash
+| · **CONFIG_VERSION**: Config generator’s (``xmipp`` script) hash
   version. An error is raised if trying to compile Xmipp with a
   different hash than the current in the github repository.
-| · **``USE_DL``**: Flag to download deep learning models during the
+| · **USE_DL**: Flag to download deep learning models during the
   compilation process. ``False`` by default.
-| · **``DEBUG``**: Flag to compile the code under the debug mode.
+| · **DEBUG**: Flag to compile the code under the debug mode.
   ``False`` by default.
