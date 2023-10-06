@@ -2,7 +2,7 @@ Installation Notes
 ==================
 
 Installing on Ubuntu 18.04
-~~~~~~~~~~~~~
+---------------------------
 Required dependencies
 ^^^^^^^^^^^^^^^^^^^^
 
