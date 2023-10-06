@@ -1,5 +1,7 @@
-Python Binding `Text borrowed from here <http://www.tutorialspoint.com/python/python_further_extensions.htm>`__
----------------------------------------------------------------------------------------------------------------
+Python Binding 
+==============
+
+`Text borrowed from here <http://www.tutorialspoint.com/python/python_further_extensions.htm>`_
 
 Any code that you write using any compiled language like C, C++ or Java
 can be integrated or imported into a Python script. This code is
@@ -47,7 +49,9 @@ Py_RETURN_FALSE; }
 This would be a Python function called isImage inside of the module
 [[FileName]]. You’ll be putting pointers to your C functions into the
 method table for the module that usually comes next in your source code.
-## The method mapping table:
+
+The method mapping table
+--------------------------
 
 This method table is a simple array of [[PyMethodDef]] structures. That
 structure looks something like this: struct [[PyMethodDef]] { char
@@ -85,7 +89,9 @@ static[[PyMethodDef]][[FileName]]_methods[] = { { “compose”,
 and extension OR prefix with number @” }, { “composeBlock”,
 (PyCFunction) FileName_composeBlock, METH_VARARGS, “Compose from
 blockname, number, root and extension” }, { NULL } /\* Sentinel \*/ };
-## The initialization function:
+
+The initialization function
+---------------------------
 
 The last part of your extension module is the initialization function.
 This function is called by the Python interpreter when the module is
@@ -113,7 +119,10 @@ Example:
 variable[[PyObject]]\* module; module = Py_InitModule3(“xmipp”,
 xmipp_methods, “Xmipp module as a Python extension.”);
 
-… } ## All together
+… }
+
+All together
+---------------
 
 A simple example that makes use of all the above concepts:
 
@@ -129,8 +138,10 @@ static[[PyMethodDef]] helloworld_funcs[] = { {“helloworld”,
 (PyCFunction)helloworld, METH_NOARGS, helloworld_docs}, {NULL} };
 
 void inithelloworld(void) { Py_InitModule3(“helloworld”,
-helloworld_funcs, “Extension module example!”); } ## Passing Function
-Parameters:
+helloworld_funcs, “Extension module example!”); }
+
+Passing Function parameters
+---------------------------
 
 Most of the time you will add functions to an existing module. For
 example, the following function, that accepts some number of parameters,
@@ -166,7 +177,8 @@ if (!PyArg_ParseTuple(args, “ids”, &i, &d, &s)) { return NULL; }
 Compiling the new version of your module and importing it will enable
 you to invoke the new function with any number of arguments of any type:
 
-### The PyArg \_ParseTuple Function:
+The PyArg \_ParseTuple Function
+---------------------------------
 
 Here is a list of format codes for[[PyArg]] \_ParseTuple function:
 
@@ -957,7 +969,8 @@ Py_BuildValue(“ii”, a + b, a - b); }
 
 This is what it would look like if implemented in Python:
 
-## Calling Python (+numpy) from C:
+Calling Python (+numpy) from C
+-------------------------------
 
 Here is an example code to perform the sum of two volumes in Python:
 
