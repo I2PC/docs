@@ -49,6 +49,8 @@ The recommended way for users (not developers) to install and use Xmipp is via t
 
     Developers/Guidelines/index
     Developers/Checkout-specific-date/index
+    Developers/PArallelPrograming/index
+    Developers/xmipp-Binding/index
     Developers/How-to-release/index
     
 .. _Releases-docs:
