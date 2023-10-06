@@ -1,11 +1,8 @@
 Guidelines
-==========
+------------
 
-Programming
------------
-
-Handling images
-~~~~~~~~~~~~~~~
+Programming - Handling images
+^^^^^^^^^^
 
 Although Xmipp supports stacks of volumes (4 dimensions arrays) in
 memory, it is recommended to avoid allocate in memory as much images as
@@ -13,10 +10,8 @@ possible at once. If your code is going to iterate over a set of images
 stored in a stack file, then you should try accessing each image at
 once. 
 
-Coding
------------
-C++ guidelines
-~~~~~~~~~~~~~~~
+Coding - C++ guidelines
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Source code is like the text of a book, it is possible to be understood
 with almost any formatting but much more easier if it is done properly.

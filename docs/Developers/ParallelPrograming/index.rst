@@ -1,5 +1,8 @@
+Parallel Programming
+----------------------
+
 Introduction
-------------
+^^^^^^^^^^^^^^^^^^^^^
 
 In the simplest sense, **parallel computing** is the simultaneous use of
 multiple compute resources to solve a computational problem:
@@ -71,7 +74,7 @@ nothing to be done. The following are several subclasses of
      }
 
 Using threads
--------------
+^^^^^^^^^^^^^^^^^^^^^
 
 Technically, a **thread** is defined as an independent stream of
 instructions that can be scheduled to run as such by the operating
@@ -167,7 +170,7 @@ The previous example can be coded:
      }
 
 Synchronizing threads
-~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^
 
 Synchronization is vital for almost all parallel programs. We want
 things done faster but also we want things done well. Through
@@ -220,7 +223,7 @@ So take note of these tips:
    deadlock (program will runs forever)
 
 Programming with MPI
---------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 The Message Passing Interface Standard ( **MPI**) is a message passing
 library standard based on the consensus of the MPI Forum, which has over

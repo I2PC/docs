@@ -1,5 +1,5 @@
 Python Binding 
-==============
+--------------------
 
 `Text borrowed from here <http://www.tutorialspoint.com/python/python_further_extensions.htm>`_
 
@@ -18,7 +18,7 @@ your code into three parts:
 -  An initialization function.
 
 The C functions:
-----------------
+^^^^^^^^^^^^^^^^^
 
 The signatures of the C implementations of your functions will always
 take one of the following three forms:
@@ -51,7 +51,7 @@ This would be a Python function called isImage inside of the module
 method table for the module that usually comes next in your source code.
 
 The method mapping table
---------------------------
+^^^^^^^^^^^^^^^^^
 
 This method table is a simple array of [[PyMethodDef]] structures. That
 structure looks something like this: struct [[PyMethodDef]] { char
@@ -91,7 +91,7 @@ and extension OR prefix with number @” }, { “composeBlock”,
 blockname, number, root and extension” }, { NULL } /\* Sentinel \*/ };
 
 The initialization function
----------------------------
+^^^^^^^^^^^^^^^^^
 
 The last part of your extension module is the initialization function.
 This function is called by the Python interpreter when the module is
@@ -122,7 +122,7 @@ xmipp_methods, “Xmipp module as a Python extension.”);
 … }
 
 All together
----------------
+^^^^^^^^^^^^^^^^^
 
 A simple example that makes use of all the above concepts:
 
@@ -141,7 +141,7 @@ void inithelloworld(void) { Py_InitModule3(“helloworld”,
 helloworld_funcs, “Extension module example!”); }
 
 Passing Function parameters
----------------------------
+^^^^^^^^^^^^^^^^^
 
 Most of the time you will add functions to an existing module. For
 example, the following function, that accepts some number of parameters,
@@ -178,7 +178,7 @@ Compiling the new version of your module and importing it will enable
 you to invoke the new function with any number of arguments of any type:
 
 The PyArg \_ParseTuple Function
----------------------------------
+^^^^^^^^^^^^^^^^^
 
 Here is a list of format codes for[[PyArg]] \_ParseTuple function:
 
@@ -943,7 +943,7 @@ Format end, followed by entire error message text.
    </table>
 
 Returning Values:
------------------
+^^^^^^^^^^^^^^^^^
 
 Py_BuildValue takes in a format string much like PyArg \_ParseTuple
 does. Instead of passing in the addresses of the values you’re building,
@@ -970,7 +970,7 @@ Py_BuildValue(“ii”, a + b, a - b); }
 This is what it would look like if implemented in Python:
 
 Calling Python (+numpy) from C
--------------------------------
+^^^^^^^^^^^^^^^^^
 
 Here is an example code to perform the sum of two volumes in Python:
 

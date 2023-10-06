@@ -1,5 +1,5 @@
 How to release
-==================
+----------------
 
 Let’s assume that we want to make a new Xmipp version from the ‘devel’
 branch with a version name **X.YY.ZZ** where **X=3** (to keep the main
@@ -10,20 +10,18 @@ Boreas… <https://www.gods-and-monsters.com/list-of-greek-gods-goddesses.html>`
 see the `TAGging section
 below <https://github.com/I2PC/scipion-em-xmipp/wiki/How-to-release-a-new-Xmipp-version#making-a-git-tag-and-promoting-the-code-to-master>`__.
 
-Create the release notes
-~~~~~~~~~~~~~~~~~~~~~~~~
+**Create the release notes**
 
 Add all the information about the release
 `here <https://github.com/I2PC/xmipp/blob/devel/CHANGELOG.md>`__
 
-Schedule the releasing
-~~~~~~~~~~~~~~~~~~~~~~
+**Schedule the releasing**
 
 Prepare everything, but post the release at the beginning of your
 workday.
 
 Make release branches
----------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 Create a branch where freeze the code and fix some minor bug before to
 upgrade the version for all Xmipp repositories. The usual name for that
@@ -37,8 +35,7 @@ aprove from other developer
    from other repos is compatible. In this way, we will also be able to
    include some bug fixing during the release procedure.
 
-Set the version to the code
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Set the version to the code**
 
 There are three types of version tags. One is the plugin version (in
 sync with pypi), other is the software version (related with the name of
@@ -74,7 +71,7 @@ linking from the plugin to the software.
    from New to Production, or production to updated…
 
 Creating the Xmipp software bundle
-----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When the ``release-X.YY.ZZ`` branch is ready and all bugs seem fixed,
 **we must do a Pull Request** for each Xmipp repository from
@@ -134,7 +131,7 @@ A ``xmippSrc-vX.YY.ZZ.tgz`` should be created, where ``YY.ZZ`` is
 according to the version info set above.
 
 Test the archive in the Scipion
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To test the archive, install new Scipion without Xmipp following the
 guide
@@ -176,10 +173,10 @@ to do it, please `ask Scipion’s people <mailto:scipion@cnb.csic.es>`__
 (…/downloads/scipion/software/em)
 
 Creating the PyPi module
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Testing the installation with source archive from Nolan
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Testing the installation with source archive from Nolan**
+
 
 Before creation the Pypi module, **it is worth it to start a testing
 stage** to be sure that all is working well. Take into account that,
@@ -200,14 +197,13 @@ Install the Scipion-em-xmipp plugin directly from the Github:
 During the installation, the source file archive should be downloaded
 from Nolan.
 
-Update PyPi module
-~~~~~~~~~~~~~~~~~~
+**Update PyPi module**
 
 Ensures that the `release
 information <https://github.com/I2PC/scipion-em-xmipp/blob/fa78fc12536b814275b9a1790e3570f69bf5f0fd/setup.py#L43>`__
 is updated and match with those above.
 
-**New way:**
+- **New way:**
 
 Merge in scipìon-em-xmipp the PR from release to master, one action will
 manage the update to pypi, also will create a tag that we have to remove
@@ -217,7 +213,7 @@ push, clone each repository with
 ``git clone git@github.com:I2PC/scipion-em-xmipp.git``
 ``git clone git@github.com:I2PC/xmippCore.git``
 
-**Old way:**
+- **Old way:**
 
 When all is checked, create and upload the Pypi module by (check
 `this <https://scipion-em.github.io/docs/docs/developer/creating-a-plugin#create-and-upload-distribution>`__
@@ -235,7 +231,7 @@ after **``-c`` flag have to be the lowest Scipion’s compatible version**
 (e.g. ``"scipion-3.0"``).
 
 Making a git-TAG and promoting the code to MASTER
--------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 After concluding the two section above, the new Xmipp version is already
 released. Congrats! Publish it in mailing list, Twitter… but also we
@@ -257,7 +253,7 @@ permissions to push, clone each repository with
 Finally, **merge the rest 3 Pull Requests** to conclude the release!
 
 XmippTomo wants a release
--------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 XmippTomo wants a release syncronized with the release of Xmipp. To do
 that: 1. Create a branch (release_3….) from devel 2. Edit the
@@ -268,7 +264,7 @@ version number and writhe the same of the Xmipp, the last digit mst be
 action will create the tag and upload the version to pypi.
 
 Final considerations
---------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Probably, you want all the bug fixings during the release procedure also
 in the ``devel`` branch.
