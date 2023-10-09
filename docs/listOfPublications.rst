@@ -4,8 +4,8 @@ List of Publications
 ===========================
 2023
 -----
-Strelak2023performance
-^^^^^^^^^^^^^^^^^^^^^^
+Strelak2023
+^^^^^^^^^^^^^^^
 ::
 
 - AUTHOR = Střelák, David and Marchán, Daniel and Carazo, José María and S. Sorzano, Carlos O.
