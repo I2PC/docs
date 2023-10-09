@@ -19,3 +19,8 @@ The easiest way to reach us is by writing to our Xmipp channel on the Scipion fr
 Support for developers
 ================
 That way you will get almost immediate answers to your "dev-doubts" is by writing to our Xmipp channel on the Scipion framework. You can also `create an issue <https://github.com/I2PC/xmipp/issues>`_ to report a bug or suggest a new feature. Remember we have four repositories for Xmipp: `xmipp <https://github.com/I2PC/xmipp>`_, `xmippCore <https://github.com/I2PC/xmippCore>`_, `scipion-em-xmipp <https://github.com/I2PC/scipion-em-xmipp>`_ and `xmippVix <https://github.com/I2PC/xmippViz>`_)
+
+
+.. figure:: ../_static/images/banner.png
+   :alt: xmipp logo
+   :width: 500
