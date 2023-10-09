@@ -24,7 +24,6 @@ Fernandez-Gimenez2023a
 ^^^^^^^^^^^^^^^^^^^^^^
 ::
 
-
    - title = A new algorithm for particle weighted subtraction to eliminate signals from unwanted components in Single Particle Analysis
    - journal = Journal of Structural Biology
    - volume = 215
@@ -40,15 +39,15 @@ Fernandez-Gimenez2023b
 ::
 
 
-- title = Local defocus estimation in Single Particle Analysis in Cryo-Electron Microscopy
-- journal = Journal of Structural Biology
-- volume = 215
-- number = 4
-- year = 2023
-- issn = 1047-8477
-- doi = https://doi.org/10.1016/j.jsb.2023.108030
-- url = https://www.sciencedirect.com/science/article/pii/S104784772300093X
-- author = E. Fernández-Giménez, J.M. Carazo and C.O.S. Sorzano
+   - title = Local defocus estimation in Single Particle Analysis in Cryo-Electron Microscopy
+   - journal = Journal of Structural Biology
+   - volume = 215
+   - number = 4
+   - year = 2023
+   - issn = 1047-8477
+   - doi = https://doi.org/10.1016/j.jsb.2023.108030
+   - url = https://www.sciencedirect.com/science/article/pii/S104784772300093X
+   - author = E. Fernández-Giménez, J.M. Carazo and C.O.S. Sorzano
 
 Vilas2023
 ^^^^^^^^^
