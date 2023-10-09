@@ -116,10 +116,10 @@ Others
 Scripts Xmipp
 ~~~~~~~~~~~~~
 
--  **xmipp_image_operate**: taked into account non existing files
--  **angular_continuous_assign2**: Bug fixed
--  **volume_consensus**: Bug fixed
--  **ctf.h and angular_continuous_assign_2**: Changes for local defocus   estimation #578
+-  xmipp_image_operate: taked into account non existing files
+-  angular_continuous_assign2: Bug fixed
+-  volume_consensus: Bug fixed
+-  ctf.h and angular_continuous_assign_2: Changes for local defocus   estimation #578
 
 Installation and user guide
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -158,16 +158,16 @@ Installation and user guide
 Protocols scipion-em-xmipp
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  **protocol_core_analysis**: New protocol
--  **protocol_compare_angles**: Bug fix in compare angles under some   conditions
--  **protocol_center_particles**: protocol simplified (removed   setofCoordinates as output)
--  **protocol_CTF_consensus**: concurrency error fixed
--  **protocol_convert_pdb**: remove size if deactivated
--  **protocol_resolution_deepres**: binary masked not stored in Extra   folder and avoiding memory problems on GPUs
--  **protocol_add_noise**: fixes
--  **protocol_compare_reprojections**: improve computation of residuals   + tests + fix + formatting
--  **protocol_screen_deepConsensus**: multiple fixes in batch   processing, trainging and streaming mode
--  **protocol_shift_particles**: apply transform is now optional 
+-  protocol_core_analysis: New protocol
+-  protocol_compare_angles: Bug fix in compare angles under some   conditions
+-  protocol_center_particles: protocol simplified (removed   setofCoordinates as output)
+-  protocol_CTF_consensus: concurrency error fixed
+-  protocol_convert_pdb: remove size if deactivated
+-  protocol_resolution_deepres: binary masked not stored in Extra   folder and avoiding memory problems on GPUs
+-  protocol_add_noise: fixes
+-  protocol_compare_reprojections: improve computation of residuals   + tests + fix + formatting
+-  protocol_screen_deepConsensus: multiple fixes in batch   processing, trainging and streaming mode
+-  protocol_shift_particles: apply transform is now optional 
 
 Others
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
