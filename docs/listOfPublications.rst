@@ -238,8 +238,7 @@ Scheres2005b
 ::
    
 -  author = Scheres Sjors H.W. and Valle Mikel and Carazo José-María
--  title = Fast maximum-likelihood refinement of electron microscopy
-   images.
+-  title = Fast maximum-likelihood refinement of electron microscopy   images.
 -  journal = Bioinformatics
 -  year = 2005
 -  volume = 21 Suppl 2
@@ -247,20 +246,15 @@ Scheres2005b
 -  month = Sep
 -  doi = http://dx.doi.org/10.1093/bioinformatics/bti1140
 -  url = http://dx.doi.org/10.1093/bioinformatics/bti1140
--  keywords = Algorithms; Cryoelectron Microscopy methods; Image
-   Enhancement methods; Image Interpretation Computer-Assisted methods;
-   Imaging Three-Dimensional methods; Likelihood Functions;
-   Reproducibility of Results; Sensitivity and Specificity
+-  keywords = Algorithms; Cryoelectron Microscopy methods; Image   Enhancement methods; Image Interpretation Computer-Assisted methods;   Imaging Three-Dimensional methods; Likelihood Functions;   Reproducibility of Results; Sensitivity and Specificity
 
 Scheres2007a
 ^^^^^^^^^^
 
 ::
 
-   - author = Scheres Sjors H. W. and Haixiao Gao and Mikel Valle and Gabor T Herman
-   - and Paul P B Eggermont and et.al.
-   - title = Disentangling conformational states of macromolecules in 3D-EM through
-   - likelihood optimization.
+   - author = Scheres Sjors H. W. and Haixiao Gao and Mikel Valle and Gabor T Herman and Paul P B Eggermont and et.al.
+   - title = Disentangling conformational states of macromolecules in 3D-EM through likelihood optimization.
    - journal = Nature Methods
    - year = 2007
    - volume = 4
@@ -268,10 +262,7 @@ Scheres2007a
    - number = 1
    - month = Jan
    - doi = http://dx.doi.org/10.1038/nmeth992
-   - keywords = Antigens Polyomavirus Transforming; Escherichia coli; Image Processing
-   Computer-Assisted; Imaging Three-Dimensional; Likelihood Functions;
-   Microscopy Electron; Models Molecular; Protein Conformation; Ribosomes;
-   Sensitivity and Specificity; Simian virus 40
+   - keywords = Antigens Polyomavirus Transforming; Escherichia coli; Image Processing   Computer-Assisted; Imaging Three-Dimensional; Likelihood Functions;   Microscopy Electron; Models Molecular; Protein Conformation; Ribosomes;   Sensitivity and Specificity; Simian virus 40
 
 Scheres2007b
 ^^^^^^^^^^

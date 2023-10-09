@@ -8,10 +8,7 @@ We have a "legacy" folder with programs and code that is outdated. Some of the r
 
 We managed to speed up the installation time by 25%, and we were also able to reduce the lines of code to maintain and the number of code smells that were reported by `SonarCloud <https://sonarcloud.io/projects>`_.
 
-However, it is possible to recover a program if anyone needs it. If you are an external user,
- please contact us (opening an issue is a good way, `see here <https://github.com/I2PC/xmipp/issues/new>`_). 
- If you are part of the Xmipp team: Each deprecated program has an associated `commit <https://github.com/I2PC/xmipp/pull/685>`_. 
- Visit it and review all the changes the program needs to be recovered. Here are some clues:
+However, it is possible to recover a program if anyone needs it. If you are an external user, please contact us (opening an issue is a good way, `see here <https://github.com/I2PC/xmipp/issues/new>`_).  If you are part of the Xmipp team: Each deprecated program has an associated `commit <https://github.com/I2PC/xmipp/pull/685>`_.  Visit it and review all the changes the program needs to be recovered. Here are some clues:
 
 - Go to the legacy folder and
 - Search in the applications/programs folder for the folder of your program.
