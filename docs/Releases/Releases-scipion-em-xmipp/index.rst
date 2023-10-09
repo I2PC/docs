@@ -190,7 +190,7 @@ Hot fix 3.22.11.1
 3.22.01 - Eris
 ----------------------
 
--  `Visit release xmipp <https://i2pc.github.io/docs/XmippField/Releases-xmipp-program/index.html#release-3-22-01-eris>`_
+-  `Visit release xmipp <https://i2pc.github.io/docs/Releases/Releases-xmipp-program/index.html#eris>`_
 
 3.21.06 - Caerus
 ------------------------
