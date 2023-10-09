@@ -6,6 +6,8 @@ List of Publications
 -----
 Strelak2023performance
 ^^^^^^^^^^^^^^^^^^^^^^
+::
+
 - AUTHOR = Střelák, David and Marchán, Daniel and Carazo, José María and S. Sorzano, Carlos O.
 - TITLE = Performance and Quality Comparison of Movie Alignment Software for Cryogenic Electron Microscopy
 - JOURNAL = Micromachines
@@ -20,19 +22,23 @@ Strelak2023performance
 
 Fernandez-Gimenez2023a
 ^^^^^^^^^^^^^^^^^^^^^^
+::
 
-- title = A new algorithm for particle weighted subtraction to eliminate signals from unwanted components in Single Particle Analysis
-- journal = Journal of Structural Biology
-- volume = 215
-- number = 4
-- year = 2023
-- issn = 1047-8477
-- doi = https://doi.org/10.1016/j.jsb.2023.108024
-- url = https://www.sciencedirect.com/science/article/pii/S1047847723000874
-- author = E. Fernández-Giménez, M. Martínez, R. Marabini, D. Strelak, R. Sánchez-García, J.M. Carazo and C.O.S. Sorzano
+
+   - title = A new algorithm for particle weighted subtraction to eliminate signals from unwanted components in Single Particle Analysis
+   - journal = Journal of Structural Biology
+   - volume = 215
+   - number = 4
+   - year = 2023
+   - issn = 1047-8477
+   - doi = https://doi.org/10.1016/j.jsb.2023.108024
+   - url = https://www.sciencedirect.com/science/article/pii/S1047847723000874
+   - author = E. Fernández-Giménez, M. Martínez, R. Marabini, D. Strelak, R. Sánchez-García, J.M. Carazo and C.O.S. Sorzano
 
 Fernandez-Gimenez2023b
 ^^^^^^^^^^^^^^^^^^^^^^
+::
+
 
 - title = Local defocus estimation in Single Particle Analysis in Cryo-Electron Microscopy
 - journal = Journal of Structural Biology
