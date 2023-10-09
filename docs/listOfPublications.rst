@@ -19,9 +19,6 @@ Vilas2023
    - URL = https://github.com/I2PC/xmipp/wiki/FSO^^Fourier-Shell-Occupancy
 
 
-2022
------
-
 2021
 -----
 Fernandez-Gimenez2021
@@ -77,9 +74,6 @@ strelak2020flexalign
 
 
 
-2019
------
-
 2018
 -----
 Vilas2018
@@ -95,8 +89,7 @@ Vilas2018
    - volume = 26
    - doi = 10.1016/j.str.2017.12.018
    - url = http://doi.org/10.1016/j.str.2017.12.018
-2017
------
+
 2016
 -----
 Vilas2016
@@ -438,8 +431,6 @@ Nogales2013
    - doi=http://dx.doi.org/10.1093/nar/gkt385
 
 
-2012
------
 2011
 -----
 
@@ -531,8 +522,7 @@ Sorzano2009d
    - url = http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=5286563
    - author = Sorzano C. O. S. and Iriarte-Ruiz A. and Marabini R. and Carazo J. M.
    - keywords = Downsampling Single Particles Electron microscopy
-2008
------
+
 2007
 -----
 Sorzano2007a
@@ -589,8 +579,7 @@ Scheres2007b
    Escherichia coli metabolism; Imaging Three-Dimensional; Likelihood
    Functions; Models Molecular; Models Statistical; Protein Conformation;
    Ribosomes chemistry/ultrastructure
-2006
------
+
 2005
 -----
 
