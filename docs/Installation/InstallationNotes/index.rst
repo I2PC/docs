@@ -347,24 +347,15 @@ https://www.anaconda.com/blog/a-faster-conda-for-a-growing-community
 List environments
 ^^^^^^^^^^^^^^^^^^^
 
--  xmipp_DLTK_v0.3: Protocols ussing it screen_deeplearning,
-   deep_denoising, resolution_deepres, screen_deepConsensus,
-   python=3.7, scikit-image=0.14, tensorflow=1.15, keras=2.2, 
-   scikit-learn=0.22, pip, numpy==1.21, h5py==2.10.0
+-  xmipp_DLTK_v0.3: Protocols ussing it screen_deeplearning,   deep_denoising, resolution_deepres, screen_deepConsensus,   python=3.7, scikit-image=0.14, tensorflow=1.15, keras=2.2,    scikit-learn=0.22, pip, numpy==1.21, h5py==2.10.0
 
--  xmipp_DLTK_v1.0, Protocols ussing it: deep_misalingment_detection
-  , python=3.8, tensorflow=2.7, keras=2.7, pip,
-   numpy==1.23
+-  xmipp_DLTK_v1.0, Protocols ussing it: deep_misalingment_detection, python=3.8, tensorflow=2.7, keras=2.7, pip,   numpy==1.23
 
--  xmipp_MicCleaner, Protocols ussing it: deepMicrographScreen,
-   python=3.6, micrograph-cleaner-em=0.35
+-  xmipp_MicCleaner, Protocols ussing it: deepMicrographScreen,   python=3.6, micrograph-cleaner-em=0.35
 
--  xmipp_deepEMhancer, Protocols ussing it: protocol_deepEMhancer,
-   python=3.6, deepemhancer=0.12, numba=0.45
+-  xmipp_deepEMhancer, Protocols ussing it: protocol_deepEMhancer,   python=3.6, deepemhancer=0.12, numba=0.45
 
--  xmipp_pyTorch, Protocols ussing it: deepHand, python=3.8,
-   numpy=1.23, mrcfile=1.4.3, kornia=0.6.12, starfile=0.4.12
-  , pytorch==1.11, pytorch-cuda=11.7, torchvision=0.12
+-  xmipp_pyTorch, Protocols ussing it: deepHand, python=3.8,   numpy=1.23, mrcfile=1.4.3, kornia=0.6.12, starfile=0.4.12  , pytorch==1.11, pytorch-cuda=11.7, torchvision=0.12
 
 
 Troubleshooting
