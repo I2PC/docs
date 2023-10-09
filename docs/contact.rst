@@ -10,7 +10,7 @@ contact us by mail.
 Mail
 =======================
 If the question is related to the Scipion framework, try the `contact us <https://scipion.i2pc.es/contact>`_ page.
-If it is related to someThe easiest way to reach us is by writing to our mail: `xmipp@cnb.csic.es  <mailto:xmipp@cnb.csic.es>`_ or `i2pc@cnb.csic.es <mailto:i2pc@cnb.csic.es>`_
+The easiest way to reach us is by writing to our mail: `xmipp@cnb.csic.es  <mailto:xmipp@cnb.csic.es>`_ or `i2pc@cnb.csic.es <mailto:i2pc@cnb.csic.es>`_
 
 Discord channel
 =======================
