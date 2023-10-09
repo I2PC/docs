@@ -22,14 +22,12 @@ Next is to compile xmipp. There are two possibilities and in both you
 will can run Xmipp in Scipion (see `linking
 step <https://github.com/I2PC/xmipp/edit/agm_refactoring_readme/README.md#linking-xmipp-standalone-to-scipion>`__)
 
-    - Compile Xmipp by invoking the compilation script, which will take you
-through the rest of the process:
+    - Compile Xmipp by invoking the compilation script, which will take you through the rest of the process:
 
 ``./xmipp`` 
 
-that way you will install
-Xmipp with the dependencies and thier versions that the enviroment you
-decide, or the default one. 
+that way you will install Xmipp with the dependencies and thier versions that the enviroment youdecide, or the default one. 
+
     - Compile Xmipp via Scipion enviroment
 
 ``scipion3 run ./xmipp``
