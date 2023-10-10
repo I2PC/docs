@@ -231,7 +231,7 @@ after **``-c`` flag have to be the lowest Scipion’s compatible version**
 (e.g. ``"scipion-3.0"``).
 
 Making a git-TAG and promoting the code to MASTER
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 After concluding the two section above, the new Xmipp version is already
 released. Congrats! Publish it in mailing list, Twitter… but also we

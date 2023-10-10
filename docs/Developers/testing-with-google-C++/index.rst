@@ -85,7 +85,7 @@ any extra library. ## General Rules
    BEFORE and not AFTER the creation of new routines.
 
 Adding a test to an existing file
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In this section we will assume that you want to add a test for a class
 that has already been incorporated in the test system. Let us assume
@@ -215,7 +215,7 @@ Example of execution of the test *xmipp_test_matrix* :
    [----------] Global test environment tear-down [==========] 4 tests from 1 test case ran. (1 ms total) [  PASSED  ] 4 tests. roberto@tumbao:~/xmipp_svn$  </pre>
 
 Unittest checking workflow
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When a unittest is generated, sometimes its result is very tied to the
 machine where it is generated (some mathematical results depends on the
@@ -235,7 +235,7 @@ in his machine doesn’t mean a thing. 1 If it’s not, then the owner takes
 the responsability of repairing the test
 
 Setting the gold standard
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You may update the gold standard of the tests at the server by doing:
 

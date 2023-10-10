@@ -90,15 +90,7 @@ Coss’ tricks
 -  [[GenerateTiltPairs]] - Generate untilted and tilted images for a
    given volume
 
-Jaime’s tricks
-^^^^^^^^^^^^^^^^
 
--  [[ToBeAdded]]
-
-Josue Tricks
-^^^^^^^^^^^^^^^^
-
--  
 
 Carmen’s scripts
 ^^^^^^^^^^^^^^^^
@@ -112,8 +104,3 @@ Carmen’s scripts
       downsampling (so you do not have to pick particles again)
    -  [[ScaleShifts]] - to reuse angles and shifts found in the previous
       projection matching run
-
-Alejandro’s scripts
-^^^^^^^^^^^^^^^^
-
--  
