@@ -37,7 +37,10 @@ anti-clockwise rotation of the system of coordinates
 
 Euler angles in Xmipp complies with the 3DEM standard (see
 http://www.ebi.ac.uk/pdbe/docs/3dem/test_image/3DEM_compliance for
-details) ### Filenames
+details)
+
+Filenames
+~~~~~~~~~~~~
 
 In general, Xmipp can manage any Filename you can think of. However,
 there are some ideas that could help you to organize your data, and
@@ -253,7 +256,9 @@ Xmipp, it’s just for compatibility with Spider.
 Notice also that Spider requires all data files (volumes, images,
 document files, …) to have the same extension. You might prefer this
 other convention if you don’t want to make copies of the files, or to
-have to rename the files before entering in Spider. ### Logical access
+have to rename the files before entering in Spider. 
+Logical access
+~~~~~~~~~~~~
 
 The basic multidimensional classes implemented in this library admit two
 kinds of access: physical and logical. The physical positions are those
@@ -329,7 +334,10 @@ volumes the usual way of making a loop is
    </pre>
 
 Notice that if you don’t modify the origin of the multidimensional array
-then the physical and logical accesses are the same. ### Image center
+then the physical and logical accesses are the same. 
+
+Image center
+~~~~~~~~~~~~
 
 There is a special case for the logical access when the origin is set
 just at the center of the image, volume or vector. There are several
