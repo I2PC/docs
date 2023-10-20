@@ -10,7 +10,7 @@ designed and managed by the `Biocomputing Unit <http://biocomputingunit.es/>`_ l
 The Xmipp project is made up by the `xmipp programs <https://github.com/I2PC/xmipp>`_, mainly written in C++, the `**scipion-em-xmipp** <https://github.com/I2PC/scipion-em-xmipp>`_ plugin, where all the protocols of SPA  are located and the `**scipion-em-xmippTomo** <https://github.com/I2PC/scipion-em-xmipptomo>`_ plugin, where all the protocols of tomography are located . 
 
 .. figure:: ../_static/images/xmippComposed.png
-   :alt: xmipp logo
+   :alt: xmippComposed
    :width: 400
 
 Getting started
