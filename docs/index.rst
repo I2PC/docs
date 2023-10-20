@@ -11,7 +11,7 @@ The Xmipp project is made up by the `xmipp programs <https://github.com/I2PC/xmi
 
 .. figure:: ../_static/images/XmippComposed.png
    :alt: xmippComposed
-   :width: 400
+   :width: 300
    :align: center
 
 
