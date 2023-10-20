@@ -351,5 +351,3 @@ the integer part is -2.
 This means that for images with an even dimension, the center will be
 “displaced” in that direction. Let’s have a look on the following two
 diagrams of cell indexes.
-
-–[[Main.RobertoMarabini]] - 14 May 2009
