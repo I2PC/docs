@@ -66,6 +66,31 @@ Vilas2023
 
 2021
 -----
+sanchez2021deepemhancer
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+::
+  - title = DeepEMhancer: a deep learning solution for cryo-EM volume post-processing,
+  - author = Sanchez-Garcia, Ruben and Gomez-Blanco, Josue and Cuervo, Ana and Carazo, Jose Maria and Sorzano, Carlos Oscar S and Vargas, Javier,
+  - journal = Communications biology,
+  - volume = 4,
+  - number = 1,
+  - pages = 874,
+  - year = 2021,
+  - publisher = Nature Publishing Group UK London
+
+fernandez2021cryo
+^^^^^^^^^^^^^^^^^^^^^^^^^
+::
+  - title =  Cryo-EM density maps adjustment for subtraction, consensus and sharpening,
+  - author =  Fernandez-Gimenez, E and Martinez, M and Sanchez-Garcia, R and Marabini, R and Ramirez-Aportela, E and Conesa, P and Carazo, JM and Sorzano, COS,
+  - journal =  Journal of Structural Biology,
+  - volume =  213,
+  - number =  4,
+  - pages =  107780,
+  - year =  2021,
+  - publisher =  Elsevier
+
 Fernandez-Gimenez2021
 ^^^^^^^^^^^^^^^^^^^^^
 
