@@ -40,6 +40,8 @@ Read the installation page for more details about these softwares requirements. 
     Utils/Deprecated-programs/index
     Utils/ConfigurationF/index
     Utils/xmippStructure/index
+    Utils/Conventions/index
+
 
 
 .. _Developers-docs:
