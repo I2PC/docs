@@ -206,23 +206,6 @@ Abrishami2015
    - keywords = Beam induced motion
    - keywords = Single particle analysis
    - keywords = Electron microscopy 
-B.Heymann2015
-^^^^^^^^^^^^^
-
-::
-
-   - title = Validation of 3D of 3DEM Reconstructions: The phantom in the noise
-   - journal = AIMS Biophys
-   - volume = 2
-   - number = 1
-   - pages = 21-35
-   - year = 2015
-   - note =
-   - issn =
-   - doi = 10.3934/biophy.2015.1.21
-   - url = http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4440490/
-   - author = B. Heymann
-   - keywords =
 
 Sorzano2015b
 ^^^^^^^^^^
@@ -394,56 +377,6 @@ Abrishami2013
    - journal = Bioinformatics
 
 
-zhao2013
-^^^^^^^^
-
-::
-
-   - author = Zhao Zhizhen and Singer Amit
-   - title = Fourier-Bessel rotational invariant eigenimages
-   - volume = 30
-   - number = 5
-   - pages = 871^877
-   - year = 2013
-   - doi = http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3711886/pdf/nihms484949.pdf
-   - abstract =
-   - url = http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3711886
-   - eprint = http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3711886/pdf/nihms484949.pdf
-   - journal = Journal of the Optical Society of America. A Optics image science and vision
-
-Chen2013
-^^^^^^^^
-
-::
-
-   - title = Fast and accurate reference-free alignment of subtomograms 
-   - journal = Journal of Structural Biology 
-   - volume = 182
-   - number = 3
-   - pages = 235 - 245
-   - year = 2013
-   - note = 
-   - issn = 1047-8477
-   - doi = http://dx.doi.org/10.1016/j.jsb.2013.03.002
-   - url = http://www.sciencedirect.com/science/article/pii/S1047847713000737
-   - author = Yuxiang Chen and Stefan Pfeffer and Thomas Hrabe and Jan Michael Schuller and Friedrich Förster
-   - keywords = Cryo-electron tomography
-   - keywords = Subtomogram averaging
-   - keywords = Spherical harmonics 
-
-Cherian2013
-^^^^^^^^^^
-
-::
-
-   - title = Jensen-Bregman LogDet divergence with application to efficient similarity search for covariance matrices 
-   - journal = IEEE Trans Pattern Anal Mach Intell 
-   - volume = 35
-   - pages = 2161-2174
-   - year = 2013
-   - doi = http://dx.doi.org/10.1109/TPAMI.2012.259
-   - url = http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6378374
-   - author = Cherian A. and Sra S. and Banerjee A. and Papanikolopoulos N.
 
 delaRosaTrevin2013
 ^^^^^^^^^^^^^^^
@@ -475,26 +408,6 @@ Nogales2013
    - publisher=Oxford Univ Press
    - doi=http://dx.doi.org/10.1093/nar/gkt385
 
-
-2011
------
-
-ponce2011
-^^^^^^^^^
-
-::
-
-   - author = Ponce Colin and Singer Amit
-   - title = Computing Steerable Principal Components of a Large Set of Images and Their Rotations
-   - volume = 20
-   - number = 11
-   - pages = 3051^3062
-   - year = 2011
-   - doi = http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3719433/pdf/nihms485040.pdf
-   - abstract =
-   - url = http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3719433
-   - eprint = http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3719433/pdf/nihms485040.pdf
-   - journal = IEEE Trans Image Process
 2010
 -----
 Sorzano2010a
@@ -696,22 +609,6 @@ Sorzano2004b
    - doi = http://dx.doi.org/10.1016/j.jsb.2004.01.006
    - url = http://www.sciencedirect.com/science/article/pii/S1047847704000073
    - author = Sorzano C.O.S. and S. Jonic and C. El-Bez and J.M. Carazo and S. De Carlo and P. Thevenaz and M. Unser
-2003
------
-Rosenthal2003
-^^^^^^^^^^^^^
-::
-
--  Author=Rosenthal P. B. and Henderson R.
--  Title=Optimal determination of particle orientation absolute hand and   contrast loss in single-particle electron cryomicroscopy
--  Journal=J. Mol. Biol.
--  Year=2003
--  Volume=333
--  Number=4
--  Pages=721–745
--  Month=Oct
--  url=http://www.sciencedirect.com/science/article/pii/S0022283603010222
--  doi=http://dx.doi.org/10.1016/j.jmb.2003.07.013
 
 
 2002
@@ -776,40 +673,3 @@ Pascual2000
    - author = Pascual-Montano A and Montserrat Bárcena and J.J Merelo and José-María Carazo
    - keywords = Image processing Cluster analysis Neural networks Self-organizing maps Fuzzy logic 
 
-
-1987
------
-Radermacher1987
-^^^^^^^^^^^^^^
-
-::
-
-   - author = Radermacher M. and Wagenknecht T. and Frank J.
-   - title = Three-dimensional reconstruction from a single-exposure random conical tilt series applied to the 50S ribosomal subunit of Escherichia coli.
-   - volume = 146
-   - number = 2
-   - pages = 113-36
-   - year = 1987
-   - doi = http://www.ncbi.nlm.nih.gov/pubmed/3302267
-   - abstract =
-   - url = http://www.ncbi.nlm.nih.gov/pubmed/3302267
-   - eprint = http://www.ncbi.nlm.nih.gov/pubmed/3302267
-   - journal = Journal of Microscopy
-
-
-1979
-------
-Otsu1979
-^^^^^^^^
-
-::
-
-   - title = A Threshold Selection Method from Gray-Level Histograms
-   - journal = Systems Man and Cybernetics IEEE Transactions
-   - volume = 9
-   - number = 2
-   - pages = 62 - 66
-   - year = 1979
-   - issn = 0018-9472
-   - doi = http://dx.doi.org/10.1109/TSMC.1979.4310076
-   - author = Otsu N.
