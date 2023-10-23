@@ -19,8 +19,9 @@ the main repository is required and also the installation of the plugins.
 
 .. figure:: ../_static/images/composed.png
    :alt: xmippComposed
-   :width: 400
+   :width: 450
    :align: center
+
 
 The recommended way for users (not developers) to install and use Xmipp is via the
 `Scipion framework <https://scipion-em.github.io/docs/release-3.0.0/docs/scipion-modes/how-to-install.html>`_, where you can use Xmipp with other Cryo-EM-related software. Xmipp will be installed during Scipion installation  (pay attemption on the -noXmipp flag). The Scipion installer should take care of all dependencies for you, however,   you can make its life easier if you have your compiler, `CUDA <https://docs.nvidia.com/cuda/doc/index.html>`_ and `HDF5 <https://www.hdfgroup.org/solutions/hdf5/>`_ library ready and available in the standard paths. 
