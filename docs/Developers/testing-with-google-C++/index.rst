@@ -1,4 +1,4 @@
-Tutorial: A quick introduction to the Google C++ Testing Framework
+Google C++ Testing Framework
 -------------------------------------------------------------------
 
 Summary
