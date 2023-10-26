@@ -33,7 +33,7 @@ Xmipp requires Cmake 3.16 or above. To update it, please `visit <https://github.
 Cuda
 ^^^^
 
-Xmipp supports Cuda 8 through 11.7. CUDA is optional but highly recommended. We recommend you to use the newest version available for your operating system; though Cuda 10.2 has the widest support among other Scipion plugins. Pay attention to the `compiler - CUDA compatibility <https://gist.github.com/ax3l/9489132>`_.
+Xmipp supports Cuda 8 through 12.2. CUDA is optional but highly recommended. We recommend you to use the newest version available for your operating system; though Cuda 10.2 has the widest support among other Scipion plugins. Pay attention to the `compiler - CUDA compatibility <https://gist.github.com/ax3l/9489132>`_.
 
 To install CUDA for your operating system, follow the `official install guide <https://developer.nvidia.com/cuda-toolkit-archive>`_.
 
