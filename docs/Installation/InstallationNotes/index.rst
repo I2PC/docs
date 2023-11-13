@@ -370,13 +370,17 @@ This is because the version of libstdc++ of the system is newer than the one use
 To fix it there are two options:
 
    1. Change the symbolic link of libstdc++ in your scipion enviroment of conda:
-    ``cd $CONDA_PREFIX/envs/your_env/lib``
-    Verify that _ZSt28__throw_bad_array_new_lengthv is missing in the target shared object
-    ``objdump -T libstdc++.so.6.0.28 | grep throw_bad_array``
-    Back-up the target shared object
-    ``mv libstdc++.so.6.0.28 libstdc++.so.6.0.28.old``
-    Change the target to point on the system's
-    ``ln -s /usr/lib64/libstdc++.so.6.0.29 libstdc++.so.6.0.28``
+
+   ``cd $CONDA_PREFIX/envs/your_env/lib``
+   Verify that _ZSt28__throw_bad_array_new_lengthv is missing in the target shared object
+
+   ``objdump -T libstdc++.so.6.0.28 | grep throw_bad_array``
+   Back-up the target shared object
+
+   ``mv libstdc++.so.6.0.28 libstdc++.so.6.0.28.old``
+   Change the target to point on the system's
+   
+   ``ln -s /usr/lib64/libstdc++.so.6.0.29 libstdc++.so.6.0.28``
 
 
    2. Install compiler toolchain in conda:
