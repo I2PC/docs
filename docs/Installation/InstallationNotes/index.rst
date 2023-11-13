@@ -392,7 +392,7 @@ and https://github.com/stan-dev/pystan/issues/294#issuecomment-988791438
 
 
 
-Cmake troubleshooting
+Cmake 
 ^^^^^^^^^^^^^^^^^^^
 Typing ``cmake --version`` or trying to compile Xmipp appears:
 
@@ -422,7 +422,7 @@ gcc >=8) \* You could reinstall your Conda, but you may need to
 reinstall Scipion and all the plugins of Scipion that require
 environments
 
-DeepLearningToolkit troubleshooting
+DeepLearningToolkit 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Error message:
 ``InvalidVersionSpec: Invalid version '5.11.3imageio>=2.5.0': invalid character(s)``
@@ -442,7 +442,7 @@ If there is any plugin that require *pyvistaqt*
 (`scipion-em-tomoviz <https://github.com/scipion-em/scipion-em-tomoviz>`__),
 please update it
 
-Linking Xmipp to Scipion troubleshooting
+Linking Xmipp to Scipion 
 ^^^^^^^^^^^^^^^^^^^
 Once the Standalone version has been installed, the user can link such
 installation to Scipion to have the posibility of use Xmipp inside
@@ -479,7 +479,7 @@ The link between Scipion and Xmipp consist in the last line.
 ``XMIPP_HOME = /home/username/xmipp-bundle/build``. If this line does
 not exist, it must be added.
 
-HDF5 troubleshooting
+HDF5 
 ^^^^^^^^^^^^^^^^^^^
 We sometimes see issues regarding the HDF5 dependency. We recommend
 removing all hdf5 versions and install just hdf5-devel. To do that
