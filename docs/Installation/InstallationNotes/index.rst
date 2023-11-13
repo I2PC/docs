@@ -369,7 +369,10 @@ For some combinations of gcc and python enviroment you could experience some iss
 This is because the version of libstdc++ of the system is newer than the one used by the enviroment.
 To fix it there are two options:
 
-   1. Change the symbolic link of libstdc++ in your scipion enviroment of conda:
+   1. Install compiler toolchain in conda:
+    ``conda install c-compiler cxx-compiler``
+
+   2. Change the symbolic link of libstdc++ in your scipion enviroment of conda:
    
    Verify the version of libstdc++.so... on the enviroment
 
@@ -380,7 +383,7 @@ To fix it there are two options:
    ``find /usr -name "libstdc++.so*"``
 
    Back-up the target shared object
-   
+
    ``mv libstdc++.so.VERSION_ENV. libstdc++.so.VERSION_ENV.old``
 
    Change the target to point on the system's
