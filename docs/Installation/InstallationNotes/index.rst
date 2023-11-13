@@ -360,7 +360,7 @@ List environments
 
 Troubleshooting
 -----------------
-Compiler - python troubleshooting
+libstd versions (compiler - python) 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 For some combinations of gcc and python enviroment you could experience some issue similar to:
 
@@ -379,7 +379,7 @@ To fix it there are two options:
 
    Back-up the target shared object
    ``mv libstdc++.so.VERSION_ENV. libstdc++.so.VERSION_ENV.old``
-   
+
    Change the target to point on the system's
    ``ln -s /usr/lib.../libstdc++.so.VERSION_SYSTEM libstdc++.so.VERSION_ENV``
 
