@@ -371,6 +371,7 @@ To fix it there are two options:
 
    1. Install compiler toolchain in conda:
     ``conda install c-compiler cxx-compiler``
+    
 
    2. Change the symbolic link of libstdc++ in your scipion enviroment of conda:
    
@@ -390,9 +391,6 @@ To fix it there are two options:
 
    ``ln -s /usr/lib.../libstdc++.so.VERSION_SYSTEM libstdc++.so.VERSION_ENV``
 
-
-   2. Install compiler toolchain in conda:
-    ``conda install c-compiler cxx-compiler``
 
 For more details please visit: https://github.com/I2PC/xmipp/issues/583
 and https://github.com/stan-dev/pystan/issues/294#issuecomment-988791438
