@@ -379,11 +379,12 @@ To fix it there are two options:
 
    ``find /usr -name "libstdc++.so*"``
 
-   Back-up the target shared object:
+   Back-up the target shared object
+   
    ``mv libstdc++.so.VERSION_ENV. libstdc++.so.VERSION_ENV.old``
 
    Change the target to point on the system's
-   
+
    ``ln -s /usr/lib.../libstdc++.so.VERSION_SYSTEM libstdc++.so.VERSION_ENV``
 
 
