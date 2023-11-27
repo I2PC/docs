@@ -1,7 +1,7 @@
 Releases scipion-em-xmipp
 =========================
 
-Release 3.23.11 - Nereus
+3.23.11 - Nereus
 --------------------------
 
 - New protocols

@@ -1,7 +1,7 @@
 Releases xmipp program
 =========================
 
-Release 3.23.11 - Nereus
+3.23.11 - Nereus
 ------------------------
 
 Xmipp Programs 
