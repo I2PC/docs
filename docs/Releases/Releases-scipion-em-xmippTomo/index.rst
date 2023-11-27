@@ -17,7 +17,7 @@ Releases scipion-em-xmippTomo
    - extract_particlestacks: Dose fixes
    - deep_misalignment_detection:  Recover deleted methods
    - dose_filter: Dose validation fixed
-   - score_coordinates: 
+   - score_coordinates: Test improvements and carbon score fixes
 - More xmippTomo
    - Fixed calculateRotationAngleAndShiftsFromTM
    - Test refactoring
