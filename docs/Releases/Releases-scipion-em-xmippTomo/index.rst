@@ -1,7 +1,7 @@
 
 Releases scipion-em-xmippTomo
 =========================
-V3.23.11 Nereus
+3.23.11 Nereus
 --------------------------
 
 - Protocols updated
@@ -22,7 +22,7 @@ V3.23.11 Nereus
    - Fixed calculateRotationAngleAndShiftsFromTM
    - Test refactoring
 
-V3.23.07 - Morpheus
+3.23.07 - Morpheus
 --------------------------
    - New protocols
       - project_subtomograms (for obtaining sobtomogram projections)
