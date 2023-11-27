@@ -39,28 +39,19 @@ Releases scipion-em-xmipp
    - deep_center_predict
    - deep_global_assignment_predict
 - Protocols updated
-   - consensus_classes (Efficient p-value calculation, updated
-      intersection merging process, generalized protocol for other set
-      of classes)
-   - Movie Gain: changed \_stepsCheckSecs and fixed inputMovies
-      calling, np.asscalar discontinued in numpy 1.16
-   - convert_pdb: dont allow set size if template volume, to convert a
-      set of pdbs to volumes, generates an mrc file
+   - consensus_classes (Efficient p-value calculation, updated intersection merging process, generalized protocol for other set of classes)
+   - Movie Gain: changed \_stepsCheckSecs and fixed inputMovies calling, np.asscalar discontinued in numpy 1.16
+   - convert_pdb: dont allow set size if template volume, to convert a set of pdbs to volumes, generates an mrc file
    - CTF_consensus: add 4 threads by default
    - process: Better instantiation of Scipion subclasses
-   - create_mask3d: Addding a validate in 3dmask, add :mrc to input
-      filename
-   - consensus_local_ctf: save defocus in proper fields, compute
-      consensus for local defocus U and V separately, add consensus
-      angle
+   - create_mask3d: Addding a validate in 3dmask, add :mrc to input filename
+   - consensus_local_ctf: save defocus in proper fields, compute consensus for local defocus U and V separately, add consensus angle
    - align_volume: Included the label in the volumes
    - crop_resize: Add mask as input. Mask resize is now possible
-   - subtract_projection: change pad validation error for warning,
-      parallelized
+   - subtract_projection: change pad validation error for warning, parallelized
 - Protocols fixed
    - Tilt analysis: Close correctly the output sets once finished
-   - Deep micrograph cleaner: fix two bugs that occured during
-      streaming implementation bug
+   - Deep micrograph cleaner: fix two bugs that occured during streaming implementation bug
    - volume_adjust_sub: fix with :mrc
    - Picking consensus: define correctly the possibleOutputs bug
    - Center particles: streaming bug when definining the outputs bug
@@ -78,8 +69,7 @@ Releases scipion-em-xmipp
    - split_volume_hierarchical_cluster
 - Viewers
    - viewer_resolution_fs: fixing 0.1 threshold not found
-   - viewer_projmatch, viewer_metaprotocol_golden_highres: Fixing
-      viewers, change removed ChimeraClientView to ChimeraView
+   - viewer_projmatch, viewer_metaprotocol_golden_highres: Fixing viewers, change removed ChimeraClientView to ChimeraView
    - monores_viewer: fix histogram
    - viewer_structure_map: Change the label for each volume
 
