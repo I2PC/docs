@@ -59,8 +59,7 @@ Releases scipion-em-xmipp
    - compare_reprojections: fix update subtract projection output
    - deep_micrograph_screen: Bug fix that prevents using small GPUs
    - consensus_classes:Fixed manual output generation
-- Protocols deprecated (For more details visit
-   `this <https://github.com/I2PC/xmipp/wiki/Deprecating-programs-and-protocols>`__)
+- Protocols deprecated (For more details visit `this <https://github.com/I2PC/xmipp/wiki/Deprecating-programs-and-protocols>`__)
    - apply_deformation_zernike3d
    - classify_kmeans2d
    - kmeans_clustering
