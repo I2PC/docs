@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conventions &mdash; Xmipp 1.0.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Guidelines" href="../../Developers/Guidelines/index.html" />
+    <link rel="prev" title="Xmipp structure" href="../xmippStructure/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Xmipp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installing Xmipp</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Requirements/index.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Installation-with-Scipion/index.html">Installation with Scipion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Standlone-installation/index.html">Standalone installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/InstallationNotes/index.html">Installation Notes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Utils</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Deprecated-programs/index.html">Programs deprecated</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ConfigurationF/index.html">Configuration file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../xmippStructure/index.html">Xmipp structure</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Conventions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#euler-angles">Euler Angles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#filenames">Filenames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#image-center">Image center</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/Guidelines/index.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/Checkout-specific-date/index.html">Checkout to a Specific Version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/ParallelPrograming/index.html">Parallel Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/xmipp-Binding/index.html">Python Binding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/testing-with-google-C%2B%2B/index.html">Google C++ Testing Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/UsefulScripts/index.html">Useful Tricks and Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/How-to-release/index.html">How to release</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Releases</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-xmipp-program/index.html">Releases xmipp program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-scipion-em-xmipp/index.html">Releases scipion-em-xmipp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-scipion-em-xmippTomo/index.html">Releases scipion-em-xmippTomo</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../listOfPublications.html">List of Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Xmipp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Conventions</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/Utils/Conventions/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="conventions">
+<h1>Conventions<a class="headerlink" href="#conventions" title="Link to this heading"></a></h1>
+<section id="euler-angles">
+<h2>Euler Angles<a class="headerlink" href="#euler-angles" title="Link to this heading"></a></h2>
+<p>“Euler angles are a mean of representing the spatial orientation of any
+system of coordinates of the space as a composition of three rotations
+from a reference system of coordinates.”</p>
+<ul class="simple">
+<li><p>the first rotation is denoted by phi and is around the z axis</p></li>
+<li><p>the second rotation is called theta and is around the new y-axis.</p></li>
+<li><p>the third rotation is denoted by psi and is around the new z axis</p></li>
+</ul>
+<p>The three rotations may be expressed as a single 3x3 matrix called Euler
+matrix</p>
+<pre>
+r11 = cos(psi)cos(theta)cos(phi) - sin(psi)sin(phi)
+r12 = cos(psi)cos(theta)sin(phi) + sin(psi)cos(phi)
+r13 = -cos(psi)*sin(theta)
+
+r21 = -sin(psi)cos(theta)cos(phi) - cos(psi)sin(phi)
+r22 = -sin(psi)cos(theta)sin(phi) + cos(psi)cos(phi)
+r23 = sin(psi)*sin(theta)
+
+r31 = sin(theta)cos(phi)
+r32 = sin(theta)sin(phi)
+r33 = cos(theta)
+
+where the first index refers to rows and the second to columns </pre><p>Apositive rotation implies a clockwise rotation of the OBJECT or a
+anti-clockwise rotation of the system of coordinates</p>
+<p>Euler angles in Xmipp complies with the 3DEM standard (see
+<a class="reference external" href="http://www.ebi.ac.uk/pdbe/docs/3dem/test_image/3DEM_compliance">http://www.ebi.ac.uk/pdbe/docs/3dem/test_image/3DEM_compliance</a> for
+details)</p>
+</section>
+<section id="filenames">
+<h2>Filenames<a class="headerlink" href="#filenames" title="Link to this heading"></a></h2>
+<p>In general, Xmipp can manage any Filename you can think of. However,
+there are some ideas that could help you to organize your data, and
+which might tell you more about the file only by its name. We could
+divide files in several classes:</p>
+<table><tr><th><p>Data type</p>
+</th><th><p>Suggested extension</p>
+</th><th><p>Suggested filenames</p>
+</th></tr><tr><td><p>Images</p>
+</td><td><p>.xmp</p>
+</td><td><p>g1ta000001.xmp</p>
+</td></tr><tr><td><p>Volumes</p>
+</td><td><p>.vol or .xmp</p>
+</td><td><p>art000001.vol, wbp000001.vol, sirt000001.vol</p>
+</td></tr><tr><td><p>Selection Files</p>
+</td><td><p>.sel</p>
+</td><td><p>g1t.sel</p>
+</td></tr><tr><td><p>Document Files</p>
+</td><td><p>.doc</p>
+</td><td><p>angles.doc</p>
+</td></tr></table><p>The class [[FileName]] assumes a filename structure as in
+g1ta000001.xmp, ie, a filename root (g1ta), a number (000001) and an
+extension (xmp) (“.”); although it can also manage names as g1ta00001 or
+g1ta00001.xmp.bak. To mantain compatibility with Spider it is required
+that image numbers start at 1, and if possible that all images have got
+correlative numbers, but these last conditions are not compulsory within
+Xmipp, it’s just for compatibility with Spider.</p>
+<p>Notice also that Spider requires all data files (volumes, images,
+document files, …) to have the same extension. You might prefer this
+other convention if you don’t want to make copies of the files, or to
+have to rename the files before entering in Spider.
+Logical access
+~~~~~~~~~~~~</p>
+<p>The basic multidimensional classes implemented in this library admit two
+kinds of access: physical and logical. The physical positions are those
+indexes of the pixel inside the C matrix. Just an example, suppose we
+have a 65x65 image, then the physical indexes range from 0 to 64, being
+I[0][0] (if this could be written) the first pixel stored. However, we
+might be interested in writing procedures in a more mathematical fashion
+trying to access negative indexes (or even fractional onesSee
+[[ImageOver]]) This conception is very useful when you want to represent
+a discretized plane whose origin is at the center of the image, for
+instance. So, you can express in a simpler way your algorithms without
+having to make a by hand translation from the logical positions to the
+physical ones.</p>
+<p>Suppose now that we are interested to have the logical origin at the
+center of the image 65x65, ie, at physical position [32][32]. This would
+mean that the physical position [0][0] is now at logical position
+(-32,-32), and the logical indexes range now from -32 to 32.</p>
+<p>This logical index defintion is done by means of the starting indexes of
+matrices (see matrix2D) where you can define which logical position is
+occupying the first physical pixel, ie,</p>
+<pre>
+I().startingY()`-32;
+I().startingX()`-32;
+</pre><p>From now on you can start to access to logical positions even with
+negative indexes. The usual way of establishing loops inside this
+logical images is by using the starting and finishing information of its
+axes</p>
+<pre>
+    Image I(65,65);
+    I().init_random();
+    float sum=0;
+    for (int i=STARTINGY(I()); i<=FINISHINGY(I()); i++)
+        for (int j=STARTINGX(I()); j<=FINISHINGX(I()); j++) {
+               sum += I(i,j);
+            // sum += IMGPIXEL(i,j);
+        }
+</pre><p>Although the previous example has been used using the class Image, the
+logical access rely on the classes matrix1D, matrix2D, and matrix3D, and
+all the concepts explained for images are extensible for vectors and
+volumes. The related functions are STARTINGX, STARTINGY, STARTINGZ,
+FINISHINGX, FINISHINGY, FINISHINGZ, IMGPIXEL, DIRECT_IMGPIXEL, VOLVOXEL,
+DIRECT_VOLVOXEL, VEC_ELEM, MAT_ELEM, VOL_ELEM, DIRECT_VEC_ELEM,
+DIRECT_MAT_ELEM, DIRECT_VOL_ELEM</p>
+<p>Pay attention to the index order when pointing to a pixel, first you
+have to give the most outer coordinate (which is the less varying one in
+the actual implementation), and then increase the coordinate. For
+volumes the usual way of making a loop is</p>
+<pre>
+    Volume V(65,65,65);
+    V().init_random();
+    float sum=0;
+    for (int k=STARTINGZ(V()); k<=FINISHINGZ(V()); k++)
+       for (int i=STARTINGY(I()); i<=FINISHINGY(I()); i++)
+           for (int j=STARTINGX(I()); j<=FINISHINGX(I()); j++) {
+               sum +=V(k,i,j);
+        }
+</pre><p>Notice that if you don’t modify the origin of the multidimensional array
+then the physical and logical accesses are the same.</p>
+</section>
+<section id="image-center">
+<h2>Image center<a class="headerlink" href="#image-center" title="Link to this heading"></a></h2>
+<p>There is a special case for the logical access when the origin is set
+just at the center of the image, volume or vector. There are several
+definitions of center of the image, the one used here is the physical
+position ((int)ydim/2, (int)xdim/2). This is the same convention used in
+Spider and has been chosen to mantain compatibility with that package.
+Remember that in C (int) takes the integer part of the number, for
+example, for 2.3 and 2.8 the integer part is 2, while for -2.3 and -2.8
+the integer part is -2.</p>
+<p>This means that for images with an even dimension, the center will be
+“displaced” in that direction. Let’s have a look on the following two
+diagrams of cell indexes.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../xmippStructure/index.html" class="btn btn-neutral float-left" title="Xmipp structure" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../Developers/Guidelines/index.html" class="btn btn-neutral float-right" title="Guidelines" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Xmipp team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
