@@ -25,7 +25,7 @@ Releases scipion-em-xmipp
    - classification_gpuCorr
    - classification_gpuCorr_full
    - classification_gpuCorr_semi
-- More scipio-em-xmipp
+- More scipion-em-xmipp
    - Updated Nvidia driver required version
 
 
@@ -33,15 +33,12 @@ Releases scipion-em-xmipp
 --------------------------
 
 -  New protocols
-
    -  Movie Dose analysis
    -  deep_center
    -  deep_global_assignment
    -  deep_center_predict
    -  deep_global_assignment_predict
-
 -  Protocols updated
-
    -  consensus_classes (Efficient p-value calculation, updated
       intersection merging process, generalized protocol for other set
       of classes)
@@ -60,9 +57,7 @@ Releases scipion-em-xmipp
    -  crop_resize: Add mask as input. Mask resize is now possible
    -  subtract_projection: change pad validation error for warning,
       parallelized
-
 -  Protocols fixed
-
    -  Tilt analysis: Close correctly the output sets once finished
    -  Deep micrograph cleaner: fix two bugs that occured during
       streaming implementation bug
@@ -73,19 +68,15 @@ Releases scipion-em-xmipp
    -  compare_reprojections: fix update subtract projection output
    -  deep_micrograph_screen: Bug fix that prevents using small GPUs
    -  consensus_classes:Fixed manual output generation
-
 -  Protocols deprecated (For more details visit
    `this <https://github.com/I2PC/xmipp/wiki/Deprecating-programs-and-protocols>`__)
-
    -  apply_deformation_zernike3d
    -  classify_kmeans2d
    -  kmeans_clustering
    -  particle_boxSize
    -  rotational_spectra
    -  split_volume_hierarchical_cluster
-
 -  Viewers
-
    -  viewer_resolution_fs: fixing 0.1 threshold not found
    -  viewer_projmatch, viewer_metaprotocol_golden_highres: Fixing
       viewers, change removed ChimeraClientView to ChimeraView
