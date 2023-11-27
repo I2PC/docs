@@ -21,8 +21,7 @@ Releases scipion-em-xmipp
    - extract_particles_movies: Get coords correctly
    - particle_pick_consensus: Fix MicsPointer
    - trigger_data: fix updateOutput and close correclty the output set
--  Protocols deprecated (For more details visit
-   `this <https://github.com/I2PC/xmipp/wiki/Deprecating-programs-and-protocols>`__)
+-  Protocols deprecated (For more details visit `this <https://github.com/I2PC/xmipp/wiki/Deprecating-programs-and-protocols>`__)
    - classification_gpuCorr
    - classification_gpuCorr_full
    - classification_gpuCorr_semi
