@@ -84,16 +84,19 @@ Now we have to project the volume on the projection plane. As an example I have 
    :width: 200
    :align: right
 
+
+
 But as we know that our projection plane always has got its reference with X axis facing to the right and the Y axis looking down, we should rotate the projection obtained until it is well-referenced 
 
-+----------------------------------+----------------------------------+
-| .. figure:: ../../../_static/images/Euler/Euler9.gif      | ../../../_static/images/Euler/Euler10.gif    |
-|    :width: 200                    |    :width: 200                    |
-|    :align: center                 |    :align: center                 |
-|                                  |                                  |
-|    Descripción de la imagen 1     |    Descripción de la imagen 2     |
-+----------------------------------+----------------------------------+
+.. figure:: ../../../_static/images/Euler/Euler9.gif
+   :alt: Euler9
+   :width: 200
+   :align: left
 
+.. figure:: ../../../_static/images/Euler/Euler10.gif
+   :alt: Euler10
+   :width: 200
+   :align: right
 
 
  In the las figures we can check the consistency of this reasoning. The projection with tilt=90, rot=90, psi=90 has been taken with SPIDER. As we can see the results are identical. 
