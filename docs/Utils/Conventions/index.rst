@@ -3,7 +3,8 @@ Conventions
 Projections with Euler Angles
 ------------------------------
 The problem addressed here is given any set of Euler angles to know what is the projection that Xmipp (and Spider) will associate to them. The Euler angles are defined as follow:
-
++------------------------+----------------+-------------------+
+| Columna 1              | Columna 2      | Columna 3         |
 +========================+================+===================+
 | rotational or azimuthal| First rotation | Around Z axis     |
 +------------------------+----------------+-------------------+
@@ -28,6 +29,20 @@ First, the way Xmipp define the coordinate axes is like this.
 
 Moving the projection plane
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The idea is to define a projection plane and move it around the volume until we get the desired point of view. It would seem that we had to make the rotations in the same order as they are defined in the Euler angles but it is not totally true. We can interchange tilt and rotation to make an easiest method to get manually the projection. I will describe a chain of steps in order to get the projection.
+
+**Getting Started**
+
+1)Construct a projection plane: take a little piece of paper and mark on it the image coordinate system will define the orientation of the projection. We will look the projection in the orientation just as it is shown. 
+.. figure:: ../../../_static/images/Euler/Euler2.gif
+   :alt: Euler2
+   :width: 200
+   :align: center
+
+2) Our point of view is defined just now for a little point on the bottom of the sphere, while the projection plane is just on the opposite side. 
+
+
 
 
 
