@@ -3,17 +3,14 @@ Conventions
 Projections with Euler Angles
 ------------------------------
 The problem addressed here is given any set of Euler angles to know what is the projection that Xmipp (and Spider) will associate to them. The Euler angles are defined as follow:
- 
 
-+==============+=============+===================+
-| rotational or azimuthal| First rotation | Around Z axis|
-+--------------+-------------+-------------------+
-| tilting| Second rotation | Around new Y axis|
-+--------------+-------------+-------------------+
-| psi| Second rotation | Around new Z axis     |
-+--------------+-------------+-------------------+
-
- 
++========================+================+===================+
+| rotational or azimuthal| First rotation | Around Z axis     |
++------------------------+----------------+-------------------+
+| tilting                | Second rotation| Around new Y axis |
++------------------------+----------------+-------------------+
+| psi                    | Second rotation| Around new Z axis |
++------------------------+----------------+-------------------+
 
 
 
@@ -25,7 +22,7 @@ First, the way Xmipp define the coordinate axes is like this.
 
 .. figure:: ../../../_static/images/Euler/Euler1.gif
    :alt: Euler1
-   :width: 400
+   :width: 200
    :align: center
 
 
