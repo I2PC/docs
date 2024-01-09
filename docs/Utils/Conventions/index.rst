@@ -98,8 +98,7 @@ But as we know that our projection plane always has got its reference with X axi
    :width: 200
    :align: right
 
-
- In the las figures we can check the consistency of this reasoning. The projection with tilt=90, rot=90, psi=90 has been taken with SPIDER. As we can see the results are identical. 
+In the las figures we can check the consistency of this reasoning. The projection with tilt=90, rot=90, psi=90 has been taken with SPIDER. As we can see the results are identical. 
 
 **PROJECTING in a more Euler fashion**
 
@@ -499,3 +498,12 @@ the integer part is -2.
 This means that for images with an even dimension, the center will be
 “displaced” in that direction. Let’s have a look on the following two
 diagrams of cell indexes.
+
+
++--------------+--------------+--------------+
+| Nombre       | Apellido     | Edad         |
++==============+==============+==============+
+| Juan         | Pérez        | 30           |
++--------------+--------------+--------------+
+| María        | García       | 28           |
++--------------+--------------+--------------+
