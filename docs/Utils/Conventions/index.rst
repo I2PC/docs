@@ -84,6 +84,65 @@ Now we have to project the volume on the projection plane. As an example I have 
    :width: 200
    :align: right
 
+But as we know that our projection plane always has got its reference with X axis facing to the right and the Y axis looking down, we should rotate the projection obtained until it is well-referenced 
+
+.. figure:: ../../../_static/images/Euler/Euler9.gif
+   :alt: Euler9
+   :width: 200
+   :align: left
+
+.. figure:: ../../../_static/images/Euler/Euler10.gif
+   :alt: Euler10
+   :width: 200
+   :align: right
+
+ In the las figures we can check the consistency of this reasoning. The projection with tilt=90, rot=90, psi=90 has been taken with SPIDER. As we can see the results are identical. 
+
+**PROJECTING in a more Euler fashion**
+
+So far we have devised a method to manually compute projections using a piece of paper and a fixed phantom. But this is not the way really they are taken. In this part we will move the phantom and letting the projection plane fixed. We start again from the same initial point as before. Now we will move the internal reference axes in the reverse order (click here for further information for why this is like that).
+
+Starting Point: 
+
+.. figure:: ../../../_static/images/Euler/Euler11.gif
+   :alt: Euler11
+   :width: 200
+   :align: center
+
+3) PSI ANGLE
+
+The rotational angle is the first Euler angle to measure, around Z. It is a left hand angle, so if the left hand thumb is aligned with Z then positive angles are measured in the direction of the rest of the fingers. We will develop the same example as before, so the new internal reference axes are 
+
+.. figure:: ../../../_static/images/Euler/Euler12.gif
+   :alt: Euler12
+   :width: 200
+   :align: center
+
+4) TILTING ANGLE
+
+The tilting angle is a left handed turn around Y, but the new Y!!!. Applying tilt=90 in our example we get 
+
+.. figure:: ../../../_static/images/Euler/Euler13.gif
+   :alt: Euler13
+   :width: 200
+   :align: center
+
+5) ROTATIONAL ANGLE
+
+Finally the third angle is again a left handed turn around Z, again the new one!!!. Using rot=90 we finally get 
+
+.. figure:: ../../../_static/images/Euler/Euler14.gif
+   :alt: Euler14
+   :width: 200
+   :align: center
+
+
+**FACTS ABOUT THE EULER MATRIX and SPIDER**
+
+    These projections are exactly the same as the ones provided by Spider using the same angles.
+    The Euler matrix shown in Euler_angles2matrix(rot,tilt,psi,A) is obtained by RotZ(-psi)*RotY(tilt)*RotZ(-rot)
+
+
 Euler Angles
 ------------------------------
 
