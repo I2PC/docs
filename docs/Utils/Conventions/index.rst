@@ -11,10 +11,13 @@ The problem addressed here is given any set of Euler angles to know what is the 
 +-------------------------+-----------------+-------------------+
 | Tilting                 | Second rotation | Around new Y axis |
 +-------------------------+-----------------+-------------------+
-| psi                     | Second rotation | Around new Z axis |
+| psi                     | Third rotation | Around new Z axis |
 +-------------------------+-----------------+-------------------+
 
 
+- Rotational or azimuthal     First rotation    Around Z axis
+- Tilting     Second rotation   Around new Y axis
+- psi     Third rotation   Around new Z axis
 
 
 
