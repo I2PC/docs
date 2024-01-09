@@ -66,7 +66,7 @@ move the point of view towards you (positive azimuthal angles) or away from you 
 5) PSI:
 for taking psi into account we must turn the projection plane together with the point of view. Looking from the point of view positive psi angles turns counterclockwise. For example, psi=90, would give, 
 
-.. figure:: ../../../_static/images/Euler/Euler6.gif
+.. figure:: ../../../_static/images/Euler/euler6.gif
    :alt: Euler6
    :width: 200
    :align: center
@@ -143,9 +143,8 @@ Finally the third angle is again a left handed turn around Z, again the new one!
     The Euler matrix shown in Euler_angles2matrix(rot,tilt,psi,A) is obtained by RotZ(-psi)*RotY(tilt)*RotZ(-rot)
 
 
-Euler Angles
-------------------------------
-
+More Euler Angles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 “Euler angles are a mean of representing the spatial orientation of any
 system of coordinates of the space as a composition of three rotations
