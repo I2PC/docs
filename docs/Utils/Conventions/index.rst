@@ -41,10 +41,41 @@ The idea is to define a projection plane and move it around the volume until we 
    :align: center
 
 2) Our point of view is defined just now for a little point on the bottom of the sphere, while the projection plane is just on the opposite side. 
+.. figure:: ../../../_static/images/Euler/Euler3.gif
+   :alt: Euler3
+   :width: 200
+   :align: center
 
+**We begin now to read eulerian angles**
+3) TILT:
+move the point of view as many degrees as necessary towards right (positive tilting angles) or left (negative tilting angles). Projection plane must move as if the system point_of_view-plane_of_projection were a whole.For example, 90º of tilting would be 
+.. figure:: ../../../_static/images/Euler/Euler4.gif
+   :alt: Euler4
+   :width: 200
+   :align: center
+4) ROTATIONAL (AZIMUTHAL) ANGLE:
+move the point of view towards you (positive azimuthal angles) or away from you (negative azimuthal  angles) (Notice that this directions are simplifications for when tilting angles are positive, you must keep in mind the direction of turn and not the description of towards or away from you. If tilt angle is negative this directions are reversed in respect to you but not in the direction of turn).  For example from the above situation of tilt=90, now let's take rotational=90. The new situation would be 
+.. figure:: ../../../_static/images/Euler/Euler5.gif
+   :alt: Euler5
+   :width: 200
+   :align: center
+5) PSI:
+for taking psi into account we must turn the projection plane together with the point of view. Looking from the point of view positive psi angles turns counterclockwise. For example, psi=90, would give, 
+.. figure:: ../../../_static/images/Euler/Euler6.gif
+   :alt: Euler6
+   :width: 200
+   :align: center
 
-
-
+**PROJECTING**
+Now we have to project the volume on the projection plane. As an example I have defined a volume which has got a sphere along y-axis, a larger ellipsoid along z-axis and a cylinder along x-axis as you can see in the next figure. If we project for (tilt=90, rot=90, psi=90) we would obtain the following by direct projection 
+.. figure:: ../../../_static/images/Euler/Euler7.gif
+   :alt: Euler7
+   :width: 200
+   :align: left
+.. figure:: ../../../_static/images/Euler/Euler8.gif
+   :alt: Euler8
+   :width: 200
+   :align: right
 
 Euler Angles
 ------------------------------
