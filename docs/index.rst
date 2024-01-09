@@ -64,6 +64,7 @@ Read the installation page for more details about these softwares requirements. 
     :caption: Developers
 
     Developers/Guidelines/index
+    Developers/CodeDocumentation/index
     Developers/Checkout-specific-date/index
     Developers/ParallelPrograming/index
     Developers/xmipp-Binding/index
