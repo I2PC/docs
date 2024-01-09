@@ -5,9 +5,11 @@ Projections with Euler Angles
 The problem addressed here is given any set of Euler angles to know what is the projection that Xmipp (and Spider) will associate to them. The Euler angles are defined as follow:
  
  
-rotational or azimuthal: 	First rotation.  	Around Z axis
-tilting: 	Second rotation.  	Around new Y axis 
-psi:  	Third rotation.  	Around new Z axis
+rotational or azimuthal:    	First rotation.  	   Around Z axis
+
+tilting: 	                  Second rotation.  	Around new Y axis 
+
+psi:  	                     Third rotation.   	Around new Z axis
 
 All angles are measured using the left hand thumb rule (when aligning the left hand thumb with the rotation axis, positive angles are measured according to the direction of the rest of the fingers).
 
@@ -15,7 +17,7 @@ There is an approach which consists of rotating the volume according to the Eule
 
 First, the way Xmipp define the coordinate axes is like this. 
 
-.. figure:: ../_static/images/Euler/Euler1.gif
+.. figure:: ../../_static/images/Euler/Euler1.gif
    :alt: Euler1
    :width: 400
    :align: center
