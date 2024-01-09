@@ -1,15 +1,21 @@
 Conventions
 ===============
 Projections with Euler Angles
-~~~~~~~~~~~~
+------------------------------
 The problem addressed here is given any set of Euler angles to know what is the projection that Xmipp (and Spider) will associate to them. The Euler angles are defined as follow:
  
+
++==============+=============+===================+
+| rotational or azimuthal| First rotation | Around Z axis|
++--------------+-------------+-------------------+
+| tilting| Second rotation | Around new Y axis|
++--------------+-------------+-------------------+
+| psi| Second rotation | Around new Z axis     |
++--------------+-------------+-------------------+
+
  
-rotational or azimuthal:    	First rotation.  	   Around Z axis
 
-tilting: 	                  Second rotation.  	Around new Y axis 
 
-psi:  	                     Third rotation.   	Around new Z axis
 
 All angles are measured using the left hand thumb rule (when aligning the left hand thumb with the rotation axis, positive angles are measured according to the direction of the rest of the fingers).
 
@@ -17,16 +23,20 @@ There is an approach which consists of rotating the volume according to the Eule
 
 First, the way Xmipp define the coordinate axes is like this. 
 
-.. figure:: ../../_static/images/Euler/Euler1.gif
+.. figure:: ../../../_static/images/Euler/Euler1.gif
    :alt: Euler1
    :width: 400
    :align: center
 
 
+Moving the projection plane
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 
 Euler Angles
-~~~~~~~~~~~~
+------------------------------
+
 
 “Euler angles are a mean of representing the spatial orientation of any
 system of coordinates of the space as a composition of three rotations
@@ -64,7 +74,7 @@ http://www.ebi.ac.uk/pdbe/docs/3dem/test_image/3DEM_compliance for
 details)
 
 Filenames
-~~~~~~~~~~~~
+------------------------------
 
 In general, Xmipp can manage any Filename you can think of. However,
 there are some ideas that could help you to organize your data, and
@@ -281,8 +291,10 @@ Notice also that Spider requires all data files (volumes, images,
 document files, …) to have the same extension. You might prefer this
 other convention if you don’t want to make copies of the files, or to
 have to rename the files before entering in Spider. 
+
 Logical access
-~~~~~~~~~~~~
+------------------------------
+
 
 The basic multidimensional classes implemented in this library admit two
 kinds of access: physical and logical. The physical positions are those
@@ -361,7 +373,8 @@ Notice that if you don’t modify the origin of the multidimensional array
 then the physical and logical accesses are the same. 
 
 Image center
-~~~~~~~~~~~~
+------------------------------
+
 
 There is a special case for the logical access when the origin is set
 just at the center of the image, volume or vector. There are several
