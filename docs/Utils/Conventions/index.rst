@@ -88,7 +88,7 @@ But as we know that our projection plane always has got its reference with X axi
 
 +----------------------------------+----------------------------------+
 | .. figure:: ../../../_static/images/Euler/Euler9.gif      | ../../../_static/images/Euler/Euler10.gif    |
-|    :width: 50%                    |    :width: 50%                    |
+|    :width: 200                    |    :width: 200                    |
 |    :align: center                 |    :align: center                 |
 |                                  |                                  |
 |    Descripción de la imagen 1     |    Descripción de la imagen 2     |
