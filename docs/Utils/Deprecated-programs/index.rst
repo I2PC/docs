@@ -44,9 +44,9 @@ List of deprecated programs
 
 List of deprecated protocols
 -----------------------------
-- `protocol_mltomo`
-- `protocol_movie_average`
-- `protocol_subtract_projection`
+- protocol_mltomo
+- protocol_movie_average
+- protocol_subtract_projection
 - `protocol_deep_align <https://github.com/I2PC/scipion-em-xmipp/pull/614/commits/497f1f3596a78a35d58c8b9baebc07e78f311e48>`_
 - `protocol_reconstruct_heterogeneous <https://github.com/I2PC/scipion-em-xmipp/pull/614/commits/f5844c0207d9f74a30f0e0afbbf0868207460836>`_
 - `protocol_metaprotocol_create_output <https://github.com/I2PC/scipion-em-xmipp/pull/614/commits/f5844c0207d9f74a30f0e0afbbf0868207460836>`_
