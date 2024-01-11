@@ -44,13 +44,13 @@ List of deprecated programs
 
 List of deprecated protocols
 -----------------------------
-- protocol_mltomo
-- protocol_movie_average
-- protocol_subtract_projection
-- `protocol_deep_align <https://github.com/I2PC/scipion-em-xmipp/pull/614/commits/497f1f3596a78a35d58c8b9baebc07e78f311e48>`_
-- `protocol_reconstruct_heterogeneous <https://github.com/I2PC/scipion-em-xmipp/pull/614/commits/f5844c0207d9f74a30f0e0afbbf0868207460836>`_
-- `protocol_metaprotocol_create_output <https://github.com/I2PC/scipion-em-xmipp/pull/614/commits/f5844c0207d9f74a30f0e0afbbf0868207460836>`_
-- `protocol_metaprotocol_discrete_heterogeneity_scheduler <https://github.com/I2PC/scipion-em-xmipp/pull/614/commits/f5844c0207d9f74a30f0e0afbbf0868207460836>`_
+- mltomo
+- movie_average
+- subtract_projection
+- `deep_align <https://github.com/I2PC/scipion-em-xmipp/pull/614/commits/497f1f3596a78a35d58c8b9baebc07e78f311e48>`_
+- `reconstruct_heterogeneous <https://github.com/I2PC/scipion-em-xmipp/pull/614/commits/f5844c0207d9f74a30f0e0afbbf0868207460836>`_
+- `metaprotocol_create_output <https://github.com/I2PC/scipion-em-xmipp/pull/614/commits/f5844c0207d9f74a30f0e0afbbf0868207460836>`_
+- `metaprotocol_discrete_heterogeneity_scheduler <https://github.com/I2PC/scipion-em-xmipp/pull/614/commits/f5844c0207d9f74a30f0e0afbbf0868207460836>`_
 - `apply_deformation_zernike3d <https://github.com/I2PC/scipion-em-xmipp/commit/278996293f685995370ec80be5046c05677bf6ca>`_
 - `classify_kmeans2d <https://github.com/I2PC/scipion-em-xmipp/commit/6378a4ef7c8457b86dc14223ef39eab3d503b4fc>`_
 - `kmeans_clustering <https://github.com/I2PC/scipion-em-xmipp/commit/3f9333f5b2c056b2abea8ad751b7f8e216bc113a>`_
