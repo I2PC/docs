@@ -41,6 +41,7 @@ List of deprecated programs
 - `reconstruct_fourier_starpu <https://github.com/I2PC/xmipp/pull/685/commits/8a762466adb01d50c854267d5ba48c0bb9466f75>`_
 - `tomo_align_tilt_series, tomo_align_dual_tilt_series, tomo_align_refinement, tomo_align_refinement, tomo_extract_subvolume, tomo_project_main, tomo_remove_fluctuations <https://github.com/I2PC/xmipp/pull/685/commits/9f1335854eadadad2e111b8f0062e4cdf7e8d6c4>`_
 - tomo_align_tilt
+- `deep_denoissing <https://github.com/I2PC/xmipp/commit/d28e250b3e1a5cd466ef61f3cdba294cea89de60>`_
 
 List of deprecated protocols
 -----------------------------
