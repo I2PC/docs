@@ -44,21 +44,21 @@ List of deprecated programs
 
 List of deprecated protocols
 -----------------------------
-* :doc:`protocol_mltomo`
-* :doc:`protocol_movie_average`
-* :doc:`protocol_subtract_projection`
-* :doc:`protocol_deep_align <https://github.com/I2PC/scipion-em-xmipp/pull/614/commits/497f1f3596a78a35d58c8b9baebc07e78f311e48>`
-* :doc:`protocol_reconstruct_heterogeneous <https://github.com/I2PC/scipion-em-xmipp/pull/614/commits/f5844c0207d9f74a30f0e0afbbf0868207460836>`
-* :doc:`protocol_metaprotocol_create_output <https://github.com/I2PC/scipion-em-xmipp/pull/614/commits/f5844c0207d9f74a30f0e0afbbf0868207460836>`
-* :doc:`protocol_metaprotocol_discrete_heterogeneity_scheduler <https://github.com/I2PC/scipion-em-xmipp/pull/614/commits/f5844c0207d9f74a30f0e0afbbf0868207460836>`
-* :doc:`apply_deformation_zernike3d <https://github.com/I2PC/scipion-em-xmipp/commit/278996293f685995370ec80be5046c05677bf6ca>`
-* :doc:`classify_kmeans2d <https://github.com/I2PC/scipion-em-xmipp/commit/6378a4ef7c8457b86dc14223ef39eab3d503b4fc>`
-* :doc:`kmeans_clustering <https://github.com/I2PC/scipion-em-xmipp/commit/3f9333f5b2c056b2abea8ad751b7f8e216bc113a>`
-* :doc:`rotational_spectra <https://github.com/I2PC/scipion-em-xmipp/commit/d032963d8b003e0b3c4c5df6d4bd306e4b3dea6c>`
-* :doc:`particle_boxSize <https://github.com/I2PC/scipion-em-xmipp/pull/636/commits/ad2fa0e670282e86aafab13c5b11a79d4bdc11e0>`
-* :doc:`protocol_split_volume_hierarchical_cluster <https://github.com/I2PC/scipion-em-xmipp/pull/700/commits/9c4ac348585841aaaf3c44c0cef7982a3f10a8fc>`
-* :doc:`deep_denoissing <https://github.com/I2PC/scipion-em-xmipp/commit/547a5fe1b49d58a32ea61091b7615c299d2ed377>`
-* :doc:`metaprotocol_create_subset <https://github.com/I2PC/scipion-em-xmipp/commit/bca78f9c8ba48ca203d7b83c56b885cc55c9eba2>`
-* :doc:`metaprotocol_golden_highres <https://github.com/I2PC/scipion-em-xmipp/commit/4bc23c0a47a0267da6046a1ee7179ec470aaa7f3>`
-* :doc:`solid_angle <https://github.com/I2PC/scipion-em-xmipp/commit/086710d671b0bcb388c4b99d662991e761952a44>`
-* :doc:`split_volume <https://github.com/I2PC/scipion-em-xmipp/commit/b297c596441df37a626ec97c4d7373d858364cb6>`
+- `protocol_mltomo`
+- `protocol_movie_average`
+- `protocol_subtract_projection`
+- `protocol_deep_align <https://github.com/I2PC/scipion-em-xmipp/pull/614/commits/497f1f3596a78a35d58c8b9baebc07e78f311e48>`_
+- `protocol_reconstruct_heterogeneous <https://github.com/I2PC/scipion-em-xmipp/pull/614/commits/f5844c0207d9f74a30f0e0afbbf0868207460836>`_
+- `protocol_metaprotocol_create_output <https://github.com/I2PC/scipion-em-xmipp/pull/614/commits/f5844c0207d9f74a30f0e0afbbf0868207460836>`_
+- `protocol_metaprotocol_discrete_heterogeneity_scheduler <https://github.com/I2PC/scipion-em-xmipp/pull/614/commits/f5844c0207d9f74a30f0e0afbbf0868207460836>`_
+- `apply_deformation_zernike3d <https://github.com/I2PC/scipion-em-xmipp/commit/278996293f685995370ec80be5046c05677bf6ca>`_
+- `classify_kmeans2d <https://github.com/I2PC/scipion-em-xmipp/commit/6378a4ef7c8457b86dc14223ef39eab3d503b4fc>`_
+- `kmeans_clustering <https://github.com/I2PC/scipion-em-xmipp/commit/3f9333f5b2c056b2abea8ad751b7f8e216bc113a>`_
+- `rotational_spectra <https://github.com/I2PC/scipion-em-xmipp/commit/d032963d8b003e0b3c4c5df6d4bd306e4b3dea6c>`_
+- `particle_boxSize <https://github.com/I2PC/scipion-em-xmipp/pull/636/commits/ad2fa0e670282e86aafab13c5b11a79d4bdc11e0>`_
+- `protocol_split_volume_hierarchical_cluster <https://github.com/I2PC/scipion-em-xmipp/pull/700/commits/9c4ac348585841aaaf3c44c0cef7982a3f10a8fc>`_
+- `deep_denoissing <https://github.com/I2PC/scipion-em-xmipp/commit/547a5fe1b49d58a32ea61091b7615c299d2ed377>`_
+- `metaprotocol_create_subset <https://github.com/I2PC/scipion-em-xmipp/commit/bca78f9c8ba48ca203d7b83c56b885cc55c9eba2>`_
+- `metaprotocol_golden_highres <https://github.com/I2PC/scipion-em-xmipp/commit/4bc23c0a47a0267da6046a1ee7179ec470aaa7f3>`_
+- `solid_angle <https://github.com/I2PC/scipion-em-xmipp/commit/086710d671b0bcb388c4b99d662991e761952a44>`_
+- `split_volume <https://github.com/I2PC/scipion-em-xmipp/commit/b297c596441df37a626ec97c4d7373d858364cb6>`_
