@@ -83,7 +83,7 @@ Now we have to project the volume on the projection plane. As an example I have 
 .. figure:: ../../../_static/images/Euler/Euler8.gif
    :alt: Euler8
    :width: 200
-   :align: right
+   :align: left
 
 
 
@@ -499,12 +499,3 @@ the integer part is -2.
 This means that for images with an even dimension, the center will be
 “displaced” in that direction. Let’s have a look on the following two
 diagrams of cell indexes.
-
-
-+--------------+--------------+--------------+
-| Nombre       | Apellido     | Edad         |
-+==============+==============+==============+
-| Juan         | Pérez        | 30           |
-+--------------+--------------+--------------+
-| María        | García       | 28           |
-+--------------+--------------+--------------+
