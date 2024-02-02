@@ -78,12 +78,12 @@ Now we have to project the volume on the projection plane. As an example I have 
 .. figure:: ../../../_static/images/Euler/Euler7.gif
    :alt: Euler7
    :width: 200
-   :align: left
+   :align: center
 
 .. figure:: ../../../_static/images/Euler/Euler8.gif
    :alt: Euler8
    :width: 200
-   :align: left
+   :align: center
 
 
 
