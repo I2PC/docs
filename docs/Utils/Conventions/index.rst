@@ -92,12 +92,12 @@ But as we know that our projection plane always has got its reference with X axi
 .. figure:: ../../../_static/images/Euler/Euler9.gif
    :alt: Euler9
    :width: 200
-   :align: left
+   :align: center
 
 .. figure:: ../../../_static/images/Euler/Euler10.gif
    :alt: Euler10
    :width: 200
-   :align: right
+   :align: center
 
 In the las figures we can check the consistency of this reasoning. The projection with tilt=90, rot=90, psi=90 has been taken with SPIDER. As we can see the results are identical. 
 
