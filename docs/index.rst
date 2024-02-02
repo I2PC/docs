@@ -42,6 +42,17 @@ Read the installation page for more details about these softwares requirements. 
     Installation/InstallationNotes/index
     
 
+.. _Releases-docs:
+
+  .. toctree::
+    :maxdepth: 1
+    :hidden:
+    :caption: Releases
+
+    Releases/Releases-xmipp-program/index
+    Releases/Releases-scipion-em-xmipp/index
+    Releases/Releases-scipion-em-xmippTomo/index
+    
 .. _Utils-docs:
 
   .. toctree::
@@ -49,10 +60,10 @@ Read the installation page for more details about these softwares requirements. 
     :hidden:
     :caption: Utils
 
-    Utils/Deprecated-programs/index
     Utils/ConfigurationF/index
     Utils/xmippStructure/index
     Utils/Conventions/index
+    Utils/Deprecated-programs/index
 
 
 
@@ -72,16 +83,7 @@ Read the installation page for more details about these softwares requirements. 
     Developers/UsefulScripts/index
     Developers/How-to-release/index
     
-.. _Releases-docs:
 
-  .. toctree::
-    :maxdepth: 1
-    :hidden:
-    :caption: Releases
-
-    Releases/Releases-xmipp-program/index
-    Releases/Releases-scipion-em-xmipp/index
-    Releases/Releases-scipion-em-xmippTomo/index
 
 
   .. toctree::
