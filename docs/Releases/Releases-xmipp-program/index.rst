@@ -152,7 +152,7 @@ Others
 - Removal of anartifact of symmetrization related to the z pitch (symmetries.cpp) 
 - Using the same identical Deprecated param from pyworkflow.
 
-3.22.07 - Helios
+3.22.07 - `Helios <https://github.com/I2PC/xmipp/releases/tag/v3.22.07-Helios>`__
 ------------------------
 
 Scripts Xmipp
@@ -181,7 +181,7 @@ Others
 -  “nullptr” used to denote the null pointer not “NULL”
 -  Check if nvidiaDriverVer is None
 
-3.22.04 - Gaia
+3.22.04 - `Gaia <https://github.com/I2PC/xmipp/releases/tag/v3.22.04-Gaia>`__
 ----------------------
 
 Installation and user guide
