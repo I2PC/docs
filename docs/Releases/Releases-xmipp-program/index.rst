@@ -1,7 +1,7 @@
 Releases xmipp program
 =========================
 
-3.23.11 - Nereus
+3.23.11 - `Nereus <https://github.com/I2PC/xmipp/releases/tag/v3.23.11-Nereus>`__
 ------------------------
 
 Xmipp Programs 
@@ -43,7 +43,7 @@ More Xmipp
 - Added option to write mirrors in angularDistance
 
 
-3.23.07 - Morpheus 
+3.23.07 - `Morpheus <https://github.com/I2PC/xmipp/releases/tag/v3.23.07-Morpheus>`__
 ------------------------
 
 Xmipp Programs
@@ -82,7 +82,7 @@ More Xmipp
 - Assign tiff to gain files - adding half maps labels
 
 
-3.23.03 - Kratos 
+3.23.03 - `Kratos <https://github.com/I2PC/xmipp/releases/tag/v3.23.03-Kratos>`__
 ------------------------
 
 Xmipp Programs
@@ -121,7 +121,7 @@ Others
 - Fixed memory pinning CUDA bug - Fixed compilation errors on CUDA 9
 
 
-3.22.11 - Iris
+3.22.11 - `Iris <https://github.com/I2PC/xmipp/releases/tag/v3.22.11-Iris>`__
 ------------------------
 
 Xmipp Programs
