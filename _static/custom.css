@@ -2,10 +2,10 @@
     white-space: pre-wrap;
   }
   .wy-side-nav-search {
-    background-color: firebrick;
+    background-color: #F3CBCB;
   }
   .wy-nav-top {
-    background-color: firebrick;
+    background-color: #F3CBCB;
   }
   a {
     color: firebrick;
@@ -35,9 +35,9 @@
   html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.glossary):not(.simple)>dt {
     background: #F3CBCB;
     color: firebrick;
-    border-top: 3px solid firebrick;
+    border-top: 3px solid #F3CBCB;
   }
   
   .rst-content .viewcode-back, .rst-content .viewcode-link {
-      color: firebrick;
+      color: #F3CBCB;
   }
