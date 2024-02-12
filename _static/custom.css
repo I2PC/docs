@@ -5,7 +5,7 @@
     background-color: #8e1919;
   }
   .wy-nav-top {
-    background-color: #8e1919;
+    background-color: firebrick;
   }
   a {
     color: firebrick;
@@ -28,16 +28,16 @@
   }
   
   .wy-side-nav-search input[type=text] {
-    border-color: #8e1919;
+    border-color: #F3CBCB;
   }
   
   html.writer-html4 .rst-content dl:not(.docutils)>dt,
   html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.glossary):not(.simple)>dt {
     background: #F3CBCB;
     color: firebrick;
-    border-top: 3px solid #8e1919;
+    border-top: 3px solid firebrick;
   }
   
   .rst-content .viewcode-back, .rst-content .viewcode-link {
-      color: #F3CBCB;
+      color: firebrick;
   }
