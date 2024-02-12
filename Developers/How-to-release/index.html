@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to release &mdash; Xmipp 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="List of Publications" href="../../listOfPublications.html" />
+    <link rel="prev" title="Useful Tricks and Scripts" href="../UsefulScripts/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Xmipp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installing Xmipp</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Requirements/index.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Installation-with-Scipion/index.html">Installation with Scipion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Standlone-installation/index.html">Standalone installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/InstallationNotes/index.html">Installation Notes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Releases</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-xmipp-program/index.html">Releases xmipp program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-scipion-em-xmipp/index.html">Releases scipion-em-xmipp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-scipion-em-xmippTomo/index.html">Releases scipion-em-xmippTomo</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Utils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/ConfigurationF/index.html">Configuration file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/xmippStructure/index.html">Xmipp structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/Conventions/index.html">Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/Deprecated-programs/index.html">Programs deprecated</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Guidelines/index.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CodeDocumentation/index.html">Code documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Checkout-specific-date/index.html">Checkout to a Specific Version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ParallelPrograming/index.html">Parallel Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../xmipp-Binding/index.html">Python Binding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testing-with-google-C%2B%2B/index.html">Google C++ Testing Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../UsefulScripts/index.html">Useful Tricks and Scripts</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How to release</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#make-release-branches">Make release branches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-the-xmipp-software-bundle">Creating the Xmipp software bundle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#test-the-archive-in-the-scipion">Test the archive in the Scipion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-the-pypi-module">Creating the PyPi module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#making-a-git-tag-and-promoting-the-code-to-master">Making a git-TAG and promoting the code to MASTER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#xmipptomo-wants-a-release">XmippTomo wants a release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#final-considerations">Final considerations</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../listOfPublications.html">List of Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Xmipp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">How to release</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/Developers/How-to-release/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="how-to-release">
+<h1>How to release<a class="headerlink" href="#how-to-release" title="Link to this heading"></a></h1>
+<p>Let’s assume that we want to make a new Xmipp version from the ‘devel’
+branch with a version name <strong>X.YY.ZZ</strong> where <strong>X=3</strong> (to keep the main
+version number to be able to sort the version as usual. Also to keep the
+name <em>xmipp3</em>), <strong>YY=Year</strong> of the release, <strong>ZZ=Month</strong> of release.
+Also, we name the version following Greek gods/goddess (<a class="reference external" href="https://www.gods-and-monsters.com/list-of-greek-gods-goddesses.html">Apollo,
+Boreas…</a>),
+see the <a class="reference external" href="https://github.com/I2PC/scipion-em-xmipp/wiki/How-to-release-a-new-Xmipp-version#making-a-git-tag-and-promoting-the-code-to-master">TAGging section
+below</a>.</p>
+<p><strong>Create the release notes</strong></p>
+<p>Add all the information about the release
+<a class="reference external" href="https://github.com/I2PC/xmipp/blob/devel/CHANGELOG.md">here</a></p>
+<p><strong>Schedule the releasing</strong></p>
+<p>Prepare everything, but post the release at the beginning of your
+workday.</p>
+<section id="make-release-branches">
+<h2>Make release branches<a class="headerlink" href="#make-release-branches" title="Link to this heading"></a></h2>
+<p>Create a branch where freeze the code and fix some minor bug before to
+upgrade the version for all Xmipp repositories. The usual name for that
+branch is <code class="docutils literal notranslate"><span class="pre">release-X.YY.ZZ</span></code>. &gt; Branches with ‘release’ word are
+protected, to unprotect it create a PR from an other branch and get the
+aprove from other developer</p>
+<blockquote>
+<div><p>If some Xmipp repository has not to be uploaded (scipion-em-xmipp,
+xmipp, xmippViz, xmippCore), please make this <code class="docutils literal notranslate"><span class="pre">release-X.YY.ZZ</span></code>
+branch from the <code class="docutils literal notranslate"><span class="pre">master</span></code> one in order to make sure that the update
+from other repos is compatible. In this way, we will also be able to
+include some bug fixing during the release procedure.</p>
+</div></blockquote>
+<p><strong>Set the version to the code</strong></p>
+<p>There are three types of version tags. One is the plugin version (in
+sync with pypi), other is the software version (related with the name of
+the tgz hosted in the Scipion web) and, finally, the third is the
+linking from the plugin to the software.</p>
+<ul class="simple">
+<li><p><strong>Software version</strong>: It must be set at <code class="docutils literal notranslate"><span class="pre">$XMIPP_BUNDLE/xmipp</span></code> –&gt;
+<a class="reference external" href="https://github.com/I2PC/xmipp/blob/f152af31ff8ab6400b77c7fb513aa3319901b3a3/xmipp#L41">XMIPP_VERSION=X.YY.ZZ</a>.
+This version is used when the software is compiled and the
+<code class="docutils literal notranslate"><span class="pre">xmipp_version</span></code> is done, to create the end-of-installation token
+(<code class="docutils literal notranslate"><span class="pre">$XMIPP_HOME/vX.YY.ZZ</span></code>) and when the bundle is created using
+<code class="docutils literal notranslate"><span class="pre">./xmipp</span> <span class="pre">tar</span> <span class="pre">...</span></code> with an automatic version.</p></li>
+<li><p><strong>Linking version</strong>:It must be set at
+<code class="docutils literal notranslate"><span class="pre">$XMIPP_BUNDLE/src/scipion-em-xmipp/xmipp3/__init__.py</span></code> –&gt;
+<a class="reference external" href="https://github.com/I2PC/scipion-em-xmipp/blob/c12a1115f268ec77edd34bf5c84e6ffad256a818/xmipp3/__init__.py#L41">_currentVersion =
+‘X.YY.ZZ’</a>.
+This is used to find the binaries to install. This is also in sync
+with <a class="reference external" href="https://pypi.org/project/scipion-em-xmipp/#history">the pypi
+versions</a>
+since this version is used when the pypi module is created and
+uploaded.</p></li>
+<li><p><strong>XMIPP_VERNAME</strong> Replace devel for the name of the release
+<a class="reference external" href="https://github.com/I2PC/xmipp/blob/7e5aea662c93bbfbb6bcd3729850b95914a722f4/xmipp#L38">here</a></p></li>
+<li><p>Replace the logo for the protocols: replace
+<a class="reference external" href="https://github.com/I2PC/scipion-em-xmipp">scipion-em-xmipp</a>/<a class="reference external" href="https://github.com/I2PC/scipion-em-xmipp/tree/devel/xmipp3">xmipp3</a>/xmipp_logo.png
+(in devel is the devel version of the image) for
+xmipp_logo_original.png</p></li>
+<li><p>Review the status of each protocol (_devStatus), maybe some change
+from New to Production, or production to updated…</p></li>
+</ul>
+</section>
+<section id="creating-the-xmipp-software-bundle">
+<h2>Creating the Xmipp software bundle<a class="headerlink" href="#creating-the-xmipp-software-bundle" title="Link to this heading"></a></h2>
+<p>When the <code class="docutils literal notranslate"><span class="pre">release-X.YY.ZZ</span></code> branch is ready and all bugs seem fixed,
+<strong>we must do a Pull Request</strong> for each Xmipp repository from
+<code class="docutils literal notranslate"><span class="pre">release-X.YY.ZZ</span></code> to <code class="docutils literal notranslate"><span class="pre">master</span></code>. Once approved but <strong>not merged yet</strong>,
+we can start with the release procedure.</p>
+<blockquote>
+<div><p>If the Pull Request contain conflicts, merge Master into your release
+branch and resolve it. If the release only contain changes in the
+plugin (not in the rest of the Xmipp repositories), you can go to the
+next section below.</p>
+</div></blockquote>
+<p>Make sure that all is self-contained (keep in mind the rest of the
+Xmipp’s repositories) and compatible with the current Scipion version.
+To do that, go for a fresh compilation as follow</p>
+<p>(<em>We assume that the current version of Scipion is installed in
+``$scipionMASTER``.</em>)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>git clone git@github.com:I2PC/xmipp.git xmipp2release
+cd xmipp2release
+
+$scipionMASTER/scipion3 run ./xmipp all br=release-X.YY.ZZ N=8
+
+$scipionMASTER/scipion3 uninstallp -p scipion-em-xmipp
+git checkout release-X.YY.ZZ
+$scipionMASTER/scipion3 installp -p ./xmipp2release/src/scipion-em-xmipp --devel
+
+rm -rf $scipionMASTER/software/em/xmipp
+ln -s ~/xmipp2release/build $scipionMASTER/software/em/xmipp
+
+$scipionMASTER scipion3 test --grep xmipp
+$scipionMASTER scipion3 test xmipp3.tests.XXX
+$scipionMASTER scipion3 test xmipp3.tests.XXY
+</pre></div>
+</div>
+<p>If all goes well (no error should be in the tests, however we assume
+some ones… (at least all those at Buildbot
+<a class="reference external" href="http://scipion-test.cnb.csic.es:9980/#/builders/50">xmipp_bundle_devel</a>
+and
+<a class="reference external" href="http://scipion-test.cnb.csic.es:9980/#/builders/19">xmipp_devel</a>)
+then, we can make the Xmipp bundle.</p>
+<p>First ensures that the new version info is well set at the <a class="reference external" href="https://github.com/I2PC/xmipp/blob/45c18d3397bcf94581b7568ed583729dfa1cab9f/xmipp#L40-L43">Xmipp main
+script</a>.
+If not, update it, commit the change and push it. <strong>All should be pushed
+to github since the bundle is done from the github/branch, instead of
+you local version.</strong></p>
+<p>Then, we are able to create the bundle</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">xmipp</span> <span class="n">tar</span> <span class="n">Sources</span> <span class="n">br</span><span class="o">=</span><span class="n">release</span><span class="o">-</span><span class="n">X</span><span class="o">.</span><span class="n">YY</span><span class="o">.</span><span class="n">ZZ</span>
+</pre></div>
+</div>
+<p>A <code class="docutils literal notranslate"><span class="pre">xmippSrc-vX.YY.ZZ.tgz</span></code> should be created, where <code class="docutils literal notranslate"><span class="pre">YY.ZZ</span></code> is
+according to the version info set above.</p>
+</section>
+<section id="test-the-archive-in-the-scipion">
+<h2>Test the archive in the Scipion<a class="headerlink" href="#test-the-archive-in-the-scipion" title="Link to this heading"></a></h2>
+<p>To test the archive, install new Scipion without Xmipp following the
+guide
+<a class="reference external" href="https://scipion-em.github.io/docs/release-3.0.0/docs/scipion-modes/how-to-install.html">here</a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">scipioninstaller</span> <span class="o">-</span><span class="n">conda</span> <span class="o">-</span><span class="n">noXmipp</span> <span class="o">-</span><span class="n">noAsk</span> <span class="n">scipion2ReleaseXmipp</span>
+</pre></div>
+</div>
+<p>First thing that needs to be done is to install Xmipp plugin.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">scipion3</span> <span class="n">installp</span> <span class="o">-</span><span class="n">p</span>  <span class="n">path</span><span class="o">/</span><span class="n">of</span><span class="o">/</span><span class="n">xmipp2release</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">scipion</span><span class="o">-</span><span class="n">em</span><span class="o">-</span><span class="n">xmipp</span> <span class="o">--</span><span class="n">devel</span>
+</pre></div>
+</div>
+<p>Once the plugin is installed, you should see Xmipp sources available for
+installation:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./scipion3 installb
+...
+xmippSrc                 3.YY.ZZ.0[ ]
+</pre></div>
+</div>
+<p>Copy (overwrite) the source file <code class="docutils literal notranslate"><span class="pre">xmippSrc-vX.YY.ZZ.tgz</span></code> to the
+<em>/software/em</em> path of the Scipion installation. Now install the
+binaries and run some test to verify that everything works. Typical
+problem is not matching version number in the <em>scipion-em-xmipp</em> plugin.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">scipion3</span> <span class="n">installb</span> <span class="n">xmippSrc</span> <span class="o">-</span><span class="n">j</span> <span class="mi">8</span>
+</pre></div>
+</div>
+<p>If all seems fine means that bundle <code class="docutils literal notranslate"><span class="pre">xmippSrc-vX.YY.ZZ.tgz</span></code> is
+compatible to work with the Scipion under <code class="docutils literal notranslate"><span class="pre">$scipionMASTER</span></code> and under
+the plugin at <code class="docutils literal notranslate"><span class="pre">~/xmipp2release/src/scipion-em-xmipp</span></code>, thus upload the
+<code class="docutils literal notranslate"><span class="pre">.tgz</span></code> to Nolan to be able to get it remotely. If you don’t know how
+to do it, please <a class="reference external" href="mailto:scipion&#37;&#52;&#48;cnb&#46;csic&#46;es">ask Scipion’s people</a>
+(…/downloads/scipion/software/em)</p>
+</section>
+<section id="creating-the-pypi-module">
+<h2>Creating the PyPi module<a class="headerlink" href="#creating-the-pypi-module" title="Link to this heading"></a></h2>
+<p><strong>Testing the installation with source archive from Nolan</strong></p>
+<p>Before creation the Pypi module, <strong>it is worth it to start a testing
+stage</strong> to be sure that all is working well. Take into account that,
+once the Pypi module is uploaded, the current available version will
+automaticly be this.</p>
+<p>Make sure that you remove existing Xmipp installation from the Scipion.
+The easiest way is to do so via the Plugin manager. Make also sure that
+there is no Xmipp archive in the <code class="docutils literal notranslate"><span class="pre">software/em</span></code> folder.</p>
+<p>Install the Scipion-em-xmipp plugin directly from the Github:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">scipion3</span> <span class="n">run</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">I2PC</span><span class="o">/</span><span class="n">scipion</span><span class="o">-</span><span class="n">em</span><span class="o">-</span><span class="n">xmipp</span><span class="o">.</span><span class="n">git</span><span class="nd">@release</span><span class="o">-</span><span class="n">X</span><span class="o">.</span><span class="n">YY</span><span class="o">.</span><span class="n">MM</span>   <span class="c1"># What is after &#39;@&#39; is the release branch.</span>
+<span class="o">./</span><span class="n">scipion3</span> <span class="n">installb</span> <span class="n">xmippSrc</span> <span class="o">-</span><span class="n">j</span> <span class="mi">8</span>
+</pre></div>
+</div>
+<p>During the installation, the source file archive should be downloaded
+from Nolan.</p>
+<p><strong>Update PyPi module</strong></p>
+<p>Ensures that the <a class="reference external" href="https://github.com/I2PC/scipion-em-xmipp/blob/fa78fc12536b814275b9a1790e3570f69bf5f0fd/setup.py#L43">release
+information</a>
+is updated and match with those above.</p>
+<ul class="simple">
+<li><p><strong>New way:</strong></p></li>
+</ul>
+<p>Merge in scipìon-em-xmipp the PR from release to master, one action will
+manage the update to pypi, also will create a tag that we have to remove
+(will be managed in the next step) <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">tag</span> <span class="pre">-d</span> <span class="pre">tagname</span></code>
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">--delete</span> <span class="pre">origin</span> <span class="pre">tagname</span></code> &gt; If you have no permissions to
+push, clone each repository with
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">git&#64;github.com:I2PC/scipion-em-xmipp.git</span></code>
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">git&#64;github.com:I2PC/xmippCore.git</span></code></p>
+<ul class="simple">
+<li><p><strong>Old way:</strong></p></li>
+</ul>
+<p>When all is checked, create and upload the Pypi module by (check
+<a class="reference external" href="https://scipion-em.github.io/docs/docs/developer/creating-a-plugin#create-and-upload-distribution">this</a>
+for more information) Notice that you should have the Scipion virtual
+environment active.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">src</span><span class="o">/</span><span class="n">scipion</span><span class="o">-</span><span class="n">em</span><span class="o">-</span><span class="n">xmipp</span>
+<span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="n">dist</span><span class="o">/*</span>    <span class="c1"># To clean the already uploaded modules</span>
+<span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">sdist</span>
+<span class="n">twine</span> <span class="n">upload</span> <span class="n">dist</span><span class="o">/*</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;scipion-X.Y&quot;</span>
+</pre></div>
+</div>
+<p>after <strong>``-c`` flag have to be the lowest Scipion’s compatible version</strong>
+(e.g. <code class="docutils literal notranslate"><span class="pre">&quot;scipion-3.0&quot;</span></code>).</p>
+</section>
+<section id="making-a-git-tag-and-promoting-the-code-to-master">
+<h2>Making a git-TAG and promoting the code to MASTER<a class="headerlink" href="#making-a-git-tag-and-promoting-the-code-to-master" title="Link to this heading"></a></h2>
+<p>After concluding the two section above, the new Xmipp version is already
+released. Congrats! Publish it in mailing list, Twitter… but also we
+want to keep this checkpoint in the git history by a TAG and we must
+promote the code to the master branch:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">xmipp2release</span>
+<span class="o">./</span><span class="n">xmipp</span> <span class="n">git</span> <span class="n">tag</span> <span class="s1">&#39;vX.YY.ZZ-GreekGod&#39;</span>   <span class="c1"># replace GreekGod for one in the list below</span>
+<span class="o">./</span><span class="n">xmipp</span> <span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="s1">&#39;vX.YY.ZZ-GreekGod&#39;</span>
+</pre></div>
+</div>
+<p>we name the version following Greek gods (<a class="reference external" href="https://greekgodsandgoddesses.net/gods/">Apollo,
+Boreas…</a>) &gt; If you have no
+permissions to push, clone each repository with
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">git&#64;github.com:I2PC/scipion-em-xmipp.git</span></code>
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">git&#64;github.com:I2PC/xmippCore.git</span></code></p>
+<p>Finally, <strong>merge the rest 3 Pull Requests</strong> to conclude the release!</p>
+</section>
+<section id="xmipptomo-wants-a-release">
+<h2>XmippTomo wants a release<a class="headerlink" href="#xmipptomo-wants-a-release" title="Link to this heading"></a></h2>
+<p>XmippTomo wants a release syncronized with the release of Xmipp. To do
+that: 1. Create a branch (release_3….) from devel 2. Edit the
+<a class="reference external" href="https://github.com/I2PC/scipion-em-xmipptomo/pull/118/files#diff-a2df3bcb36a6120ad93308737e1c6ff4200936396e7aedd5b0debc62752c03e2">xmipptomo/init.py</a>
+version number and writhe the same of the Xmipp, the last digit mst be
+.0. 3. Be sure you have all the changes in your local path (git pull).
+4. Create a PR from your branch to master. When it will be merged, the
+action will create the tag and upload the version to pypi.</p>
+</section>
+<section id="final-considerations">
+<h2>Final considerations<a class="headerlink" href="#final-considerations" title="Link to this heading"></a></h2>
+<p>Probably, you want all the bug fixings during the release procedure also
+in the <code class="docutils literal notranslate"><span class="pre">devel</span></code> branch.</p>
+<p>To do so, <strong>make a Pull Request from ``release`` to ``devel``</strong>. Also
+replace the name of the version for devel
+<a class="reference external" href="https://github.com/I2PC/xmipp/blob/7e5aea662c93bbfbb6bcd3729850b95914a722f4/xmipp#L38">here</a>
+and replace the logo for the protocols: replace
+<a class="reference external" href="https://github.com/I2PC/scipion-em-xmipp/blob/devel/xmipp3/xmipp_logo.png">xmipp_logo.png</a>
+(in devel is the devel version of the image) for xmipp_logo_devel.png</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../UsefulScripts/index.html" class="btn btn-neutral float-left" title="Useful Tricks and Scripts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../listOfPublications.html" class="btn btn-neutral float-right" title="List of Publications" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Xmipp team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

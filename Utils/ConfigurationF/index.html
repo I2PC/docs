@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Configuration file &mdash; Xmipp 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Xmipp structure" href="../xmippStructure/index.html" />
+    <link rel="prev" title="Releases scipion-em-xmippTomo" href="../../Releases/Releases-scipion-em-xmippTomo/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Xmipp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installing Xmipp</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Requirements/index.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Installation-with-Scipion/index.html">Installation with Scipion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Standlone-installation/index.html">Standalone installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/InstallationNotes/index.html">Installation Notes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Releases</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-xmipp-program/index.html">Releases xmipp program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-scipion-em-xmipp/index.html">Releases scipion-em-xmipp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-scipion-em-xmippTomo/index.html">Releases scipion-em-xmippTomo</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Utils</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Configuration file</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#c-configuration">C++ configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mpi-configuration">MPI configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#java-configuration">Java configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cuda-configuration">Cuda configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#matlab-configuration">Matlab configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#opencv-configuration">OpenCV configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#others">Others</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../xmippStructure/index.html">Xmipp structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Conventions/index.html">Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Deprecated-programs/index.html">Programs deprecated</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/Guidelines/index.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/CodeDocumentation/index.html">Code documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/Checkout-specific-date/index.html">Checkout to a Specific Version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/ParallelPrograming/index.html">Parallel Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/xmipp-Binding/index.html">Python Binding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/testing-with-google-C%2B%2B/index.html">Google C++ Testing Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/UsefulScripts/index.html">Useful Tricks and Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/How-to-release/index.html">How to release</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../listOfPublications.html">List of Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Xmipp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Configuration file</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/Utils/ConfigurationF/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="configuration-file">
+<h1>Configuration file<a class="headerlink" href="#configuration-file" title="Link to this heading"></a></h1>
+<p>Reviewed for version 20.07</p>
+<p>The main command <code class="docutils literal notranslate"><span class="pre">./xmipp</span></code> will try to make the properly configuration
+according to your system, generating a config file named <code class="docutils literal notranslate"><span class="pre">xmipp.conf</span></code>.
+Afterwards, XMIPP will be built. You can run <code class="docutils literal notranslate"><span class="pre">./xmipp</span> <span class="pre">config</span></code> to only
+set the configuration.</p>
+<ul class="simple">
+<li><p>If your Xmipp is intended to run under <strong>Scipion</strong>, you should run
+<code class="docutils literal notranslate"><span class="pre">scipion3</span> <span class="pre">run</span></code> as a wrapper (i.e. <code class="docutils literal notranslate"><span class="pre">scipion3</span> <span class="pre">run</span> <span class="pre">./xmipp</span></code> or
+<code class="docutils literal notranslate"><span class="pre">scipion3</span> <span class="pre">run</span> <span class="pre">./xmipp</span> <span class="pre">config</span></code>). However, Scipion’s installation
+includes the Xmipp installation, by default.
+Check <a class="reference external" href="https://scipion-em.github.io/docs/docs/user/troubleshooting.html#general-error-while-installing-compiling-xmipp-non-development-installations">this (for
+non-developers)</a>
+or <a class="reference external" href="https://scipion-em.github.io/docs/docs/user/troubleshooting.html#general-error-while-installing-compiling-xmipp-development-installations">this (for
+developers)</a>
+to learn how to trigger a compilation through Scipion.</p></li>
+</ul>
+<p>The Xmipp configuration sets mainly six compiling blocks:
+<a class="reference external" href="#c-configuration">C++</a>, <a class="reference external" href="#mpi-configuration">MPI</a>,
+<a class="reference external" href="#java-configuration">Java</a>, <a class="reference external" href="#cuda-configuration">Cuda</a> (optional
+but recommended), <a class="reference external" href="#matlab-configuration">Matlab</a> (optional),
+<a class="reference external" href="#opencv-configuration">OpenCV</a> (optional, not recommended).</p>
+<p>The idea is always the same, Xmipp will try to find compilers in the
+PATH (similar to the <code class="docutils literal notranslate"><span class="pre">which</span></code> command) and will take the libraries and
+headers from them. If some compiler is not found in the PATH, Xmipp will
+look for the default paths on the majority of the Linux distros. You can
+bypass this automatic searching by means of manually setting the
+environment variables described in the sections below.</p>
+<p>Xmipp asks users if agree on using automatically found paths in the
+system. Include the <code class="docutils literal notranslate"><span class="pre">noAsk</span></code> option to the config command in order to
+launch an unattended configuration.</p>
+<ul class="simple">
+<li><p>If your Xmipp is intended to run under <strong>Scipion</strong>, <strong>the environment
+variables described in sections below can be added in the
+``scipion3/config/scipion.conf``</strong> before launching
+<code class="docutils literal notranslate"><span class="pre">scipion3</span> <span class="pre">installb</span> <span class="pre">xmippSrc</span></code> (or your compilation command).</p></li>
+<li><p>Note that <code class="docutils literal notranslate"><span class="pre">scipion3</span> <span class="pre">installb</span> <span class="pre">xmippSrc</span></code> (or other Xmipp compilation
+commands in Scipion) regenerates the <code class="docutils literal notranslate"><span class="pre">xmipp.conf</span></code>. Therefore, <strong>if
+you want to manually set some variables in the ``xmipp.conf``,
+``export XMIPP_NOCONFIG=True`` or include ``XMIPP_NOCONFIG=True`` in
+``scipion3/config/scipion.conf``</strong> to skip that config regeneration.</p></li>
+</ul>
+<section id="c-configuration">
+<h2>C++ configuration<a class="headerlink" href="#c-configuration" title="Link to this heading"></a></h2>
+<p>The default C compiler is <code class="docutils literal notranslate"><span class="pre">gcc</span></code> while <code class="docutils literal notranslate"><span class="pre">g++</span></code> compiler is for C++ code
+and C++ library links. Then Xmipp will ensure that they are visible
+prior to assign them to the configuration. You can set any other
+compilers by setting the <code class="docutils literal notranslate"><span class="pre">CC</span></code>, <code class="docutils literal notranslate"><span class="pre">CXX</span></code> and <code class="docutils literal notranslate"><span class="pre">LINKERFORPROGRAMS</span></code>
+variables.</p>
+<p>Find below a list of tuneable variables regarding to C and C++
+compilation. Keep in mind that they are automatically set by Xmipp.
+However, you can bypass this automatic setting by exporting them
+(e.g. <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">CXX=icc</span></code>) prior to launch the command or, even, you can
+update the resulting <code class="docutils literal notranslate"><span class="pre">xmipp.conf</span></code> file, once created.</p>
+<div class="line-block">
+<div class="line">· <strong>CC</strong>: C compiler. gcc`` by default.</div>
+<div class="line">· <strong>CCFLAGS</strong>: Flags to add during C compilations. <code class="docutils literal notranslate"><span class="pre">-std=c99</span></code> by
+default</div>
+</div>
+<div class="line-block">
+<div class="line">· CXX C++ compiler. <code class="docutils literal notranslate"><span class="pre">g++</span></code> by default.</div>
+<div class="line">· <strong>CXXFLAGS</strong>: Flags to add during C++ compilations.
+<code class="docutils literal notranslate"><span class="pre">-mtune=native</span> <span class="pre">-march=native</span> <span class="pre">-std=c++11</span> <span class="pre">-O3</span></code> by default.</div>
+<div class="line">· <strong>INCDIRFLAGS</strong>: Flags to add headers directories. See note
+below.</div>
+<div class="line">· <strong>LIBDIRFLAGS</strong>: Flags to add libraries directories. See note
+below.</div>
+</div>
+<div class="line-block">
+<div class="line">· <strong>LINKERFORPROGRAMS</strong>: C++ linker. <code class="docutils literal notranslate"><span class="pre">g++</span></code> by default.</div>
+<div class="line">· <strong>LINKFLAGS</strong>: Flags to add while linking. Empty by default.</div>
+</div>
+<div class="line-block">
+<div class="line">· <strong>PYTHON_LIB</strong>: Python library to make the python binding. Xmipp
+automatically discovers the current python (e.g. <a href="#id1"><span class="problematic" id="id2">``</span></a>python3.5m).</div>
+<div class="line">· <strong>PYTHONINCFLAGS</strong>: Flags to add during the binding compilation.
+Usually to include the python header and the numpy header
+(e.g. <code class="docutils literal notranslate"><span class="pre">-I/usr/include/python3.5m</span> <span class="pre">-I/home/david/scipion3/.scipion3env/lib/python3.5/site-packages/numpy/core/include</span></code>)</div>
+</div>
+<ul>
+<li><p>Note regarding <strong>INCDIRFLAGS</strong> and <strong>LIBDIRFLAGS</strong></p>
+<p>Xmipp adds the <code class="docutils literal notranslate"><span class="pre">include</span></code> and <code class="docutils literal notranslate"><span class="pre">lib</span></code> from the current environ
+(using the python function <code class="docutils literal notranslate"><span class="pre">sysconfig.get_path('data')</span></code>) in order
+to take system or environ headers and libs.</p>
+<p>In addition, if <code class="docutils literal notranslate"><span class="pre">hdf5</span></code> is not found there, <strong>Xmipp will look for it
+in ``/usr/lib`` and ``/usr/include/hdf5/serial``</strong>. If found it, the
+paths are appended to the <code class="docutils literal notranslate"><span class="pre">INCDIRFLAGS</span></code> and <code class="docutils literal notranslate"><span class="pre">LIBDIRFLAGS</span></code>. If not
+found and a specific conda environ is present, <strong>Xmipp will try to
+install hdf5 through conda</strong> under the current conda-environ.</p>
+<p>Moreover, if <code class="docutils literal notranslate"><span class="pre">fftw3</span></code> or <code class="docutils literal notranslate"><span class="pre">tiff</span></code> libraries are not found and a
+specific conda environ is present, <strong>Xmipp will try to install them
+through conda</strong> under the current conda-environ.</p>
+</li>
+<li><p>Note that <strong>``CXXFLAGS``</strong> is optimizing the compilation to the
+architecture found during in compilation time. This will make Xmipp
+incompatible to be run under another architecture.</p>
+<p>To make more flexible this optimization in order to make Xmipp
+compatible on both, Intel and AMD cores, please consider to</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">CXXFLAGS</span><span class="o">=</span><span class="s2">&quot;-mfma -mavx2 -m3dnow -fomit-frame-pointer -std=c++11 -O3&quot;</span>
+</pre></div>
+</div>
+<p>or edit the <code class="docutils literal notranslate"><span class="pre">xmipp.conf</span></code> file in such a way, before compiling
+Xmipp.</p>
+</li>
+</ul>
+</section>
+<section id="mpi-configuration">
+<h2>MPI configuration<a class="headerlink" href="#mpi-configuration" title="Link to this heading"></a></h2>
+<p>The default MPI compiler for C is <code class="docutils literal notranslate"><span class="pre">mpicc</span></code> while <code class="docutils literal notranslate"><span class="pre">mpicxx</span></code> is for C++
+code and C++ library links. Then Xmipp will ensure that they are visible
+prior to assign them to the configuration. You can set any other
+compilers by setting the <code class="docutils literal notranslate"><span class="pre">MPI_CC</span></code>, <code class="docutils literal notranslate"><span class="pre">MPI_CXX</span></code> and
+<code class="docutils literal notranslate"><span class="pre">MPI_LINKERFORPROGRAMS</span></code> variables.</p>
+<p>Additionally, <code class="docutils literal notranslate"><span class="pre">mpirun</span></code> is the default program to run mpi programs. If
+not found, <code class="docutils literal notranslate"><span class="pre">mpiexec</span></code> becomes an option. Then, Xmipp will ensure that
+they are visible prior to assign them to the configuration (any other
+mpi executor can be used by setting the <code class="docutils literal notranslate"><span class="pre">MPI_RUN</span></code> variable). You can
+set a given MPI toolkit by setting <code class="docutils literal notranslate"><span class="pre">MPI_BINDIR</span></code>, <code class="docutils literal notranslate"><span class="pre">MPI_LIBDIR</span></code> and
+<code class="docutils literal notranslate"><span class="pre">MPI_INCLUDE</span></code> (see <a class="reference external" href="https://scipion-em.github.io/docs/release-3.0.0/docs/scipion-modes/scipion-configuration.html#mpi-variables">Scipion-config
+doc</a>).</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">mpicc</span></code>, <code class="docutils literal notranslate"><span class="pre">mpicxx</span></code> or <code class="docutils literal notranslate"><span class="pre">mpirun</span></code> are not found following
+instructions above, Xmipp looks for them in the Linux default paths:
+<code class="docutils literal notranslate"><span class="pre">/usr/lib/openmpi/bin</span></code> or <code class="docutils literal notranslate"><span class="pre">/usr/lib64/openmpi/bin</span></code>.</p>
+<p>Find below a list of tuneable variables regarding to MPI compilations.
+Keep in mind that they are automatically set by Xmipp. However, you can
+bypass this automatic setting by exporting them
+(e.g. <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">MPI_CXX=mpi2-intel</span></code>) prior to launch the command or,
+even, you can update the resulting <code class="docutils literal notranslate"><span class="pre">xmipp.conf</span></code> file, once created.</p>
+<div class="line-block">
+<div class="line">· <strong>MPI_RUN</strong>: Executor to run MPI programs. <code class="docutils literal notranslate"><span class="pre">mpirun</span></code> by
+default.</div>
+<div class="line">· <strong>MPI_CC</strong>: MPI compiler for C code. <code class="docutils literal notranslate"><span class="pre">mpicc</span></code> by default.</div>
+<div class="line">· <strong>MPI_CXX</strong>: MPI compiler for C++ code. <code class="docutils literal notranslate"><span class="pre">mpicxx</span></code> by default.</div>
+<div class="line">· <strong>MPI_CXXFLAGS</strong>: Flags to add during the MPI compilation. Empty
+by default.</div>
+<div class="line">· <strong>MPI_LINKERFORPROGRAMS</strong>: MPI compiler to link C++ libraries.
+<code class="docutils literal notranslate"><span class="pre">mpicxx</span></code> by default.</div>
+<div class="line">· <strong>MPI_LINKFLAGS</strong>: Flags to add during the MPI linking. Empty by
+default.</div>
+</div>
+</section>
+<section id="java-configuration">
+<h2>Java configuration<a class="headerlink" href="#java-configuration" title="Link to this heading"></a></h2>
+<p>Xmipp ensures that <code class="docutils literal notranslate"><span class="pre">javac</span></code> command is visible and takes its location
+in order to get the <code class="docutils literal notranslate"><span class="pre">jar</span></code> and <code class="docutils literal notranslate"><span class="pre">java</span></code> programs. If <code class="docutils literal notranslate"><span class="pre">javac</span></code> is not
+present in the PATH, Xmipp look for it at <code class="docutils literal notranslate"><span class="pre">/usr/lib/jvm/java-*/bin</span></code>.
+If still not found and a specific conda environ is present, <strong>Xmipp will
+try to install ``openjdk`` through conda</strong> under that conda-environ.</p>
+<p>Find below a list of tuneable variables regarding to Java compilations.
+Keep in mind that they are automatically set by Xmipp. However, you can
+bypass this automatic setting by exporting them
+(e.g. <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">JAVA_HOME=/my/own/java</span></code>) prior to launch the command or,
+even, you can update the resulting <code class="docutils literal notranslate"><span class="pre">xmipp.conf</span></code> file, once created.</p>
+<div class="line-block">
+<div class="line">· <strong>JAVA_HOME</strong>: Path where java is loacated.
+<code class="docutils literal notranslate"><span class="pre">dirname</span> <span class="pre">$(dirname</span> <span class="pre">$(realpath</span> <span class="pre">$(which</span> <span class="pre">javac)))</span></code> by default
+(<code class="docutils literal notranslate"><span class="pre">jre/bin</span></code> is pull out if present).</div>
+<div class="line">· <strong>JAVA_BINDIR</strong>: Path where <code class="docutils literal notranslate"><span class="pre">jar</span></code> and <code class="docutils literal notranslate"><span class="pre">javac</span></code> are located.
+<code class="docutils literal notranslate"><span class="pre">%(JAVA_HOME)s/bin</span></code> by default.</div>
+<div class="line">· <strong>JAVAC</strong>: JavaC compiler. <code class="docutils literal notranslate"><span class="pre">%(JAVA_BIN)s/javac</span></code> by default.</div>
+<div class="line">· <strong>JAR</strong>: Jar compiler. <code class="docutils literal notranslate"><span class="pre">%(JAVA_BIN)s/jar</span></code> by default.</div>
+<div class="line">· <strong>JNI_CPPPATH</strong>: Include paths during the Java compilation.
+<code class="docutils literal notranslate"><span class="pre">%(JAVA_HOME)s/include:%(JAVA_HOME)s/include/linux</span></code> by default.</div>
+</div>
+</section>
+<section id="cuda-configuration">
+<h2>Cuda configuration<a class="headerlink" href="#cuda-configuration" title="Link to this heading"></a></h2>
+<p>Cuda compilation is optional in Xmipp, but strongly recommended. Xmipp
+will find the <code class="docutils literal notranslate"><span class="pre">nvcc</span></code> compiler in the PATH and will take its
+corresponding cuda toolkit. If no <code class="docutils literal notranslate"><span class="pre">nvcc</span></code> is found in the PATH, Xmipp
+looks for it in the default Linux locations: <code class="docutils literal notranslate"><span class="pre">/usr/local/cuda*/bin</span></code>.
+In addition, following the Scipion syntax, you can manually set a
+certain path where to find the <code class="docutils literal notranslate"><span class="pre">nvcc</span></code> by
+<code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">CUDA_BIN=/my/own/cuda/bin</span></code> or even
+<code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">XMIPP_CUDA_BIN=/my/own/cuda/bin</span></code> (or include it in the
+<code class="docutils literal notranslate"><span class="pre">scipion3/config/scipion.conf</span></code> if you are under Scipion structure).</p>
+<p>Check below the preference list while looking for a <code class="docutils literal notranslate"><span class="pre">nvcc</span></code> compiler:</p>
+<ol class="arabic simple">
+<li><p>in <code class="docutils literal notranslate"><span class="pre">XMIPP_CUDA_BIN</span></code>.</p></li>
+<li><p>in <code class="docutils literal notranslate"><span class="pre">CUDA_BIN</span></code></p></li>
+<li><p>in <code class="docutils literal notranslate"><span class="pre">PATH</span></code></p></li>
+<li><p>in <code class="docutils literal notranslate"><span class="pre">/usr/local/cuda/bin</span></code></p></li>
+<li><p>in <code class="docutils literal notranslate"><span class="pre">/usr/local/cuda*/bin</span></code> (in this case, the glob-expanding order
+will be defined by the OS)</p></li>
+</ol>
+<p>At the end, Xmipp will take as <code class="docutils literal notranslate"><span class="pre">CUDA_HOME</span></code> the directory (resolving
+any eventual linking) of the <code class="docutils literal notranslate"><span class="pre">nvcc</span></code> found. If it is found using
+assumption 4. or 5., Xmipp asks users if they agree (use <code class="docutils literal notranslate"><span class="pre">noAsk</span></code>
+option in the command launching for an unattended behavior).</p>
+<p>Find below a list of tuneable variables regarding to CUDA compilations.
+Keep in mind that they are automatically set by Xmipp according to that
+described above. However, you can bypass this automatic setting by
+exporting them (e.g. <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">NVCC=/my/own/cuda/bin/nvcc</span></code>) prior to
+launch the command or, even, you can update the resulting <code class="docutils literal notranslate"><span class="pre">xmipp.conf</span></code>
+file, once created.</p>
+<div class="line-block">
+<div class="line">· <strong>CUDA</strong>: Main flag to enable/disable CUDA compilation, set to
+<code class="docutils literal notranslate"><span class="pre">True</span></code>/<code class="docutils literal notranslate"><span class="pre">False</span></code> accordingly. By default, it is set to <code class="docutils literal notranslate"><span class="pre">True</span></code> if a
+<code class="docutils literal notranslate"><span class="pre">nvcc</span></code> is found.</div>
+<div class="line">· <strong>NVCC</strong>: Path to the Cuda compiler (it can be just the command
+if it is in the PATH). <code class="docutils literal notranslate"><span class="pre">nvcc</span></code> (or the real path to it) by default.</div>
+<div class="line">· <strong>CXX_CUDA</strong>: C++ compiler to compile Cuda code. Notice that
+Cuda-8.0 is incompatible with <code class="docutils literal notranslate"><span class="pre">g++&gt;5</span></code>, then this can be set to
+<code class="docutils literal notranslate"><span class="pre">g++-5</span></code>, whereas the main C++ compiler still <code class="docutils literal notranslate"><span class="pre">g++-8</span></code>. By default,
+it is <code class="docutils literal notranslate"><span class="pre">g++</span></code> (if compatible).</div>
+<div class="line">· <strong>NVCC_CXXFLAGS</strong>: Cuda compilation flags.
+<code class="docutils literal notranslate"><span class="pre">--x</span> <span class="pre">cu</span> <span class="pre">-D_FORCE_INLINES</span> <span class="pre">-Xcompiler</span> <span class="pre">-fPIC</span> <span class="pre">-ccbin</span> <span class="pre">%(CXX_CUDA)s</span> <span class="pre">-std=c++11</span> <span class="pre">--expt-extended-lambda</span> <span class="pre">-gencode=arch=compute_30,code=compute_30</span> <span class="pre">-gencode=arch=compute_35,code=compute_35</span> <span class="pre">-gencode=arch=compute_50,code=compute_50</span> <span class="pre">-gencode=arch=compute_60,code=compute_60</span> <span class="pre">-gencode=arch=compute_61,code=compute_61</span></code>,
+by default.</div>
+<div class="line">· <strong>NVCC_LINKFLAGS</strong>: Cuda linking flags.
+<code class="docutils literal notranslate"><span class="pre">-L/usr/local/cuda-X.Y/targets/x86_64-linux/lib</span> <span class="pre">-L/usr/local/cuda-X.Y/targets/x86_64-linux/lib/stubs</span></code>
+by default.</div>
+</div>
+<p>Notice that <code class="docutils literal notranslate"><span class="pre">NVCC_LINKFLAGS</span></code> contain the libraries according to the
+<code class="docutils literal notranslate"><span class="pre">nvcc</span></code> found (in the default example there is <code class="docutils literal notranslate"><span class="pre">cuda-X.Y</span></code> indicating
+a certain cuda version). That libraries are set by looking for the
+<code class="docutils literal notranslate"><span class="pre">libcudart.so</span></code> lib following the preference list below:</p>
+<ol class="arabic simple">
+<li><p>in <code class="docutils literal notranslate"><span class="pre">$CUDA_HOME/lib</span></code></p></li>
+<li><p>in <code class="docutils literal notranslate"><span class="pre">$CUDA_HOME/lib64</span></code></p></li>
+<li><p>in <code class="docutils literal notranslate"><span class="pre">$CUDA_HOME/targets/x86_64-linux/lib</span></code></p></li>
+<li><p>in <code class="docutils literal notranslate"><span class="pre">$CUDA_HOME/lib/x86_64-linux-gnu</span></code></p></li>
+<li><p>in <code class="docutils literal notranslate"><span class="pre">/usr/lib</span></code></p></li>
+<li><p>in <code class="docutils literal notranslate"><span class="pre">/usr/lib64</span></code></p></li>
+<li><p>in <code class="docutils literal notranslate"><span class="pre">/usr/targets/x86_64-linux/lib</span></code></p></li>
+<li><p>in <code class="docutils literal notranslate"><span class="pre">/usr/lib/x86_64-linux-gnu</span></code></p></li>
+</ol>
+<p>If it is found using assumptions from 5. to 8., Xmipp asks users if they
+agree (use <code class="docutils literal notranslate"><span class="pre">noAsk</span></code> option in the command launching for an unattended
+behavior).</p>
+</section>
+<section id="matlab-configuration">
+<h2>Matlab configuration<a class="headerlink" href="#matlab-configuration" title="Link to this heading"></a></h2>
+<p>Some programs in Xmipp are coded in Matlab and they needs to be compiled
+with. (<em>TODO: list those programs</em>)</p>
+<p>Find below a list of tuneable variables regarding to Matlab
+compilations. Keep in mind that they are automatically set by Xmipp.
+However, you can bypass this automatic setting by exporting them
+(e.g. <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">MATLAB_DIR=/my/own/matlab</span></code>) prior to launch the command
+or, even, you can update the resulting <code class="docutils literal notranslate"><span class="pre">xmipp.conf</span></code> file, once
+created.</p>
+<div class="line-block">
+<div class="line">· <strong>MATLAB</strong>: Main flag to enable/disable Matlab compilation, set
+to <code class="docutils literal notranslate"><span class="pre">True</span></code>/<code class="docutils literal notranslate"><span class="pre">False</span></code> accordingly. By default is set to <code class="docutils literal notranslate"><span class="pre">True</span></code> if a
+<code class="docutils literal notranslate"><span class="pre">matlab</span></code> is found in the PATH.</div>
+<div class="line">· <strong>MATLAB_DIR</strong>: Matlab home directory where <code class="docutils literal notranslate"><span class="pre">bin/mex</span></code> is
+expected to compile Matlab code.
+<code class="docutils literal notranslate"><span class="pre">dirname</span> <span class="pre">$(dirname</span> <span class="pre">$(which</span> <span class="pre">matlab))</span></code> by default.</div>
+</div>
+</section>
+<section id="opencv-configuration">
+<h2>OpenCV configuration<a class="headerlink" href="#opencv-configuration" title="Link to this heading"></a></h2>
+<p>A few programs in Xmipp are coded using the OpenCV library and they
+needs to be compiled against it. (<em>TODO: list those programs</em>)</p>
+<p>Find below a list of tuneable variables regarding to OpenCV
+compilations. Keep in mind that they are automatically set by Xmipp.
+However, you can bypass this automatic setting by exporting them
+(e.g. <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">OPENCV=False</span></code>) prior to launch the command or, even, you
+can update the resulting <code class="docutils literal notranslate"><span class="pre">xmipp.conf</span></code> file, once created.</p>
+<div class="line-block">
+<div class="line">· <strong>OPENCV</strong>: Main flag to enable/disable OpenCV compilation, set
+to <code class="docutils literal notranslate"><span class="pre">True</span></code>/<code class="docutils literal notranslate"><span class="pre">False</span></code> accordingly. By default, it is set to <code class="docutils literal notranslate"><span class="pre">True</span></code>
+if a basic code including the <code class="docutils literal notranslate"><span class="pre">opencv2/core/core.hpp</span></code> header
+compiles.</div>
+<div class="line">· <strong>OPENCV3</strong>: Flag to indicate if openCV-v3 is present, set to
+<code class="docutils literal notranslate"><span class="pre">True</span></code>/<code class="docutils literal notranslate"><span class="pre">False</span></code> accordingly. By default, it is set to <code class="docutils literal notranslate"><span class="pre">True</span></code> if
+the <code class="docutils literal notranslate"><span class="pre">CV_MAJOR_VERSION</span> <span class="pre">&gt;=</span> <span class="pre">3</span></code> in the <code class="docutils literal notranslate"><span class="pre">opencv2/core/version.hpp</span></code>.</div>
+<div class="line">· <strong>OPENCVSUPPORTSCUDA</strong>: Flag to enable/disable OpenCV
+compilation against CUDA, set to <code class="docutils literal notranslate"><span class="pre">True</span></code>/<code class="docutils literal notranslate"><span class="pre">False</span></code> accordingly. By
+default, it is set to <code class="docutils literal notranslate"><span class="pre">True</span></code> if a basic code including the
+<code class="docutils literal notranslate"><span class="pre">cudaoptflow.hpp</span></code> header compiles (if OpenCV-v3 is used, the
+<code class="docutils literal notranslate"><span class="pre">cuda.hpp</span></code> is used to check it).</div>
+</div>
+</section>
+<section id="others">
+<h2>Others<a class="headerlink" href="#others" title="Link to this heading"></a></h2>
+<div class="line-block">
+<div class="line">· <strong>VERIFIED</strong>: Firstly, it is set to <code class="docutils literal notranslate"><span class="pre">False</span></code> and, then
+<code class="docutils literal notranslate"><span class="pre">./xmipp</span> <span class="pre">check_config</span></code> swaps it to <code class="docutils literal notranslate"><span class="pre">True</span></code> (if checks passes). This
+prevents to check the configuration twice.</div>
+<div class="line">· <strong>CONFIG_VERSION</strong>: Config generator’s (<code class="docutils literal notranslate"><span class="pre">xmipp</span></code> script) hash
+version. An error is raised if trying to compile Xmipp with a
+different hash than the current in the github repository.</div>
+<div class="line">· <strong>USE_DL</strong>: Flag to download deep learning models during the
+compilation process. <code class="docutils literal notranslate"><span class="pre">False</span></code> by default.</div>
+<div class="line">· <strong>DEBUG</strong>: Flag to compile the code under the debug mode.
+<code class="docutils literal notranslate"><span class="pre">False</span></code> by default.</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../Releases/Releases-scipion-em-xmippTomo/index.html" class="btn btn-neutral float-left" title="Releases scipion-em-xmippTomo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../xmippStructure/index.html" class="btn btn-neutral float-right" title="Xmipp structure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Xmipp team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
