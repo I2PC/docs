@@ -65,7 +65,7 @@ Before installing Xmipp, you need to ensure that your system meets certain requi
 - `default-jdk`: Default Java Development Kit.
 - `git`: Version control system for source code management.
 - `cmake`: Cross-platform build system.
-- `jpeg`: Compress, decompress, transform JPEG images.
+- `libjpeg-dev`: Compress, decompress, transform JPEG images.
 
 You can install these packages on Ubuntu-based systems using the following command:
 
