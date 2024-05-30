@@ -92,6 +92,6 @@ Read the installation page for more details about these softwares requirements. 
     :caption: Others
     
     listOfPublications
-    EnhancingXmipp
+    enhancingXmipp
     contact
     license
