@@ -30,7 +30,7 @@ Releases scipion-em-xmipp
    - metaprotocol_golden_highres
    - solid_angle
    - split_volume
-- More scipio-em-xmipp
+- More scipion-em-xmipp
    - Solve Sonar Cloud reported bugs
    - Flexible import of pyQT on chimera script
    - Removing tkAgg matplotlib requirement in viewer_structure_map
