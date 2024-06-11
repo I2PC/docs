@@ -1,6 +1,6 @@
 Releases xmipp program
 =========================
-3.24.06 - `Oceanus`__
+3.24.06 - `Oceanus <https://github.com/I2PC/xmipp/releases/tag/v3.24.06-Oceanus>`__
 ------------------------
 
 Xmipp Programs 
