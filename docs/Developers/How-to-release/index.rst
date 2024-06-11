@@ -272,6 +272,3 @@ in the ``devel`` branch.
 To do so, **make a Pull Request from ``release`` to ``devel``**. Also
 replace the name of the version for devel
 `here <https://github.com/I2PC/xmipp/blob/7e5aea662c93bbfbb6bcd3729850b95914a722f4/xmipp#L38>`__
-and replace the logo for the protocols: replace
-`xmipp_logo.png <https://github.com/I2PC/scipion-em-xmipp/blob/devel/xmipp3/xmipp_logo.png>`__
-(in devel is the devel version of the image) for xmipp_logo_devel.png
