@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xmipp structure &mdash; Xmipp 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Conventions" href="../Conventions/index.html" />
+    <link rel="prev" title="Configuration file" href="../ConfigurationF/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Xmipp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installing Xmipp</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Requirements/index.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Installation-with-Scipion/index.html">Installation with Scipion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Standlone-installation/index.html">Standalone installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/InstallationNotes/index.html">Installation Notes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Releases</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-xmipp-program/index.html">Releases xmipp program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-scipion-em-xmipp/index.html">Releases scipion-em-xmipp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-scipion-em-xmippTomo/index.html">Releases scipion-em-xmippTomo</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Utils</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../ConfigurationF/index.html">Configuration file</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Xmipp structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Conventions/index.html">Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Deprecated-programs/index.html">Programs deprecated</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/Guidelines/index.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/CodeDocumentation/index.html">Code documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/Checkout-specific-date/index.html">Checkout to a Specific Version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/ParallelPrograming/index.html">Parallel Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/xmipp-Binding/index.html">Python Binding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/testing-with-google-C%2B%2B/index.html">Google C++ Testing Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/UsefulScripts/index.html">Useful Tricks and Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/How-to-release/index.html">How to release</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../listOfPublications.html">List of Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../enhancingXmipp.html">Data Collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Xmipp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Xmipp structure</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/Utils/xmippStructure/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="xmipp-structure">
+<h1>Xmipp structure<a class="headerlink" href="#xmipp-structure" title="Link to this heading"></a></h1>
+<p>XMIPP software is split in three repositories (XmippCore, XmippViz and
+Xmipp) plus the repository regarding to the Scipion’s plugin
+(scipion-em-xmipp). All this four repositories are in <a class="reference external" href="https://github.com/i2pc">I2PC
+gitHub</a>.</p>
+<ul class="simple">
+<li><p><strong>scipion-em-xmipp</strong>: It is the Scipion’s plugin. Protocol
+(wrappers), viewers, tests… are there. All Xmipp regarding Scipion is
+there.</p></li>
+<li><p><strong>xmipp</strong>: EM-reconstraction methods. Usually wrote in C++.</p></li>
+<li><p><strong>xmippCore</strong>: Low-level image-processing and EM-images definitions.
+In addition, metadata_labels, metadata and data are there.</p></li>
+<li><p><strong>xmippViz</strong>: Basically ShowJ, coordinates viewer and Xmipp Picker.
+Java code.</p></li>
+</ul>
+<p>We call <code class="docutils literal notranslate"><span class="pre">xmipp-bundle</span></code> to the folder that contains the four
+repositories listed above in the following structure.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>xmipp-bundle                  # This is the https://github.com/I2PC/xmipp repository
+├── CHANGELOG.md
+├── LICENSE
+├── README.md
+│
+├── xmipp          # Main script
+├── xmipp.conf     # Config file
+│
+├── scripts
+│   └── (...)
+├── sonar-project.properties
+│
+├── src      # Sources directory
+│   ├── scipion-em-xmipp      # This is the https://github.com/I2PC/scipion-em-xmipp repository
+│   │   └── (...)
+│   ├── xmipp
+│   │   └── (...)
+│   ├── xmippCore             # This is the https://github.com/I2PC/xmippCore repository
+│   │   └── (...)
+│   └── xmippViz              # This is the https://github.com/I2PC/xmippViz repository
+│       └── (...)
+│
+└── build    # Self-contained directory with all runnable Xmipp (created during the installation)
+    ├── bin        # All binaries of Xmipp
+    │   └── (...)
+    ├── bindings   # Bindings to other languages
+    │   └── (...)
+    ├── lib        # Libraries that some binaries use
+    │   └── (...)
+    ├── pylib      # Python modules that some binaries use
+    │   └── (...)
+    ├── v3.20.07         # Installation token containing the version number
+    ├── xmipp.bashrc     # bash script to set Xmipp env. vars. (run &#39;source xmipp.basrc&#39;)
+    ├── xmippEnv.json    # Variables to set environ for Xmipp in running time
+    └── xmipp.fish       # fish script to set Xmipp env. vars. (run &#39;fish xmipp.fish&#39;)
+</pre></div>
+</div>
+<p>To get this structure in a certain directory, run</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">certain_directory</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">I2PC</span><span class="o">/</span><span class="n">xmipp</span> <span class="n">xmipp</span><span class="o">-</span><span class="n">bundle</span>
+<span class="n">cd</span> <span class="n">xmipp</span><span class="o">-</span><span class="n">bundle</span>
+<span class="o">./</span><span class="n">xmipp</span> <span class="n">get_devel_sources</span>
+</pre></div>
+</div>
+<p>Check below a detailed structure of Xmipp. Please, check also the <a class="reference external" href="https://scipion-em.github.io/docs/docs/api/xmipp-API.html">Xmipp
+API</a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>xmipp-bundle                -&gt; this is the https://github.com/I2PC/xmipp repository &lt;-
+│
+├── xmipp            # Main script
+├── xmipp.conf       # Config file
+├── xmippEnv.json    # Temporary compilation environ saving for runtime uses
+├── CHANGELOG.md
+├── LICENSE
+├── README.md
+├── scripts
+│   ├── install_cuda_travis.sh
+│   └── tar.py
+├── sonar-project.properties
+│
+├── src     # Main folder containing sources subrepos (scipion-em-xmipp, xmippCore and xmippViz).
+│   │
+│   ├── scipion-em-xmipp    # Repository of the Scipion&#39;s plugin   -&gt; this is the https://github.com/I2PC/scipion-em-xmipp repository &lt;-
+│   │   ├── CHANGES.txt
+│   │   ├── LICENSE
+│   │   ├── MANIFEST.in
+│   │   ├── README.md
+│   │   ├── requirements.txt
+│   │   ├── scipion_em_xmipp.egg-info
+│   │   ├── setup.py
+│   │   ├── sonar-project.properties
+│   │   └── xmipp3               # Xmipp plugin for Scipion
+│   │       ├── base.py
+│   │       ├── bibtex.py
+│   │       ├── constants.py
+│   │       ├── convert
+│   │       │   └── (...)
+│   │       ├── __init__.py
+│   │       ├── programs.py
+│   │       ├── protocols
+│   │       │   └── (...)
+│   │       ├── protocols.conf
+│   │       ├── tests
+│   │       │   └── (...)
+│   │       ├── utils.py
+│   │       ├── viewers
+│   │       │   └── (...)
+│   │       ├── wizards.py
+│   │       └── xmipp_logo.png
+│   │
+│   ├── xmipp        # Main sources for Xmipp
+│   │   │
+│   │   ├── applications
+│   │   │   ├── programs  # This contains the main fuctions for the Xmipp progrmas
+│   │   │   │   ├── angular_accuracy_pca
+│   │   │   │   ├── (...)
+│   │   │   │   └── xray_psf_create
+│   │   │   ├── scripts  # This contains programs coded in non-compiling lenguage (e.g. python)
+│   │   │   │   ├── apropos
+│   │   │   │   ├── (...)
+│   │   │   │   └── volume_align
+│   │   │   └── tests    # This contains some tests
+│   │   │       └── function_tests
+│   │   │           ├── aft_tests.h
+│   │   │           ├── (...)
+│   │   │           └── test_funcs_main.cpp
+│   │   ├── bin  # This is created in compilation time
+│   │   │   ├── xmipp_angular_accuracy_pca
+│   │   │   ├── (...)
+│   │   │   └── xmipp_xray_psf_create
+│   │   ├── bindings    # This contains binding for other lenguages
+│   │   │   ├── matlab
+│   │   │   │   ├── mirt3D_mexinterp.cpp
+│   │   │   │   ├── (...)
+│   │   │   │   └── xmipp_write.m
+│   │   │   └── python
+│   │   │       ├── python_constants.cpp
+│   │   │       ├── (...)
+│   │   │       ├── xmipp_base.py
+│   │   │       ├── xmipp_conda_envs.py
+│   │   │       ├── xmippmodule.cpp
+│   │   │       ├── xmippmodule.h
+│   │   │       ├── xmippmodule.os
+│   │   │       └── xmipp.py
+│   │   ├── external
+│   │   │   ├── condor
+│   │   │   │   ├── CNLSolver.cpp
+│   │   │   │   ├── (...)
+│   │   │   │   └── Vector.cpp
+│   │   │   ├── delaunay
+│   │   │   │   ├── dcel.cpp
+│   │   │   │   ├── (...)
+│   │   │   │   └── voronoi.cpp
+│   │   │   ├── gtest
+│   │   │   │   └── (...)
+│   │   │   └── sh_alignment
+│   │   │       ├── frm.cpp
+│   │   │       ├── (...)
+│   │   │       └── swig_frm.py
+│   │   ├── install    # This is created in compilation time
+│   │   │   ├── scons-tools
+│   │   │   │   ├── AutoConfig.py
+│   │   │   │   ├── Make.py
+│   │   │   │   └── __pycache__
+│   │   │   ├── xmipp.conf
+│   │   │   └── xmipp.template
+│   │   ├── lib    # This contains the compiled final libraries
+│   │   │   ├── libcuFFTAdvisor.so
+│   │   │   ├── libXmippCuda.a
+│   │   │   ├── libXmippInterfaceCuda.so
+│   │   │   ├── libXmippParallelCuda.so
+│   │   │   ├── libXmippParallel.so
+│   │   │   ├── libXmipp.so
+│   │   │   ├── _swig_frm.so
+│   │   │   └── xmippLib.so
+│   │   ├── libraries    # This contains the hard code of Xmipp (xmipp is made of C++ libraries)
+│   │   │   ├── classification
+│   │   │   │   ├── ahc_classifier.cpp
+│   │   │   │   ├── (...)
+│   │   │   │   └── vector_ops.h
+│   │   │   ├── data
+│   │   │   │   ├── aft.h
+│   │   │   │   ├── (...)
+│   │   │   │   └── xmipp_polynomials.cpp
+│   │   │   ├── dimred
+│   │   │   │   ├── diffusionMaps.cpp
+│   │   │   │   ├── (...)
+│   │   │   │   └── transform_dimred.cpp
+│   │   │   ├── interface
+│   │   │   │   ├── docfile.cpp
+│   │   │   │   ├── (...)
+│   │   │   │   └── virus.h
+│   │   │   ├── parallel
+│   │   │   │   ├── mpi_angular_accuracy_pca.cpp
+│   │   │   │   ├── (...)
+│   │   │   │   └── xmipp_mpi.cpp
+│   │   │   ├── parallel_adapt_cuda
+│   │   │   │   ├── mpi_reconstruct_fourier_gpu.cpp
+│   │   │   │   ├── mpi_reconstruct_fourier_gpu.h
+│   │   │   │   └── mpi_reconstruct_fourier_gpu.os
+│   │   │   ├── py_xmipp
+│   │   │   │   ├── coordinatesTools
+│   │   │   │   ├── deepConsensusWorkers
+│   │   │   │   ├── deepDenoising
+│   │   │   │   ├── deepLearningToolkitUtils
+│   │   │   │   ├── deepResLearner
+│   │   │   │   ├── example_module2
+│   │   │   │   └── example_module.py
+│   │   │   ├── reconstruction
+│   │   │   │   ├── aalign_significant.cpp
+│   │   │   │   ├── (...)
+│   │   │   │   └── xray_psf_create.cpp
+│   │   │   ├── reconstruction_adapt_cuda
+│   │   │   │   ├── align_significant_gpu.cpp
+│   │   │   │   ├── (...)
+│   │   │   │   └── xmipp_gpu_utils.cpp
+│   │   │   └── reconstruction_cuda
+│   │   │       ├── cuda_all.cpp
+│   │   │       ├── (...)
+│   │   │       └── gpu.cpp
+│   │   ├── resources
+│   │   │   └── test
+│   │   │       ├── dimred
+│   │   │       ├── EMX
+│   │   │       ├── filters
+│   │   │       ├── funcs
+│   │   │       ├── image
+│   │   │       ├── metadata
+│   │   │       ├── polynomials
+│   │   │       ├── pythoninterface
+│   │   │       └── sampling
+│   │   ├── SConscript           # This contains the instructions to compile Xmipp (SConscript)
+│   │   ├── SConstruct           # This contains the instructions to compile Xmipp (SConstruct)
+│   │   └── tests  # This is created in testing time
+│   │       ├── data
+│   │       │   ├── gold
+│   │       │   │   └── (...)
+│   │       │   ├── input
+│   │       │   │   └── (...)
+│   │       │   ├── MANIFEST
+│   │       │   ├── temp.txt
+│   │       │   └── tmpLink
+│   │       ├── __init__.py
+│   │       ├── _test_internal.py
+│   │       ├── test_programs_xmipp.py
+│   │       ├── test.py
+│   │       └── _test_pythoninferface_xmipp.py
+│   │
+│   ├── xmippCore        # Repository of the Core        -&gt; this is the https://github.com/I2PC/xmippCore repository &lt;-
+│   │   │
+│   │   ├── bindings  # This contains bindings to other lenguages
+│   │   │   └── python
+│   │   │       ├── python_image.h
+│   │   │       └── xmippmoduleCore.h
+│   │   ├── CHANGELOG.md
+│   │   ├── core   # This contains the Xmipp CORE code
+│   │   │   ├── alglib
+│   │   │   │   ├── alglibinternal.cpp
+│   │   │   │   ├── (...)
+│   │   │   │   └── stdafx.h
+│   │   │   ├── args.cpp
+│   │   │   ├── (...)
+│   │   │   ├── bilib
+│   │   │   │   ├── changebasis.cc
+│   │   │   │   ├── (...)
+│   │   │   │   └── window.CC
+│   │   │   ├── gcc_version.h
+│   │   │   ├── (...)
+│   │   │   ├── utils
+│   │   │   │   └── (...)
+│   │   │   ├── xmipp_color.cpp
+│   │   │   ├── (...)
+│   │   │   └── xvsmooth.os
+│   │   ├── install  # This is created in compilation time
+│   │   │   ├── scons-tools
+│   │   │   │   ├── AutoConfig.py
+│   │   │   │   ├── Make.py
+│   │   │   │   └── __pycache__
+│   │   │   ├── xmipp.conf
+│   │   │   └── xmipp.template
+│   │   ├── lib    # Where the final libraries ends up
+│   │   │   ├── libXmippCore.so
+│   │   │   └── xmippCore.so
+│   │   ├── LICENSE
+│   │   ├── README.md
+│   │   ├── SConscript           # This contains the instructions to compile XmippCore (SConscript)
+│   │   └── SConstruct           # This contains the instructions to compile XmippCore (SConstruct)
+│   │
+│   └── xmippViz        # Repository of the Core       -&gt; this is the https://github.com/I2PC/xmippViz repository &lt;-
+│       │
+│       ├── applications
+│       │   └── scripts
+│       │       ├── metadata_plot
+│       │       └── showj
+│       ├── bin
+│       │   ├── xmipp_metadata_plot
+│       │   └── xmipp_showj
+│       ├── bindings
+│       │   ├── java
+│       │   │   ├── src
+│       │   │   │   └── (...)
+│       │   │   ├── xmipp_Aux.cpp
+│       │   │   ├── (...)
+│       │   │   └── xmipp_TiltPairAligner.cpp
+│       │   └── python
+│       │       └── xmippViz.py
+│       ├── CHANGELOG.md
+│       ├── external
+│       │   ├── imagej
+│       │   │   └── (...)
+│       │   └── imagej.tgz
+│       ├── install
+│       │   ├── scons-tools
+│       │   │   ├── AutoConfig.py
+│       │   │   └── Make.py
+│       │   ├── xmipp.conf
+│       │   └── xmipp.template
+│       ├── java
+│       │   ├── build
+│       │   │   ├── HandleExtraFileTypes.class
+│       │   │   ├── (...)
+│       │   │   └── XmippViewer.jar_source.txt
+│       │   ├── lib
+│       │   │   ├── commons-cli-1.1.jar
+│       │   │   ├── (...)
+│       │   │   └── XmippViewer.jar
+│       │   └── src          # This contains the hard code of xmippViz (coded in Java)
+│       │       ├── HandleExtraFileTypes.java
+│       │       └── xmipp
+│       │           └── (...)
+│       ├── lib
+│       │   └── libXmippJNI.so
+│       ├── LICENSE
+│       ├── README.md
+│       ├── resources
+│       │   ├── add.gif
+│       │   ├── (...)
+│       │   └── zoom.png
+│       ├── SConscript           # This contains the instructions to compile XmippViz (SConscript)
+│       ├── SConstruct           # This contains the instructions to compile XmippViz (SConstruct)
+│       └── xmipp_MetaData.cpp
+│
+└── build        # After compilation, all binaries ends up to the self-contained build folder
+    ├── bin   # This contains the binaries to be launched
+    │   ├── xmipp_angular_accuracy_pca
+    │   ├── (...)
+    │   └── xmipp_xray_psf_create
+    ├── bindings  # This contains the compiled bindings to other lenguages
+    │   ├── java
+    │   ├── matlab
+    │   └── python
+    ├── lib    # This contains the compiled libraries (needed to launch binaries in the bin folder)
+    │   ├── libcuFFTAdvisor.so
+    │   ├── libXmippCore.so
+    │   ├── libXmippCuda.a
+    │   ├── libXmippInterfaceCuda.so
+    │   ├── libXmippJNI.so
+    │   ├── libXmippParallelCuda.so
+    │   ├── libXmippParallel.so
+    │   └── libXmipp.so
+    ├── pylib    # Python modules to use in running time
+    │   └── xmippPyModules
+    │       └── xmippPyModules
+    │       ├── coordinatesTools
+    │       ├── deepConsensusWorkers
+    │       ├── deepDenoising
+    │       ├── deepLearningToolkitUtils
+    │       ├── deepResLearner
+    │       ├── example_module2
+    │       ├── example_module.py
+    │       └── __init__.py
+    ├── resources
+    │   ├── add.gif
+    │   ├── binocular.png
+    │   ├── brush.png
+    │   ├── (...)
+    │   └── zoom.png
+    ├── v3.20.07         # Installation token containing the version number
+    ├── xmipp.bashrc     # bash script to set Xmipp env. vars. (run &#39;source xmipp.basrc&#39;)
+    ├── xmippEnv.json    # Variables to set environ for Xmipp in running time
+    └── xmipp.fish       # fish script to set Xmipp env. vars. (run &#39;fish xmipp.basrc&#39;)
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../ConfigurationF/index.html" class="btn btn-neutral float-left" title="Configuration file" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Conventions/index.html" class="btn btn-neutral float-right" title="Conventions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Xmipp team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
