@@ -66,6 +66,7 @@ linking from the plugin to the software.
    `scipion-em-xmipp <https://github.com/I2PC/scipion-em-xmipp>`__/`xmipp3 <https://github.com/I2PC/scipion-em-xmipp/tree/devel/xmipp3>`__/xmipp_logo.png
    (in devel is the devel version of the image) for
    xmipp_logo_original.png
+-  Replace the type_of_version at <https://github.com/I2PC/scipion-em-xmipp/blob/da42ebc37f85c1c39fcd7f6f2f9d1af1b9424c7a/xmipp3/__init__.py#L40>`__
 
 -  Review the status of each protocol (_devStatus), maybe some change
    from New to Production, or production to updated…
