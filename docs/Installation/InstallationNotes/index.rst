@@ -405,8 +405,17 @@ Typing ``cmake --version`` or trying to compile Xmipp appears:
 by cmake)** (or similar)
 
 That appears in new versions of Cmake with older versions of the
-enviroment Scipion created with gcc-10. To solve it, you may add the
-path of the conda lib in the LD_LIBRARY_PATH to avoid that the new Cmake
+enviroment Scipion created with gcc-10. To solve it, you can try to:
+
+
+\* Reinstall the library libstdcxx on the base
+enviroment of Conda ``conda install -c conda-forge libstdcxx-ng``
+
+\* Simply removing the offending libstdc++.so file will normally resolve this issue. 
+
+or
+
+\* Add the path of the conda lib in the LD_LIBRARY_PATH to avoid that the new Cmake
 tries to read older \*.so files. Write the next line in the .bashrc
 file:
 
@@ -417,10 +426,11 @@ the LD_LIBRARY_PATH.
 
 ``export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/:/path/To/Conda/lib:$LD_LIBRARY_PATH``
 
-Other solutions \* Reinstall the library libstdcxx on the base
-enviroment of Conda ``conda install -c anaconda libstdcxx-ng`` and add
-the path of the base enviroment on
-LD_LIBRARY_PATH\ ``export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/path/to/conda/lib``
+
+
+
+
+
 \* If your Conda was compiled with an older version of gcc you could try
 to compile Xmipp with an older version of gcc (limitation: we require
 gcc >=8) \* You could reinstall your Conda, but you may need to
