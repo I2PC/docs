@@ -407,15 +407,14 @@ by cmake)** (or similar)
 That appears in new versions of Cmake with older versions of the
 enviroment Scipion created with gcc-10. To solve it, you can try to:
 
+- a/ Rename the problematic file "libstdc++.so.6" located on a enviroment
 
-\* Reinstall the library libstdcxx on the base
+- b/ Link the problematic file "libstdc++.so.6" located on a enviroment
+- c/ Reinstall the library libstdcxx on the base
 enviroment of Conda ``conda install -c conda-forge libstdcxx-ng``
 
-\* Simply removing the offending libstdc++.so file will normally resolve this issue. 
 
-or
-
-\* Add the path of the conda lib in the LD_LIBRARY_PATH to avoid that the new Cmake
+- d/ Add the path of the conda lib in the LD_LIBRARY_PATH to avoid that the new Cmake
 tries to read older \*.so files. Write the next line in the .bashrc
 file:
 
@@ -426,12 +425,7 @@ the LD_LIBRARY_PATH.
 
 ``export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/:/path/To/Conda/lib:$LD_LIBRARY_PATH``
 
-
-
-
-
-
-\* If your Conda was compiled with an older version of gcc you could try
+- e/ If your Conda was compiled with an older version of gcc you could try
 to compile Xmipp with an older version of gcc (limitation: we require
 gcc >=8) \* You could reinstall your Conda, but you may need to
 reinstall Scipion and all the plugins of Scipion that require
