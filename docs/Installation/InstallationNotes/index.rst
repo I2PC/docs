@@ -410,13 +410,10 @@ enviroment Scipion created with gcc-10. To solve it, you can try to:
 - a/ Rename the problematic file "libstdc++.so.6" located on a enviroment
 
 - b/ Link the problematic file "libstdc++.so.6" located on a enviroment
-- c/ Reinstall the library libstdcxx on the base
-enviroment of Conda ``conda install -c conda-forge libstdcxx-ng``
+- c/ Reinstall the library libstdcxx on the base enviroment of Conda ``conda install -c conda-forge libstdcxx-ng``
 
 
-- d/ Add the path of the conda lib in the LD_LIBRARY_PATH to avoid that the new Cmake
-tries to read older \*.so files. Write the next line in the .bashrc
-file:
+- d/ Add the path of the conda lib in the LD_LIBRARY_PATH to avoid that the new Cmaketries to read older \*.so files. Write the next line in the .bashrcfile:
 
 ``export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/:$LD_LIBRARY_PATH``
 
