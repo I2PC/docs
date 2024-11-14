@@ -4,6 +4,7 @@ Integrating with Visual Studio Code
 The CMake based installation script can be tightly integrated with any modern IDE. This section shows the procedure for Visual Studio Code (VSCode).
 
 Before starting with the configuration process open a terminal and run the following commands. Anotate their outputs.
+
 .. code-block:: bash
 
     conda activate scipion3 && echo $CONDA_PREFIX
