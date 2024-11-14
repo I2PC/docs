@@ -22,10 +22,15 @@ In visual studio code
     7. Navigate to the "CMake Tools" section
     8. Set the following options:
         "Cmake: Configure Args" add -DCMAKE_PREFIX_PATH=CONDA_PREFIX (replace CONDA_PREFIX with the value obtained previously)
+
         "Cmake: Configure Args" add -DCMAKE_SKIP_RPATH=ON
+
         "Cmake: Configure Environment" add: Element: Python3_ROOT_DIR Value: CONDA_PREFIX (replace CONDA_PREFIX with the value obtained previously)
+
         "Cmake: Configure Environment" add: Element: SCIPION_SOFTWARE Value: SCIPION_SOFTWARE (replace SCIPION_SOFTWARE with the value obtained previousy)
+
         "Cmake: Install prefix": /path-to/xmipp/dist (Absolute path)
+        
     9. Go to the CMake tab on the left.
     10. In "Pinned commands" add "Install"
 
