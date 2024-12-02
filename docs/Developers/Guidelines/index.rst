@@ -1,6 +1,13 @@
 Guidelines
 ------------
 
+Software Development Guide
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1. Branch Management 
+2. Naming Conventions 
+3. Merging to Development Branch
+4. Release Management 
+
 Programming - Handling images
 ^^^^^^^^^^
 
