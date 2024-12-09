@@ -42,6 +42,7 @@ List of deprecated programs
 - `tomo_align_tilt_series, tomo_align_dual_tilt_series, tomo_align_refinement, tomo_align_refinement, tomo_extract_subvolume, tomo_project_main, tomo_remove_fluctuations <https://github.com/I2PC/xmipp/pull/685/commits/9f1335854eadadad2e111b8f0062e4cdf7e8d6c4>`_
 - tomo_align_tilt
 - `deep_denoissing <https://github.com/I2PC/xmipp/commit/d28e250b3e1a5cd466ef61f3cdba294cea89de60>`_
+- `angular resolution alignmnet https://github.com/I2PC/xmipp/pull/959/commits/4b6a0813337099318cdf42411e83987d85b0731d`_
 
 List of deprecated protocols
 -----------------------------
@@ -63,3 +64,4 @@ List of deprecated protocols
 - `metaprotocol_golden_highres <https://github.com/I2PC/scipion-em-xmipp/commit/4bc23c0a47a0267da6046a1ee7179ec470aaa7f3>`_
 - `solid_angle <https://github.com/I2PC/scipion-em-xmipp/commit/086710d671b0bcb388c4b99d662991e761952a44>`_
 - `split_volume <https://github.com/I2PC/scipion-em-xmipp/commit/b297c596441df37a626ec97c4d7373d858364cb6>`_
+- `angular resolution alignmnet https://github.com/I2PC/scipion-em-xmipp/pull/842/commits/40d8e7b00997b311926123641e73681cfe9acc3e`_
