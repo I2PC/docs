@@ -64,5 +64,5 @@ List of deprecated protocols
 - `metaprotocol_golden_highres <https://github.com/I2PC/scipion-em-xmipp/commit/4bc23c0a47a0267da6046a1ee7179ec470aaa7f3>`_
 - `solid_angle <https://github.com/I2PC/scipion-em-xmipp/commit/086710d671b0bcb388c4b99d662991e761952a44>`_
 - `split_volume <https://github.com/I2PC/scipion-em-xmipp/commit/b297c596441df37a626ec97c4d7373d858364cb6>`_
-- `angular resolution alignmnet https://github.com/I2PC/scipion-em-xmipp/pull/842/commits/40d8e7b00997b311926123641e73681cfe9acc3e`_
-- `movie_opticalflow https://github.com/I2PC/scipion-em-xmipp/pull/845/commits/631ab13cd104a5e62c46decc4241b93c0a34b455`_
+- `angular resolution alignmnet <https://github.com/I2PC/scipion-em-xmipp/pull/842/commits/40d8e7b00997b311926123641e73681cfe9acc3e>`_
+- `movie_opticalflow <https://github.com/I2PC/scipion-em-xmipp/pull/845/commits/631ab13cd104a5e62c46decc4241b93c0a34b455>`_
