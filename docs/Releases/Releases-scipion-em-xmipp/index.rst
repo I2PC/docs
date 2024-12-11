@@ -3,8 +3,7 @@ Releases scipion-em-xmipp
 3.24.12 - Poseidon
 --------------------------
 - New protocols
-   - apply_tilt_to_ctf: Apply a local deviation to the CTF based on the micrograph's tilt
-   angle
+   - apply_tilt_to_ctf: Apply a local deviation to the CTF based on the micrograph's tilt   angle
    - mics_defocus_balancer: It takes as input a certain number of CTFs and makes a balanced sampling of N images based on the defocus U values
    - deep_center_predict: Center a set of particles in 2D using a neural network
    - cl2d_clustering: 2D clustering protocol to group similar images (2D Averages or 2D Classes)
