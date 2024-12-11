@@ -30,7 +30,7 @@ Releases scipion-em-xmipp
    -  ctf_defocus_group: fix when testing multiple downsampling factors
    -  ctf_micrographs: fix when testing multiple downsampling factors
 
-- Protocols deprecated (For more details visit [this](https://github.com/I2PC/xmipp/wiki/Deprecating-programs-and-protocols))
+- Protocols deprecated (For more details [visit] (https://github.com/I2PC/xmipp/wiki/Deprecating-programs-and-protocols))
    - angular_resolution_alignment
    - movie_opticalflow.py
       
