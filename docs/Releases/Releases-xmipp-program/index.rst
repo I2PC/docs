@@ -1,6 +1,6 @@
 Releases xmipp program
 =========================
-3.24.06 - Poseidon 
+3.24.12 - Poseidon 
 ------------------------
 Xmipp Programs 
 ~~~~~~~~~~~~~~~
@@ -38,7 +38,7 @@ More Xmipp
    - Added MADV_HUGEPAGE support check
    - Fix for rare axis orderings in MRC/MAP files
    - Local average label added (used to measure the intensity of the particles in the original micrographs)
-   
+
 
 3.24.06 - `Oceanus <https://github.com/I2PC/xmipp/releases/tag/v3.24.06-Oceanus>`__
 ------------------------
