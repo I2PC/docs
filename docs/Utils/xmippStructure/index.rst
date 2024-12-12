@@ -18,8 +18,6 @@ gitHub <https://github.com/i2pc>`__.
 We call ``xmipp-bundle`` to the folder that contains the four
 repositories listed above in the following structure.
 
-Xmipp
---------------------------
 ::
    .
    ├── CHANGELOG.md
@@ -87,7 +85,7 @@ Xmipp
 The schematic of the four repositories is shown below.
 
 Xmipp
-
+--------------------------
 ::
    │   │   ├── applications
    │   │   │   ├── CMakeLists.txt
