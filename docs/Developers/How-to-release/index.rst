@@ -10,21 +10,24 @@ Step 1: Define the Version Name
   - **X** = 3 (this keeps the main version number consistent to sort releases and maintain `xmipp3`).
   - **YY** = Year of the release.
   - **ZZ** = Month of the release.
-- Additionally, name the release after a Greek god or goddess. Check out the list at: https://www.gods-and-monsters.com/list-of-greek-gods-goddesses.html
+- Additionally, name the release after a Greek god or goddess. `Check out the list <https://www.gods-and-monsters.com/list-of-greek-gods-goddesses.html>`__
 - Example: `3.24.06 - Boreas` (for a June 2024 release).
+
+
 
 Step 2: Update the `changelog.md`
 ----------------------------------
-1. Go through the changes in:
+1. Go through the changes in CHANGELOG.md file:
    - **xmipp** (includes `xmippcore`).
    - **scipion-em-xmipp**.
    - **xmippViz**.
-2. Follow the format used in previous releases.
+2. Follow the tittle format used in previous releases.
    - This is crucial because the release automation uses these tags.
 3. Use pull requests as a reference to identify changes and describe them clearly.
 
 Step 3: Schedule the Release
 ----------------------------
+- Announce at least **two weeks in advance** that no new changes will be merged into `devel`. This stabilization period helps identify potential bugs in the `devel` branch.
 - Prepare all steps in advance.
 - Post the release at the **start of your workday** to address any issues promptly.
 
@@ -39,62 +42,54 @@ Step 5: Update Protocol Status
   - Set to **PROD**, **NEW**, or **UPDATED** if applicable.
 - Consider deprecating protocols no longer in use or supported.
 
-Step 6: Announce the Release Freeze
-------------------------------------
-- Announce at least **two weeks in advance** that no new changes will be merged into `devel`.
-- This stabilization period helps identify potential bugs in the `devel` branch.
 
-Step 7: Create Candidate Branches
+Step 6: Create Candidate Branches
 ----------------------------------
 - Name the release branches according to the release version (e.g., `release-3.24.06`).
 
-Step 8: Update Version Information
+Step 7: Update Version Information
 -----------------------------------
 1. **In Xmipp**:
-   - Update the name, version, and release date in:
-     `https://github.com/I2PC/xmipp/blob/e72e2e9ea0ae824f60ded8b1f00b404d2c99d4d9/installer/constants/versions.py#L31`
+   - Update the name, version, and release date in `here <https://github.com/I2PC/xmipp/blob/e72e2e9ea0ae824f60ded8b1f00b404d2c99d4d9/installer/constants/versions.py#L31>`__
 
 2. **In scipion-em-xmipp**:
-   - Change the `devel` variable to `release` in:
-     `https://github.com/I2PC/scipion-em-xmipp/blob/9881da0c6cdec69517e26fc025500d4940d44d0e/xmipp3/version.py#L28`
+   - Change the `devel` variable to `release` in `here <https://github.com/I2PC/scipion-em-xmipp/blob/9881da0c6cdec69517e26fc025500d4940d44d0e/xmipp3/version.py#L28>`__
    - Update `_current_xmipp_tag` and `_currentBinVersion` accordingly.
 
-Step 9: Validate Release Branches Locally
+Step 8: Validate Release Branches Locally
 ------------------------------------------
 - Check out the release branches locally or on a test machine.
 - Verify:
   - Installation with and without Scipion.
   - Execution of a few tests.
 
-Step 10: Create Pull Requests
+Step 9: Create Pull Requests
 ------------------------------
 - Open four pull requests:
   - **Release to master** for each relevant repository.
 
-Step 11: Document Changes
+Step 10: Document Changes
 --------------------------
-- Compile a list of changed files, lines added, and other details from the PRs.
-- Document this in the Xmipp monitoring file.
+- Compile a list of changed files, lines added, and other details from the PRs. Document this in the Xmipp monitoring file.
 
-Step 12: Merge the Pull Requests
+Step 11: Merge the Pull Requests
 ---------------------------------
 - Merge the four PRs.
   - This triggers the creation of release tags on GitHub.
-  - In **scipion-em-xmipp**, it will also upload the package to PyPI.
-  - Note: This is the most critical step to revert if issues arise.
+  - In **scipion-em-xmipp**, it will also upload the package to PyPI. Note: This is the most critical step to revert if issues arise.
 
-Step 13: Announce the Release
+Step 12: Announce the Release
 ------------------------------
 - Share the release news via:
   - Email lists.
   - Discord.
   - Any other relevant platforms.
 
-Step 14: Consider XmippTomo
+Step 13: Consider XmippTomo
 ----------------------------
 - Evaluate whether **XmippTomo** needs a corresponding release.
 
-Step 15: PR from Release to Devel
+Step 14: PR from Release to Devel
 ----------------------------------
 - Create a pull request from `release` back to `devel`.
 - Revert the tags for `release` and `devel` in:
