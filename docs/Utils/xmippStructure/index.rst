@@ -89,6 +89,7 @@ The schematic of the four repositories is shown below.
 Xmipp
 --------------------------
 ::
+   
    │   │   ├── applications
    │   │   │   ├── CMakeLists.txt
    │   │   │   ├── programs
