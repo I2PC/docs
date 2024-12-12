@@ -1,7 +1,7 @@
 Xmipp Configuration File
 ========================
 
-This document describes the variables present in the Xmipp configuration file and their purpose. 
+This document describes the variables present in the Xmipp configuration file and their purpose. Reviewed for xmipp.3.24.12 - Poseidon
 Each section and variable is detailed below:
 
 Toggle Section
