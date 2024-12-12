@@ -641,3 +641,394 @@ xmippCore
    │   │   │   ├── ci_build
    │   │   │   └── version.py
    │   │   └── sonar-project.properties
+
+
+xmippViz
+
+::
+   │   └── xmippViz
+   │       ├── applications
+   │       │   ├── CMakeLists.txt
+   │       │   └── scripts
+   │       │       ├── CMakeLists.txt
+   │       │       ├── metadata_plot
+   │       │       │   └── batch_metadata_plot.py
+   │       │       └── showj
+   │       │           └── batch_showj.py
+   │       ├── bindings
+   │       │   ├── java
+   │       │   │   ├── xmipp_Aux.cpp
+   │       │   │   ├── xmipp_Aux.h
+   │       │   │   ├── xmipp_CTFDescription.cpp
+   │       │   │   ├── xmipp_CTFDescription.h
+   │       │   │   ├── xmipp_ExceptionsHandler.cpp
+   │       │   │   ├── xmipp_ExceptionsHandler.h
+   │       │   │   ├── xmipp_Filename.cpp
+   │       │   │   ├── xmipp_Filename.h
+   │       │   │   ├── xmipp_ImageGeneric.cpp
+   │       │   │   ├── xmipp_ImageGeneric.h
+   │       │   │   ├── xmipp_InternalData.h
+   │       │   │   ├── xmipp_java_adapter.h
+   │       │   │   ├── xmipp_MDRow.cpp
+   │       │   │   ├── xmipp_MDRow.h
+   │       │   │   ├── xmipp_MetaData.cpp
+   │       │   │   ├── xmipp_MetaData.h
+   │       │   │   ├── xmipp_PickingClassifier.cpp
+   │       │   │   ├── xmipp_PickingClassifier.h
+   │       │   │   ├── xmipp_Program.cpp
+   │       │   │   ├── xmipp_Program.h
+   │       │   │   ├── xmipp_Projection.cpp
+   │       │   │   ├── xmipp_Projection.h
+   │       │   │   ├── xmipp_TiltPairAligner.cpp
+   │       │   │   └── xmipp_TiltPairAligner.h
+   │       │   └── python
+   │       │       └── xmippViz.py
+   │       ├── CHANGELOG.md
+   │       ├── cmake
+   │       │   └── enum.java.in
+   │       ├── CMakeLists.txt
+   │       ├── external
+   │       │   └── imagej.tgz
+   │       ├── java
+   │       │   ├── lib
+   │       │   │   ├── commons-cli-1.1.jar
+   │       │   │   ├── core-1.1.jar
+   │       │   │   ├── ImageJ_3D_Viewer.jar
+   │       │   │   ├── ImageJ_SURF_2009-12-01_08.19.jar
+   │       │   │   ├── j3dcore.jar
+   │       │   │   ├── j3dutils.jar
+   │       │   │   ├── Jama-1.0.2.jar
+   │       │   │   ├── jcommon-1.0.16.jar
+   │       │   │   ├── jfreechart-1.0.13.jar
+   │       │   │   ├── junit4-4.8.2.jar
+   │       │   │   ├── sqlite-jdbc-3.7.15-M1.jar
+   │       │   │   ├── vecmath.jar
+   │       │   │   └── VIB-lib.jar
+   │       │   └── src
+   │       │       ├── HandleExtraFileTypes.java
+   │       │       └── xmipp
+   │       │           ├── ij
+   │       │           │   ├── commons
+   │       │           │   │   ├── DesignMaskJFrame.java
+   │       │           │   │   ├── Geometry.java
+   │       │           │   │   ├── IJCommand.java
+   │       │           │   │   ├── ImageJPanel.java
+   │       │           │   │   ├── ImagePlusFromFile.java
+   │       │           │   │   ├── ImagePlusLoader.java
+   │       │           │   │   ├── ImagePlusNotFromFile.java
+   │       │           │   │   ├── ImagePlusReader.java
+   │       │           │   │   ├── InputFieldsMessageDialog.java
+   │       │           │   │   ├── PollTimer.java
+   │       │           │   │   ├── Tool.java
+   │       │           │   │   ├── XmippApplication.java
+   │       │           │   │   ├── XmippIJWindow.java
+   │       │           │   │   ├── XmippImageCanvas.java
+   │       │           │   │   ├── XmippImageConverter.java
+   │       │           │   │   ├── XmippImageJ.java
+   │       │           │   │   ├── XmippImageWindow.java
+   │       │           │   │   ├── XmippMenuBar.java
+   │       │           │   │   ├── XmippStackWindow.java
+   │       │           │   │   └── XmippUtil.java
+   │       │           │   └── plugins
+   │       │           │       └── maskstoolbar
+   │       │           │           ├── AboutMasksToolBar.java
+   │       │           │           ├── ICONS.java
+   │       │           │           ├── LABELS.java
+   │       │           │           ├── MasksToolBar.java
+   │       │           │           ├── MasksToolBarPlugin.java
+   │       │           │           ├── Operations.java
+   │       │           │           └── plugins.config
+   │       │           ├── jni
+   │       │           │   ├── CastWriteMode.java
+   │       │           │   ├── Classifier.java
+   │       │           │   ├── CTFDescription.java
+   │       │           │   ├── EllipseCTF.java
+   │       │           │   ├── Filename.java
+   │       │           │   ├── ImageGeneric.java
+   │       │           │   ├── ImageWriteMode.java
+   │       │           │   ├── LinearAlgebra.java
+   │       │           │   ├── MDRow.java
+   │       │           │   ├── MetaData.java
+   │       │           │   ├── Particle.java
+   │       │           │   ├── PickingClassifier.java
+   │       │           │   ├── Program.java
+   │       │           │   ├── ProgTomographAlignment.java
+   │       │           │   ├── Projection.java
+   │       │           │   └── TiltPairAligner.java
+   │       │           ├── test
+   │       │           │   ├── FilenameTest.java
+   │       │           │   ├── imagegeneric.stk
+   │       │           │   ├── ImageGenericTest.java
+   │       │           │   ├── MetadataTest.java
+   │       │           │   ├── singleImage2.spi
+   │       │           │   ├── singleImage.spi
+   │       │           │   ├── tux.xmd
+   │       │           │   └── XmippTest.java
+   │       │           ├── tomography
+   │       │           │   └── alignment
+   │       │           │       ├── Matrix.java
+   │       │           │       ├── Tomography.java
+   │       │           │       └── TomoSerieAligner.java
+   │       │           ├── utils
+   │       │           │   ├── Cache.java
+   │       │           │   ├── ColorEditor.java
+   │       │           │   ├── ColorIcon.java
+   │       │           │   ├── ColorRenderer.java
+   │       │           │   ├── CompoundIcon.java
+   │       │           │   ├── DEBUG.java
+   │       │           │   ├── ImageRenderer.java
+   │       │           │   ├── InfiniteProgressPanel.java
+   │       │           │   ├── MultilineCellRenderer.java
+   │       │           │   ├── Params.java
+   │       │           │   ├── QuickHelpJDialog.java
+   │       │           │   ├── QuickHelpPane.java
+   │       │           │   ├── ScipionParams.java
+   │       │           │   ├── SpringUtilities.java
+   │       │           │   ├── StopWatch.java
+   │       │           │   ├── Task.java
+   │       │           │   ├── TaskTimer.java
+   │       │           │   ├── XmippDialog.java
+   │       │           │   ├── XmippFileChooser.java
+   │       │           │   ├── XmippFilePreview.java
+   │       │           │   ├── XmippFileView.java
+   │       │           │   ├── XmippLabel.java
+   │       │           │   ├── XmippMenuBarCreator.java
+   │       │           │   ├── XmippMenuCreator.java
+   │       │           │   ├── XmippMessageDialog.java
+   │       │           │   ├── XmippMessage.java
+   │       │           │   ├── XmippPopupMenuCreator.java
+   │       │           │   ├── XmippQuestionDialog.java
+   │       │           │   ├── XmippResource.java
+   │       │           │   ├── XmippStringUtils.java
+   │       │           │   └── XmippWindowUtil.java
+   │       │           └── viewer
+   │       │               ├── ctf
+   │       │               │   ├── CommandTask.java
+   │       │               │   ├── CTFAnalyzerImagePane.java
+   │       │               │   ├── CTFAnalyzerJFrame.java
+   │       │               │   ├── CTFCanvas.java
+   │       │               │   ├── CTFRecalculateImageWindow.java
+   │       │               │   ├── EstimateFromCTFTask.java
+   │       │               │   ├── iCTFGUI.java
+   │       │               │   ├── iTaskCompletionListener.java
+   │       │               │   ├── SortPSDSTask.java
+   │       │               │   └── TasksEngine.java
+   │       │               ├── FloatRenderer.java
+   │       │               ├── ImageDimension.java
+   │       │               ├── ImageItemRenderer.java
+   │       │               ├── JMetaDataIO.java
+   │       │               ├── models
+   │       │               │   ├── ClassInfo.java
+   │       │               │   ├── ColumnInfo.java
+   │       │               │   ├── GalleryColumnModel.java
+   │       │               │   ├── GalleryData.java
+   │       │               │   ├── GalleryRowHeaderModel.java
+   │       │               │   ├── ImageGalleryTableModel.java
+   │       │               │   ├── MetadataGalleryTableModel.java
+   │       │               │   ├── MetadataRowTableModel.java
+   │       │               │   ├── MetadataTableModel.java
+   │       │               │   └── VolumeGalleryTableModel.java
+   │       │               ├── particlepicker
+   │       │               │   ├── ColorHelper.java
+   │       │               │   ├── CtfInfo.java
+   │       │               │   ├── extract
+   │       │               │   │   ├── ExtractCanvas.java
+   │       │               │   │   ├── ExtractMicrograph.java
+   │       │               │   │   ├── ExtractParticle.java
+   │       │               │   │   ├── ExtractParticlePicker.java
+   │       │               │   │   ├── ExtractPickerJFrame.java
+   │       │               │   │   ├── MicrographCanvas.java
+   │       │               │   │   └── MicrographData.java
+   │       │               │   ├── Format.java
+   │       │               │   ├── ImportParticlesJDialog.java
+   │       │               │   ├── Micrograph.java
+   │       │               │   ├── ParticleCanvas.java
+   │       │               │   ├── ParticlePickerCanvas.java
+   │       │               │   ├── ParticlePicker.java
+   │       │               │   ├── ParticlePickerJFrame.java
+   │       │               │   ├── ParticlePickerParams.java
+   │       │               │   ├── ParticlesDialog.java
+   │       │               │   ├── PickerParticle.java
+   │       │               │   ├── Shape.java
+   │       │               │   ├── tiltpair
+   │       │               │   │   ├── gui
+   │       │               │   │   │   ├── ImportParticlesFromFilesTiltPairJDialog.java
+   │       │               │   │   │   ├── MicrographPairsTableModel.java
+   │       │               │   │   │   ├── TiltedMicrographCanvas.java
+   │       │               │   │   │   ├── TiltPairParticlesDialog.java
+   │       │               │   │   │   ├── TiltPairPickerJFrame.java
+   │       │               │   │   │   └── UntiltedMicrographCanvas.java
+   │       │               │   │   ├── model
+   │       │               │   │   │   ├── TiltedMicrograph.java
+   │       │               │   │   │   ├── TiltedParticle.java
+   │       │               │   │   │   ├── TiltPairPicker.java
+   │       │               │   │   │   ├── UntiltedMicrograph.java
+   │       │               │   │   │   └── UntiltedParticle.java
+   │       │               │   │   └── TiltPairPickerRunner.java
+   │       │               │   └── training
+   │       │               │       ├── AutopickRunnable.java
+   │       │               │       ├── CorrectAndAutopickRunnable.java
+   │       │               │       ├── gui
+   │       │               │       │   ├── MicrographsTableModel.java
+   │       │               │       │   ├── SupervisedPickerCanvas.java
+   │       │               │       │   ├── SupervisedPickerJFrame.java
+   │       │               │       │   └── TemplatesJDialog.java
+   │       │               │       ├── model
+   │       │               │       │   ├── AutomaticParticle.java
+   │       │               │       │   ├── CenterParticleTask.java
+   │       │               │       │   ├── GenericClassifier.java
+   │       │               │       │   ├── ManualParticle.java
+   │       │               │       │   ├── MicrographState.java
+   │       │               │       │   ├── Mode.java
+   │       │               │       │   ├── ParticleToTemplatesTask.java
+   │       │               │       │   ├── SupervisedParticlePicker.java
+   │       │               │       │   └── SupervisedPickerMicrograph.java
+   │       │               │       ├── SupervisedPickerRunner.java
+   │       │               │       └── TrainRunnable.java
+   │       │               ├── RowHeaderRenderer.java
+   │       │               ├── scipion
+   │       │               │   ├── ScipionGalleryData.java
+   │       │               │   ├── ScipionGalleryJFrame.java
+   │       │               │   ├── ScipionMetaData.java
+   │       │               │   └── ScipionViewer.java
+   │       │               ├── StrokeBorder.java
+   │       │               ├── Viewer.java
+   │       │               ├── ViewerTest.java
+   │       │               └── windows
+   │       │                   ├── AddFillLabelsJDialog.java
+   │       │                   ├── AddObjectJDialog.java
+   │       │                   ├── ClassesJDialog.java
+   │       │                   ├── ColumnsJDialog.java
+   │       │                   ├── CTFProfileWindow.java
+   │       │                   ├── EditLabelsJDialog.java
+   │       │                   ├── ExportImagesJDialog.java
+   │       │                   ├── FSCJFrame.java
+   │       │                   ├── GalleryJFrame.java
+   │       │                   ├── ImagesWindowFactory.java
+   │       │                   ├── iPollImageWindow.java
+   │       │                   ├── MDSearchJDialog.java
+   │       │                   ├── PlotJDialog.java
+   │       │                   ├── SaveImagesJDialog.java
+   │       │                   ├── SaveJDialog.java
+   │       │                   ├── TextfileJFrame.java
+   │       │                   └── Worker.java
+   │       ├── LICENSE
+   │       ├── README.md
+   │       ├── resources
+   │       │   ├── add.gif
+   │       │   ├── binocular.png
+   │       │   ├── brush.png
+   │       │   ├── brush_size.png
+   │       │   ├── bulb.png
+   │       │   ├── Bundle.properties
+   │       │   ├── center.png
+   │       │   ├── chimera.png
+   │       │   ├── circle.png
+   │       │   ├── columns.gif
+   │       │   ├── copy.gif
+   │       │   ├── create_mask.png
+   │       │   ├── create_selection.png
+   │       │   ├── delete.gif
+   │       │   ├── delete_item.png
+   │       │   ├── disable.gif
+   │       │   ├── down.gif
+   │       │   ├── edit.gif
+   │       │   ├── ellipse.png
+   │       │   ├── enable.gif
+   │       │   ├── eraserC.png
+   │       │   ├── eraser.png
+   │       │   ├── err.gif
+   │       │   ├── error.gif
+   │       │   ├── export.gif
+   │       │   ├── export_wiz.gif
+   │       │   ├── fa-cogs.png
+   │       │   ├── fa-plus-circle.png
+   │       │   ├── fa-refresh.png
+   │       │   ├── fa-times.png
+   │       │   ├── fileopen.gif
+   │       │   ├── file.png
+   │       │   ├── fill.png
+   │       │   ├── find.gif
+   │       │   ├── foderopen.gif
+   │       │   ├── folderopen.gif
+   │       │   ├── folder.png
+   │       │   ├── freehand.png
+   │       │   ├── generic_file.gif
+   │       │   ├── goto.gif
+   │       │   ├── help.gif
+   │       │   ├── histogram.png
+   │       │   ├── I2PC.png
+   │       │   ├── ij.gif
+   │       │   ├── image.gif
+   │       │   ├── import_wiz.gif
+   │       │   ├── info.gif
+   │       │   ├── invert_mask.png
+   │       │   ├── invert_selection.png
+   │       │   ├── java_file.gif
+   │       │   ├── left.gif
+   │       │   ├── level_warning.gif
+   │       │   ├── linearPickingC.png
+   │       │   ├── linearPicking.png
+   │       │   ├── locked.png
+   │       │   ├── log.gif
+   │       │   ├── md.gif
+   │       │   ├── md_view.gif
+   │       │   ├── merge.gif
+   │       │   ├── missing2.png
+   │       │   ├── missing.png
+   │       │   ├── new_object.gif
+   │       │   ├── no-image.jpg
+   │       │   ├── no-image.png
+   │       │   ├── online_help.gif
+   │       │   ├── out.gif
+   │       │   ├── oval.png
+   │       │   ├── pdb.gif
+   │       │   ├── pdbSmall.gif
+   │       │   ├── picking1.png
+   │       │   ├── pickingC1.png
+   │       │   ├── picking.png
+   │       │   ├── pick.png
+   │       │   ├── plot.png
+   │       │   ├── plus.png
+   │       │   ├── polygon.png
+   │       │   ├── progress_error.gif
+   │       │   ├── progress_none.gif
+   │       │   ├── progress_ok.gif
+   │       │   ├── python_file.gif
+   │       │   ├── question.gif
+   │       │   ├── rectangle.png
+   │       │   ├── refresh.gif
+   │       │   ├── resize.png
+   │       │   ├── right.gif
+   │       │   ├── rotate.png
+   │       │   ├── roundrectangle.png
+   │       │   ├── run_steps.gif
+   │       │   ├── save_as.gif
+   │       │   ├── save.gif
+   │       │   ├── save_small.gif
+   │       │   ├── scipion_logo.png
+   │       │   ├── search.gif
+   │       │   ├── select_run.gif
+   │       │   ├── specify_selection.png
+   │       │   ├── square.png
+   │       │   ├── stack.gif
+   │       │   ├── step_finished.gif
+   │       │   ├── step.gif
+   │       │   ├── stop.gif
+   │       │   ├── table_view.gif
+   │       │   ├── topview.png
+   │       │   ├── tree2.gif
+   │       │   ├── tree.gif
+   │       │   ├── unlocked.png
+   │       │   ├── up.gif
+   │       │   ├── visualize.gif
+   │       │   ├── vol.gif
+   │       │   ├── wait.gif
+   │       │   ├── wait_menu.gif
+   │       │   ├── warning.gif
+   │       │   ├── wizard.gif
+   │       │   ├── xmipp_logoFull.png
+   │       │   ├── xmipp_logo.gif
+   │       │   ├── xmipp_logo.psd
+   │       │   └── zoom.png
+   │       └── version.py
