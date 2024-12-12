@@ -89,7 +89,7 @@ The schematic of the four repositories is shown below.
 Xmipp
 --------------------------
 ::
-   
+
    │   │   ├── applications
    │   │   │   ├── CMakeLists.txt
    │   │   │   ├── programs
@@ -2849,3 +2849,7 @@ xmippViz
    │       │   ├── xmipp_logo.psd
    │       │   └── zoom.png
    │       └── version.py
+
+
+
+   Structure updated: xmipp3.24.12 - Poseidon
