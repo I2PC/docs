@@ -81,8 +81,9 @@ repositories listed above in the following structure.
    │   └── utils.py
    ├── xmipp
    └── xmipp_old
-   ├── src
 
+
+The schematic of the three repositories is shown below.
 
 scipion-em-xmipp
 ::
