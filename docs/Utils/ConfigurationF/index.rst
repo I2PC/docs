@@ -1,7 +1,13 @@
 Xmipp Configuration File
 ========================
 
-This document describes the variables present in the Xmipp configuration file and their purpose. Reviewed for xmipp.3.24.12 - Poseidon
+The Xmipp configuration file is generated at the beginning of the installation process if it does not already exist. This file is used to load the necessary libraries and set up environment variables for Xmipp. To generate a new configuration file, you can use the command:
+
+```
+./xmipp config
+```
+
+This document describes the variables present in the Xmipp configuration file and their purpose. 
 Each section and variable is detailed below:
 
 Toggle Section
