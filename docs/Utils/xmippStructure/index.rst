@@ -21,7 +21,7 @@ repositories listed above in the following structure.
 Main repository
 --------------------------
 ::
-   .
+
    ├── CHANGELOG.md
    ├── cmake
    │   ├── fetch_cifpp.cmake
@@ -1900,6 +1900,7 @@ Xmipp
 scipion-em-xmipp
 --------------------------
 ::
+
    │   ├── scipion-em-xmipp
    │   │   ├── CHANGELOG.md
    │   │   ├── LICENSE
@@ -2460,6 +2461,7 @@ xmippCore
 xmippViz
 --------------------------
 ::
+   
    │   └── xmippViz
    │       ├── applications
    │       │   ├── CMakeLists.txt
