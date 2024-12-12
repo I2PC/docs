@@ -18,6 +18,8 @@ gitHub <https://github.com/i2pc>`__.
 We call ``xmipp-bundle`` to the folder that contains the four
 repositories listed above in the following structure.
 
+Main repository
+--------------------------
 ::
    .
    ├── CHANGELOG.md
