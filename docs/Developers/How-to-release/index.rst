@@ -1,5 +1,3 @@
-.. _creating-xmipp-release:
-
 =================================
 Steps to Create an Xmipp Release
 =================================
@@ -12,7 +10,6 @@ Step 1: Define the Version Name
   - **ZZ** = Month of the release.
 - Additionally, name the release after a Greek god or goddess. `Check out the list <https://www.gods-and-monsters.com/list-of-greek-gods-goddesses.html>`__
 - Example: `3.24.06 - Boreas` (for a June 2024 release).
-
 
 
 Step 2: Update the `changelog.md`
