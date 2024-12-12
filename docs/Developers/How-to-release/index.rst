@@ -1,12 +1,8 @@
 .. _creating-xmipp-release:
 
-=============================
+=================================
 Steps to Create an Xmipp Release
-=============================
-
-.. contents:: Table of Contents
-   :depth: 2
-   :local:
+=================================
 
 Step 1: Define the Version Name
 -------------------------------
