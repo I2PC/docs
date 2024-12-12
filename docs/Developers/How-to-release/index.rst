@@ -12,7 +12,7 @@ Step 1: Define the Version Name
 - Example: `3.24.06 - Boreas` (for a June 2024 release).
 
 
-Step 2: Update the `changelog.md`
+Step 2: Update the `CHANGELOG.md`
 ----------------------------------
 1. Go through the changes in CHANGELOG.md file:
    - **xmipp** (includes `xmippcore`).
