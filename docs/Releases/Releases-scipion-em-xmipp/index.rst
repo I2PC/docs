@@ -9,8 +9,8 @@ Releases scipion-em-xmipp
    - cl2d_clustering: 2D clustering protocol to group similar images (2D Averages or 2D Classes)
 
 - Protocols updated
+   - flexalign: Added support for reading EER. Add multi-GPU support. Optimized and refactor the streaming, the continue action stabilized. 
    - convert_pdb: now can read cif
-   - flexalign: Added support for reading EER. Optimized and refactor the streaming, the continue action stabilized
    - create_gallery: Allow Scipion protocol create gallery to access missing projection options
    - ctf_consensus: optimized and refactor the streaming, the continue action stabilized. Remove parallelization
    - movie_dose_analysis: optimized and refactor the streaming, the continue action stabilized
@@ -30,7 +30,7 @@ Releases scipion-em-xmipp
    -  ctf_defocus_group: fix when testing multiple downsampling factors
    -  ctf_micrographs: fix when testing multiple downsampling factors
 
-- Protocols deprecated (For more details [visit] (https://github.com/I2PC/xmipp/wiki/Deprecating-programs-and-protocols))
+- Protocols deprecated (For more details visit `this <https://i2pc.github.io/docs/Utils/Deprecated-programs/index.html>`__)
    - angular_resolution_alignment
    - movie_opticalflow.py
       
@@ -63,7 +63,7 @@ Releases scipion-em-xmipp
    - movie_doseanalysis: update correctly the outputSet
    - extract_particles: Check if resizing is enabled
    - particle_pick_remove_duplicates: Remove duplicates coordinates
-- Protocols deprecated (For more details visit this)
+- Protocols deprecated (For more details visit `this <https://i2pc.github.io/docs/Utils/Deprecated-programs/index.html>`__)
    - deep_denoissing
    - metaprotocol_create_subset
    - metaprotocol_golden_highres
@@ -100,7 +100,7 @@ Releases scipion-em-xmipp
    - extract_particles_movies: Get coords correctly
    - particle_pick_consensus: Fix MicsPointer
    - trigger_data: fix updateOutput and close correclty the output set
-- Protocols deprecated (For more details visit `this <https://github.com/I2PC/xmipp/wiki/Deprecating-programs-and-protocols>`__)
+- Protocols deprecated (For more details visit `this <https://i2pc.github.io/docs/Utils/Deprecated-programs/index.html>`__)
    - classification_gpuCorr
    - classification_gpuCorr_full
    - classification_gpuCorr_semi

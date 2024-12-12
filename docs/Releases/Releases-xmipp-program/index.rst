@@ -11,7 +11,7 @@ Xmipp Programs
         - angular_continuous_assign2_gpu: Make a continuous angular assignment with GPU
         - cuda_fourier_projection
         - predict_deep_center
-        - cl2d_clustering.py
+        - cl2d_clustering
 
    - Programs updated
       - tomogram_reconstruction:  averaging with gold standard, tigre with internal interpolation, enviroment of tigre updated
