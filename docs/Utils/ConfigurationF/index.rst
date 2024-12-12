@@ -1,4 +1,4 @@
-Xmipp Configuration File
+Configuration File
 ========================
 
 The Xmipp configuration file is generated at the beginning of the installation process if it does not already exist. This file is used to load the necessary libraries and set up environment variables for Xmipp. To generate a new configuration file, you can use the command:
