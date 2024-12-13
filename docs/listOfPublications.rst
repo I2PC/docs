@@ -6,7 +6,7 @@ List of Publications
 -----
 DeIsidroGomez2024
 ^^^^^^^^^^^^^^^^^^
-::
+.. code:: text
 
    AUTHOR = F.P. de Isidro-Gómez and J.L. Vilas and P. Losana and J.M. Carazo and C.O.S. Sorzano
    TITLE = A deep learning approach to the automatic detection of alignment errors in cryo-electron tomographic reconstructions
@@ -22,7 +22,7 @@ DeIsidroGomez2024
 -----
 Strelak2023
 ^^^^^^^^^^^^^^^
-::
+.. code:: text
 
    * AUTHOR = Střelák, David and Marchán, Daniel and Carazo, José María and S. Sorzano, Carlos O.
    * TITLE = Performance and Quality Comparison of Movie Alignment Software for Cryogenic Electron Microscopy
@@ -38,7 +38,7 @@ Strelak2023
 
 Fernandez-Gimenez2023a
 ^^^^^^^^^^^^^^^^^^^^^^
-::
+.. code:: text
 
    - title = A new algorithm for particle weighted subtraction to eliminate signals from unwanted components in Single Particle Analysis
    - journal = Journal of Structural Biology
