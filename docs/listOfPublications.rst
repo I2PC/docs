@@ -4,8 +4,7 @@ List of Publications
 ===========================
 2024
 -----
-DeIsidroGomez2024
-^^^^^^^^^^^^^^^^^^
+*DeIsidroGomez2024*
 .. code:: text
 
    AUTHOR = F.P. de Isidro-Gómez and J.L. Vilas and P. Losana and J.M. Carazo and C.O.S. Sorzano
@@ -20,8 +19,8 @@ DeIsidroGomez2024
 
 2023
 -----
-Strelak2023
-^^^^^^^^^^^^^^^
+*Strelak2023*
+
 .. code:: text
 
    * AUTHOR = Střelák, David and Marchán, Daniel and Carazo, José María and S. Sorzano, Carlos O.
