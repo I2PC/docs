@@ -5,6 +5,7 @@ List of Publications
 2024
 -----
 *DeIsidroGomez2024*
+
 .. code:: text
 
    AUTHOR = F.P. de Isidro-Gómez and J.L. Vilas and P. Losana and J.M. Carazo and C.O.S. Sorzano
