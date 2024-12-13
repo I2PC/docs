@@ -1,5 +1,5 @@
 =================================
-Steps to Create an Xmipp Release
+Creating an Xmipp Release
 =================================
 
 Step 1: Define the Version Name
@@ -57,7 +57,11 @@ Step 8: Validate Release Branches Locally
 ------------------------------------------
 - Check out the release branches locally or on a test machine.
 - Verify:
-  - Installation with and without Scipion.
+  - Installation with Scipion. Downolad the scipion-em-xmipp repo in the release branch and launch 
+  ::
+    
+    scipion3 installp -p path/repo/downloaded 
+  Descargara en scipion/software/em los repositorios en xmippSrc-3.... e instalara xmipp
   - Execution of a few tests.
 
 Step 9: Create Pull Requests
