@@ -8,15 +8,15 @@ DeIsidroGomez2024
 ^^^^^^^^^^^^^^^^^^
 .. code:: text
 
-   AUTHOR = F.P. de Isidro-Gómez and J.L. Vilas and P. Losana and J.M. Carazo and C.O.S. Sorzano
-   TITLE = A deep learning approach to the automatic detection of alignment errors in cryo-electron tomographic reconstructions
-   JOURNAL = Journal of Structural Biology
-   VOLUME = 216
-   YEAR = 2024
-   NUMBER = 1
-   URL = https://www.sciencedirect.com/science/article/pii/S1047847723001193
-   ISSN = 1047-8477
-   DOI = https://doi.org/10.1016/j.jsb.2023.108056
+   - AUTHOR = F.P. de Isidro-Gómez and J.L. Vilas and P. Losana and J.M. Carazo and C.O.S. Sorzano
+   - TITLE = A deep learning approach to the automatic detection of alignment errors in cryo-electron tomographic reconstructions
+   - JOURNAL = Journal of Structural Biology
+   - VOLUME = 216
+   - YEAR = 2024
+   - NUMBER = 1
+   - URL = https://www.sciencedirect.com/science/article/pii/S1047847723001193
+   - ISSN = 1047-8477
+   - DOI = https://doi.org/10.1016/j.jsb.2023.108056
 
 2023
 -----
@@ -24,16 +24,16 @@ Strelak2023
 ^^^^^^^^^^^^^^^
 .. code:: text
 
-   * AUTHOR = Střelák, David and Marchán, Daniel and Carazo, José María and S. Sorzano, Carlos O.
-   * TITLE = Performance and Quality Comparison of Movie Alignment Software for Cryogenic Electron Microscopy
-   * JOURNAL = Micromachines
-   * VOLUME = 14
-   * YEAR = 2023
-   * NUMBER = 10
-   * ARTICLE-NUMBER = 1835
-   * URL = https://www.mdpi.com/2072-666X/14/10/1835
-   * ISSN = 2072-666X
-   * DOI = https://doi.org/10.3390/mi14101835
+   - AUTHOR = Střelák, David and Marchán, Daniel and Carazo, José María and S. Sorzano, Carlos O.
+   - TITLE = Performance and Quality Comparison of Movie Alignment Software for Cryogenic Electron Microscopy
+   - JOURNAL = Micromachines
+   - VOLUME = 14
+   - YEAR = 2023
+   - NUMBER = 10
+   - ARTICLE-NUMBER = 1835
+   - URL = https://www.mdpi.com/2072-666X/14/10/1835
+   - ISSN = 2072-666X
+   - DOI = https://doi.org/10.3390/mi14101835
 
 
 Fernandez-Gimenez2023a
@@ -608,32 +608,32 @@ Scheres2005b
 
 .. code:: text
    
--  author = Scheres Sjors H.W. and Valle Mikel and Carazo José-María
--  title = Fast maximum-likelihood refinement of electron microscopy   images.
--  journal = Bioinformatics
--  year = 2005
--  volume = 21 Suppl 2
--  pages = ii243–ii244
--  month = Sep
--  doi = http://dx.doi.org/10.1093/bioinformatics/bti1140
--  url = http://dx.doi.org/10.1093/bioinformatics/bti1140
--  keywords = Algorithms; Cryoelectron Microscopy methods; Image   Enhancement methods; Image Interpretation Computer-Assisted methods;   Imaging Three-Dimensional methods; Likelihood Functions;   Reproducibility of Results; Sensitivity and Specificity
+   -  author = Scheres Sjors H.W. and Valle Mikel and Carazo José-María
+   -  title = Fast maximum-likelihood refinement of electron microscopy   images.
+   -  journal = Bioinformatics
+   -  year = 2005
+   -  volume = 21 Suppl 2
+   -  pages = ii243–ii244
+   -  month = Sep
+   -  doi = http://dx.doi.org/10.1093/bioinformatics/bti1140
+   -  url = http://dx.doi.org/10.1093/bioinformatics/bti1140
+   -  keywords = Algorithms; Cryoelectron Microscopy methods; Image   Enhancement methods; Image Interpretation Computer-Assisted methods;   Imaging Three-Dimensional methods; Likelihood Functions;   Reproducibility of Results; Sensitivity and Specificity
 
 Jonic2005
 ^^^^^^^^^
 .. code:: text
 
--  title = Spline-based image-to-volume registration for three-dimensional electron microscopy
--  journal = Ultramicroscopy
--  volume = 103
--  number = 4
--  pages = 303 - 317
--  year = 2005
--  issn = 0304-3991
--  doi = http://dx.doi.org/10.1016/j.ultramic.2005.02.002
--  url =   http://www.sciencedirect.com/science/article/pii/S0304399105000173
--  author = Jonic S. and C.O.S. Sorzano and P. Thevenaz and C. El-Bez   and S. De Carlo and M. Unser
--  keywords = 2D/3D registration Splines 3DEM Angular assignment
+   -  title = Spline-based image-to-volume registration for three-dimensional electron microscopy
+   -  journal = Ultramicroscopy
+   -  volume = 103
+   -  number = 4
+   -  pages = 303 - 317
+   -  year = 2005
+   -  issn = 0304-3991
+   -  doi = http://dx.doi.org/10.1016/j.ultramic.2005.02.002
+   -  url =   http://www.sciencedirect.com/science/article/pii/S0304399105000173
+   -  author = Jonic S. and C.O.S. Sorzano and P. Thevenaz and C. El-Bez   and S. De Carlo and M. Unser
+   -  keywords = 2D/3D registration Splines 3DEM Angular assignment
 
 
 2004
