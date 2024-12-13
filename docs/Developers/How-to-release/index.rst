@@ -59,8 +59,9 @@ Step 8: Validate Release Branches Locally
 - Verify:
   - Installation with Scipion. Downolad the scipion-em-xmipp repo in the release branch and launch 
   ::
-    
-    scipion3 installp -p path/repo/downloaded --devel
+    git clone git@github.com:I2PC/scipion-em-xmipp.git
+    cd scipion-em-xmipp
+    scipion3 installp -p . --devel
   Descargara en scipion/software/em los repositorios en xmippSrc-3.... e instalara xmipp
   - Execution of a few tests.
 
