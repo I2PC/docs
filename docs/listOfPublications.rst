@@ -8,15 +8,15 @@ DeIsidroGomez2024
 ^^^^^^^^^^^^^^^^^^
 ::
 
-   * AUTHOR = F.P. de Isidro-Gómez and J.L. Vilas and P. Losana and J.M. Carazo and C.O.S. Sorzano
-   * TITLE = A deep learning approach to the automatic detection of alignment errors in cryo-electron tomographic reconstructions
-   * JOURNAL = Journal of Structural Biology
-   * VOLUME = 216
-   * YEAR = 2024
-   * NUMBER = 1
-   * URL = https://www.sciencedirect.com/science/article/pii/S1047847723001193
-   * ISSN = 1047-8477
-   * DOI = https://doi.org/10.1016/j.jsb.2023.108056
+   AUTHOR = F.P. de Isidro-Gómez and J.L. Vilas and P. Losana and J.M. Carazo and C.O.S. Sorzano
+   TITLE = A deep learning approach to the automatic detection of alignment errors in cryo-electron tomographic reconstructions
+   JOURNAL = Journal of Structural Biology
+   VOLUME = 216
+   YEAR = 2024
+   NUMBER = 1
+   URL = https://www.sciencedirect.com/science/article/pii/S1047847723001193
+   ISSN = 1047-8477
+   DOI = https://doi.org/10.1016/j.jsb.2023.108056
 
 2023
 -----
