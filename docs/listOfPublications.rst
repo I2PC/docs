@@ -52,7 +52,7 @@ Fernandez-Gimenez2023a
 
 Fernandez-Gimenez2023b
 ^^^^^^^^^^^^^^^^^^^^^^
-::
+.. code:: text
 
 
    - title = Local defocus estimation in Single Particle Analysis in Cryo-Electron Microscopy
@@ -68,7 +68,7 @@ Fernandez-Gimenez2023b
 Vilas2023
 ^^^^^^^^^
 
-::
+.. code:: text
 
    - AUTHOR = Vilas JL and Tagare HD
    - TITLE = A simple and intuitive measurement of directional resolution anisotropy of cryoEM maps
@@ -86,7 +86,7 @@ Vilas2023
 sanchez2021deepemhancer
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-::
+.. code:: text
 
   - title = DeepEMhancer: a deep learning solution for cryo-EM volume post-processing,
   - author = Sanchez-Garcia, Ruben and Gomez-Blanco, Josue and Cuervo, Ana and Carazo, Jose Maria and Sorzano, Carlos Oscar S and Vargas, Javier,
@@ -100,7 +100,7 @@ sanchez2021deepemhancer
 fernandez2021cryo
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-::
+.. code:: text
 
   - title =  Cryo-EM density maps adjustment for subtraction, consensus and sharpening,
   - author =  Fernandez-Gimenez, E and Martinez, M and Sanchez-Garcia, R and Marabini, R and Ramirez-Aportela, E and Conesa, P and Carazo, JM and Sorzano, COS,
@@ -114,7 +114,7 @@ fernandez2021cryo
 Fernandez-Gimenez2021
 ^^^^^^^^^^^^^^^^^^^^^
 
-::
+.. code:: text
 
    - title = Cryo-EM density maps adjustment for subtraction consensus and sharpening
    - journal = Journal of Structural Biology
@@ -130,7 +130,7 @@ Fernandez-Gimenez2021
 Strelak2021
 ^^^^^^^^^^
 
-::
+.. code:: text
 
    - AUTHOR = Strelak David and Jiménez-Moreno Amaya and Vilas José L. and Ramírez-Aportela Erney and Sánchez-García Ruben and Maluenda David and Vargas Javier and Herreros David and Fernández-Giménez Estrella and de Isidro-Gómez Federico P. and Horacek Jan and Myska David and Horacek Martin and Conesa Pablo and Fonseca-Reyna Yunior C. and Jiménez Jorge and Martínez Marta and Harastani Mohamad and Jonić Slavica and Filipovic Jiri and Marabini Roberto and Carazo José M. and Sorzano Carlos O. S.
    - TITLE = Advances in Xmipp for Cryo–Electron Microscopy: From Xmipp to Scipion
@@ -149,7 +149,7 @@ Strelak2021
 strelak2020flexalign
 ^^^^^^^^^^^^^^^^
 
-::
+.. code:: text
 
    - AUTHOR = Střelák David and Filipovič Jiří and Jiménez-Moreno Amaya and Carazo Jose María and Sánchez Sorzano Carlos Óscar
    - TITLE = FlexAlign: An Accurate and Fast Algorithm for Movie Alignment in Cryo-Electron Microscopy
@@ -169,7 +169,7 @@ strelak2020flexalign
 Vilas2018
 ^^^^^^^^^
 
-::
+.. code:: text
 
    - title = MonoRes: Automatic and Accurate Estimation of Local Resolution for Electron Microscopy Maps
    - author = Vilas J. L. and et al
@@ -185,7 +185,7 @@ Vilas2018
 Vilas2016
 ^^^^^^^^^
 
-::
+.. code:: text
 
    - title = Fast and automatic identification of particle tilt pairs based on Delaunay triangulation.
    - author = Vilas J. L. and Navas J. and Gomez-Blanco J. and de la Rosa-Trevin J. M. and Melero and Peschiera I. and Ferlenghi. I and Cuenca J. and Marabini R. and Carazo J. M. and Vargas J. and Sorzano C. O. S.
@@ -199,7 +199,7 @@ Vilas2016
 Sorzano2016
 ^^^^^^^^^^
 
-::
+.. code:: text
 
    - title = StructMap: Elastic distance analysis of electron microscopy maps for studying conformational changes
    - journal = Biophysical J.
@@ -221,7 +221,7 @@ Sorzano2016
 Sorzano2015
 ^^^^^^^^^^
 
-::
+.. code:: text
 
    - author = Sorzano C. O. S. and Vargas J. and de la Rosa-Trevin  J. M. and Oton J. and Alvarez-Cabrera A. L. and Abrishami V. and Sesmero E. and Marabini R. and Carazo J. M.
    - title = A Statistical approach to the initial volume problem in Single Particle Analysis by Electron Microscopy
@@ -234,7 +234,7 @@ Sorzano2015
 Abrishami2015
 ^^^^^^^^^^^^^
 
-::
+.. code:: text
 
    - title = Alignment of direct detection device micrographs using a robust Optical Flow approach 
    - journal = Journal of Structural Biology 
@@ -255,7 +255,7 @@ Abrishami2015
 Sorzano2015b
 ^^^^^^^^^^
 
-::
+.. code:: text
 
    - title = Cryo-EM and the elucidation of new macromolecular structures: Random Conical Tilt revisited.
    - author = Sorzano C O S. and Alcorlo M. and de la Rosa-Trevín J. M. and Melero R. and Foche I. and Zaldívar-Peraza A. and del Cano L. and Vargas J. and Abrishami V. and Otón J. and Marabini R. and Carazo J. M.
@@ -273,7 +273,7 @@ Sorzano2015b
 Vargas2014
 ^^^^^^^^^
 
-::
+.. code:: text
 
    - author = Vargas Javier and Álvarez-Cabrera Ana-Lucia and Marabini Roberto and Carazo Jose M. and Sorzano C. O. S.
    - title = Efficient initial volume determination from electron microscopy images of single particles
@@ -289,7 +289,7 @@ Vargas2014
 Sorzano2014
 ^^^^^^^^^^
 
-::
+.. code:: text
 
    - title  = Outlier detection for single particle analysis in Electron Microscopy
    - author  = Sorzano C. O. S. and Vargas J. and de la Rosa-Trevín J. M. and Zaldívar-Peraza A. and Otón J. and Abrishami V. and Foche I. and Marabini R. and Caffarena G. and Carazo J. M.
@@ -300,7 +300,7 @@ Sorzano2014
 Jin2014
 ^^^^
 
-::
+.. code:: text
 
    - title = Iterative Elastic 3D-to-2D Alignment Method Using Normal Modes for Studying Structural Dynamics of Large Macromolecular Complexes
    - journal = Structure
@@ -314,7 +314,7 @@ Jin2014
 Vargas2014a
 ^^^^^^^^^^
 
-::
+.. code:: text
 
    - title = Particle alignment reliability in single particle electron cryomicroscopy: a general approach
    - journal = Scientific reports
@@ -332,7 +332,7 @@ Vargas2014a
 Marabini2014a
 ^^^^^^^^^^^^^
 
-::
+.. code:: text
 
    - title = CTF Challenge: Result summary
    - journal = J. Structural Biology
@@ -353,7 +353,7 @@ Marabini2014a
 Sorzano2013
 ^^^^^^^^^^
 
-::
+.. code:: text
 
    - title = Semiautomatic High-Throughput High-Resolution Protocol for Three-Dimensional Reconstruction of Single Particles in Electron Microscopy
    - booktitle = Nanoimaging
@@ -373,7 +373,7 @@ Sorzano2013
 Vargas2013a
 ^^^^^^^^^^
 
-::
+.. code:: text
 
    - author = Vargas J. and Otón J. and Marabini R. and Jonic S. and de la
      Rosa-Trevín J. M. and et.al.
@@ -390,7 +390,7 @@ Vargas2013a
 Vargas2013b
 ^^^^^^^^^^
 
-::
+.. code:: text
 
    - title = Particle quality assessment and sorting for automatic and semiautomatic particle-picking techniques
    - journal = J. Structural Biology
@@ -409,7 +409,7 @@ Vargas2013b
 Abrishami2013
 ^^^^^^^^^^^^^
 
-::
+.. code:: text
 
    - author = Abrishami V. and Zaldívar-Peraza A. and de la Rosa-Trevín J. M. and Vargas J. and Otón J. and Marabini R. and Shkolnisky Y. and Carazo J. M. and Sorzano C. O. S.
    - title = A pattern matching approach to the automatic selection of particles from low-contrast electron micrographs
@@ -426,7 +426,7 @@ Abrishami2013
 delaRosaTrevin2013
 ^^^^^^^^^^^^^^^
 
-::
+.. code:: text
 
    - title = Xmipp 3.0: An improved software suite for image processing in electron microscopy 
    - journal = JSB
@@ -444,7 +444,7 @@ delaRosaTrevin2013
 Nogales2013
 ^^^^^^^^^^
 
-::
+.. code:: text
 
    - title=3DEM Loupe: analysis of macromolecular dynamics using structures from electron microscopy
    - author=Nogales-Cadenas R. and Jonic S. and Tama F. and Arteni A. A. and Tabas-Madrid D. and V\'azquez M. and Pascual-Montano A. and Sorzano C. O. S.
@@ -458,7 +458,7 @@ Nogales2013
 Sorzano2010a
 ^^^^^^^^^^
 
-::
+.. code:: text
 
    - title = A clustering approach to multireference alignment of single-particle projections in electron microscopy
    - journal = Journal of Structural Biology
@@ -478,7 +478,7 @@ Sorzano2010a
 Scheres2009b
 ^^^^^^^^^^
 
-::
+.. code:: text
 
    - author = Scheres Sjors H W. and Carazo José María
    - title = Introducing robustness to maximum-likelihood refinement of electron-microscopy
@@ -498,7 +498,7 @@ Scheres2009b
 Scheres2009c
 ^^^^^^^^^^
 
-::
+.. code:: text
 
    - author = Scheres Sjors H W. and Melero Roberto and Valle Mikel and Carazo José María
    - title = Averaging of Electron Subtomograms and Random Conical Tilt Reconstructions through Likelihood Optimization
@@ -513,7 +513,7 @@ Scheres2009c
 Sorzano2009d
 ^^^^^^^^^^
 
-::
+.. code:: text
 
    - title = Effects of the downsampling scheme on three-dimensional electron microscopy of single particles
    - journal = Proc. of IEEE Workshop on Intelligent Signal Processing
@@ -531,7 +531,7 @@ Sorzano2009d
 Sorzano2007a
 ^^^^^^^^^^
 
-::
+.. code:: text
 
    - Title                    = Fast robust and accurate determination of transmission electron microscopy contrast transfer function
    - Author                   = Sorzano C. O. S. and Jonic S. and N\'u\\-nez-Ram\'irez R. and Boisset N. and Carazo J. M.
@@ -545,7 +545,7 @@ Sorzano2007a
 Scheres2007a
 ^^^^^^^^^^
 
-::
+.. code:: text
 
    - author = Scheres Sjors H. W. and Haixiao Gao and Mikel Valle and Gabor T Herman and Paul P B Eggermont and et.al.
    - title = Disentangling conformational states of macromolecules in 3D-EM through likelihood optimization.
@@ -561,7 +561,7 @@ Scheres2007a
 Scheres2007b
 ^^^^^^^^^^
 
-::
+.. code:: text
 
    - author = Scheres Sjors H. W. and Núñez-Ramírez Rafael and Gómez-Llorente
    - Yacob and San Martín Carmen and Eggermont Paul P B. and Carazo
@@ -590,7 +590,7 @@ Scheres2007b
 Scheres2005a
 ^^^^^^^^^^
 
-::
+.. code:: text
 
    - title = Maximum-likelihood Multi-reference Refinement for Electron Microscopy Images       Journal=J. Mol. Biol.
    - volume = 348
@@ -606,7 +606,7 @@ Scheres2005a
 Scheres2005b
 ^^^^^^^^^^
 
-::
+.. code:: text
    
 -  author = Scheres Sjors H.W. and Valle Mikel and Carazo José-María
 -  title = Fast maximum-likelihood refinement of electron microscopy   images.
@@ -621,7 +621,7 @@ Scheres2005b
 
 Jonic2005
 ^^^^^^^^^
-::
+.. code:: text
 
 -  title = Spline-based image-to-volume registration for three-dimensional electron microscopy
 -  journal = Ultramicroscopy
@@ -641,7 +641,7 @@ Jonic2005
 Sorzano2004b
 ^^^^^^^^^^
 
-::
+.. code:: text
 
    - title = A multiresolution approach to orientation assignment in 3D electron microscopy of single particles
    - journal = JSB
@@ -662,7 +662,7 @@ Sorzano2004b
 PascualMontano2002
 ^^^^^^^^^^^^^^^
 
-::
+.. code:: text
 
    - title = Quantitative self-organizing maps for clustering electron tomograms 
    - journal = JSB
@@ -682,7 +682,7 @@ PascualMontano2002
 PascualMontano2001
 ^^^^^^^^^^^^^^^
 
-::
+.. code:: text
 
    - title = A Novel Neural Network Technique for Analysis and Classification of \\EM\\ Single-Particle Images
    - journal = JSB
@@ -703,7 +703,7 @@ PascualMontano2001
 Pascual2000
 ^^^^^^^^^^
 
-::
+.. code:: text
 
    - title = Mapping and fuzzy classification of macromolecular images using self-organizing neural networks 
    - journal = Ultramicroscopy
