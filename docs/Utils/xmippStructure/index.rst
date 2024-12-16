@@ -2852,4 +2852,4 @@ xmippViz
 
 
 
-   Structure updated: xmipp3.24.12 - Poseidon
+Structure updated: xmipp3.24.12 - Poseidon

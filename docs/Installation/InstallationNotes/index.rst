@@ -107,6 +107,7 @@ Make sure you have these settings in your `configuration file <https://i2pc.gith
 (``xmipp-bundle/xmipp.conf``) before compiling Xmipp:
 
 ``XMIPP_USE_MATLAB=ON``
+
 ``MATLAB_DIR=<path to your MATLAB instalation>`` (usually something
 like: ``MATLAB_DIR=/home/user/MATLAB/R2021b``)
 
