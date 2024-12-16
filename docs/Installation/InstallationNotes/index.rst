@@ -12,42 +12,6 @@ recommend you to follow the guide for installation of CUDA 11.4 (deb
 (local))
 
 
-Matlab
--------
-
-Xmipp has a binding to MATLAB, which allows the user to run specific
-Xmipp functions inside MATLAB.
-
-Previous requirements
-^^^^^^^^^^^^
-
-It is required to have a regular MATLAB installation.
-
-Settings
-^^^^^^^^^^^^^^^^^^^^
-
-Make sure you have these settings in your Xmipp configuration file
-(``xmipp-bundle/xmipp.conf``) before compiling Xmipp:
-
-``MATLAB=True``
-
-``MATLAB_DIR=<path to your MATLAB instalation>`` (usually something
-like: ``MATLAB_DIR=/home/user/MATLAB/R2021b``)
-
-Run
-^^^^^^^^^^^^^^^^^^^^
-
-1. Compile Xmipp normally (once the settings are as above): ``./xmipp``
-   or ``scipion run ./xmipp``
-2. Open MATLAB
-3. In MATLAB, set the path to Xmipp binding:
-   ``HOME > Set Path > Add Folder...`` and select the path to the
-   binding (``<path to xmipp>/xmipp-bundle/build/bindings/matlab``),
-   then, click in ``Open`` and ``Save``
-4. Now you should be able to run functions like ``xmipp_read()`` in
-   MATLAB
-
-
 DeepLearningToolkit 
 ---------------------
 
@@ -143,4 +107,41 @@ Program using this environment:* `tomogram_reconstruction`
     - mrcfile
     - numpy
     - tigre
+
+
+
+Matlab
+-------
+
+Xmipp has a binding to MATLAB, which allows the user to run specific
+Xmipp functions inside MATLAB.
+
+Previous requirements
+^^^^^^^^^^^^
+
+It is required to have a regular MATLAB installation.
+
+Settings
+^^^^^^^^^^^^^^^^^^^^
+
+Make sure you have these settings in your Xmipp configuration file
+(``xmipp-bundle/xmipp.conf``) before compiling Xmipp:
+
+``MATLAB=True``
+
+``MATLAB_DIR=<path to your MATLAB instalation>`` (usually something
+like: ``MATLAB_DIR=/home/user/MATLAB/R2021b``)
+
+Run
+^^^^^^^^^^^^^^^^^^^^
+
+1. Compile Xmipp normally (once the settings are as above): ``./xmipp``
+   or ``scipion run ./xmipp``
+2. Open MATLAB
+3. In MATLAB, set the path to Xmipp binding:
+   ``HOME > Set Path > Add Folder...`` and select the path to the
+   binding (``<path to xmipp>/xmipp-bundle/build/bindings/matlab``),
+   then, click in ``Open`` and ``Save``
+4. Now you should be able to run functions like ``xmipp_read()`` in
+   MATLAB
 
