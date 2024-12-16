@@ -1,14 +1,15 @@
 Optional Tools and Libraries
 ==============================
+
 CUDA
 -------
+By default Xmippp will search your CUDA installation.
 We recomend CUDA >=11.2. Older version of CUDA requires an older gcc
 (gcc-8 could be difficult to install and cause issues with the OS).
 Follow official `install
 instructions <https://developer.nvidia.com/cuda-toolkit-archive>`__. We
 recommend you to follow the guide for installation of CUDA 11.4 (deb
 (local))
-
 
 
 Matlab
@@ -46,11 +47,10 @@ Run
 4. Now you should be able to run functions like ``xmipp_read()`` in
    MATLAB
 
-CUDA
--------
 
 DeepLearningToolkit 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------
+
 The DeepLearningToolkit (DLTK) is a set of environments equipped with several libraries related to deep learning. It enables running protocols in Scipion that require deep learning tools, available for both GPU and CPU. The installer will automatically detect your configuration.
 
 Requirements
