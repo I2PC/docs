@@ -1,11 +1,7 @@
-Installation Notes
-==================
-
-Optional dependencies
-^^^^^^^^^^^^^^^^^^^^
-
-**CUDA**
-
+Optional Tools and Libraries
+==============================
+CUDA
+-------
 We recomend CUDA >=11.2. Older version of CUDA requires an older gcc
 (gcc-8 could be difficult to install and cause issues with the OS).
 Follow official `install
@@ -15,10 +11,9 @@ recommend you to follow the guide for installation of CUDA 11.4 (deb
 
 
 
+Matlab
+-------
 
-
-Compiling with Matlab
--------------------------
 Xmipp has a binding to MATLAB, which allows the user to run specific
 Xmipp functions inside MATLAB.
 
@@ -51,53 +46,101 @@ Run
 4. Now you should be able to run functions like ``xmipp_read()`` in
    MATLAB
 
-
-Troubleshooting
------------------
-
+CUDA
+-------
 
 DeepLearningToolkit 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Error message:
-``InvalidVersionSpec: Invalid version '5.11.3imageio>=2.5.0': invalid character(s)``
+The DeepLearningToolkit (DLTK) is a set of environments equipped with several libraries related to deep learning. It enables running protocols in Scipion that require deep learning tools, available for both GPU and CPU. The installer will automatically detect your configuration.
 
-The package *pyvistaqt* installed by an old version of the plugin
-*flexutils* or *tomoviz* in the enviroment *scipion3* has a bug in the
-version *pyvistaqt*\ =0.3.0. To fix it and be able to install *DLTK*
-run:
+Requirements
+------------------------------
+- NVIDIA drivers version **450** or higher are required.
+- To check your NVIDIA driver version, run:
 
-``conda activate scipion3``
+  .. code-block:: bash
 
-``pip uninstall pyvistaqt``
+      nvidia-smi
 
-``pip install pyvistaqt==0.4.0``
+- If an older version is detected, DLTK will be installed without GPU support.
 
-If there is any plugin that require *pyvistaqt*
-(`scipion-em-tomoviz <https://github.com/scipion-em/scipion-em-tomoviz>`__),
-please update it
+How to Install
+------------------------------
+To install DLTK, run:
+
+.. code-block:: bash
+
+   scipion3 installb deepLearningToolkit
+
+If the installation would take over 30 minutes, please accelerate the process using the **libmamba** solver, which can provide up to a 4x speed improvement. Note that libmamba is only available for Conda >=4.12 and must be installed and configured in your Conda environment. For more information, refer to the official guide:
+
+`A Faster Conda for a Growing Community <https://www.anaconda.com/blog/a-faster-conda-for-a-growing-community>`_
+
+List of Environments
+------------------------------
+- **xmipp_DLTK_v0.3**  
+Protocols using this environment:* `screen_deeplearning`, `deep_denoising`, `resolution_deepres`, `screen_deepConsensus`  
+
+.. code-block:: text
+
+    - python=3.7  
+    - scikit-image=0.14  
+    - tensorflow=1.15  
+    - keras=2.2  
+    - scikit-learn=0.22  
+    - pip  
+    - numpy==1.21  
+    - h5py==2.10.0  
+
+- **xmipp_DLTK_v1.0**  
+Protocols using this environment:* `deep_misalignment_detection`  
+
+.. code-block:: text
+    - python=3.8  
+    - tensorflow=2.7  
+    - keras=2.7  
+    - pip  
+    - numpy==1.23  
+
+- **xmipp_MicCleaner**  
+Protocols using this environment:* `deepMicrographScreen`  
+
+.. code-block:: text
+
+    - python=3.6  
+    - micrograph-cleaner-em=0.35  
+
+- **xmipp_deepEMhancer**  
+Protocols using this environment:* `protocol_deepEMhancer`  
+
+.. code-block:: text
+
+    - python=3.6  
+    - deepemhancer=0.12  
+    - numba=0.45  
+
+- **xmipp_pyTorch**  
+Protocols using this environment:* `deepHand`  
+
+.. code-block:: text
+
+    - python=3.8  
+    - numpy=1.23  
+    - mrcfile=1.4.3  
+    - kornia=0.6.12  
+    - starfile=0.4.12  
+    - pytorch==1.11  
+    - pytorch-cuda=11.7  
+    - torchvision=0.12  
 
 
-HDF5 
-^^^^^^^^^^^^^^^^^^^
-We sometimes see issues regarding the HDF5 dependency. We recommend
-removing all hdf5 versions and install just hdf5-devel. To do that
-(Ubuntu-Debian systems):
+- **xtomo_tigre**  
+Program using this environment:* `tomogram_reconstruction`  
 
-::
+.. code-block:: text
 
-   sudo apt remove hdf5
-   sudo apt remove hdf5-devel
-   pip uninstall h5py
+    - python=3.6
+    - mrcfile
+    - numpy
+    - tigre
 
-Remove all files related to hdf5 in: \* ``_/usr/lib64/libhdf5*_`` \*
-``_/usr/include/hdf5*_`` \* ``_/usr/lib/x86_64-linux-gnu/hdf5_*`` \*
-``_.../anaconda3/include/H5*.h_`` \* ``_.../anaconda3/include/hdf5*.h_``
-\* ``_.../anaconda3/lib/libhdf5*_`` \*
-``_.../anaconda3/envs/.../libhdf5*_``
-
-We strongy recommend you to install it via your default package manager:
-``sudo apt-get install libhdf5-dev`` If you install it using other
-package management system (such as Conda), it might lead to compile/link
-time issues caused by incompatible version being fetched. Other option
-is to run”scipion3 installb xmippSrc” to force the xmipp install its own
-HDF5 into its desired directory.

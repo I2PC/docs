@@ -39,7 +39,6 @@ Read the installation page for more details about these softwares requirements. 
     Installation/Requirements/index
     Installation/Installation-with-Scipion/index
     Installation/Standlone-installation/index
-    Installation/DeepLearningToolkit/index
     Installation/InstallationNotes/index
     
 
