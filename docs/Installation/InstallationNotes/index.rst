@@ -19,7 +19,7 @@ Xmipp has a binding to MATLAB, which allows the user to run specific
 Xmipp functions inside MATLAB.
 
 Previous requirements
-^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 It is required to have a regular MATLAB installation.
 
@@ -54,8 +54,8 @@ DeepLearningToolkit
 The DeepLearningToolkit (DLTK) is a set of environments equipped with several libraries related to deep learning. It enables running protocols in Scipion that require deep learning tools, available for both GPU and CPU. The installer will automatically detect your configuration.
 
 Requirements
-------------------------------
-- NVIDIA drivers version **450** or higher are required.
+^^^^^^^^^^^^^^^^
+ NVIDIA drivers version **450** or higher are required.
 - To check your NVIDIA driver version, run:
 
   .. code-block:: bash
@@ -65,7 +65,7 @@ Requirements
 - If an older version is detected, DLTK will be installed without GPU support.
 
 How to Install
-------------------------------
+^^^^^^^^^^^^^^^^
 To install DLTK, run:
 
 .. code-block:: bash
@@ -77,7 +77,7 @@ If the installation would take over 30 minutes, please accelerate the process us
 `A Faster Conda for a Growing Community <https://www.anaconda.com/blog/a-faster-conda-for-a-growing-community>`_
 
 List of Environments
-------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^
 - **xmipp_DLTK_v0.3**  
 Protocols using this environment:* `screen_deeplearning`, `deep_denoising`, `resolution_deepres`, `screen_deepConsensus`  
 
