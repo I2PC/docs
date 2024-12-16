@@ -114,12 +114,7 @@ Matlab
 -------
 
 Xmipp has a binding to MATLAB, which allows the user to run specific
-Xmipp functions inside MATLAB.
-
-Previous requirements
-^^^^^^^^^^^^
-
-It is required to have a regular MATLAB installation.
+Xmipp functions inside MATLAB. It is required to have a regular MATLAB installation.
 
 Settings
 ^^^^^^^^^^^^^^^^^^^^
