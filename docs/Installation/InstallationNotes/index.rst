@@ -119,10 +119,10 @@ Xmipp functions inside MATLAB. It is required to have a regular MATLAB installat
 Settings
 ^^^^^^^^^^^^^^^^^^^^
 
-Make sure you have these settings in your Xmipp configuration file
+Make sure you have these settings in your `configuration file <https://i2pc.github.io/docs/Utils/ConfigurationF/index.html>`__
 (``xmipp-bundle/xmipp.conf``) before compiling Xmipp:
 
-``MATLAB=True``
+``XMIPP_USE_MATLAB=ON``
 
 ``MATLAB_DIR=<path to your MATLAB instalation>`` (usually something
 like: ``MATLAB_DIR=/home/user/MATLAB/R2021b``)
