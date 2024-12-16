@@ -67,8 +67,6 @@ You can install these packages on Ubuntu-based systems using the following comma
 
    sudo apt install -y libfftw3-dev libopenmpi-dev libhdf5-dev python3-numpy python3-dev libtiff5-dev libsqlite3-dev default-jdk git cmake libjpeg-dev
 
-Additionally, you need to install `scons` in the environment where Xmipp will be compiled. If you plan to run Xmipp within Scipion, you should install it in your Scipion3 environment. You can install `scons` using `pip`:
-
 
 These requirements will ensure that your system is ready for installing and using Xmipp.
 
