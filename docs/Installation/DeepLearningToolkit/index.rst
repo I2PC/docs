@@ -29,7 +29,7 @@ If the installation would take over 30 minutes, please accelerate the process us
 List of Environments
 ------------------------------
 - **xmipp_DLTK_v0.3**  
-    *Protocols using this environment:* `screen_deeplearning`, `deep_denoising`, `resolution_deepres`, `screen_deepConsensus`  
+Protocols using this environment:* `screen_deeplearning`, `deep_denoising`, `resolution_deepres`, `screen_deepConsensus`  
 
 .. code-block:: text
 
@@ -43,7 +43,7 @@ List of Environments
     - h5py==2.10.0  
 
 - **xmipp_DLTK_v1.0**  
-    *Protocols using this environment:* `deep_misalignment_detection`  
+Protocols using this environment:* `deep_misalignment_detection`  
 
 .. code-block:: text
     - python=3.8  
@@ -53,7 +53,7 @@ List of Environments
     - numpy==1.23  
 
 - **xmipp_MicCleaner**  
-    *Protocols using this environment:* `deepMicrographScreen`  
+Protocols using this environment:* `deepMicrographScreen`  
 
 .. code-block:: text
 
@@ -61,7 +61,7 @@ List of Environments
     - micrograph-cleaner-em=0.35  
 
 - **xmipp_deepEMhancer**  
-    *Protocols using this environment:* `protocol_deepEMhancer`  
+Protocols using this environment:* `protocol_deepEMhancer`  
 
 .. code-block:: text
 
@@ -70,7 +70,7 @@ List of Environments
     - numba=0.45  
 
 - **xmipp_pyTorch**  
-    *Protocols using this environment:* `deepHand`  
+Protocols using this environment:* `deepHand`  
 
 .. code-block:: text
 
@@ -85,7 +85,7 @@ List of Environments
 
 
 - **xtomo_tigre**  
-    *Program using this environment:* `tomogram_reconstruction`  
+Program using this environment:* `tomogram_reconstruction`  
 
 .. code-block:: text
 
