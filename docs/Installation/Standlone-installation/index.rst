@@ -1,8 +1,10 @@
-Installation Guide for Xmipp
+Installation Guide for Xmipp
+====================================
 
 This guide explains the standalone installation of Xmipp and the process to link it with Scipion. The standalone version allows you to use Xmipp independently of Scipion. For details on linking, see the section *Linking Xmipp to Scipion*.
 
-Standalone Installation
+Standalone Installation
+----------------------------
 
 1. Clone the repository and navigate to the folder:
 
@@ -35,6 +37,7 @@ Standalone Installation
       ./xmipp --help
 
 Linking Xmipp to Scipion
+----------------------------
 
 To use Xmipp within Scipion, link the standalone installation by following these steps:
 
