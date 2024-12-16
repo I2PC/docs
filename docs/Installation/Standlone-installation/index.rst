@@ -12,17 +12,19 @@ Standalone Installation
 
 2. Compile Xmipp. You have two options:
 
-   **Option 1:** Compile using the Xmipp environment. This method installs Xmipp with the required dependencies and versions defined by your environment or defaults.
 
-   .. code-block:: bash
-
-      ./xmipp
-
-   **Option 2:** Compile using the Scipion environment. This method installs Xmipp with dependencies managed by Scipion.
+   **Option 1:** Compile using the Scipion environment. This method installs Xmipp with dependencies managed by Scipion and is the recomended way.
 
    .. code-block:: bash
 
       scipion3 run ./xmipp
+
+    
+    **Option 2:** Compile the Xmipp alone. This method installs Xmipp with the required dependencies and versions defined by your environment or defaults.
+
+   .. code-block:: bash
+
+      ./xmipp
 
    Both methods only compile Xmipp. Linking it to Scipion is explained in the next section.
 
@@ -32,7 +34,7 @@ Standalone Installation
 
       ./xmipp --help
 
-Linking Xmipp to Scipion
+Linking Xmipp to Scipion
 
 To use Xmipp within Scipion, link the standalone installation by following these steps:
 
