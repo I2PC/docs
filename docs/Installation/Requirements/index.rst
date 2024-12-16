@@ -17,6 +17,7 @@ Compiler
 ^^^^^^^^
 
 Xmipp requires C++17 compatible compiler (see table below for minimum versions). We have had good experience with using GCC. Clang is mostly untested. Mind that when compiling with CUDA, a  `compatible compiler <https://gist.github.com/ax3l/9489132>`__ must be installed and findable (although it may not be used for non-CUDA sources) for Xmipp.
+
 .. list-table:: 
    :header-rows: 1
    :widths: 50 50
