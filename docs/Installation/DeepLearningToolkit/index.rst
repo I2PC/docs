@@ -75,3 +75,10 @@ List of Environments
   - torchvision=0.12  
 
 
+- **xtomo_tigre**  
+  *Program using this environment:* `tomogram_reconstruction`  
+  Libraries and dependencies:  
+  - python=3.6
+  - mrcfile
+  - numpy
+  - tigre
