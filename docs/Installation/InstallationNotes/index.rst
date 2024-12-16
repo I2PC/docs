@@ -116,9 +116,6 @@ Matlab
 Xmipp has a binding to MATLAB, which allows the user to run specific
 Xmipp functions inside MATLAB. It is required to have a regular MATLAB installation.
 
-Settings
-^^^^^^^^^^^^^^^^^^^^
-
 Make sure you have these settings in your `configuration file <https://i2pc.github.io/docs/Utils/ConfigurationF/index.html>`__
 (``xmipp-bundle/xmipp.conf``) before compiling Xmipp:
 
@@ -128,7 +125,7 @@ Make sure you have these settings in your `configuration file <https://i2pc.gith
 like: ``MATLAB_DIR=/home/user/MATLAB/R2021b``)
 
 Run
-^^^^^^^^^^^^^^^^^^^^
+^^^^^^
 
 1. Compile Xmipp normally (once the settings are as above): ``./xmipp``
    or ``scipion run ./xmipp``
