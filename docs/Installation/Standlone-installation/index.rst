@@ -29,7 +29,7 @@ Standalone Installation
 
 Both methods only compile Xmipp. Linking it to Scipion is explained in the next section.
 
-3. For additional details about the compilation process, run:
+Note. For additional details about the compilation process, run:
 
    .. code-block:: bash
 
