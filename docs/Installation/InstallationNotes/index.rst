@@ -1,17 +1,6 @@
 Optional Tools and Libraries
 ==============================
 
-CUDA
--------
-By default Xmippp will search your CUDA installation.
-We recomend CUDA >=11.2. Older version of CUDA requires an older gcc
-(gcc-8 could be difficult to install and cause issues with the OS).
-Follow official `install
-instructions <https://developer.nvidia.com/cuda-toolkit-archive>`__. We
-recommend you to follow the guide for installation of CUDA 11.4 (deb
-(local))
-
-
 DeepLearningToolkit 
 ---------------------
 
@@ -120,7 +109,6 @@ Make sure you have these settings in your `configuration file <https://i2pc.gith
 (``xmipp-bundle/xmipp.conf``) before compiling Xmipp:
 
 ``XMIPP_USE_MATLAB=ON``
-
 ``MATLAB_DIR=<path to your MATLAB instalation>`` (usually something
 like: ``MATLAB_DIR=/home/user/MATLAB/R2021b``)
 
