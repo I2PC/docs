@@ -46,7 +46,7 @@ To use Xmipp within Scipion, link the standalone installation by following these
 
    .. code-block:: bash
 
-      scipion3 installp -p ~/src/scipion-em-xmipp --devel
+      scipion3 installp -p ~/scipion-em-xmipp --devel
 
    Replace `~/scipion-em-xmipp` with the path to your `scipion-em-xmipp` folder.
 
