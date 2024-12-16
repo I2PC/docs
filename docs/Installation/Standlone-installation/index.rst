@@ -27,7 +27,7 @@ Standalone Installation
 
         ./xmipp
 
-Both methods only compile Xmipp. Linking it to Scipion is explained in the next section.
+   Both methods only compile Xmipp. Linking it to Scipion is explained in the next section.
 
 Note. For additional details about the compilation process, run:
 
