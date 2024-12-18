@@ -57,7 +57,7 @@ Step 8: Validate Release Branches Locally
 ------------------------------------------
 - Check out the release branches locally or on a test machine.
 - Verify:
-  - Installation with Scipion. Downolad the scipion-em-xmipp repo in the release branch and launch 
+  - Installation with Scipion. Downolad the scipion-em-xmipp repo in the release branch. In your local, edit `this line <https://github.com/I2PC/scipion-em-xmipp/blob/f430dbf33871af0a503f90a864fd532fbe622271/xmipp3/__init__.py#L184>`__ to detault=True and run:
 
   .. code-block:: bash
 
