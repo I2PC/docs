@@ -5,6 +5,7 @@ The Xmipp configuration file is generated at the beginning of the installation p
 
 
 .. code-block:: bash
+
   ./xmipp config
 
 
