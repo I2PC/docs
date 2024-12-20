@@ -55,23 +55,53 @@ Step 7: Update Version Information
 
 Step 8: Validate Release Branches Locally
 ------------------------------------------
-- Check out the release branches locally or on a test machine.
-- Verify:
-  - Installation with Scipion. Downolad the scipion-em-xmipp repo in the release branch.
+a. Simulate localy
+  - Check out the release branches locally or on a test machine.
+  - Verify:
+    - Installation with Scipion. Downolad the scipion-em-xmipp repo in the release branch.
 
-  .. code-block:: bash
+    .. code-block:: bash
 
-    git clone git@github.com:I2PC/scipion-em-xmipp.git --branch release-3...
-    cd scipion-em-xmipp
+      git clone git@github.com:I2PC/scipion-em-xmipp.git --branch release-3...
+      cd scipion-em-xmipp
 
-  In your local, edit `this line <https://github.com/I2PC/scipion-em-xmipp/blob/f430dbf33871af0a503f90a864fd532fbe622271/xmipp3/__init__.py#L184>`__ to detault=True. After that, install xmipp and inspect any posible issue
-  
-  .. code-block:: bash
+    In your local, edit `this line <https://github.com/I2PC/scipion-em-xmipp/blob/f430dbf33871af0a503f90a864fd532fbe622271/xmipp3/__init__.py#L184>`__ to detault=True. After that, install xmipp and inspect any posible issue
+    
+    .. code-block:: bash
 
-    scipion3 installp -p . --devel
-    scipion3 inspect xmipp3
+      scipion3 installp -p . --devel
+      scipion3 inspect xmipp3
 
-  - Open the scipion gui and execute a few tests.
+    - Open the scipion gui and execute a few tests.
+
+
+b. To simulate installation using the plugin manager:
+
+  1. **Create a `plugins.json` file**:  
+    Use a structure similar to the one at `<https://scipion.i2pc.es/getplugins/>`, but replace the `scipion-em-xmipp` entry with the following:  
+
+    .. code-block:: json
+
+        {
+          "scipion-em-xmipp": {
+              "pipName": "scipion-em-xmipp",
+              "pluginSourceUrl": "https://github.com/i2pc/scipion-em-xmipp.git@release-3.24.12",
+              "id": 2,
+              "name": "Xmipp3"
+          }
+        }
+
+  2. **Update `scipion.conf`**:  
+    Add the following line to your `scipion.conf` file (adjust the path as needed):  
+
+    .. code-block:: text
+
+        SCIPION_PLUGIN_JSON = /home/pconesa/software/prod-scipion/config/plugins.json
+
+  3. **Notes**:  
+    - The plugin manager will now fetch the repository from GitHub with the specified branch (indicated after `@`).  
+    - This setup allows you to simulate an update.  
+    - Ignore the version number, as it may not be properly displayed in this configuration.
 
 Step 9: Create Pull Requests
 ------------------------------
