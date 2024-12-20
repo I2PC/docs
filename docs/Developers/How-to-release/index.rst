@@ -56,6 +56,7 @@ Step 7: Update Version Information
 Step 8: Validate Release Branches Locally
 ------------------------------------------
 a. Simulate localy
+~~~~~~~~~~~~~~~~~~~~
   - Check out the release branches locally or on a test machine.
   - Verify:
     - Installation with Scipion. Downolad the scipion-em-xmipp repo in the release branch.
@@ -76,6 +77,7 @@ a. Simulate localy
 
 
 b. Simulate using the plugin manager:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   1. **Create a `plugins.json` file**:  
     Use a structure similar to the one at `<https://scipion.i2pc.es/getplugins/>`, but replace the `scipion-em-xmipp` entry with the following:  
