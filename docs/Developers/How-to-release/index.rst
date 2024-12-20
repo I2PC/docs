@@ -79,7 +79,8 @@ a. Simulate localy
 b. Simulate using the plugin manager:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  1. **Create a `plugins.json` file**:  
+  1. Install scipion with the last( the one before the current release) xmipp
+  2. **Create a `plugins.json` file**:  
     Use a structure similar to the one at `<https://scipion.i2pc.es/getplugins/>`, but replace the `scipion-em-xmipp` entry with the following:  
 
     .. code-block:: json
@@ -93,14 +94,14 @@ b. Simulate using the plugin manager:
           }
         }
 
-  2. **Update `scipion.conf`**:  
+  3. **Update `scipion.conf`**:  
     Add the following line to your `scipion.conf` file (adjust the path as needed):  
 
     .. code-block:: text
 
         SCIPION_PLUGIN_JSON = /home/pconesa/software/prod-scipion/config/plugins.json
 
-  3. **Notes**:  
+  4. **Notes**:  
     - The plugin manager will now fetch the repository from GitHub with the specified branch (indicated after `@`).  
     - This setup allows you to simulate an update.  
     - Ignore the version number, as it may not be properly displayed in this configuration.
