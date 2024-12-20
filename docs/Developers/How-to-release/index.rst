@@ -75,7 +75,7 @@ a. Simulate localy
     - Open the scipion gui and execute a few tests.
 
 
-b. To simulate installation using the plugin manager:
+b. Simulate using the plugin manager:
 
   1. **Create a `plugins.json` file**:  
     Use a structure similar to the one at `<https://scipion.i2pc.es/getplugins/>`, but replace the `scipion-em-xmipp` entry with the following:  
