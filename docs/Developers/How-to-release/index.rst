@@ -4,14 +4,20 @@ Creating an Xmipp Release
 
 Step 1: Define the Version Name
 -------------------------------
-- The version name follows the format **X.YY.ZZ.B.P**:
+The version name follows the format **X.YY.ZZ.B.P**:
 
-  - **X** = 3 (this keeps the main version number consistent to sort releases and maintain `xmipp3`).
-  - **YY** = Year of the release.
-  - **ZZ** = Month of the release.
-  - **B** = Binaries version. Each release starts by 0 if any hotfix is requiered in any repositorie (Xmipp, XmippXore and or XmippViz) it has to be increased +1 in all three repositories).
-  - **P** = Plugin version. Each release starts by 0. If any hotfix is requireded it has to be increased by +1. No changes in other repositoirees are required.
+- **X**: 3  
+  This keeps the main version number consistent to sort releases and maintain `xmipp3`.
 
+- **YY**: Year of the release.
+
+- **ZZ**: Month of the release.
+
+- **B**: Binaries version.  
+  Each release starts by 0. If any hotfix is required in any repository (Xmipp, XmippXore, or XmippViz), it has to be increased by +1 in all three repositories.
+
+- **P**: Plugin version.  
+  Each release starts by 0. If any hotfix is required, it has to be increased by +1. No changes in other repositories are required.
 
 - Additionally, name the release after a Greek god or goddess. `Check out the list <https://www.gods-and-monsters.com/list-of-greek-gods-goddesses.html>`__
 - Example: `3.24.12.0.0 - Boreas` (for a June 2024 release).
