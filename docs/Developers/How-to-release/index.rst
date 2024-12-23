@@ -8,7 +8,7 @@ Step 1: Define the Version Name
   - **X** = 3 (this keeps the main version number consistent to sort releases and maintain `xmipp3`).
   - **YY** = Year of the release.
   - **ZZ** = Month of the release.
-  - **B** = Binaries version. Each release starts by 0 if any hotfix is requiered in any repositorie (Xmipp, XmippXore and or XmippViz) it has to be increased +1 in all three repositories)
+  - **B** = Binaries version. Each release starts by 0 if any hotfix is requiered in any repositorie (Xmipp, XmippXore and or XmippViz) it has to be increased +1 in all three repositories).
   - **P** = Plugin version. Each release starts by 0. If any hotfix is requireded it has to be increased by +1. No changes in other repositoirees are required.
 
 
