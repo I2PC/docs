@@ -10,9 +10,13 @@ Step 1: Define the Version Name
   - **ZZ** = Month of the release.
   - **B** = Binaries version. Each release starts by 0 if any hotfix is requiered in any repositorie (Xmipp, XmippXore and or XmippViz) it has to be increased +1 in all three repositories)
   - **P** = Plugin version. Each release starts by 0. If any hotfix is requireded it has to be increased by +1. No changes in other repositoirees are required.
-  
+
 - Additionally, name the release after a Greek god or goddess. `Check out the list <https://www.gods-and-monsters.com/list-of-greek-gods-goddesses.html>`__
-- Example: `3.24.06 - Boreas` (for a June 2024 release).
+- Example: `3.24.12.0.0 - Boreas` (for a June 2024 release).
+
+.. note::
+    The Scipion plugin manager takes the pypi package from `here <https://pypi.org/project/scipion-em-xmipp/#history>`__. This package is created in a `Github action https://github.com/I2PC/scipion-em-xmipp/actions/workflows/release.yml>`__ that takes the __version__ from the setup.py file (in future from the .toml file.)
+    The producction installation procedure takes the version._pluginTagVersion variable and checkout to that tag generated in an action of GitHub. After that clone the rest of repositorioes and checkout to the version._binTagVersion generated in a GitHub Action.
 
 
 Step 2: Update the `CHANGELOG.md`
