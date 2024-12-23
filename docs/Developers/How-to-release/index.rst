@@ -16,7 +16,7 @@ Step 1: Define the Version Name
 - Example: `3.24.12.0.0 - Boreas` (for a June 2024 release).
 
 .. note::
-    The Scipion plugin manager takes the pypi package from `here <https://pypi.org/project/scipion-em-xmipp/#history>`__. This package is created in a `Github action https://github.com/I2PC/scipion-em-xmipp/actions/workflows/release.yml>`__ that takes the __version__ from the setup.py file (in future from the .toml file.)
+    The Scipion plugin manager takes the pypi package from `here <https://pypi.org/project/scipion-em-xmipp/#history>`__. This package is created in a `Github action <https://github.com/I2PC/scipion-em-xmipp/actions/workflows/release.yml>`__ that takes the __version__ from the setup.py file (in future from the .toml file.)
     The producction installation procedure takes the version._pluginTagVersion variable and checkout to that tag generated in an action of GitHub. After that clone the rest of repositorioes and checkout to the version._binTagVersion generated in a GitHub Action.
 
 
