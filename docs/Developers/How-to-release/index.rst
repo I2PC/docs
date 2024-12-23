@@ -19,8 +19,8 @@ The version name follows the format **X.YY.ZZ.B.P**:
 - **P**: Plugin version.  
   Each release starts by 0. If any hotfix is required, it has to be increased by +1. No changes in other repositories are required.
 
-Additionally, name the release after a Greek god or goddess. `Check out the list <https://www.gods-and-monsters.com/list-of-greek-gods-goddesses.html>`__
-Example: `3.24.12.0.0 - Boreas` (for a June 2024 release).
+
+Example: `3.24.12.0.0 - Poseidon` (for a June 2024 release). Additionally, name the release after a Greek god or goddess. `Check out the list <https://www.gods-and-monsters.com/list-of-greek-gods-goddesses.html>`__
 
 .. note::
     The Scipion plugin manager takes the pypi package from `here <https://pypi.org/project/scipion-em-xmipp/#history>`__. This package is created in a `Github action <https://github.com/I2PC/scipion-em-xmipp/actions/workflows/release.yml>`__ that takes the __version__ from the setup.py file (in future from the .toml file.)
