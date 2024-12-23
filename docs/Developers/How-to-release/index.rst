@@ -5,6 +5,7 @@ Creating an Xmipp Release
 Step 1: Define the Version Name
 -------------------------------
 - The version name follows the format **X.YY.ZZ.B.P**:
+
   - **X** = 3 (this keeps the main version number consistent to sort releases and maintain `xmipp3`).
   - **YY** = Year of the release.
   - **ZZ** = Month of the release.
