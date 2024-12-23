@@ -117,7 +117,7 @@ b. Simulate using the plugin manager:
         SCIPION_PLUGIN_JSON = /home/userName/scipion/config/plugins.json
 
   4. **Notes**:  
-    - The plugin manager will now fetch the repository from GitHub with the specified branch (indicated after `@`).  
+    - The plugin manager will fetch the repository from GitHub with the specified branch (indicated after `@`).  
     - This setup allows you to simulate an update.  
     - Ignore the version number, as it may not be properly displayed in this configuration.
 
