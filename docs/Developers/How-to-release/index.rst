@@ -4,7 +4,7 @@ Creating an Xmipp Release
 
 Step 1: Define the Version Name
 -------------------------------
-The version name follows the format **X.YY.ZZ.B.P**:
+The version name follows the format **X.YY.ZZ.B** for the binaries (xmipp, xmippCore and xmippViz) and **X.YY.ZZ.P** for the plugin:
 
 - **X**: 3  
   This keeps the main version number consistent to sort releases and maintain `xmipp3`.
