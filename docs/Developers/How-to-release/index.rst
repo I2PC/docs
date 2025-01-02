@@ -63,6 +63,7 @@ Step 7: Update Version Information
 -----------------------------------
 1. **In Xmipp**:
    - Update the name, version, and release date in `here <https://github.com/I2PC/xmipp/blob/e72e2e9ea0ae824f60ded8b1f00b404d2c99d4d9/installer/constants/versions.py#L31>`__
+   - Update the tag name `here <https://github.com/I2PC/xmipp/blob/3a0534e3f30daeeeec01e2b71803b0a613d3e426/installer/constants/main.py#L76:>`__
 
 2. **In scipion-em-xmipp**:
    - Change the `devel` variable to `release` in `here <https://github.com/I2PC/scipion-em-xmipp/blob/9881da0c6cdec69517e26fc025500d4940d44d0e/xmipp3/version.py#L28>`__
