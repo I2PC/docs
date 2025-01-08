@@ -164,5 +164,5 @@ Step 14: PR from Release to Devel
 Note: Scheme installation and versions name
 ---------------------------------------------
 .. figure:: ../../../_static/images/installationdiagram.png
-   :width: 550
+   :width: 600
    :align: center
