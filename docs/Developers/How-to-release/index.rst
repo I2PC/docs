@@ -158,3 +158,12 @@ Step 14: PR from Release to Devel
 ---
 
 **That's it!** Now sit back, grab a coffee, and enjoy your shiny new release. 🚀
+
+
+
+Note: Scheme installation and versions name
+---------------------------------------------
+.. figure:: ../_static/images/installationdiagram.png
+   :alt: xmippComposed
+   :width: 450
+   :align: center
