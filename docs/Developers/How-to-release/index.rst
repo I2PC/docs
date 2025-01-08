@@ -104,7 +104,7 @@ b. Simulate using the plugin manager:
         {
           "scipion-em-xmipp": {
               "pipName": "scipion-em-xmipp",
-              "pluginSourceUrl": "https://github.com/i2pc/scipion-em-xmipp.git@v3.24.12.2-Poseidon",
+              "pluginSourceUrl": "https://github.com/i2pc/scipion-em-xmipp.git@release-3.24.12a",
               "id": 2,
               "name": "Xmipp3"
           }
