@@ -151,9 +151,7 @@ Step 13: Consider XmippTomo
 Step 14: PR from Release to Devel
 ----------------------------------
 - Create a pull request from `release` back to `devel`.
-- Revert the tags for `release` and `devel` in:
-  - Xmipp.
-  - scipion-em-xmipp.
+- Revert the tags for `release` and `devel` in scipion-em-xmipp `scipion-em-xmipp <https://github.com/I2PC/scipion-em-xmipp/blob/835c6fd23bb1004fe63155517c62bbe92b5efadd/xmipp3/version.py#L28>`__
 
 ---
 
