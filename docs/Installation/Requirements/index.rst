@@ -3,7 +3,7 @@ Requirements
 Supported OS
 ^^^^^^^^^^^^^^^^^^^^
 
-We have tested Xmipp compilation on the following operating systems:Ubuntu 18.04, Ubuntu 20.04, Ubuntu 22.04 and Centos 7. While compilation and execution might be possible on other systems, it might not be straightforward. If you encounter a problem, please refer to known and fixed `issues <https://github.com/I2PC/xmipp/issues?q=is%3Aissue>`_. Let us know if something is not working.
+We have tested Xmipp compilation on the following operating systems:Ubuntu 18.04, Ubuntu 20.04, Ubuntu 22.04 and Centos 7. While compilation and execution might be possible on other systems, it might not be straightforward. 
 
 Hardware requirements
 ^^^^^^^^^^^^^^^^^^^^
@@ -68,5 +68,5 @@ You can install these packages on Ubuntu-based systems using the following comma
    sudo apt install -y libfftw3-dev libopenmpi-dev libhdf5-dev python3-numpy python3-dev libtiff5-dev libsqlite3-dev default-jdk git cmake libjpeg-dev
 
 
-These requirements will ensure that your system is ready for installing and using Xmipp.
+These requirements will ensure that your system is ready for installing and using Xmipp. If you encounter a problem, please refer to known and fixed `issues <https://github.com/I2PC/xmipp/issues?q=is%3Aissue>`_. Let us know if something is not working.
 
