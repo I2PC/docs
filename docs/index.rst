@@ -69,6 +69,7 @@ the main repository is required and also the installation of the plugins.
     :hidden:
     :caption: Developers
 
+    Developers/Welcome-developers/index
     Developers/Guidelines/index
     Developers/Integrating-with-Visual-Studio/index
     Developers/CodeDocumentation/index
