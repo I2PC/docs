@@ -17,7 +17,7 @@ the main repository is required and also the installation of the plugins.
 
 .. figure:: ../_static/images/composed.png
    :alt: xmippComposed
-   :width: 450
+   :width: 550
    :align: center
 
 
