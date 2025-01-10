@@ -9,24 +9,24 @@ The Xmipp community is a vibrant and dynamic group of developers from around the
 
 Here's a snapshot of our community in action:
 - **Commits this month**: `Check here <https://github.com/I2PC/xmipp/pulse/monthly>`__ 🖋️
-- **Contributors over time**: [See the stats](https://github.com/I2PC/xmipp/graphs/contributors) 👥
+- **Contributors over time**: `See the stats <https://github.com/I2PC/xmipp/graphs/contributors>`__  👥
 
 We're proud to be a relatively large and active group of contributors, constantly pushing updates, reviewing pull requests (PRs), and tackling issues.
 
 Our GitHub Repositories 
 --------------------------
 Here are the main repositories where all the magic happens:
-- **[xmipp](https://github.com/I2PC/xmipp)**: The core repository of the Xmipp project. (C++)
-- **[xmippCore](https://github.com/I2PC/xmippCore)**: Core functionalities of Xmipp. (C++)
-- **[xmippViz](https://github.com/I2PC/xmippViz)**: Tools for visualization and analysis.
-- **[scipion-em-xmipp](https://github.com/I2PC/scipion-em-xmipp)**: With all the protocols for Scipion (python)
+- `xmipp <https://github.com/I2PC/xmipp>`__ : The core repository of the Xmipp project. (C++)
+- `xmippCore <https://github.com/I2PC/xmippCore>`__ : Core functionalities of Xmipp. (C++)
+- `xmippViz <https://github.com/I2PC/xmippViz>`__ : Tools for visualization and analysis.
+- `scipion-em-xmipp <https://github.com/I2PC/scipion-em-xmipp>`__ : With all the protocols for Scipion (python)
 Feel free to explore, clone, and experiment with our repositories! If you encounter bugs or have feature requests, please **open an issue** in the relevant repository. We welcome and encourage all contributions! 🙌
 
 Contributing: What you need to know 
 --------------------------------------
 - **Pull Requests (PRs)**: We actively review PRs and aim to merge improvements as quickly as possible. 🎉
 - **New to Xmipp Development?**: If you're contributing for the first time, we recommend reaching out to us before starting your work. That way, we can guide you and ensure you're set up for success.  
-  Visit our [Contact Page](https://i2pc.github.io/docs/contact.html) for more details.
+  Visit our `Contact Page <https://i2pc.github.io/docs/contact.html>`__ for more details.
 
 Pro Tips for Contributors 
 ----------------------------
