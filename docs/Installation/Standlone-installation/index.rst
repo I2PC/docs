@@ -57,6 +57,6 @@ Xmipp is installed in the build directory located in the same directory where th
    
    .. code-block:: bash
 
-      `source dist/xmipp.bashrc`
+      source dist/xmipp.bashrc
 
 
