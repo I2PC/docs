@@ -7,9 +7,7 @@ Who are we?
 --------------
 The Xmipp community is a vibrant and dynamic group of developers from around the world. We collaborate on various tools and modules that make up Xmipp, a powerful software suite for image processing in electron microscopy.
 
-Here's a snapshot of our community in action:
-- **Commits this month**: `Check here <https://github.com/I2PC/xmipp/pulse/monthly>`__ 🖋️
-- **Contributors over time**: `See the stats <https://github.com/I2PC/xmipp/graphs/contributors>`__  👥
+Here's a snapshot of our community in action:  `Commits this month <https://github.com/I2PC/xmipp/pulse/monthly>`__ 🖋️ `Contributors over time <https://github.com/I2PC/xmipp/graphs/contributors>`__  👥
 
 We're proud to be a relatively large and active group of contributors, constantly pushing updates, reviewing pull requests (PRs), and tackling issues.
 
