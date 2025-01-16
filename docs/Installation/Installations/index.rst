@@ -77,7 +77,7 @@ Xmipp is installed in the build directory located in the same directory where th
 Installation for HPC Clusters
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This guide explains how to install Xmipp on High-Performance Computing (HPC) environments such as clusters.
+This guide explains how to install Xmipp on High-Performance Computing (HPC).
 
 
 1. **Install Scipion for HPC**
