@@ -1,8 +1,8 @@
 Troubleshooting
-====================================
+--------------------------------------
 
 General error while installing/compiling Xmipp (non-development installations)
----------------------------------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you are getting an error during the Xmipp compilation, consider to read compilationLog.txt file located in the xmipp floder (by default in scipion2/software/em) and review the `Xmipp's configuration page <https://i2pc.github.io/docs/Utils/ConfigurationF/index.html#configuration-file>`_.
 
@@ -23,7 +23,7 @@ If the problem persist, don't hesitate to `contact us <https://scipion-em.github
 
 
 Compiling Xmipp to be used in both Intel and AMD cores
----------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Xmipp is optimizing the compilation to the architecture found in the compilation
 time. However, this is not a good idea if it must run on both AMD and Intel cores
@@ -42,7 +42,7 @@ Please, check `Xmipp's configuration page <https://i2pc.github.io/docs/Utils/Con
 
 
 HDF5
---------
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 We sometimes see issues regarding the HDF5 dependency.
 We recommend removing all hdf5 versions and install just hdf5-devel. To do that:
@@ -60,7 +60,7 @@ If you install it using other package management system (such as Conda), it migh
 
 
 Cannot compile with Java
--------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ::
 
