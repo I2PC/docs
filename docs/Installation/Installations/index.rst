@@ -124,7 +124,7 @@ This guide explains how to install Xmipp on High-Performance Computing (HPC).
    
    .. code-block:: bash
 
-      scipion3 python -c "from xmipp3.version import _binTagVersion; print(_binTagVersion)"
+      scipion3 python -c "from xmipp3.version import _binTagVersion; print(_binTagVersion)"  | grep v3
    
 
 8. **Compile and Install Xmipp**
