@@ -92,16 +92,15 @@ This guide explains how to install Xmipp on High-Performance Computing (HPC).
       scipion3 installp -p scipion-em-xmipp
    
 
-3. **Navigate to the Xmipp Installation Directory**
-   Locate the installation directory of the Xmipp plugin within Scipion:
+3. **Locate and navigate the installation directory** of softwares of Scipion:
    
    .. code-block:: bash
 
-      cd /path/to/scipion3/software/em/scipion-em-xmipp
+      cd /path/to/scipion3/software/em/
    
 
 4. **Clone the Xmipp Repository**
-   Clone the Xmipp repository and move to the source directory:
+   Clone there the Xmipp repository and move to the source directory:
    
    .. code-block:: bash
 
@@ -133,6 +132,6 @@ This guide explains how to install Xmipp on High-Performance Computing (HPC).
    .. code-block:: bash
 
       ./xmipp --production True
-   
+
 
 After completing these steps, Xmipp should be successfully installed and configured on your HPC environment. But in any case you can `contact us <https://i2pc.github.io/docs/contact.htmlrefer>`__ for advice or support.
