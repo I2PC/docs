@@ -71,3 +71,6 @@ Xmipp is installed in the build directory located in the same directory where th
       source dist/xmipp.bashrc
 
 
+
+Installation for HPC Clusters
+===============================

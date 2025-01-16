@@ -34,7 +34,7 @@ the main repository is required and also the installation of the plugins.
     Installation/Requirements/index
     Installation/Installation/index
     Installation/Optionals/index
-    Installation/troubleshooting/index
+    Installation/Troubleshooting/index
 
     
 
