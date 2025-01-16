@@ -120,14 +120,21 @@ This guide explains how to install Xmipp on High-Performance Computing (HPC).
 
 
 7. **Check the Installed Xmipp Version**
-   Use the following command to verify the version of the binaries the plugin scipion-em-Xmipp requires:
+   Use the following command to verify the version of the binaries the plugin scipion-em-Xmipp requires (something like "v3.24.12.0-Poseidon")
    
    .. code-block:: bash
 
       scipion3 python -c "from xmipp3.version import _binTagVersion; print(_binTagVersion)"  | grep v3
    
 
-8. **Compile and Install Xmipp**
+8. **Checkout to the specific release**
+
+   .. code-block:: bash
+
+      git checkout v3.24.12.0-Poseidon
+
+
+9. **Compile and Install Xmipp**
    Compile Xmipp in production mode with the command:
    
    .. code-block:: bash
