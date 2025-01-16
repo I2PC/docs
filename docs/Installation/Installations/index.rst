@@ -117,7 +117,7 @@ This guide explains how to install Xmipp on High-Performance Computing (HPC).
    
 
 6. **Edit the Configuration File**
-   Open the `configuration file <https://i2pc.github.io/docs/Utils/ConfigurationF/index.html#configuration-file>`__generated in the previous step and edit the fields as needed. Adjust options such as `CMAKE_C_FLAGS` or `CMAKE_CXX_FLAGS` to match the requirements of your HPC system.
+   Open the `configuration file <https://i2pc.github.io/docs/Utils/ConfigurationF/index.html#configuration-file>`__ generated in the previous step and edit the fields as needed. Adjust options such as `CMAKE_C_FLAGS` or `CMAKE_CXX_FLAGS` to match the requirements of your HPC system.
 
 7. **Check the Installed Xmipp Version**
    Use the following command to verify the version of the binaries the plugin scipion-em-Xmipp requires:
