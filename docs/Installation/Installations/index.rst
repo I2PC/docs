@@ -143,4 +143,4 @@ This guide explains how to install Xmipp on High-Performance Computing (HPC).
       scipion3 run ./xmipp --production True
 
 
-After completing these steps, Xmipp should be successfully installed and configured on your HPC environment. But in any case you can `contact us <https://i2pc.github.io/docs/contact.htmlrefer>`__ for advice or support.
+After completing these steps, Xmipp should be successfully installed and configured on your HPC environment. But in any case you can `contact us <https://i2pc.github.io/docs/contact.html#contact-us>`__ for advice or support.
