@@ -32,7 +32,7 @@ the main repository is required and also the installation of the plugins.
     :caption: Installing Xmipp
 
     Installation/Requirements/index
-    Installation/Installation/index
+    Installation/Installations/index
     Installation/Optionals/index
     Installation/Troubleshooting/index
 
