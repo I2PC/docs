@@ -1,5 +1,5 @@
 Installations
------------------ 
+----------------------
 Installation with Scipion
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
