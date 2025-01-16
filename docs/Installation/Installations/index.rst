@@ -86,25 +86,25 @@ This guide explains how to install Xmipp on High-Performance Computing (HPC) env
 
 2. **Install the Scipion Xmipp Plugin**
    Run the following command to install the Xmipp plugin for Scipion:
-   ```bash
-   scipion3 installp -p scipion-em-xmipp
+   ```
+      scipion3 installp -p scipion-em-xmipp
    ```
 
 3. **Navigate to the Xmipp Installation Directory**
    Locate the installation directory of the Xmipp plugin within Scipion:
-   ```bash
+   ```
    cd /path/to/scipion3/software/em/scipion-em-xmipp
    ```
 
 4. **Clone the Xmipp Repository**
    Clone the Xmipp repository and move to the source directory:
-   ```bash
+   ```
    git clone https://github.com/I2PC/xmipp.git xmippSrc && cd xmippSrc
    ```
 
 5. **Create the Configuration File**
    Generate the initial configuration file by running:
-   ```bash
+   ```
    ./xmipp config
    ```
 
@@ -113,13 +113,13 @@ This guide explains how to install Xmipp on High-Performance Computing (HPC) env
 
 7. **Check the Installed Xmipp Version**
    Use the following command to verify the version of the binaries the plugin scipion-em-Xmipp requires:
-   ```bash
+   ```
    scipion3 python -c "from xmipp3.version import _binTagVersion; print(_binTagVersion)"
    ```
 
 8. **Compile and Install Xmipp**
    Compile Xmipp in production mode with the command:
-   ```bash
+   ```
    ./xmipp --production True
    ```
 
