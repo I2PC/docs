@@ -32,9 +32,10 @@ the main repository is required and also the installation of the plugins.
     :caption: Installing Xmipp
 
     Installation/Requirements/index
-    Installation/Installation-with-Scipion/index
-    Installation/Standlone-installation/index
-    Installation/InstallationNotes/index
+    Installation/Installation/index
+    Installation/Optionals/index
+    Installation/troubleshooting/index
+
     
 
 .. _Releases-docs:
