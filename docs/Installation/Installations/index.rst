@@ -66,7 +66,7 @@ To use Xmipp within Scipion, link the standalone installation by following these
 Using Xmipp
 """"""""""""""""""
 
-Xmipp is installed in the build directory located in the same directory where the xmipp script is located. To set all necessary environment variables and paths to all Xmipp programs, you can simply run 
+Xmipp is installed in the build directory located in the same directory where the xmipp script is located. To run Xmipp standalone (without Scipion) and to set all necessary environment variables and paths to all Xmipp programs, you can simply run 
    
    .. code-block:: bash
 
