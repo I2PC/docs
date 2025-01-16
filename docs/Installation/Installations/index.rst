@@ -77,4 +77,50 @@ Xmipp is installed in the build directory located in the same directory where th
 Installation for HPC Clusters
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Working on it...
+This guide explains how to install Xmipp on High-Performance Computing (HPC) environments such as clusters.
+
+
+1. **Install Scipion for HPC**
+   Follow the instructions provided in the Scipion for HPC installation guide: 
+   `Scipion HPC Installation Guide <https://scipion-em.github.io/docs/release-3.0.0/docs/scipion-modes/how-to-install.html#for-hpc-clusters>`__.
+
+2. **Install the Scipion Xmipp Plugin**
+   Run the following command to install the Xmipp plugin for Scipion:
+   ```bash
+   scipion3 installp -p scipion-em-xmipp
+   ```
+
+3. **Navigate to the Xmipp Installation Directory**
+   Locate the installation directory of the Xmipp plugin within Scipion:
+   ```bash
+   cd /path/to/scipion3/software/em/scipion-em-xmipp
+   ```
+
+4. **Clone the Xmipp Repository**
+   Clone the Xmipp repository and move to the source directory:
+   ```bash
+   git clone https://github.com/I2PC/xmipp.git xmippSrc && cd xmippSrc
+   ```
+
+5. **Create the Configuration File**
+   Generate the initial configuration file by running:
+   ```bash
+   ./xmipp config
+   ```
+
+6. **Edit the Configuration File**
+   Open the `configuration file <https://i2pc.github.io/docs/Utils/ConfigurationF/index.html#configuration-file>`__generated in the previous step and edit the fields as needed. Adjust options such as `CMAKE_C_FLAGS` or `CMAKE_CXX_FLAGS` to match the requirements of your HPC system.
+
+7. **Check the Installed Xmipp Version**
+   Use the following command to verify the version of the binaries the plugin scipion-em-Xmipp requires:
+   ```bash
+   scipion3 python -c "from xmipp3.version import _binTagVersion; print(_binTagVersion)"
+   ```
+
+8. **Compile and Install Xmipp**
+   Compile Xmipp in production mode with the command:
+   ```bash
+   ./xmipp --production True
+   ```
+
+After completing these steps, Xmipp should be successfully installed and configured on your HPC environment.
