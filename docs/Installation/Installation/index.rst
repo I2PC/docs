@@ -1,5 +1,5 @@
 Installation with Scipion
-================================
+-----------------------------------------------------
 
 The recommended way for users (not developers) to install and use Xmipp is via the 
 `Scipion framework <https://scipion-em.github.io/docs/release-3.0.0/docs/scipion-modes/how-to-install.html>`_, 
@@ -10,7 +10,7 @@ You can also install Xmipp from the `plugin manager of Scipion <https://scipion-
 
 
 Standlone-installation
-====================================
+-----------------------------------------------------
 
 This guide explains the standalone installation of Xmipp and the process to link it with Scipion. The standalone version allows you to use Xmipp independently of Scipion.
 
@@ -73,4 +73,4 @@ Xmipp is installed in the build directory located in the same directory where th
 
 
 Installation for HPC Clusters
-===============================
+-----------------------------------------------------
