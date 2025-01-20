@@ -91,5 +91,6 @@ the main repository is required and also the installation of the plugins.
     
     listOfPublications
     enhancingXmipp
+    History
     contact
     license
