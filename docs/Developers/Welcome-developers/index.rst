@@ -42,5 +42,5 @@ Happy coding!
 
 .. figure:: ../../../_static/images/XmippDevelopersTeam.png
    :alt: Xmipp team
-   :width: 500
+   :width: 700
    :align: center
