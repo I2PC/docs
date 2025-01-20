@@ -5,5 +5,5 @@ Timeline of Xmipp
 
 .. figure:: ../_static/images/Timeline.jpg
    :alt: Timeline xmipp
-   :width: 700
+   :width: 750
    :align: center
