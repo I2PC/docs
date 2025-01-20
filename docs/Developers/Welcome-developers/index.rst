@@ -40,7 +40,7 @@ We're excited to see what you'll bring to the Xmipp ecosystem. Dive in, collabor
 Happy coding! 
 
 
-.. figure:: ../_static/images/XmippDevelopersTeam.png
+.. figure:: ../../_static/images/XmippDevelopersTeam.png
    :alt: Xmipp team
    :width: 500
    :align: center
