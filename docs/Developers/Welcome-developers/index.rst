@@ -41,6 +41,6 @@ Happy coding!
 
 
 .. figure:: ../_static/images/XmippDevelopersTeam.jpg
-   :alt: Timeline xmipp
+   :alt: Xmipp team
    :width: 500
    :align: center
