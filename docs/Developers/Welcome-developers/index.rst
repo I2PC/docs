@@ -38,3 +38,9 @@ Join us and be part of something amazing!
 We're excited to see what you'll bring to the Xmipp ecosystem. Dive in, collaborate, and let's create something incredible together. If you have any questions, don't hesitate to reach out—we're here to help!
 
 Happy coding! 
+
+
+.. figure:: ../_static/images/XmippDevelopersTeam.jpg
+   :alt: Timeline xmipp
+   :width: 500
+   :align: center
