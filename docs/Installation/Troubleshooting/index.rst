@@ -54,11 +54,12 @@ When an error like this appear:
 
 .. code-block:: bash
 
-    libstdc++.so.6: version `GLIBCXX_3.4.30' not found (required by /usr/bin/cmake)
+    libstdc++.so.6: version GLIBCXX_3.4.30 not found (required by /usr/bin/cmake)
 
 It is because the version of libstdc++.so.6 found is older than the one of the system. This usually happens when the library is recently installed in the Scipion environment. The best way to resolve this issue is to rename that file to allow the correct version to be found in the system.
 
 .. code-block:: bash
+    
     mv libstdc++.so.VERSION_ENV. libstdc++.so.VERSION_ENV.old
 
 
