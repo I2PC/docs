@@ -48,7 +48,7 @@ If you install it using other package management system (such as Conda), it migh
 
 
 
-libstdc++.so.VERSION version GLIBCXX_3.4.30 not found` 
+libstdc++.so. version GLIBCXX_3.4.30 not found 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 When an error like this appear: 
 
