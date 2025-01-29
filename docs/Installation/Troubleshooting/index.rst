@@ -56,7 +56,14 @@ When an error like this appear:
 
     libstdc++.so.6: version GLIBCXX_3.4.30 not found (required by /usr/bin/cmake)
 
-It is because the version of libstdc++.so.6 found is older than the one of the system. This usually happens when the library is recently installed in the Scipion environment. The best way to resolve this issue is to rename that file to allow the correct version to be found in the system.
+It is because the version of libstdc++.so.6 found is older than the one of the system. This usually happens when the library is recently installed in the Scipion environment but with an older version. The best way to resolve this issue is to update the library in the scipion enviroment.
+
+.. code-block:: bash
+
+    scipion3 run conda install -c conda-forge libstdcxx-ng
+
+
+Another less stable option is
 
 .. code-block:: bash
 
