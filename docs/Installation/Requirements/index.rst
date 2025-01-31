@@ -61,11 +61,31 @@ Before installing Xmipp, you need to ensure that your system meets certain requi
 - `cmake`: Cross-platform build system.
 - `libjpeg-dev`: Compress, decompress, transform JPEG images.
 
-You can install these packages on Ubuntu-based systems using the following command:
+- You can install these packages on Ubuntu-based systems using the following command:
 
 .. code-block:: bash
 
    sudo apt install -y libfftw3-dev libopenmpi-dev libhdf5-dev python3-numpy python3-dev libtiff5-dev libsqlite3-dev default-jdk git cmake libjpeg-dev
+
+
+
+- Installing dependencies via yum
+
+    Note: For HDF5 to be available Extra Packages for Enterprise Linux (EPEL) repository needs to be activated in certain distros with yum install epel-release
+
+    Note: On CentOS-7 the gcc available by default is not compatible with Xmipp. You can enable newer gcc releases using:
+
+.. code-block:: bash
+    
+    yum install centos-release-scl
+
+    yum install devtoolset-10
+
+    scl enable devtoolset-10 bash
+
+.. code-block:: bash
+
+  yum install python3-devel python3-numpy fftw-devel openmpi-devel hdf5-devel sqlite-devel libtiff-devel libjpeg-turbo-devel java-17-openjdk-devel git cmake gcc g++
 
 
 These requirements will ensure that your system is ready for installing and using Xmipp. If you encounter a problem, please refer to known and fixed `issues <https://github.com/I2PC/xmipp/issues?q=is%3Aissue>`_. Let us know if something is not working.
