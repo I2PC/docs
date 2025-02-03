@@ -61,7 +61,8 @@ Before installing Xmipp, you need to ensure that your system meets certain requi
 - `cmake`: Cross-platform build system.
 - `libjpeg-dev`: Compress, decompress, transform JPEG images.
 
-- You can install these packages on Ubuntu-based systems using the following command:
+
+You can install these packages on **Ubuntu-based** systems using the following command:
 
 .. code-block:: bash
 
@@ -69,7 +70,7 @@ Before installing Xmipp, you need to ensure that your system meets certain requi
 
 
 
-- Installing dependencies via yum
+- Installing dependencies via **yum**
 
     Note: For HDF5 to be available Extra Packages for Enterprise Linux (EPEL) repository needs to be activated in certain distros with yum install epel-release
 
