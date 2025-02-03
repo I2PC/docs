@@ -72,8 +72,10 @@ You can install these packages on **Ubuntu-based** systems using the following c
 
 Installing dependencies via **yum**
 
+.. Note::
     Note: For HDF5 to be available Extra Packages for Enterprise Linux (EPEL) repository needs to be activated in certain distros with yum install epel-release
 
+.. Note::
     Note: On CentOS-7 the gcc available by default is not compatible with Xmipp. You can enable newer gcc releases using:
 
 .. code-block:: bash
