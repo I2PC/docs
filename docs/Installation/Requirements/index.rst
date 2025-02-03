@@ -70,7 +70,7 @@ You can install these packages on **Ubuntu-based** systems using the following c
 
 
 
-- Installing dependencies via **yum**
+Installing dependencies via **yum**
 
     Note: For HDF5 to be available Extra Packages for Enterprise Linux (EPEL) repository needs to be activated in certain distros with yum install epel-release
 
