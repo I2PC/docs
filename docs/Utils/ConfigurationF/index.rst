@@ -1,19 +1,35 @@
 Configuration File
 ========================
 
-The Xmipp configuration file is generated at the beginning of the installation process if it does not already exist. This file is used to load the necessary libraries and set up environment variables for Xmipp. To generate a new configuration file, you can use the command:
-
+The Xmipp configuration file is generated at the beginning of the installation process. This file is responsible for loading the necessary libraries and setting up environment variables for Xmipp. To generate a new configuration file, use the following command:
 
 .. code-block:: bash
 
   ./xmipp config
 
+To edit this file, navigate to the folder where Xmipp is installed. By default, this is located at scipion3/software/em/xmippSrc-3.24.12-Poseidon or a similar path. For development purposes, the folder name may differ. Once inside the directory, locate and edit the xmipp.conf file based on the information provided here. If the file does not exist, generate a new one.
 
-This document describes the variables present in the Xmipp configuration file and their purpose. 
-Each section and variable is detailed below:
+After editing the file:
+
+- If you are installing Xmipp with Scipion, run:
+
+.. code-block:: bash
+  scipion3 run ./xmipp
+
+
+- Otherwise, simply run:
+
+.. code-block:: bash
+
+  ./xmipp
+
+
+xmipp.conf description
+----------------------------
+This section describes the variables in the Xmipp configuration file and their purpose.
 
 Toggle Section
---------------
+^^^^^^^^^^^^^^^^^^^^
 These options allow activating or deactivating specific software functionalities.
 
 - **SEND_INSTALLATION_STATISTICS**: Enables (`ON`) or disables (`OFF`) the sending of installation statistics.
@@ -25,7 +41,7 @@ These options allow activating or deactivating specific software functionalities
 - **CMAKE_SKIP_RPATH**: Enables (`ON`) or disables (`OFF`) excluding `rpath` during the compilation process.
 
 Package Home Section
----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 These variables define custom paths for the installation of required packages. If not specified, CMake will automatically search for these packages on the system.
 
 - **CMAKE**: Path to the CMake executable.
@@ -44,7 +60,7 @@ These variables define custom paths for the installation of required packages. I
 - **CMAKE_CUDA_HOST_COMPILER**: Host compiler for CUDA.
 
 Compilation Flags
-------------------
+^^^^^^^^^^^^^^^^^^^^
 These variables configure specific options for the compilers. It is recommended not to modify these variables unless experienced with advanced compilation settings.
 
 - **CMAKE_C_FLAGS**: Compilation options for the C compiler. Default value: `-mtune=native`.
