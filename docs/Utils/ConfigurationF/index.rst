@@ -14,6 +14,7 @@ After editing the file:
 - If you are installing Xmipp with Scipion, run:
 
 .. code-block:: bash
+  
   scipion3 run ./xmipp
 
 
