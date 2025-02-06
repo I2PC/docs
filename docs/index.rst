@@ -56,6 +56,7 @@ the main repository is required and also the installation of the plugins.
     :hidden:
     :caption: Utils
 
+    Utils/ProtocolsMap/index
     Utils/ConfigurationF/index
     Utils/xmippStructure/index
     Utils/Conventions/index
