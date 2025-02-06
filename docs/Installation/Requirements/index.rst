@@ -50,7 +50,7 @@ Full list of dependencies
 Before installing Xmipp, you need to ensure that your system meets certain requirements. Here are the necessary packages and dependencies:
 
 - `GCC`: compiler for C
-- `G++`: Compiler for C++
+- `GXX`: Compiler for C++
 - `libfftw3-dev`: FFTW3 library development files.
 - `libopenmpi-dev`: OpenMPI development files.
 - `libhdf5-dev`: HDF5 library development files.
