@@ -66,6 +66,9 @@ Before installing Xmipp, you need to ensure that your system meets certain requi
 
 You can install these packages on **Ubuntu-based** systems using the following command:
 
+.. Note::
+    The the installation of the compiler is not included in the next command
+
 .. code-block:: bash
 
    sudo apt install -y libfftw3-dev libopenmpi-dev libhdf5-dev python3-numpy python3-dev libtiff5-dev libsqlite3-dev default-jdk git cmake libjpeg-dev
