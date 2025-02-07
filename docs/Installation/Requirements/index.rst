@@ -49,8 +49,8 @@ Full list of dependencies
 
 Before installing Xmipp, you need to ensure that your system meets certain requirements. Here are the necessary packages and dependencies:
 
-- `GCC`: compiler for C
-- `GXX`: Compiler for C++
+- `GCC`: `compiler <https://i2pc.github.io/docs/Installation/Requirements/index.html#compiler>`_ for C
+- `GXX`: `Compiler <https://i2pc.github.io/docs/Installation/Requirements/index.html#compiler>`_ for C++
 - `libfftw3-dev`: FFTW3 library development files.
 - `libopenmpi-dev`: OpenMPI development files.
 - `libhdf5-dev`: HDF5 library development files.
