@@ -56,7 +56,23 @@ When an error like this appear:
 
     libstdc++.so.6: version GLIBCXX_3.4.30 not found (required by /usr/bin/cmake)
 
-It is because the version of libstdc++.so.6 found is older than the one of the system. This usually happens when the library is recently installed in the Scipion environment but with an older version. The best way to resolve this issue is to update the library in the scipion enviroment.
+It is because the version of libstdc++.so.6 found is older than the one of the system. This usually happens when the library is recently installed in the Scipion environment but with an older version.
+
+The message could be masked by this message
+
+.. code-block:: bash
+
+    >>> WARNING: XmippImage library not found!
+    > Please install Xmipp to get full functionality for cryo electron microscopy workflows. Otherwise ignore this.
+
+If this message arise, please run this command to confirm the cause:
+
+.. code-block:: bash
+
+    ./scipion3 python
+    import xmippLib
+
+The best way **to resolve** this issue is to update the library in the scipion enviroment.
 
 .. code-block:: bash
 
