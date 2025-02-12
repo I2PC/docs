@@ -56,7 +56,7 @@ When an error like this appear:
 
     libstdc++.so.6: version GLIBCXX_3.4.30 not found (required by /usr/bin/cmake)
 
-It is because the version of libstdc++.so.6 found is older than the one of the system. This usually happens when the library is recently installed in the Scipion environment but with an older version.
+It is because the version of libstdc++.so.6 found (in scipion3 enviroment) is older than the one of the system. This usually happens when the library is recently installed in the Scipion environment but with an older version.
 
 The message could be masked by this message
 
