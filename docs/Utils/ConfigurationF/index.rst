@@ -55,7 +55,7 @@ These variables define custom paths for the installation of required packages. I
 - **Python3_ROOT_DIR**: Main path to the Python 3 installation.
 - **FFTW_ROOT**: Main path to the FFTW library.
 - **TIFF_ROOT**: Main path to the TIFF library.
-- **HDF5_ROOT**: Main path to the HDF5 package. The path must include the lib folder and the libhdf5.so inside, and the include folder with the hdf5.h file.
+- **HDF5_ROOT**: Main path to the HDF5 package. The path must include the *lib* folder and the *libhdf5.so* inside, and the *include* folder with the *hdf5.h* file.
 - **JPEG_ROOT**: Main path to the JPEG library.
 - **SQLite_ROOT**: Main path to the SQLite library.
 - **CMAKE_CUDA_HOST_COMPILER**: Host compiler for CUDA.
