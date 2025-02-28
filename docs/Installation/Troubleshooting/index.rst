@@ -22,28 +22,43 @@ If ``ERROR: Could not find target xmippSrc`` is gotten, try to run
 If the problem persist, don't hesitate to `contact us <https://scipion-em.github.io/docs/release-3.0.0/docs/misc/contact-us.html#contact-us>`__.
 
 
-HDF5
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+HDF5: libhdf5.so: undefined reference to ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-We sometimes see issues regarding the HDF5 dependency.
-We recommend removing all hdf5 versions and install just hdf5-devel. To do that:
-
+We sometimes see issues regarding the HDF5 dependency: 
 
 .. code-block:: bash
 
-    sudo apt remove hdf5
+    hdf5/serial/libhdf5.so: undefined reference to `curl_easy_setopt@CURL_OPENSSL_4
+
+- If hdf5 is installed on the Scipion3 enviroment, remove and reinstall it (it might lead to compile/link time issues caused by incompatible version being fetched)
+
+.. code-block:: bash
+    scipion3 pip remove hdf5 libhdf5-dev
+    scipion3 pip install libhdf5-dev
+
+
+- If you have install hdf5 just in your system We recommend install hdf5-devel in the Scipion enviroment. To do that:
+
+.. code-block:: bash
+
+    scipion3 pip install libhdf5-dev
+
+
+- If you have installed hdf5 in your system and you can not use conda, please remove hdf5 an all files it creates and reinstall it:
+
+.. code-block:: bash
     sudo apt remove hdf5-devel
-    pip uninstall h5py
 
 Remove all files related to hdf5 in /usr/lib64/libhdf5*, /usr/include/hdf5* and .../anaconda3/include/hdf5*. 
 
 We strongy recommend you to install it via your default package manager:
 
+
 .. code-block:: bash
 
     sudo apt-get install libhdf5-dev
 
-If you install it using other package management system (such as Conda), it might lead to compile/link time issues caused by incompatible version being fetched.
 
 
 
@@ -89,9 +104,6 @@ Another less stable option is
 
 Cannot compile with Java
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-
 
 ::
 
