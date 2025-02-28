@@ -25,7 +25,7 @@ If the problem persist, don't hesitate to `contact us <https://scipion-em.github
 HDF5: libhdf5.so: undefined reference to ...
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-We sometimes see issues regarding the HDF5 dependency: 
+We sometimes see issues regarding the HDF5 dependency related some incompatibility with *hdf5* and *curl*
 
 .. code-block:: bash
 
