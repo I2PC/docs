@@ -39,7 +39,7 @@ We sometimes see issues regarding the HDF5 dependency related some incompatibili
     scipion3 conda install -c conda-forge hdf5
 
 
-- If you have install hdf5 just in your system, we recommend to install hdf5-devel in the Scipion enviroment. To do that:
+- If you have install hdf5 just in your system, we recommend to install hdf5 in the Scipion enviroment. To do that:
 
 .. code-block:: bash
 
