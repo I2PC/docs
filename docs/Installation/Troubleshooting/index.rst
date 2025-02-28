@@ -34,6 +34,7 @@ We sometimes see issues regarding the HDF5 dependency related some incompatibili
 - If hdf5 is installed on the Scipion3 enviroment, remove and reinstall it (it might lead to compile/link time issues caused by incompatible version being fetched)
 
 .. code-block:: bash
+
     scipion3 conda remove hdf5 
     scipion3 conda install -c conda-forge hdf5
 
@@ -48,6 +49,7 @@ We sometimes see issues regarding the HDF5 dependency related some incompatibili
 - If you have installed hdf5 in your system and you can not use conda, please remove hdf5 an all files it creates and reinstall it:
 
 .. code-block:: bash
+    
     sudo apt remove hdf5-devel
 
 Remove all files related to hdf5 in /usr/lib64/libhdf5*, /usr/include/hdf5* and .../anaconda3/include/hdf5*. 
