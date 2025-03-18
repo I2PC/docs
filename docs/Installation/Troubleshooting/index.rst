@@ -52,7 +52,7 @@ We sometimes see issues regarding the HDF5 dependency related some incompatibili
 
         sudo apt remove hdf5-devel
 
-    Remove all files related to hdf5 in /usr/lib64/libhdf5*, /usr/include/hdf5* and .../anaconda3/include/hdf5*. 
+    Remove all files related to hdf5 in /usr/lib64/libhdf5*, /usr/include/hdf5*   /lib/x86_64-linux-gnu/libhdf5_serial.so and .../anaconda3/include/hdf5*. 
 
     We strongy recommend you to install it via your default package manager:
 
