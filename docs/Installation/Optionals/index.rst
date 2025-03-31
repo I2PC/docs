@@ -47,6 +47,7 @@ Protocols using this environment:* `screen_deeplearning`, `deep_denoising`, `res
 Protocols using this environment:* `deep_misalignment_detection`  
 
 .. code-block:: text
+    
     - python=3.8  
     - tensorflow=2.7  
     - keras=2.7  
