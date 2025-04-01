@@ -125,3 +125,45 @@ or activate a jdk with javac using alternatives.
 If this is not the case, and you have <SCIPION_HOME>/config/scipion.conf (optional),
 review the JAVA_XXX variables there. They might be pointing to a non existing JAVA home.
 
+
+
+ImportError: cannot import name 'cmake' from 'cmake' (unknown location)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This error occurs because a Python package named ``cmake`` (installed via ``pip``) conflicts with the real system-wide CMake tool.
+
+.. warning::
+   The ``cmake`` package from ``pip`` **is not the real CMake**; it is a deprecated wrapper.
+   To use the correct version, install CMake from official sources such as ``apt``, ``brew``, or the official installer.
+
+
+1. **Check the location of the CMake executable:**  
+
+   .. code-block:: bash
+
+      which cmake
+
+   If the output shows a path like ``/home/user/.local/bin/cmake``,
+   it means you are using the incorrect version installed via ``pip``.
+
+2. **Uninstall the incorrect version:**  
+
+   .. code-block:: bash
+
+      pip uninstall cmake
+
+3. **Verify that you are now using the correct CMake version:**  
+
+   .. code-block:: bash
+
+      which cmake
+
+   The binary should be located at ``/usr/bin/cmake`` or another system directory.
+
+If CMake is not installed, install it from the appropriate source:
+
+  .. code-block:: bash
+
+     sudo apt install cmake
+
+
