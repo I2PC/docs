@@ -34,6 +34,11 @@ Cmake
 
 Xmipp requires Cmake 3.17 or above. 
 
+.. warning::
+  Ubuntu 20.04 only support to cmake 3.16.3 if you experience any issue, please install cmake with conda in the Scipion3 enviroment
+  ::
+    scipion3 run conda install cmake
+
 Cuda
 ^^^^
 
