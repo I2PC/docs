@@ -130,7 +130,7 @@ review the JAVA_XXX variables there. They might be pointing to a non existing JA
 ImportError: cannot import name 'cmake' from 'cmake' (unknown location)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This error occurs because a Python package named ``cmake`` (installed via ``pip``) conflicts with the real system-wide CMake tool. The ``cmake`` package from ``pip`` **is not the real CMake**; it is a deprecated wrapper.
+This error occurs because a Python package named ``cmake`` (installed via ``pip``) conflicts with the real system-wide CMake tool. The ``cmake`` package from ``pip`` **is not the real CMake**; it is a deprecated wrapper. More `details on <https://github.com/scikit-build/cmake-python-distributions/issues/557>`__
 
 1. **Check the location of the CMake executable:**  
 
