@@ -32,12 +32,15 @@ Xmipp requires C++17 compatible compiler (see table below for minimum versions).
 Cmake
 ^^^^^
 
-Xmipp requires Cmake 3.17 or above. 
+Xmipp requires CMake 3.17 or above.
 
 .. warning::
-  Ubuntu 20.04 only support to cmake 3.16.3 if you experience any issue, please install cmake with conda in the Scipion3 enviroment
-  ::
-    scipion3 run conda install cmake
+   Ubuntu 20.04 only supports CMake 3.16.3.  
+   If you experience any issues, please install CMake using Conda in the Scipion3 environment:
+
+   .. code-block:: bash
+
+      scipion3 run conda install cmake
 
 Cuda
 ^^^^
