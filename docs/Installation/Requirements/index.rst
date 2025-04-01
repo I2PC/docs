@@ -3,7 +3,7 @@ Requirements
 Supported OS
 ^^^^^^^^^^^^^^^^^^^^
 
-We have tested Xmipp compilation on the following operating systems:Ubuntu 18.04, Ubuntu 20.04, Ubuntu 22.04 and Centos 7. While compilation and execution might be possible on other systems, it might not be straightforward. 
+We have tested Xmipp compilation on the following operating systems:Ubuntu 18.04, 20.04, 22.04 and 24.04 and Centos 7. While compilation and execution might be possible on other systems, it might not be straightforward. 
 
 Hardware requirements
 ^^^^^^^^^^^^^^^^^^^^
