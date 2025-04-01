@@ -72,7 +72,8 @@ Protocols using this environment:* `protocol_deepEMhancer`
     - numba=0.45  
 
 - **xmipp_pyTorch**  
-Protocols using this environment:* `deepHand`  
+Protocols using this environment:* `deepHand`,  `classify_pca`
+
 
 .. code-block:: text
 
