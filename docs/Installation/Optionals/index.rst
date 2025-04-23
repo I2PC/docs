@@ -44,7 +44,7 @@ Protocols using this environment: `screen_deeplearning`, `deep_align`, `deep_den
     - h5py==2.10.0  
 
 - **xmipp_DLTK_v1.0**  
-Protocols using this environment: `deep_misalignment_detection`  , `deep_center_predict`
+Protocols using this environment: `deep_misalignment_detection`, `deep_center_predict`
 
 .. code-block:: text
     
