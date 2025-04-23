@@ -30,7 +30,7 @@ If the installation would take over 30 minutes, please accelerate the process us
 List of Environments
 """"""""""""""""""""""""""""""""""""
 - **xmipp_DLTK_v0.3**  
-Protocols using this environment: `screen_deeplearning`, `deep_denoising`, `resolution_deepres`, `screen_deepConsensus`  
+Protocols using this environment: `screen_deeplearning`, `deep_align`, `deep_denoising`, `particle_boxsize`, `resolution_deepres`, `screen_deepConsensus`  
 
 .. code-block:: text
 
@@ -44,7 +44,7 @@ Protocols using this environment: `screen_deeplearning`, `deep_denoising`, `reso
     - h5py==2.10.0  
 
 - **xmipp_DLTK_v1.0**  
-Protocols using this environment: `deep_misalignment_detection`  
+Protocols using this environment: `deep_misalignment_detection`  , `deep_center_predict`
 
 .. code-block:: text
     
