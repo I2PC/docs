@@ -1,0 +1,344 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google C++ Testing Framework &mdash; Xmipp 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Useful Tricks and Scripts" href="../UsefulScripts/index.html" />
+    <link rel="prev" title="Python Binding" href="../xmipp-Binding/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Xmipp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installing Xmipp</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Requirements/index.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Installations/index.html">Installations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Optionals/index.html">Optional Tools and Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Troubleshooting/index.html">Troubleshooting</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Releases</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-xmipp-program/index.html">Releases xmipp program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-scipion-em-xmipp/index.html">Releases scipion-em-xmipp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-scipion-em-xmippTomo/index.html">Releases scipion-em-xmippTomo</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Utils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/ProtocolsMap/index.html">Protocols Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/ConfigurationF/index.html">Configuration File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/xmippStructure/index.html">Xmipp structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/Conventions/index.html">Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/Deprecated-programs/index.html">Programs deprecated</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Welcome-developers/index.html">Welcome Developers! 👋</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Guidelines/index.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Integrating-with-Visual-Studio/index.html">Integrating with Visual Studio Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CodeDocumentation/index.html">Code documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Checkout-specific-date/index.html">Checkout to a Specific Version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ParallelPrograming/index.html">Parallel Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../xmipp-Binding/index.html">Python Binding</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Google C++ Testing Framework</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-a-test-to-an-existing-file">Adding a test to an existing file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#unittest-checking-workflow">Unittest checking workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-the-gold-standard">Setting the gold standard</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../UsefulScripts/index.html">Useful Tricks and Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../How-to-release/index.html">Creating an Xmipp Release</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../listOfPublications.html">List of Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../enhancingXmipp.html">Data Collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../history.html">Timeline of Xmipp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Xmipp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Google C++ Testing Framework</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/Developers/testing-with-google-C++/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="google-c-testing-framework">
+<h1>Google C++ Testing Framework<a class="headerlink" href="#google-c-testing-framework" title="Link to this heading"></a></h1>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading"></a></h2>
+<p>Unit testing is a development procedure where programmers create tests
+as they develop software. The tests are simple short tests that test
+functionality of a particular unit or module of their code, such as a
+class or function. Using libraries like gtest these tests can be
+automatically run and any problems found quickly. As the tests are
+developed in parallel with the source code, when the particular unit is
+completed, a successful unit test demonstrates it’s correctness.</p>
+<p>Xmipp incorporates in its code the Google C++ Unit Testing Framework,
+<a class="reference external" href="http://code.google.com/p/googletest/">gtest</a> for short (version
+1.6). This tutorial explains how you may use this unit testing
+framework. ## Basic Concepts</p>
+<p>(extract from
+<a class="reference external" href="http://code.google.com/p/googletest/wiki/V1_6_Primer#Introduction:_Why_Google_C++_Testing_Framework?">http://code.google.com/p/googletest/wiki/V1_6_Primer#Introduction:_Why_Google_C++_Testing_Framework?)</a>)</p>
+<p>When using gtests, you start by writing assertions, which are statements
+that check whether a condition is true. An assertion’s result can be
+success, nonfatal failure, or fatal failure. If a fatal failure occurs,
+it aborts the current function; otherwise the program continues
+normally.</p>
+<p>Tests use assertions to verify the tested code’s behavior. If a test
+crashes or has a failed assertion, then it fails; otherwise it succeeds.</p>
+<p>A test case contains one or many tests. You should group your tests into
+test cases that reflect the structure of the tested code. When multiple
+tests in a test case need to share common objects and subroutines, you
+can put them into the same test file. ## Assertions</p>
+<p>(extract from
+<a class="reference external" href="http://code.google.com/p/googletest/wiki/V1_6_Primer#Introduction:_Why_Google_C++_Testing_Framework?">http://code.google.com/p/googletest/wiki/V1_6_Primer#Introduction:_Why_Google_C++_Testing_Framework?)</a>)</p>
+<p>Gtest assertions are macros that resemble function calls. You test a
+class or function by making assertions about its behavior. When an
+assertion fails, gest prints the assertion’s source file and line number
+location, along with a failure message. You may also supply a custom
+failure message which will be appended to Google Test’s message.</p>
+<p>The assertions come in pairs that test the same thing but have different
+effects on the current function. <a href="#id5"><span class="problematic" id="id6">ASSERT_</span></a>* versions generate fatal
+failures when they fail, and abort the current function. <a href="#id7"><span class="problematic" id="id8">EXPECT_</span></a>*
+versions generate nonfatal failures, which don’t abort the current
+function. Usually <a href="#id9"><span class="problematic" id="id10">EXPECT_</span></a>* are preferred, as they allow more than one
+failures to be reported in a test. However, you should use <a href="#id11"><span class="problematic" id="id12">ASSERT_</span></a>* if
+it doesn’t make sense to continue when the assertion in question fails.</p>
+<p>Since a failed <a href="#id13"><span class="problematic" id="id14">ASSERT_</span></a>* returns from the current function immediately,
+possibly skipping clean-up code that comes after it, it may cause a
+space leak. Depending on the nature of the leak, it may or may not be
+worth fixing - so keep this in mind if you get a heap checker error in
+addition to assertion errors.</p>
+<p>To provide a custom failure message, simply stream it into the macro
+using the &lt;&lt; operator. Example:</p>
+<p>ASSERT_EQ(x.size(), y.size()) &lt;&lt; “Vectors x and y are of unequal
+length”;</p>
+<p>for (int i = 0; i &lt; x.size(); ++i) { EXPECT_EQ(x[i], y[i]) &lt;&lt; “Vectors x
+and y differ at index” &lt;&lt; i; }</p>
+<p>More about assertion is available
+<a class="reference external" href="http://code.google.com/p/googletest/wiki/Primer#Assertions">here</a> #
+gtest in Xmipp</p>
+<p>Xmipp already incorporates gtest natively so you do not need to compile
+any extra library. ## General Rules</p>
+<ul class="simple">
+<li><p>Ideally they should be a test for each routine.</p></li>
+<li><p>Test can be found in the directory
+$HOME_XMIPP/application/tests/test_className</p></li>
+<li><p>Test output must be written in the /tmp directory as temporary files.
+These files should be deleted once the test is finished.</p></li>
+<li><p>If possible input data should be created on the fly. If some input
+file is needed it should be place in
+$HOME_XMIPP/resources/test/className</p></li>
+<li><p>Test are part of the software development cycle and should be written
+BEFORE and not AFTER the creation of new routines.</p></li>
+</ul>
+</section>
+<section id="adding-a-test-to-an-existing-file">
+<h2>Adding a test to an existing file<a class="headerlink" href="#adding-a-test-to-an-existing-file" title="Link to this heading"></a></h2>
+<p>In this section we will assume that you want to add a test for a class
+that has already been incorporated in the test system. Let us assume
+that we want to add a test for the metadata class. This test will check
+that a function called <em>Factorial(n)</em> that compute the factorial number
+of <em>n</em> works properlly.</p>
+<ul class="simple">
+<li><p>Edit file at
+<em>$XMIPP_HOME/pplications/tests/test_metadata/test_metadata_main.cpp</em></p></li>
+<li><p>Use the TEST_F() macro to define and name a test function, These are
+ordinary C++ functions that don’t return a value.</p></li>
+</ul>
+<p>TEST_F() arguments go from general to specific. The first argument is
+the name of the test case, and the second argument is the test’s name
+within the test case. Both names must be valid C++ identifiers, and they
+should not contain underscore (_).</p>
+<p>For example, let’s take a simple integer function: int Factorial(int n);
+// Returns the factorial of n.</p>
+<p>A test case for this function might look like:</p>
+<p>// Tests factorial of 0. TEST_F(MetadataTest, FactorialHandlesZeroInput)
+{ EXPECT_EQ(1, Factorial(0)); }</p>
+<p>// Tests factorial of positive numbers. TEST_F(MetadataTest,
+FactorialHandlesPositiveInput) { EXPECT_EQ(1, Factorial(1));
+EXPECT_EQ(2, Factorial(2)); EXPECT_EQ(6, Factorial(3)); EXPECT_EQ(40320,
+Factorial(8)); }</p>
+<p>In addition to the code you have written gtest will create a “fresh”
+environment each time a particular test_f is executed:</p>
+<ul class="simple">
+<li><p>First, initialize running the routineSetUp() ,</p></li>
+<li><p>Then, execute the test</p></li>
+<li><p>After that, clean up by callingTearDown()</p></li>
+<li><p>No data structures allocated in memory may be reuse from one test to
+the next one</p></li>
+</ul>
+<p>In the case of <em>metadata</em>, the <em>[[SetUp]]</em> routine creates three basic
+metadata and <a href="#id1"><span class="problematic" id="id2">`[TearDown] &lt;&gt;`__</span></a> is not defined. ## Case 2: Create Unit
+tests for a new class</p>
+<p>In this section we will assume that you want to add a test for a class
+that has NOT been incorporated in the test system. Let us create a test
+for a class called <em>myPrettyClass</em></p>
+<ul class="simple">
+<li><p>Create a new directory called
+<em>$XMIPP_HOME/application/test/test_myPrettyClass</em></p></li>
+<li><p>Create a new file in this directory called
+<em>test_myPrettyClass_main.cpp</em></p></li>
+<li><p>Edit the <em>test_myPrettyClass_main.cpp</em> file, use the bellow template
+for starting</p></li>
+<li><p>Edit <em>$XMIPP_HOME/SConscript</em></p></li>
+<li><p>Look for the line <a class="reference external" href="'test_fftw'">[AddXmippCTest]</a></p></li>
+<li><p>Add the line <a class="reference external" href="'test_myPrettyClass'">[AddXmippCTest]</a> in this
+section</p></li>
+</ul>
+<!-- * Set FORMAT_PREPEND=<style type="text/css"> --><p>#include “../../../external/gtest-1.6.0/fused-src/gtest/gtest.h”</p>
+<p>class myPrettyClassTest : public ::testing::Test { protected:</p>
+<p>virtual void <a href="#id1"><span class="problematic" id="id3">`[SetUp] &lt;&gt;`__</span></a> { // Code here will be called immediately
+after the constructor (right // before each test). }</p>
+<p>virtual void <a href="#id1"><span class="problematic" id="id4">`[TearDown] &lt;&gt;`__</span></a> { // Code here will be called immediately
+after each test (right // before the destructor). }</p>
+<p>// Objects declared here can be used by all tests in the test case for
+Foo. };</p>
+<p>// Tests that the myPrettyClassTest::Bar() method does Abc.
+TEST_F(myPrettyClass, MethodBarDoesAbc) { FileName input_filepath =
+“this/package/testdata/myinputfile.dat”; FileName output_filepath =
+“this/package/testdata/myoutputfile.dat”; Foo f; EXPECT_EQ(0,
+f.Bar(input_filepath, output_filepath)); }</p>
+<p>// Tests that Foo does Xyz. TEST_F(myPrettyClass, DoesXyz) { //
+Exercises the Xyz feature of Foo. }</p>
+<p>GTEST_API_ int main(int argc, char **argv) {
+testing::InitGoogleTest(&amp;argc, argv); return RUN_ALL_TESTS(); } ##
+Compile and Invoke the Tests</p>
+<p>In a few words:</p>
+<ul>
+<li><p>compile:</p>
+<pre> xcompile xmipp_test_myPrettyClass</pre></li>
+<li><p>compile and execute:</p>
+<pre> xcompile run_test_myPrettyClass</pre></li>
+<li><p>execute:</p>
+<pre> xmipp_test_myPrettyClass</pre></li>
+</ul>
+<p>Example of execution of the test <em>xmipp_test_matrix</em> :</p>
+<pre>roberto@tumbao:~/xmipp_svn$ xmipp_test_matrix
+[==========] Running 4 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 4 tests from [[MatrixTest]]
+[ RUN      ] [[MatrixTest]].inverse
+[       OK ] [[MatrixTest]].inverse (0 ms)
+[ RUN      ] [[MatrixTest]].det3x3
+[       OK ] [[MatrixTest]].det3x3 (0 ms)
+[ RUN      ] [[MatrixTest]].solveLinearSystem
+[       OK ] MatrixTest.solveLinearSystem (0 ms)
+[ RUN      ] MatrixTest.initGaussian
+[       OK ] MatrixTest.initGaussian (0 ms)
+[----------] 4 tests from MatrixTest (1 ms total)
+
+[----------] Global test environment tear-down [==========] 4 tests from 1 test case ran. (1 ms total) [  PASSED  ] 4 tests. roberto@tumbao:~/xmipp_svn$  </pre></section>
+<section id="unittest-checking-workflow">
+<h2>Unittest checking workflow<a class="headerlink" href="#unittest-checking-workflow" title="Link to this heading"></a></h2>
+<p>When a unittest is generated, sometimes its result is very tied to the
+machine where it is generated (some mathematical results depends on the
+compiler, libraries that may differ). This may drive the test to a
+failure as long as the result in the testing machine could be a little
+different from the goldStandard machine. We recommend giving the test a
+little tolerance to avoid this false failures. The workflow after a test
+is generated is the following:</p>
+<p>1 A test is generated, the goldStandard is generated in the owner’s
+machine. 1 The test is uploaded to the repository. 1 That night, tests
+will be passed on einstein, and results are sent to the sysadmins. 1 In
+case of failure sysadmins check with the owner whether or not it is a
+tolerance problem. 1 If it’s just a tolerance problem, then goldStandard
+is regenerated on einstein and owner assume that a failure in that test
+in his machine doesn’t mean a thing. 1 If it’s not, then the owner takes
+the responsability of repairing the test</p>
+</section>
+<section id="setting-the-gold-standard">
+<h2>Setting the gold standard<a class="headerlink" href="#setting-the-gold-standard" title="Link to this heading"></a></h2>
+<p>You may update the gold standard of the tests at the server by doing:</p>
+<pre>
+bin/xmipp_sync_data update tests/data http://scipion.cnb.csic.es/downloads/scipion/data/tests xmipp_programs
+</pre></section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../xmipp-Binding/index.html" class="btn btn-neutral float-left" title="Python Binding" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../UsefulScripts/index.html" class="btn btn-neutral float-right" title="Useful Tricks and Scripts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Xmipp team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
