@@ -35,15 +35,15 @@ We sometimes see issues regarding the HDF5 dependency related some incompatibili
 
     .. code-block:: bash
 
-        scipion3 conda remove hdf5 
-        scipion3 conda install -c conda-forge hdf5
+        scipion3 run conda remove hdf5 
+        scipion3 run conda install -c conda-forge hdf5
 
 
 - If you have install hdf5 just in your system, we recommend to install hdf5 in the Scipion enviroment. To do that:
 
     .. code-block:: bash
 
-        scipion3 conda install -c conda-forge hdf5
+        scipion3 run conda install -c conda-forge hdf5
 
 
 - If you have installed hdf5 in your system and you can not use conda, please remove hdf5 an all files it creates and reinstall it:
