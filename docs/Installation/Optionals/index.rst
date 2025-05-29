@@ -30,7 +30,7 @@ If the installation would take over 30 minutes, please accelerate the process us
 List of Environments
 """"""""""""""""""""""""""""""""""""
 - **xmipp_DLTK_v0.3**  
-Protocols using this environment: `screen_deeplearning`, `deep_align`, `deep_denoising`, `particle_boxsize`, `resolution_deepres`, `screen_deepConsensus`  
+Protocols using this environment:  `resolution_deepres`, `screen_deepConsensus`  
 
 .. code-block:: text
 
@@ -85,17 +85,6 @@ Protocols using this environment: `deepHand`,  `classify_pca`
     - pytorch==1.11  
     - pytorch-cuda=11.7  
     - torchvision=0.12  
-
-
-- **xtomo_tigre**  
-Program using this environment: `tomogram_reconstruction`  
-
-.. code-block:: text
-
-    - python=3.6
-    - mrcfile
-    - numpy
-    - tigre
 
 
 
