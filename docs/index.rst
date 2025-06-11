@@ -90,8 +90,9 @@ the main repository is required and also the installation of the plugins.
     :hidden:
     :caption: Others
     
+    thePowerOfXmipp
     listOfPublications
-    enhancingXmipp
     history
+    enhancingXmipp
     contact
     license
