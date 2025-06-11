@@ -1,5 +1,4 @@
-**Checkout to a Specific Version**
-------------------------------------------
+.. rubric:: Checkout to a Specific Version
 
 If you need to revert to a specific version of Xmipp or its associated repositories based on a particular date, you can achieve this using Git. This is useful, for example, when you encounter a new bug that was not present in an earlier version or when you have a long-lived branch in Xmipp that needs to be synchronized with a specific historical state.
 
@@ -13,8 +12,7 @@ Here is a step-by-step guide on how to accomplish this:
    git checkout `git rev-list -n 1 --first-parent --before="2020-09-27 08:57:42" devel`
 
 
-**Integrating with Visual Studio Code**
---------------------------------------------
+.. rubric:: Integrating with Visual Studio Code
 
 The CMake based installation script can be tightly integrated with any modern IDE. This section shows the procedure for Visual Studio Code (VSCode).
 
@@ -52,8 +50,7 @@ In visual studio code
 Once VS Code is set up, the Xmipp installation process can be launched though the newly pinned "Install" command. In addition, individual files or sub-projects may be compiled for quick assessment of code.
 
 
-**Parallel Programming**
-----------------------
+.. rubric:: Parallel Programming
 
 Introduction
 ^^^^^^^^^^^^^^^^^^^^^
@@ -302,8 +299,7 @@ A complete example using the MPI tools is available  Here .
 
 
 
-**Google C++ Testing Framework**
--------------------------------------------------------------------
+.. rubric:: Google C++ Testing Framework
 
 Summary
 ^^^^^^^^^^^^^^^^^
@@ -550,8 +546,7 @@ You may update the gold standard of the tests at the server by doing:
    </pre>
 
 
-  ** Python Binding **
---------------------
+.. rubric:: Python Binding 
 
 `Text borrowed from here <http://www.tutorialspoint.com/python/python_further_extensions.htm>`_
 
