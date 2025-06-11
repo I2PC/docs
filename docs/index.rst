@@ -90,6 +90,7 @@ the main repository is required and also the installation of the plugins.
     :hidden:
     :caption: Others
     
+    protocolsMap
     thePowerOfXmipp
     listOfPublications
     history
