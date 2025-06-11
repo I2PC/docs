@@ -89,7 +89,7 @@ the main repository is required and also the installation of the plugins.
   .. toctree::
     :maxdepth: 1
     :hidden:
-    :caption: Others
+    :caption: Xmipp World
     
     protocolsMap
     thePowerOfXmipp
