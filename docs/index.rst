@@ -74,16 +74,10 @@ the main repository is required and also the installation of the plugins.
     Developers/Welcome-developers/index
     Developers/Guidelines/index
     Developers/Tips/index
-    Developers/Integrating-with-Visual-Studio/index
     Developers/CodeDocumentation/index
-    Developers/Checkout-specific-date/index
-    Developers/ParallelPrograming/index
-    Developers/xmipp-Binding/index
-    Developers/testing-with-google-C++/index
     Developers/UsefulScripts/index
     Developers/How-to-release/index
     
-
 
 
   .. toctree::
