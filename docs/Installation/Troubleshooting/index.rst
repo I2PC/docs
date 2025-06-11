@@ -169,7 +169,7 @@ Looks like the `deepEMhancer` model you're trying to use is missing 🚫.
 This might be because the `deepEMhancer` package was recently updated in the `devel` branch, and the corresponding models were updated too. If you see this message, don’t worry — you can fix it by following one of these options:
 
 Option 1: Reinstall the Deep Learning Toolkit
----------------------------------------------
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 This will ensure you have the latest model versions and enviroments:
 
@@ -178,7 +178,7 @@ This will ensure you have the latest model versions and enviroments:
     scipion3 installb deepLearningToolkit
 
 Option 2: Manually reinstall `xmipp_deepEMhancer` and fetch the new model
---------------------------------------------------------------------------
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 If you prefer to go the manual route:
 
