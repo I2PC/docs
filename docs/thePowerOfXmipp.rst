@@ -1,6 +1,8 @@
 .. _thePowerOfXmipp:
 
-===============================
+.. Note::
+    Page under construction
+
 Importance of Xmipp in Cryo-EM
 ===============================
 
@@ -12,19 +14,10 @@ This page highlights the relevance of Xmipp through two concrete examples: **Clp
    :local:
    :depth: 2
 
--------------------------
-Xmipp Contributions at a Glance
--------------------------
 
-- Robust CTF estimation and correction protocols
-- Automated and deep learning-based particle picking
-- Advanced 2D classification and 3D reconstruction tools
-- Postprocessing with deep learning (e.g., `emhancer`)
-- Flexible integration of masks, volumes, and structural validation
 
-=========================
 Example: ClpC1P1P2 Project
-=========================
+------------------------------
 
 .. admonition:: Project Summary
 
@@ -49,9 +42,9 @@ Example: ClpC1P1P2 Project
 - **Masking**:
   - `Create3DMask`
 
-=======================
+
 Example: HER2-TZB Project
-=======================
+------------------------------
 
 .. admonition:: Project Summary
 
@@ -89,9 +82,9 @@ Example: HER2-TZB Project
 - **Model Integration**:
   - `XmippProtConvertPdb`
 
-======================
+
 Conclusion
-======================
+------------------------------
 
 The two projects above exemplify how Xmipp provides a comprehensive toolbox that supports end-to-end cryo-EM workflows. From CTF correction to final volume polishing and validation, Xmipp’s protocols are critical in producing reliable, reproducible, and high-quality structural data.
 
