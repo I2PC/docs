@@ -10,10 +10,6 @@ Xmipp is a key software suite in the image processing workflow for cryo-electron
 
 This page highlights the relevance of Xmipp through two concrete examples: **ClpC1P1P2** and **HER2-TZB**. In both cases, Xmipp protocols played a critical role in various stages of data processing, from preprocessing and particle selection to final 3D refinement and validation.
 
-.. contents::
-   :local:
-   :depth: 2
-
 
 
 Example: ClpC1P1P2 Project
