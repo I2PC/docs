@@ -73,7 +73,7 @@ the main repository is required and also the installation of the plugins.
 
     Developers/Welcome-developers/index
     Developers/Guidelines/index
-    Developers/Tips
+    Developers/Tips/index
     Developers/Integrating-with-Visual-Studio/index
     Developers/CodeDocumentation/index
     Developers/Checkout-specific-date/index
