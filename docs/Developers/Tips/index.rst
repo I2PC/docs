@@ -1,5 +1,5 @@
-Checkout to a Specific Version
-~~~~~~~~~~~~~~~~~~~~
+.. rubric:: Checkout to a Specific Version
+
 
 If you need to revert to a specific version of Xmipp or its associated repositories based on a particular date, you can achieve this using Git. This is useful, for example, when you encounter a new bug that was not present in an earlier version or when you have a long-lived branch in Xmipp that needs to be synchronized with a specific historical state.
 
@@ -13,8 +13,8 @@ Here is a step-by-step guide on how to accomplish this:
    git checkout `git rev-list -n 1 --first-parent --before="2020-09-27 08:57:42" devel`
 
 
-Integrating with Visual Studio Code
-~~~~~~~~~~~~~~~~~~~~
+.. rubric:: Integrating with Visual Studio Code
+
 
 The CMake based installation script can be tightly integrated with any modern IDE. This section shows the procedure for Visual Studio Code (VSCode).
 
@@ -25,8 +25,8 @@ Before starting with the configuration process open a terminal and run the follo
     conda activate scipion3 && echo $CONDA_PREFIX
     scipion3 printenv | grep SCIPION_SOFTWARE
 
-In visual studio code
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**In visual studio code**
+
 
     1. In the "Extensions" tab install "C/C++ Extension Pack".
     2. File -> Open Folder -> Navigate to "xmipp" directory (previously cloned).
@@ -52,11 +52,11 @@ In visual studio code
 Once VS Code is set up, the Xmipp installation process can be launched though the newly pinned "Install" command. In addition, individual files or sub-projects may be compiled for quick assessment of code.
 
 
-Parallel Programming
-~~~~~~~~~~~~~~~~~~~~
+.. rubric:: Parallel Programming
 
-Introduction
-^^^^^^^^^^^^^^^^^^^^^
+
+**Introduction**
+
 
 In the simplest sense, **parallel computing** is the simultaneous use of
 multiple compute resources to solve a computational problem:
@@ -127,8 +127,8 @@ nothing to be done. The following are several subclasses of
              }
      }
 
-Using threads
-^^^^^^^^^^^^^^^^^^^^^
+**Using threads**
+
 
 Technically, a **thread** is defined as an independent stream of
 instructions that can be scheduled to run as such by the operating
@@ -223,8 +223,7 @@ The previous example can be coded:
      tm.run(functionB);
      }
 
-Synchronizing threads
-^^^^^^^^^^^^^^^^^^^^^
+**Synchronizing threads**
 
 Synchronization is vital for almost all parallel programs. We want
 things done faster but also we want things done well. Through
@@ -276,8 +275,8 @@ So take note of these tips:
    *Barrier*. A misuse can lead to race conditions(bad results) or
    deadlock (program will runs forever)
 
-Programming with MPI
-^^^^^^^^^^^^^^^^^^^^^
+**Programming with MPI**
+
 
 The Message Passing Interface Standard ( **MPI**) is a message passing
 library standard based on the consensus of the MPI Forum, which has over
@@ -302,11 +301,9 @@ A complete example using the MPI tools is available  Here .
 
 
 
-Google C++ Testing Framework
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. rubric:: Google C++ Testing Framework
 
-Summary
-^^^^^^^^^^^^^^^^^
+**Summary**
 
 Unit testing is a development procedure where programmers create tests
 as they develop software. The tests are simple short tests that test
@@ -388,8 +385,7 @@ any extra library. ## General Rules
 -  Test are part of the software development cycle and should be written
    BEFORE and not AFTER the creation of new routines.
 
-Adding a test to an existing file
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**Adding a test to an existing file**
 
 In this section we will assume that you want to add a test for a class
 that has already been incorporated in the test system. Let us assume
@@ -518,8 +514,7 @@ Example of execution of the test *xmipp_test_matrix* :
 
    [----------] Global test environment tear-down [==========] 4 tests from 1 test case ran. (1 ms total) [  PASSED  ] 4 tests. roberto@tumbao:~/xmipp_svn$  </pre>
 
-Unittest checking workflow
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**Unittest checking workflow**
 
 When a unittest is generated, sometimes its result is very tied to the
 machine where it is generated (some mathematical results depends on the
@@ -538,8 +533,8 @@ is regenerated on einstein and owner assume that a failure in that test
 in his machine doesn’t mean a thing. 1 If it’s not, then the owner takes
 the responsability of repairing the test
 
-Setting the gold standard
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**Setting the gold standard**
+
 
 You may update the gold standard of the tests at the server by doing:
 
