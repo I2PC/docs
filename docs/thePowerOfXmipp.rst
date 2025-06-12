@@ -12,34 +12,7 @@ This page highlights the relevance of Xmipp through two concrete examples: **Clp
 
 
 
-Example: ClpC1P1P2 Project
-------------------------------
-
-.. admonition:: Project Summary
-
-   - **Protein**: *[To be completed]*
-   - **Final Resolution**: *[To be completed]*
-   - **Number of Movies**: *[To be completed]*
-   - **EMDB ID**: *[To be completed]*
-   - **Resolution Method**: *[To be completed]*
-   - **Xmipp Version**: *[To be completed]*
-
-.. rubric:: Protocols Used
-
-- **CTF Estimation and Consensus**:
-  - `CTFConsensus`
-- **Particle Picking**:
-  - `ConsensusPicking`
-- **Micrograph Quality Control**:
-  - `DeepMicrographScreen`
-- **3D Postprocessing**:
-  - `XmippProtDeepVolPostProc`
-  - `emhancer`
-- **Masking**:
-  - `Create3DMask`
-
-
-Example: HER2-TZB Project
+Example: HER2-TZB project
 ------------------------------
 
 .. admonition:: Project Summary
@@ -82,7 +55,7 @@ Example: HER2-TZB Project
 Conclusion
 ------------------------------
 
-The two projects above exemplify how Xmipp provides a comprehensive toolbox that supports end-to-end cryo-EM workflows. From CTF correction to final volume polishing and validation, Xmipp’s protocols are critical in producing reliable, reproducible, and high-quality structural data.
+The projects above exemplify how Xmipp provides a comprehensive toolbox that supports end-to-end cryo-EM workflows. From CTF correction to final volume polishing and validation, Xmipp’s protocols are critical in producing reliable, reproducible, and high-quality structural data.
 
 Future developments in Xmipp continue to incorporate state-of-the-art techniques such as deep learning, automation, and hybrid modeling to push the boundaries of cryo-EM analysis.
 
