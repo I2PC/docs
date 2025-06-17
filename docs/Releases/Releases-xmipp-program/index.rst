@@ -28,7 +28,7 @@ Installation and user guide
    - Enhanced data collection steps (context suggests improvements in reproducibility or logging)
      
 More Xmipp 
-~~~~~~~~~~~~~ 
+~~~~~~~~~~~~
    - DLTK environments: channels limited to conda-forge and pip. Updated deepEMhancer version and models
    - Allowing to skip sorting in metadata_vec::split
 
