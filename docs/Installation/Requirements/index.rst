@@ -29,19 +29,6 @@ Xmipp requires C++17 compatible compiler (see table below for minimum versions).
    * - Clang
      - 5.0
 
-Cmake
-^^^^^
-
-Xmipp requires CMake 3.17 or above.
-
-.. warning::
-   Ubuntu 20.04 only supports CMake 3.16.3.  
-   If you experience any issues, please install CMake using Conda in the Scipion3 environment:
-
-   .. code-block:: bash
-
-      scipion3 run conda install cmake
-
 Cuda
 ^^^^
 
@@ -56,6 +43,42 @@ To install CUDA for your operating system, follow the `official install guide <h
 .. warning::
    `CUDA 11.5 is not compatible with GCC - 9 <https://forums.developer.nvidia.com/t/cuda-11-5-samples-throw-multiple-error-attribute-malloc-does-not-take-arguments/192750/12>`_, please change one of these.
 
+OpenMPI
+^^^^^^^^
+OpenMPI
+^^^^^^^
+
+OpenMPI is required for parallel execution of certain Xmipp programs. It provides support for distributed computing across multiple CPUs and nodes using the Message Passing Interface (MPI).
+
+We recommend installing **OpenMPI 3.1** or higher to ensure compatibility with all Xmipp functionalities.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 50 50
+
+   * - Package
+     - Minimum Version
+   * - OpenMPI
+     - 3.1
+
+.. note::
+   On **Ubuntu-based** systems, you can install OpenMPI development files with:
+
+   .. code-block:: bash
+
+      sudo apt install libopenmpi-dev
+
+   On **RHEL/CentOS-based** systems, use:
+
+   .. code-block:: bash
+
+      yum install openmpi-devel
+
+.. warning::
+   Make sure that your environment variables (e.g. ``PATH`` and ``LD_LIBRARY_PATH``) are correctly set to point to the OpenMPI installation. In some systems, MPI programs may default to incompatible versions if multiple MPI implementations coexist.
+
+
+
 Full list of dependencies
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -64,30 +87,10 @@ Before installing Xmipp, you need to ensure your system meets certain requiremen
 .. note::
   The following explanations are available on devel and as of `Xmipp 3.25.06.0 - Rhea <https://i2pc.github.io/docs/Releases/Releases-scipion-em-xmipp/index.html#rhea>`_
 
-
-Dependencies Automatically Installed via Scipion
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-
-If Xmipp is installed **through Scipion** `with the plugin manager or with the terminal <https://i2pc.github.io/docs/Installation/Installations/index.html#installation-with-scipion>`_ , the following packages will be automatically installed in the Scipion environment by default:
-
-- ``cmake>=3.18,<4``
-- ``hdf5>=1.18``
-- ``sqlite>=3``
-- ``fftw>=3``
-- ``make``
-- ``zlib``
-- ``openjdk``
-- ``libtiff``
-- ``libstdcxx-ng``
-- ``libjpeg-turbo``
-
-.. note::
-   This automatic installation is enabled by default. To disable it, set ``default=False`` in `this file <https://github.com/I2PC/scipion-em-xmipp/blob/206832bff698a8eb40ac6b7d7cf5fbb1286d31ef/xmipp3/__init__.py#L177>`_
-
 Manually Required Dependencies
 """"""""""""""""""""""""""""""""""""
 
-The following system-level packages **must be installed manually**, as they are not handled by Scipion:
+The following system-level packages **must be installed manually**, as they are not handled by the Xmipp installer:
 
 - ``GCC``: C compiler
 - ``G++``: C++ compiler
@@ -115,6 +118,35 @@ Then, install the dependencies:
 .. code-block:: bash
 
    yum install gcc gcc-c++ openmpi-devel
+
+
+Dependencies Automatically Installed via Scipion
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+
+If Xmipp is installed **through Scipion** `with the plugin manager or with the terminal <https://i2pc.github.io/docs/Installation/Installations/index.html#installation-with-scipion>`_ , the following packages will be automatically installed in the Scipion environment by default:
+
+- ``cmake>=3.18,<4``
+- ``hdf5>=1.18``
+- ``sqlite>=3``
+- ``fftw>=3``
+- ``make``
+- ``zlib``
+- ``openjdk``
+- ``libtiff``
+- ``libstdcxx-ng``
+- ``libjpeg-turbo``
+
+.. note::
+   This automatic installation is enabled by default. To disable it, set ``default=False`` in `this file <https://github.com/I2PC/scipion-em-xmipp/blob/206832bff698a8eb40ac6b7d7cf5fbb1286d31ef/xmipp3/__init__.py#L177>`_
+
+
+.. note::
+   Xmipp requires CMake 3.17 or above. Ubuntu 20.04 only supports CMake 3.16.3.  
+   If you experience any issues, please install CMake using Conda in the Scipion3 environment:
+
+   .. code-block:: bash
+
+      scipion3 run conda install cmake
 
 
 These requirements will ensure that your system is ready for installing and using Xmipp. If you encounter a problem, please refer to known and fixed `issues <https://github.com/I2PC/xmipp/issues?q=is%3Aissue>`_. Let us know if something is not working.
