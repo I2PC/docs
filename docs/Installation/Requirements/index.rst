@@ -112,11 +112,12 @@ Then, install the dependencies:
    yum install gcc gcc-c++ openmpi-devel
 
 
-.. note::
-  The following explanations are available on devel and as of `Xmipp 3.25.06.0 - Rhea <https://i2pc.github.io/docs/Releases/Releases-scipion-em-xmipp/index.html#rhea>`_
 
 Dependencies Automatically Installed via Scipion
 """""""""""""""""""""""""""""""""""""""""""""""""""
+.. note::
+  The following explanations are available on devel and as of `Xmipp 3.25.06.0 - Rhea <https://i2pc.github.io/docs/Releases/Releases-scipion-em-xmipp/index.html#rhea>`_
+
 
 If Xmipp is installed **through Scipion** `with the plugin manager or with the terminal <https://i2pc.github.io/docs/Installation/Installations/index.html#installation-with-scipion>`_ , the following packages will be automatically installed in the Scipion environment by default:
 
