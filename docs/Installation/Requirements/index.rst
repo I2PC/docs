@@ -82,8 +82,6 @@ Full list of dependencies
 
 Before installing Xmipp, you need to ensure your system meets certain requirements. Below is a list of required packages and dependencies.
 
-.. note::
-  The following explanations are available on devel and as of `Xmipp 3.25.06.0 - Rhea <https://i2pc.github.io/docs/Releases/Releases-scipion-em-xmipp/index.html#rhea>`_
 
 Manually Required Dependencies
 """"""""""""""""""""""""""""""""""""
@@ -117,6 +115,9 @@ Then, install the dependencies:
 
    yum install gcc gcc-c++ openmpi-devel
 
+
+.. note::
+  The following explanations are available on devel and as of `Xmipp 3.25.06.0 - Rhea <https://i2pc.github.io/docs/Releases/Releases-scipion-em-xmipp/index.html#rhea>`_
 
 Dependencies Automatically Installed via Scipion
 """""""""""""""""""""""""""""""""""""""""""""""""""
