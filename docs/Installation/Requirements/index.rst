@@ -72,10 +72,6 @@ We recommend installing **OpenMPI 3.1** or higher to ensure compatibility with a
 
       yum install openmpi-devel
 
-.. warning::
-   Make sure that your environment variables (e.g. ``PATH`` and ``LD_LIBRARY_PATH``) are correctly set to point to the OpenMPI installation. In some systems, MPI programs may default to incompatible versions if multiple MPI implementations coexist.
-
-
 
 Full list of dependencies
 ^^^^^^^^^^^^^^^^^^^^^^^^^
