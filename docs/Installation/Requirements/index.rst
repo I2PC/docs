@@ -62,13 +62,13 @@ Full list of dependencies
 Before installing Xmipp, you need to ensure your system meets certain requirements. Below is a list of required packages and dependencies.
 
 .. note::
-  The next explanations are available on devel and from `Xmipp 3.25.06.0 - Rhea https://i2pc.github.io/docs/Releases/Releases-scipion-em-xmipp/index.html#rhea>`_
+  The next explanations are available on devel and from `Xmipp 3.25.06.0 - Rhea <https://i2pc.github.io/docs/Releases/Releases-scipion-em-xmipp/index.html#rhea>`_
 
 
 Dependencies Automatically Installed via Scipion
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
-If Xmipp is installed **through Scipion** `with the plugin manager or with the terminal https://i2pc.github.io/docs/Installation/Installations/index.html#installation-with-scipion>`_, the following packages will be automatically installed in the Scipion environment by default:
+If Xmipp is installed **through Scipion** `with the plugin manager or with the terminal <https://i2pc.github.io/docs/Installation/Installations/index.html#installation-with-scipion>`_ , the following packages will be automatically installed in the Scipion environment by default:
 
 - ``cmake>=3.18,<4``
 - ``hdf5>=1.18``
