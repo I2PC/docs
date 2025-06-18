@@ -1,6 +1,6 @@
 Releases scipion-em-xmipp
 =========================
-3.25.06 - XXX
+3.25.06 - Rhea
 --------------------------
 - New protocols
    - compute_likelihood: This protocol computes the likelihood of a set of particles with assigned angles when compared to a set of maps or atomic modelS
