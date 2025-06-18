@@ -59,53 +59,58 @@ To install CUDA for your operating system, follow the `official install guide <h
 Full list of dependencies
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Before installing Xmipp, you need to ensure that your system meets certain requirements. Here are the necessary packages and dependencies:
+Before installing Xmipp, you need to ensure your system meets certain requirements. Below is a list of required packages and dependencies.
 
-- `GCC`: `compiler <https://i2pc.github.io/docs/Installation/Requirements/index.html#compiler>`_ for C
-- `GXX`: `Compiler <https://i2pc.github.io/docs/Installation/Requirements/index.html#compiler>`_ for C++
-- `libfftw3-dev`: FFTW3 library development files.
-- `libopenmpi-dev`: OpenMPI development files.
-- `libhdf5-dev`: HDF5 library development files.
-- `python3-numpy`: NumPy library for Python 3.
-- `python3-dev`: Python 3 development headers.
-- `libtiff5-dev`: LibTIFF development files.
-- `libsqlite3-dev`: SQLite3 development files.
-- `default-jdk`: Default Java Development Kit.
-- `git`: Version control system for source code management.
-- `cmake`: Cross-platform build system.
-- `libjpeg-dev`: Compress, decompress, transform JPEG images.
+Dependencies Automatically Installed via Scipion
+-------------------------------------------------
 
+If Xmipp is installed **through Scipion** `with the plugin manager or with the terminal https://i2pc.github.io/docs/Installation/Installations/index.html#installation-with-scipion>`_, the following packages will be automatically installed in the Scipion environment by default:
 
-You can install these packages on **Ubuntu-based** systems using the following command:
+- ``cmake>=3.18,<4``
+- ``hdf5>=1.18``
+- ``sqlite>=3``
+- ``fftw>=3``
+- ``make``
+- ``zlib``
+- ``openjdk``
+- ``libtiff``
+- ``libstdcxx-ng``
+- ``libjpeg-turbo``
 
-.. Note::
-    The the installation of the compiler is not included in the next command
+.. note::
+   This automatic installation is enabled by default. To disable it, set ``default=False`` in `this file <https://github.com/I2PC/scipion-em-xmipp/blob/206832bff698a8eb40ac6b7d7cf5fbb1286d31ef/xmipp3/__init__.py#L177>`_
 
-.. code-block:: bash
+Manually Required Dependencies
+------------------------------
 
-   sudo apt install -y libfftw3-dev libopenmpi-dev libhdf5-dev python3-numpy python3-dev libtiff5-dev libsqlite3-dev default-jdk git cmake libjpeg-dev
+The following system-level packages **must be installed manually**, as they are not handled by Scipion:
 
+- ``GCC``: C compiler
+- ``G++``: C++ compiler
+- ``OpenMPI`` development libraries
 
-
-Installing dependencies via **yum**
-
-.. Note::
-    Note: For HDF5 to be available Extra Packages for Enterprise Linux (EPEL) repository needs to be activated in certain distros with yum install epel-release
-
-.. Note::
-    Note: On CentOS-7 the gcc available by default is not compatible with Xmipp. You can enable newer gcc releases using:
-
-.. code-block:: bash
-    
-    yum install centos-release-scl
-
-    yum install devtoolset-10
-
-    scl enable devtoolset-10 bash
+On **Ubuntu-based** systems, you can install them using:
 
 .. code-block:: bash
 
-  yum install python3-devel python3-numpy fftw-devel openmpi-devel hdf5-devel sqlite-devel libtiff-devel libjpeg-turbo-devel java-17-openjdk-devel git cmake gcc g++
+   sudo apt install -y gcc g++ libopenmpi-dev
+
+On **YUM-based** systems (e.g., CentOS, RHEL), use:
+
+.. note::
+   On CentOS 7, the default GCC version is not compatible with Xmipp. You can enable a newer GCC version using:
+
+.. code-block:: bash
+
+   yum install centos-release-scl
+   yum install devtoolset-10
+   scl enable devtoolset-10 bash
+
+Then, install the dependencies:
+
+.. code-block:: bash
+
+   yum install gcc gcc-c++ openmpi-devel
 
 
 These requirements will ensure that your system is ready for installing and using Xmipp. If you encounter a problem, please refer to known and fixed `issues <https://github.com/I2PC/xmipp/issues?q=is%3Aissue>`_. Let us know if something is not working.
