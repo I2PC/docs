@@ -45,8 +45,6 @@ To install CUDA for your operating system, follow the `official install guide <h
 
 OpenMPI
 ^^^^^^^^
-OpenMPI
-^^^^^^^
 
 OpenMPI is required for parallel execution of certain Xmipp programs. It provides support for distributed computing across multiple CPUs and nodes using the Message Passing Interface (MPI).
 
