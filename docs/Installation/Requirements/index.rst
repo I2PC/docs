@@ -66,7 +66,7 @@ Before installing Xmipp, you need to ensure your system meets certain requiremen
 
 
 Dependencies Automatically Installed via Scipion
--------------------------------------------------
+"""""""""""""""""""""""""""""""""""""""""""""""""""
 
 If Xmipp is installed **through Scipion** `with the plugin manager or with the terminal https://i2pc.github.io/docs/Installation/Installations/index.html#installation-with-scipion>`_, the following packages will be automatically installed in the Scipion environment by default:
 
@@ -85,7 +85,7 @@ If Xmipp is installed **through Scipion** `with the plugin manager or with the t
    This automatic installation is enabled by default. To disable it, set ``default=False`` in `this file <https://github.com/I2PC/scipion-em-xmipp/blob/206832bff698a8eb40ac6b7d7cf5fbb1286d31ef/xmipp3/__init__.py#L177>`_
 
 Manually Required Dependencies
-------------------------------
+""""""""""""""""""""""""""""""""""""
 
 The following system-level packages **must be installed manually**, as they are not handled by Scipion:
 
