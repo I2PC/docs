@@ -138,16 +138,7 @@ If Xmipp is installed **through Scipion** `with the plugin manager or with the t
 
 .. note::
    This automatic installation is enabled by default. To disable it, set ``default=False`` in `this file <https://github.com/I2PC/scipion-em-xmipp/blob/206832bff698a8eb40ac6b7d7cf5fbb1286d31ef/xmipp3/__init__.py#L177>`_
-
-
-.. note::
-   Xmipp requires CMake 3.17 or above. Ubuntu 20.04 only supports CMake 3.16.3.  
-   If you experience any issues, please install CMake using Conda in the Scipion3 environment:
-
-   .. code-block:: bash
-
-      scipion3 run conda install cmake
-
+   For a manual installation of the dependencies, please conside that Xmipp requires CMake 3.17 or above. Ubuntu 20.04 only supports CMake 3.16.3.  
 
 These requirements will ensure that your system is ready for installing and using Xmipp. If you encounter a problem, please refer to known and fixed `issues <https://github.com/I2PC/xmipp/issues?q=is%3Aissue>`_. Let us know if something is not working.
 
