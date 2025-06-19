@@ -160,12 +160,17 @@ modification of build scripts were required.
 
 **Fetch Phase (local, in `xmipp` folder)**
 
+Dependencies are separated based on how they're used in the build system:
+
+1. **FetchContent_Declare-based dependencies**: must be placed in the `_deps` folder.
+2. **ExternalProject_Add-based dependencies**: must be cloned directly in `build`.
+
 .. code-block:: bash
 
    mkdir build
    cd build
 
-   # Clone required dependencies into a separate folder
+   # Case 1: FetchContent_Declare (stored in _deps)
    mkdir _deps
    cd _deps
    git clone https://github.com/MartinSalinas98/libcifpp.git
@@ -173,37 +178,43 @@ modification of build scripts were required.
    git clone https://github.com/google/googletest.git
    mv googletest googletest-src
 
-   # Patch source file to avoid valarray constexpr issues
+   # Patch libcifpp to fix valarray constexpr conflict
    nano libcifpp-src/include/cif++/point.hpp
    # -> Comment out lines 324–331
    # -> Replace line 333 with:
    #    value_type length = std::sqrt(q.a*q.a+q.b*q.b+q.c*q.c+q.d*q.d);
 
-   # Clone additional dependencies
+   # Case 2: ExternalProject_Add (cloned in main build directory)
    cd ..
    git clone https://github.com/HiPerCoRe/cuFFTAdvisor.git
    git clone https://github.com/cossorzano/libsvm.git
    git clone https://github.com/vit-vit/CTPL.git
 
-**Disable Auto-Fetching (local)**
+Disable Auto-Fetching (local)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+The `cmake/fetch_*.cmake` scripts must be modified to disable network fetching during CMake configuration.
+There are **two types** of fetch scripts:
 
-Edit the CMake fetch scripts to disable online fetching:
+1. **FetchContent_Declare-based**: modify inside the macro to indicate dependency is already "POPULATED".
+2. **ExternalProject_Add-based**: remove or comment out the full `ExternalProject_Add()` block.
 
 .. code-block:: bash
 
    cd ../cmake
 
-   # Edit fetch_cifpp.cmake
+   # Case 1: FetchContent_Declare
    nano fetch_cifpp.cmake
-   # -> Comment out GIT_REPOSITORY and GIT_TAG lines
-   # -> Add `POPULATED TRUE`
-
-   # Repeat the same pattern for the following files:
    nano fetch_googletest.cmake
+   # -> Inside FetchContent_Declare:
+   #    Comment out GIT_REPOSITORY and GIT_TAG lines
+   #    Add line: POPULATED TRUE
+
+   # Case 2: ExternalProject_Add
    nano fetch_ctpl.cmake
-   nano fetch_cuFFTAdvisor.cmake
    nano fetch_libsvm.cmake
+   nano fetch_cuFFTAdvisor.cmake
+   # -> Comment out or remove the entire ExternalProject_Add() block
 
 **Prepare Environment (remote, on MareNostrum5)**
 
@@ -243,5 +254,5 @@ Launch the build process:
 **Remarks**
 
 - MareNostrum5 blocks all outgoing HTTP(S) requests, so **all dependencies must be fetched locally and transferred manually** to the build environment.
-- The module configuration is critical and may vary depending on cluster policies.
+- Distinguish between dependencies using `FetchContent_Declare` and those using `ExternalProject_Add`, as their locations and how they are disabled differ.
 - Patching `libcifpp` was necessary to resolve `constexpr`/`valarray` issues during compilation.
