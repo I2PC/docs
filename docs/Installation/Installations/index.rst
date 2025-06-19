@@ -245,5 +245,3 @@ Launch the build process:
 - MareNostrum5 blocks all outgoing HTTP(S) requests, so **all dependencies must be fetched locally and transferred manually** to the build environment.
 - The module configuration is critical and may vary depending on cluster policies.
 - Patching `libcifpp` was necessary to resolve `constexpr`/`valarray` issues during compilation.
-
-We hope this helps others attempting to install Xmipp on similar restricted HPC environments!
