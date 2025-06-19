@@ -143,3 +143,107 @@ This guide explains how to install Xmipp on High-Performance Computing (HPC).
 
 
 After completing these steps, Xmipp should be successfully installed and configured on your HPC environment. But in any case you can `contact us <https://i2pc.github.io/docs/contact.html#contact-us>`__ for advice or support.
+
+
+Xmipp on MareNostrum5 cluster; a successful Installation
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+.. note::
+
+   The following is a user-contributed installation report from MareNostrum5 (BSC-CNS, Barcelona),
+   which may serve as a helpful reference when installing Xmipp on similar HPC systems.
+
+
+This is a summary of the steps followed to successfully install Xmipp on the **MareNostrum5** cluster.
+Due to the restricted environment (no outgoing requests allowed), some manual pre-fetching and
+modification of build scripts were required.
+
+**Fetch Phase (local, in `xmipp` folder)**
+
+.. code-block:: bash
+
+   mkdir build
+   cd build
+
+   # Clone required dependencies into a separate folder
+   mkdir _deps
+   cd _deps
+   git clone https://github.com/MartinSalinas98/libcifpp.git
+   mv libcifpp libcifpp-src
+   git clone https://github.com/google/googletest.git
+   mv googletest googletest-src
+
+   # Patch source file to avoid valarray constexpr issues
+   nano libcifpp-src/include/cif++/point.hpp
+   # -> Comment out lines 324–331
+   # -> Replace line 333 with:
+   #    value_type length = std::sqrt(q.a*q.a+q.b*q.b+q.c*q.c+q.d*q.d);
+
+   # Clone additional dependencies
+   cd ..
+   git clone https://github.com/HiPerCoRe/cuFFTAdvisor.git
+   git clone https://github.com/cossorzano/libsvm.git
+   git clone https://github.com/vit-vit/CTPL.git
+
+**Disable Auto-Fetching (local)**
+
+
+Edit the CMake fetch scripts to disable online fetching:
+
+.. code-block:: bash
+
+   cd ../cmake
+
+   # Edit fetch_cifpp.cmake
+   nano fetch_cifpp.cmake
+   # -> Comment out GIT_REPOSITORY and GIT_TAG lines
+   # -> Add `POPULATED TRUE`
+
+   # Repeat the same pattern for the following files:
+   nano fetch_googletest.cmake
+   nano fetch_ctpl.cmake
+   nano fetch_cuFFTAdvisor.cmake
+   nano fetch_libsvm.cmake
+
+**Prepare Environment (remote, on MareNostrum5)**
+
+
+Load required modules:
+
+.. code-block:: bash
+
+   module load intel
+   module load mkl
+   module load python
+   module load cmake
+   module load openmpi/4.1.5-gcc
+   module load eigen/3.3.4-gcc-ompi
+   module load boost/1.84.0-gcc-ompi
+   module load nvidia-hpc-sdk
+   module load hdf5/1.10.11-nvidia-nvhpcx
+   module load sqlite3/3.45.2-gcc
+   module load fftw/3.3.10-gcc-ompi
+   module load java-openjdk/22.0.1
+
+Set the Eigen path:
+
+.. code-block:: bash
+
+   export Eigen3_DIR=/apps/ACC/EIGEN/3.3.4/GCC/OPENMPI/share/eigen3/cmake
+
+**Installation (remote)**
+
+
+Launch the build process:
+
+.. code-block:: bash
+
+   ./xmipp
+
+**Remarks**
+
+- MareNostrum5 blocks all outgoing HTTP(S) requests, so **all dependencies must be fetched locally and transferred manually** to the build environment.
+- The module configuration is critical and may vary depending on cluster policies.
+- Patching `libcifpp` was necessary to resolve `constexpr`/`valarray` issues during compilation.
+
+We hope this helps others attempting to install Xmipp on similar restricted HPC environments!
