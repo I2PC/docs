@@ -190,8 +190,7 @@ Dependencies are separated based on how they're used in the build system:
    git clone https://github.com/cossorzano/libsvm.git
    git clone https://github.com/vit-vit/CTPL.git
 
-Disable Auto-Fetching (local)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**Disable Auto-Fetching (local)**
 
 The `cmake/fetch_*.cmake` scripts must be modified to disable network fetching during CMake configuration.
 There are **two types** of fetch scripts:
