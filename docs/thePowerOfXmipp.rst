@@ -3,8 +3,8 @@
 .. Note::
     Page under construction
 
-The power of Xmipp in Cryo-EM
-===============================
+The power of Xmipp 
+=====================
 
 Xmipp is a key software suite in the image processing workflow for cryo-electron microscopy (cryo-EM) single-particle analysis. Its modular protocols and deep integration with Scipion enable users to handle the complexity of cryo-EM data and achieve high-resolution 3D reconstructions.
 
