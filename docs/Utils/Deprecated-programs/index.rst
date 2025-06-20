@@ -67,4 +67,5 @@ List of deprecated protocols
 - `angular resolution alignmnet <https://github.com/I2PC/scipion-em-xmipp/pull/842/commits/40d8e7b00997b311926123641e73681cfe9acc3e>`_
 - `movie_opticalflow <https://github.com/I2PC/scipion-em-xmipp/pull/845/commits/631ab13cd104a5e62c46decc4241b93c0a34b455>`_
 - `screen deepLearning <https://github.com/I2PC/scipion-em-xmipp/pull/926/commits/4038d09cd0e164ef4467db48624c126c33a7c2b9>`_
+- `enrich <https://github.com/I2PC/scipion-em-xmipp/pull/940>`_
 
