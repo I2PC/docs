@@ -120,14 +120,14 @@ b. Simulate using the plugin manager:
     .. code-block:: text
 
         SCIPION_PLUGIN_JSON = /home/userName/scipion/config/plugins.json
-        
+
   4. Install scipion-em-xmipp from the terminal with
 
   .. code-block:: bash
 
     scipion3 installp scipion-em-xmipp
 
-  5. **Notes**:  
+  .. notes::  
     - The plugin manager will fetch the repository from GitHub with the specified branch (indicated after `@`).  
     - This setup allows you to simulate an update.  
     - Ignore the version number, as it may not be properly displayed in this configuration.
