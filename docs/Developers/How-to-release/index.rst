@@ -95,7 +95,7 @@ a. Simulate localy
 b. Simulate using the plugin manager:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. note::
+  .. note::
 
     The PR of the release from the Xmipp repository has to be merged in order to have the tag available
 
