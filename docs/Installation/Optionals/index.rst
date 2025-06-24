@@ -4,7 +4,7 @@ Optional Tools and Libraries
 DeepLearningToolkit 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The DeepLearningToolkit (DLTK) is a set of environments equipped with several libraries related to deep learning. It enables running protocols in Scipion that require deep learning tools, available for both GPU and CPU. The installer will automatically detect your configuration.
+The DeepLearningToolkit (DLTK) is a set of environments equipped with several libraries related to deep learning. It enables running protocols in Scipion that require deep learning tools, available for both GPU and CPU. The installer will automatically detect your configuration. Since xmipp-3.25.06-Rhea all environments except micCleaner (tensorflow-gpu<2 needs anaconda) do not require any private channels (non-free channels for commercial purposes).
 
 Requirements
 """"""""""""""""""
@@ -29,38 +29,41 @@ If the installation would take over 30 minutes, please accelerate the process us
 
 List of Environments
 """"""""""""""""""""""""""""""""""""
-- **xmipp_DLTK_v0.3**  
+- **xmipp_DLTK_v0.3 (GPU version)**  
 Protocols using this environment:  `resolution_deepres`, `screen_deepConsensus`  
 
 .. code-block:: text
+    - python=3.7
+    - libstdcxx-ng 
+    - tensorflow==1.15.0
+    - numpy==1.19.5
+    - h5py==2.10.0
+    - keras==2.2.5
+    - scikit-learn==0.22
+    - protobuf==3.20.3
 
-    - python=3.7  
-    - scikit-image=0.14  
-    - tensorflow=1.15  
-    - keras=2.2  
-    - scikit-learn=0.22  
-    - pip  
-    - numpy==1.21  
-    - h5py==2.10.0  
-
-- **xmipp_DLTK_v1.0**  
+- **xmipp_DLTK_v1.0 (GPU version)**  
 Protocols using this environment: `deep_misalignment_detection`, `deep_center_predict`
 
 .. code-block:: text
     
-    - python=3.8  
-    - tensorflow=2.7  
-    - keras=2.7  
-    - pip  
-    - numpy==1.23  
+    - python=3.8
+    - libstdcxx-ng
+    - tensorflow==2.7
+    - numpy==1.22
+    - absl-py<0.12
+    - protobuf==3.20.3
 
 - **xmipp_MicCleaner**  
 Protocols using this environment: `deepMicrographScreen`  
 
 .. code-block:: text
 
-    - python=3.6  
-    - micrograph-cleaner-em=0.35  
+  - python=3.10
+  - deepemhancer=0.16 #CUDA > 10 required. Drivers nvidia >= 450.80.02
+  - numba
+  - h5py
+  - libstdcxx-ng
 
 - **xmipp_deepEMhancer**  
 Protocols using this environment: `protocol_deepEMhancer`  
@@ -71,20 +74,24 @@ Protocols using this environment: `protocol_deepEMhancer`
     - deepemhancer=0.12  
     - numba=0.45  
 
-- **xmipp_pyTorch**  
+- **xmipp_pyTorch (GPU version)**  
 Protocols using this environment: `deepHand`,  `classify_pca`
 
 
 .. code-block:: text
 
-    - python=3.8  
-    - numpy=1.23  
-    - mrcfile=1.4.3  
-    - kornia=0.6.12  
-    - starfile=0.4.12  
-    - pytorch==1.11  
-    - pytorch-cuda=11.7  
-    - torchvision=0.12  
+  - python=3.10
+  - numpy=1.23
+  - mrcfile=1.4.3
+  - kornia=0.6.8 
+  - starfile=0.4.11 
+  - requests=2
+  - pillow
+  - libstdcxx-ng 
+  - pytorch-gpu=1.13.1
+  - torchvision=0.14.0
+  - cudatoolkit=11.3
+  - libcurl=7
 
 
 
