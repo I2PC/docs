@@ -71,6 +71,10 @@ Step 7: Update Version Information
 
 Step 8: Validate Release Branches Locally
 ------------------------------------------
+  .. note::
+
+    The PR of the release from the Xmipp repository has to be merged in order to have the tag available
+
 a. Simulate localy
 ~~~~~~~~~~~~~~~~~~~~
   - Check out the release branches locally or on a test machine.
@@ -94,10 +98,6 @@ a. Simulate localy
 
 b. Simulate using the plugin manager:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-  .. note::
-
-    The PR of the release from the Xmipp repository has to be merged in order to have the tag available
 
   1. **Install scipion** with the last( the one before the current release) xmipp
   2. **Create a `plugins.json` file**:  
