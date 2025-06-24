@@ -127,7 +127,8 @@ b. Simulate using the plugin manager:
 
     scipion3 installp scipion-em-xmipp
 
-  .. note::  
+  .. notes::  
+
     - The plugin manager will fetch the repository from GitHub with the specified branch (indicated after `@`).  
     - This setup allows you to simulate an update.  
     - Ignore the version number, as it may not be properly displayed in this configuration.
