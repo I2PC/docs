@@ -95,6 +95,10 @@ a. Simulate localy
 b. Simulate using the plugin manager:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. note::
+
+    The PR of the release from the Xmipp repository has to be merged in order to have the tag available
+
   1. **Install scipion** with the last( the one before the current release) xmipp
   2. **Create a `plugins.json` file**:  
     Use a structure similar to the one at `<https://scipion.i2pc.es/getplugins/>`__, but replace the `scipion-em-xmipp` entry with the following:  
