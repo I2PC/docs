@@ -70,9 +70,11 @@ Protocols using this environment: `protocol_deepEMhancer`
 
 .. code-block:: text
 
-    - python=3.6  
-    - deepemhancer=0.12  
-    - numba=0.45  
+  - python=3.10
+  - deepemhancer=0.16 #CUDA > 10 required. Drivers nvidia >= 450.80.02
+  - numba
+  - h5py
+  - libstdcxx-ng 
 
 - **xmipp_pyTorch (GPU version)**  
 Protocols using this environment: `deepHand`,  `classify_pca`
