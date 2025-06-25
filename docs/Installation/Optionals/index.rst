@@ -44,7 +44,8 @@ Protocols using this environment:  `resolution_deepres`, `screen_deepConsensus`
     - protobuf==3.20.3
 
 - **xmipp_DLTK_v1.0 (GPU version)**  
-Protocols using this environment: `deep_misalignment_detection`, `deep_center_predict`
+Protocol using this environment: `deep_center_predict`
+Program using this enviroment: `deep_misalignment_detection`
 
 .. code-block:: text
     
