@@ -33,6 +33,7 @@ List of Environments
 Protocols using this environment:  `resolution_deepres`, `screen_deepConsensus`  
 
 .. code-block:: text
+  
     - python=3.7
     - libstdcxx-ng 
     - tensorflow==1.15.0
