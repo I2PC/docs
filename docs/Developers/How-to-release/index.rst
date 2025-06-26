@@ -86,7 +86,7 @@ a. Simulate localy
       git clone git@github.com:I2PC/scipion-em-xmipp.git --branch release-3...
       cd scipion-em-xmipp
 
-    In your local, change to False `develMode <https://github.com/I2PC/scipion-em-xmipp/blob/46d4ef33b2cdc474d756118a3b7ac1fd2c532dc1/xmipp3/__init__.py#L180>`__ to detault=True. After that, install xmipp and inspect any posible issue
+    In your local, change to False `develMode <https://github.com/I2PC/scipion-em-xmipp/blob/46d4ef33b2cdc474d756118a3b7ac1fd2c532dc1/xmipp3/__init__.py#L180>`__ . After that, install xmipp and inspect any posible issue
     
     .. code-block:: bash
 
