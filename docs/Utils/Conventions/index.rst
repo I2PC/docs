@@ -499,3 +499,275 @@ the integer part is -2.
 This means that for images with an even dimension, the center will be
 “displaced” in that direction. Let’s have a look on the following two
 diagrams of cell indexes.
+
+
+
+
+
+Symmetry
+--------
+
+This page describes the different symmetries that a polyhedron with fixed center may have. There are five fundamental symmetry classes: cyclical, dihedral, tetrahedral, octahedral, and icosahedral, and 17 different symmetry groups. All of them are implemented in Xmipp.
+
+For each type, we show on this page:
+
+* Surface rendering of a volume with such symmetry.
+* JavaScript model of a volume with such symmetry (viewable with JavaView).
+* The sym file needed by different Xmipp programs to impose a given symmetry.
+
+.. note::
+
+   Symmetry files must have a precision of **10⁻⁶**. That is, in most cases, 6 decimal digits are required (for more complex symmetries such as icosahedral, 7 are needed).
+   All Xmipp programs requiring a symmetry file will also work when supplying the symmetry acronym instead of the filename.
+
+.. note::
+
+   Blue axis is Z, yellow axis is Y, and red axis is X.
+
+.. note::
+
+   To repeat the tests, the volume used to generate the symmetries is available at ``/left_hand.spi``.
+
+Symmetry File Format
+~~~~~~~~~~~~~~~~~~~~~~
+
+Arbitrary symmetry files can be provided using the following syntax:
+
+.. code-block:: text
+
+    # The fold is the number of times that the volume can be rotated along
+    # the symmetry axis giving the same view from different viewpoints.
+    # Structure for rotational axis:
+    # rot_axis      <fold> <X0> <Y0> <Z0>
+    # mirror_plane         <X0> <Y0> <Z0>
+    # P4212
+    # inversion
+    # Example: 6-fold rotational symmetry along the Z-axis
+    rot_axis      6 0 0 1
+    mirror_plane    0 0 1
+
+Symmetry Groups
+~~~~~~~~~~~~~~~~~~~~~~
+
+C1
+^^^^^^
+
+No symmetry.
+
+* `View model <#>`_
+* **c1**
+
+  .. code-block:: text
+
+     rot_axis 1 0 0 1 (rot=0, tilt=0, psi=0)
+
+* Image: ``/c1.jpg``
+
+Ci
+^^^^^^
+
+Inversion symmetry only.
+
+* `View model <#>`_
+* **ci**
+
+  .. code-block:: text
+
+     inversion
+
+* Image: ``/ci.jpg``
+
+Cs
+^^^^^^
+
+Reflection symmetry only.
+
+* `View model <#>`_
+* **cs**
+
+  .. code-block:: text
+
+     mirror_plane 0 0 1 (rot=0, tilt=0, psi=0)
+
+* Image: ``/cs.jpg``
+
+Cn
+^^^^^^
+
+Cyclic rotational symmetry only.
+
+* `View model <http://conventions.cnb.uam.es/Submit/cyclic/3DEM_cyclic>`_
+* **c5**
+
+  .. code-block:: text
+
+     rot_axis 5 0 0 1 (rot=0, tilt=0, psi=0)
+
+* Image: ``/c5.jpg``
+
+Cnv
+^^^^^^
+
+Cyclic rotational symmetry with vertical mirror plane.
+
+* `View model <#>`_
+* **c5v**
+
+  .. code-block:: text
+
+     rot_axis 5 0 0 1 (rot=0, tilt=0, psi=0)
+     mirror_plane 0 1 0 (rot=90, tilt=90, psi=0)
+
+* Image: ``/c5v.jpg``
+
+Cnh
+^^^^^^
+
+Cyclic rotational symmetry with horizontal mirror plane.
+
+* `View model <#>`_
+* **c5h**
+
+  .. code-block:: text
+
+     rot_axis 5 0 0 1 (rot=0, tilt=0, psi=0)
+     mirror_plane 0 0 1 (rot=0, tilt=0, psi=0)
+
+* Image: ``/c5h.jpg``
+
+Sn
+^^^^^^
+
+Cyclic (n/2)-fold symmetry with horizontal mirror.
+
+* `View model <#>`_
+* **s10**
+
+  .. code-block:: text
+
+     rot_axis 5 0 0 1 (rot=0, tilt=0, psi=0)
+     inversion
+
+* Image: ``/s10.jpg``
+
+Dn
+^^^^^^
+
+Dihedral rotational symmetry only.
+
+* `View model <http://conventions.cnb.uam.es/Submit/dihedral/3DEM_dihedral>`_
+* **d5**
+
+  .. code-block:: text
+
+     rot_axis 5 0 0 1 (rot=0, tilt=0, psi=0)
+     rot_axis 2 1 0 0 (rot=0, tilt=90, psi=0)
+
+* Image: ``/d5.jpg``
+
+Dnv
+^^^^^^
+
+Dihedral symmetry with vertical mirror plane.
+
+* `View model <#>`_
+* **d5v**
+
+  .. code-block:: text
+
+     rot_axis 5 0 0 1 (rot=0, tilt=0, psi=0)
+     rot_axis 2 1 0 0 (rot=0, tilt=90, psi=0)
+     mirror_plane 1 0 0 (rot=0, tilt=90, psi=0)
+
+* Image: ``/d5v.jpg``
+
+Dnh
+^^^^^^
+
+Dihedral symmetry with horizontal mirror plane.
+
+* `View model <#>`_
+* **d5h**
+
+  .. code-block:: text
+
+     rot_axis 5 0 0 1 (rot=0, tilt=0, psi=0)
+     rot_axis 2 1 0 0 (rot=0, tilt=90, psi=0)
+     mirror_plane 0 0 1 (rot=0, tilt=0, psi=0)
+
+* Image: ``/d5h.jpg``
+
+T (Tetrahedral)
+^^^^^^^^^^^^^^^^^^
+
+* `View model <http://conventions.cnb.uam.es/Submit/tetrahedron/3DEM_tetrahedral>`_
+* **t**
+
+  .. code-block:: text
+
+     rot_axis 3 0 0 1 (rot=0, tilt=0, psi=0)
+     rot_axis 2 0 0.816496 0.577350 (rot=90, tilt=54.7356, psi=0)
+
+* Image: ``/t.jpg``
+
+Td
+^^^^^^
+
+Tetrahedral symmetry with reflection.
+
+* `View model <#>`_
+* **td**
+
+  .. code-block:: text
+
+     rot_axis 3 0 0 1
+     rot_axis 2 0 0.816496 0.577350
+     mirror_plane 1.4142136 2.4494897 0
+
+* Image: ``/td.jpg``
+
+Th
+^^^^^^
+
+Tetrahedral symmetry with inversion.
+
+* `View model <#>`_
+* **th**
+
+  .. code-block:: text
+
+     rot_axis 3 0 0 1
+     rot_axis 2 0 -0.816496 -0.577350
+     inversion
+
+* Image: ``/th.jpg``
+
+O (Octahedral)
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+* `View model <http://conventions.cnb.uam.es/Submit/octahedron/3DEM_octahedral>`_
+* **o**
+
+  .. code-block:: text
+
+     rot_axis 3 0.5773502 0.5773502 0.5773502
+     rot_axis 4 0 0 1
+
+* Image: ``/o.jpg``
+
+Oh
+^^^^^^
+
+Octahedral symmetry with mirror.
+
+* `View model <#>`_
+* **oh**
+
+  .. code-block:: text
+
+     rot_axis 3 0.5773502 0.5773502 0.5773502
+     rot_axis 4 0 0 1
+     mirror_plane 0 1 1
+
+* Image: ``/oh.jpg``
+
