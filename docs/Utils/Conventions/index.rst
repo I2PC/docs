@@ -554,7 +554,6 @@ C1
 
 No symmetry.
 
-* `View model <#>`_
 * **c1**
 
   .. code-block:: text
@@ -568,7 +567,6 @@ Ci
 
 Inversion symmetry only.
 
-* `View model <#>`_
 * **ci**
 
   .. code-block:: text
@@ -582,7 +580,6 @@ Cs
 
 Reflection symmetry only.
 
-* `View model <#>`_
 * **cs**
 
   .. code-block:: text
@@ -596,7 +593,6 @@ Cn
 
 Cyclic rotational symmetry only.
 
-* `View model <http://conventions.cnb.uam.es/Submit/cyclic/3DEM_cyclic>`_
 * **c5**
 
   .. code-block:: text
@@ -610,7 +606,6 @@ Cnv
 
 Cyclic rotational symmetry with vertical mirror plane.
 
-* `View model <#>`_
 * **c5v**
 
   .. code-block:: text
@@ -625,7 +620,6 @@ Cnh
 
 Cyclic rotational symmetry with horizontal mirror plane.
 
-* `View model <#>`_
 * **c5h**
 
   .. code-block:: text
@@ -640,7 +634,6 @@ Sn
 
 Cyclic (n/2)-fold symmetry with horizontal mirror.
 
-* `View model <#>`_
 * **s10**
 
   .. code-block:: text
@@ -655,7 +648,6 @@ Dn
 
 Dihedral rotational symmetry only.
 
-* `View model <http://conventions.cnb.uam.es/Submit/dihedral/3DEM_dihedral>`_
 * **d5**
 
   .. code-block:: text
@@ -670,7 +662,6 @@ Dnv
 
 Dihedral symmetry with vertical mirror plane.
 
-* `View model <#>`_
 * **d5v**
 
   .. code-block:: text
@@ -686,7 +677,6 @@ Dnh
 
 Dihedral symmetry with horizontal mirror plane.
 
-* `View model <#>`_
 * **d5h**
 
   .. code-block:: text
@@ -700,7 +690,6 @@ Dihedral symmetry with horizontal mirror plane.
 T (Tetrahedral)
 ^^^^^^^^^^^^^^^^^^
 
-* `View model <http://conventions.cnb.uam.es/Submit/tetrahedron/3DEM_tetrahedral>`_
 * **t**
 
   .. code-block:: text
@@ -715,7 +704,6 @@ Td
 
 Tetrahedral symmetry with reflection.
 
-* `View model <#>`_
 * **td**
 
   .. code-block:: text
@@ -731,7 +719,6 @@ Th
 
 Tetrahedral symmetry with inversion.
 
-* `View model <#>`_
 * **th**
 
   .. code-block:: text
@@ -745,7 +732,6 @@ Tetrahedral symmetry with inversion.
 O (Octahedral)
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-* `View model <http://conventions.cnb.uam.es/Submit/octahedron/3DEM_octahedral>`_
 * **o**
 
   .. code-block:: text
@@ -760,7 +746,6 @@ Oh
 
 Octahedral symmetry with mirror.
 
-* `View model <#>`_
 * **oh**
 
   .. code-block:: text
