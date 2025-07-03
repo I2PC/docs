@@ -32,7 +32,7 @@ Xmipp requires C++17 compatible compiler (see table below for minimum versions).
 Cuda
 ^^^^
 
-CUDA is optional but highly recommended. By default Xmippp will search your CUDA installation. Xmipp supports Cuda **11.0** through **12.6**. We recommend you to use the newest version available for your operating system. Pay attention to the `compiler - CUDA compatibility <https://gist.github.com/ax3l/9489132>`_.
+CUDA is optional but highly recommended. By default Xmippp will search your CUDA installation. Xmipp supports Cuda **11.0** through **12.2**. We recommend you to use the newest version available for your operating system. Pay attention to the `compiler - CUDA compatibility <https://gist.github.com/ax3l/9489132>`_.
 
 .. Note::
   As of may 2025, we have officially dropped support for CUDA 10.2. Please make sure to upgrade to a supported CUDA version (11.0 or higher) to ensure compatibility.
