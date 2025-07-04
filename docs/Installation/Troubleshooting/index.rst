@@ -161,8 +161,8 @@ If CMake is not installed, install it from the appropriate source:
 
      sudo apt install cmake
 
-Troubleshooting Linker Error with libLerc
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Linker Error with libLerc
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Error** during compilation:
 
