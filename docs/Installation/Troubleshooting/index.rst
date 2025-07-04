@@ -161,4 +161,24 @@ If CMake is not installed, install it from the appropriate source:
 
      sudo apt install cmake
 
+Troubleshooting Linker Error with libLerc
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+**Error** during compilation:
+
+::
+
+    /usr/bin/ld: .../libLerc.so.4: undefined reference to `std::__throw_bad_array_new_length()@GLIBCXX_3.4.29'
+    collect2: error: ld returned 1 exit status
+
+**Cause**:
+This occurs due to `libLerc` being pulled in by `libtiff >= 4.6.0`, which may have been built against a newer C++ standard or libstdc++ version.
+
+**Fix**:
+Downgrade `libtiff` to a version prior to 4.6.0. For example, with Scipion:
+
+::
+
+    scipion3 run conda install libtiff=4.5.1
+
+This prevents `libLerc` from being linked and resolves the incompatibility.
