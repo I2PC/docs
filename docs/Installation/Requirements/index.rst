@@ -20,7 +20,7 @@ Xmipp requires C++17 compatible compiler (see table below for minimum versions).
 
 .. list-table:: 
    :header-rows: 1
-   :widths: 50 50
+   :widths: 50 50 50
 
    * - Compiler
      - Minimum Version
