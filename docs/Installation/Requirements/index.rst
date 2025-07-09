@@ -24,10 +24,13 @@ Xmipp requires C++17 compatible compiler (see table below for minimum versions).
 
    * - Compiler
      - Minimum Version
+     - Maximum version
    * - GCC
      - 8.4
+     - 12.X
    * - Clang
      - 5.0
+     - 14
 
 Cuda
 ^^^^
