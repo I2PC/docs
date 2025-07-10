@@ -61,11 +61,12 @@ Protocols using this environment: `deepMicrographScreen`
 
 .. code-block:: text
 
-  - python=3.10
-  - deepemhancer=0.16 #CUDA > 10 required. Drivers nvidia >= 450.80.02
-  - numba
-  - h5py
-  - libstdcxx-ng
+  - python=3.6
+  - micrograph-cleaner-em=0.35
+  - libstdcxx-ng # To be compatible with scipion env
+  - pip
+  - pip:
+    - absl-py<0.12
 
 - **xmipp_deepEMhancer**  
 Protocols using this environment: `protocol_deepEMhancer`  
