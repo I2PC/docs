@@ -19,7 +19,7 @@ Project: SARS-CoV-2 spike
    - **EMDB ID**: *EMD-11328, EMD-11336, EMD-11337, EMD-11341*
    - **Final Resolution**: *2.96 A˚*
    - **Xmipp Version**: *3.20.07 - Boreas*
-   - **Publication**: *Melero R, Sorzano COS, Foster B, Vilas JL, Martínez M, Marabini R, Ramírez-Aportela E, Sanchez-Garcia R, Herreros D, Del Caño L, Losana P, Fonseca-Reyna YC, Conesa P, Wrapp D, Chacon P, McLellan JS, Tagare HD, Carazo JM. Continuous flexibility analysis of SARS-CoV-2 spike prefusion structures. IUCrJ. 2020 Sep 29;7(Pt 6):1059–69. doi: 10.1107/S2052252520012725. Epub ahead of print. PMID: 33063791; PMCID: PMC7553147.*
+   - **Publication** `Melero R, Sorzano COS, Foster B, Vilas JL, Martínez M, Marabini R, Ramírez-Aportela E, Sanchez-Garcia R, Herreros D, Del Caño L, Losana P, Fonseca-Reyna YC, Conesa P, Wrapp D, Chacon P, McLellan JS, Tagare HD, Carazo JM. Continuous flexibility analysis of SARS-CoV-2 spike prefusion structures. IUCrJ. 2020 Sep 29;7(Pt 6):1059–69. doi: 10.1107/S2052252520012725. Epub ahead of print. PMID: 33063791; PMCID: PMC7553147. <https://europepmc.org/article/MED/36208775>`_ 
 
 
 .. rubric:: Protocols Used
@@ -48,7 +48,7 @@ Project: CLP-C1  (Mycobacterium tuberculosis)
    - **EMDB ID**: *EMD-15240, EMD-15242, EMD-15243, EMD-15241*
    - **Final Resolution**: *2.96 A˚*
    - **Xmipp Version**: *3.22.04 - Gaia*
-   - **Publication**: * Weinhäupl K, Gragera M, Bueno-Carrasco MT, et al. Structure of the drug target ClpC1 unfoldase in action provides insights on antibiotic mechanism of action. The Journal of Biological Chemistry. 2022 Nov;298(11):102553. DOI: 10.1016/j.jbc.2022.102553. PMID: 36208775; PMCID: PMC9661721. *
+   - **Publication** `Weinhäupl K, Gragera M, Bueno-Carrasco MT, et al. Structure of the drug target ClpC1 unfoldase in action provides insights on antibiotic mechanism of action. The Journal of Biological Chemistry. 2022 Nov;298(11):102553. DOI: 10.1016/j.jbc.2022.102553. PMID: 36208775; PMCID: PMC9661721 <https://pubmed.ncbi.nlm.nih.gov/36208775/>`
 
 .. rubric:: Protocols Used
 
