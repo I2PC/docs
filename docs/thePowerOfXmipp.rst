@@ -16,12 +16,11 @@ Example: SARS-CoV-2 spike
 .. admonition:: Project Summary
 
    - **Protein**: *[To be completed]*
-   - **Final Resolution**: *[To be completed]*
-   - **Number of Movies**: *[To be completed]*
-   - **EMDB ID**: *[To be completed]*
+   - **EMDB ID**: * EMD-11328, EMD-11336, EMD-11337, EMD-11341*
    - **Resolution Method**: *[To be completed]*
-   - **Xmipp Version**: *[To be completed]*
-   - **Publication**: *[]*
+   - **Final Resolution**: * 2.96 A˚ *
+   - **Xmipp Version**: *3.20.07 - Boreas*
+   - **Publication**: *Melero R, Sorzano COS, Foster B, Vilas JL, Martínez M, Marabini R, Ramírez-Aportela E, Sanchez-Garcia R, Herreros D, Del Caño L, Losana P, Fonseca-Reyna YC, Conesa P, Wrapp D, Chacon P, McLellan JS, Tagare HD, Carazo JM. Continuous flexibility analysis of SARS-CoV-2 spike prefusion structures. IUCrJ. 2020 Sep 29;7(Pt 6):1059–69. doi: 10.1107/S2052252520012725. Epub ahead of print. PMID: 33063791; PMCID: PMC7553147.*
 
 
 .. rubric:: Protocols Used
@@ -47,7 +46,6 @@ Example: HER2-TZB project
 
    - **Protein**: *[To be completed]*
    - **Final Resolution**: *[To be completed]*
-   - **Number of Movies**: *[To be completed]*
    - **EMDB ID**: *[To be completed]*
    - **Resolution Method**: *[To be completed]*
    - **Xmipp Version**: *[To be completed]*
