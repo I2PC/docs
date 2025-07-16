@@ -49,6 +49,19 @@ the main repository is required and also the installation of the plugins.
     Releases/Releases-scipion-em-xmipp/index
     Releases/Releases-scipion-em-xmippTomo/index
     
+
+.. _Xmipp-World-docs:
+  .. toctree::
+    :maxdepth: 1
+    :hidden:
+    :caption: Xmipp World
+    
+    protocolsMap
+    thePowerOfXmipp
+    listOfPublications
+    history
+
+
 .. _Utils-docs:
 
   .. toctree::
@@ -80,15 +93,13 @@ the main repository is required and also the installation of the plugins.
     
 
 
+.. Others-docs:
+
   .. toctree::
     :maxdepth: 1
     :hidden:
     :caption: Xmipp World
     
-    protocolsMap
-    thePowerOfXmipp
-    listOfPublications
-    history
-    enhancingXmipp
-    contact
-    license
+    Others/enhancingXmipp
+    Others/contact
+    Others/license
