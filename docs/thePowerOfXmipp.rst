@@ -72,7 +72,7 @@ Project: HER2-TZB
 
 .. admonition:: Project Summary
 
-   - **Sample**: *[To be completed]*
+   - **Sample**: *[HER2-TZB ]*
    - **EMDB ID**: *[To be completed]*
    - **Final Resolution**: *[To be completed]*
    - **Xmipp Version**: *[To be completed]*
