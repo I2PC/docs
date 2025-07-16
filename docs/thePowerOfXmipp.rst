@@ -109,7 +109,10 @@ Project: HER2-TZB
 Conclusion
 ------------------------------
 
-The projects above exemplify how Xmipp provides a comprehensive toolbox that supports end-to-end cryo-EM workflows. From CTF correction to final volume polishing and validation, Xmipp’s protocols are critical in producing reliable, reproducible, and high-quality structural data.
+The projects presented here demonstrate the transformative power of Xmipp in cryo-EM single-particle analysis. By offering an extensive suite of robust protocols—from early-stage CTF correction to advanced 3D reconstruction and postprocessing—Xmipp streamlines the entire workflow, enabling researchers to achieve exceptional structural resolutions and scientific insight.
 
-Future developments in Xmipp continue to incorporate state-of-the-art techniques such as deep learning, automation, and hybrid modeling to push the boundaries of cryo-EM analysis.
+In high-impact studies such as SARS-CoV-2 spike and ClpC1, Xmipp played a decisive role in achieving high resolution and validating structural models, directly contributing to key biological discoveries and impactful publications.
 
+Using tools like Xmipp doesn’t just simplify data processing—it empowers users to extract the full potential of their data, reduce processing bottlenecks, and ensure reproducibility and scientific rigor. As the field evolves, Xmipp continues to integrate cutting-edge methods like deep learning, adaptive workflows, and hybrid modeling, reinforcing its role as a cornerstone for next-generation cryo-EM research.
+
+In short, Xmipp is not just a tool—it’s an enabler of breakthrough science.
