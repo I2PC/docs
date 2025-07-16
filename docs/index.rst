@@ -98,7 +98,7 @@ the main repository is required and also the installation of the plugins.
   .. toctree::
     :maxdepth: 1
     :hidden:
-    :caption: Xmipp World
+    :caption: Others
     
     Others/enhancingXmipp
     Others/contact
