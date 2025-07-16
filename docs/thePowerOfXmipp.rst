@@ -52,14 +52,10 @@ Project: CLP-C1  (Mycobacterium tuberculosis)
 
 .. rubric:: Protocols Used
 
-- **CTF Correction**:
-  - *[To be completed]*
 - **Particle Handling**:
-  - *[To be completed]*
-- **3D Visualization and Validation**:
-  - *[To be completed]*
+  - `XmippProtParticlePicking`
 - **Postprocessing**:
-  - *[To be completed]*
+  - `XmippProtDeepVolPostProc (EMhancer)`
 
 
 .. figure:: /_static/images/ClpC1.png
