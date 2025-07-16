@@ -10,6 +10,34 @@ Xmipp is a key software suite in the image processing workflow for cryo-electron
 
 This page highlights the relevance of Xmipp through two concrete examples: **ClpC1P1P2** and **HER2-TZB**. In both cases, Xmipp protocols played a critical role in various stages of data processing, from preprocessing and particle selection to final 3D refinement and validation.
 
+Example: SARS-CoV-2 spike
+------------------------------
+
+.. admonition:: Project Summary
+
+   - **Protein**: *[To be completed]*
+   - **Final Resolution**: *[To be completed]*
+   - **Number of Movies**: *[To be completed]*
+   - **EMDB ID**: *[To be completed]*
+   - **Resolution Method**: *[To be completed]*
+   - **Xmipp Version**: *[To be completed]*
+   - **Publication**: *[]*
+
+
+.. rubric:: Protocols Used
+
+- **CTF Correction**:
+  - `XmippProtCTFMicrographs`
+- **Particle Handling**:
+  - `XmippProtParticlePicking`
+  - `XmippProtConsensusPicking`
+  - `XmippProtDeepMicrographScreen (micCleaner)`
+- **3D Visualization and Validation**:
+  - `XmippProtReconstructHighRes`
+- **Postprocessing**:
+  - `XmippProtDeepVolPostProc (EMhancer)`
+
+
 
 
 Example: HER2-TZB project
@@ -47,7 +75,7 @@ Example: HER2-TZB project
   - `XmippProtCreateMask3D`
   - `XmippProtFSO`
 - **Postprocessing**:
-  - `emhancer`
+  - `XmippProtDeepVolPostProc (EMhancer)`
 - **Model Integration**:
   - `XmippProtConvertPdb`
 
