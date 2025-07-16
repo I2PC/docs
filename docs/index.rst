@@ -51,6 +51,7 @@ the main repository is required and also the installation of the plugins.
     
 
 .. _Xmipp-World-docs:
+
   .. toctree::
     :maxdepth: 1
     :hidden:
@@ -93,7 +94,7 @@ the main repository is required and also the installation of the plugins.
     
 
 
-.. Others-docs:
+.. _Others-docs:
 
   .. toctree::
     :maxdepth: 1
