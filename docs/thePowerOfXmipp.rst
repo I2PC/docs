@@ -1,7 +1,5 @@
 .. _thePowerOfXmipp:
 
-.. Note::
-    Page under construction
 
 The power of Xmipp 
 =====================
@@ -48,7 +46,7 @@ Project: CLP-C1  (Mycobacterium tuberculosis)
    - **EMDB ID**: *EMD-15240, EMD-15242, EMD-15243, EMD-15241*
    - **Final Resolution**: *2.96 A˚*
    - **Xmipp Version**: *3.22.04 - Gaia*
-   - **Publication** `Weinhäupl K, Gragera M, Bueno-Carrasco MT, et al. Structure of the drug target ClpC1 unfoldase in action provides insights on antibiotic mechanism of action. The Journal of Biological Chemistry. 2022 Nov;298(11):102553. DOI: 10.1016/j.jbc.2022.102553. PMID: 36208775; PMCID: PMC9661721 <https://pubmed.ncbi.nlm.nih.gov/36208775/>`
+   - **Publication** `Weinhäupl K, Gragera M, Bueno-Carrasco MT, et al. Structure of the drug target ClpC1 unfoldase in action provides insights on antibiotic mechanism of action. The Journal of Biological Chemistry. 2022 Nov;298(11):102553. DOI: 10.1016/j.jbc.2022.102553. PMID: 36208775; PMCID: PMC9661721 <https://pubmed.ncbi.nlm.nih.gov/36208775/>`_
 
 .. rubric:: Protocols Used
 
