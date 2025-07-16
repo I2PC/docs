@@ -10,7 +10,7 @@ Xmipp is a key software suite in the image processing workflow for cryo-electron
 
 This page highlights the relevance of Xmipp through two concrete examples: **ClpC1P1P2** and **HER2-TZB**. In both cases, Xmipp protocols played a critical role in various stages of data processing, from preprocessing and particle selection to final 3D refinement and validation.
 
-Example: SARS-CoV-2 spike
+Project: SARS-CoV-2 spike
 ------------------------------
 
 .. admonition:: Project Summary
@@ -40,10 +40,35 @@ Example: SARS-CoV-2 spike
    :alt: spike view
    :width: 300
 
+Project: CLP-C1  (Mycobacterium tuberculosis)
+----------------------------------------------------
+.. admonition:: Project Summary
+
+   - **Sample**: *ClpC1*
+   - **EMDB ID**: * EMD-15240, EMD-15242, EMD-15243, EMD-15241 *
+   - **Final Resolution**: * 2.96 A˚ *
+   - **Xmipp Version**: *3.22.04 - Gaia*
+   - **Publication**: * Weinhäupl K, Gragera M, Bueno-Carrasco MT, et al. Structure of the drug target ClpC1 unfoldase in action provides insights on antibiotic mechanism of action. The Journal of Biological Chemistry. 2022 Nov;298(11):102553. DOI: 10.1016/j.jbc.2022.102553. PMID: 36208775; PMCID: PMC9661721. *
+
+.. rubric:: Protocols Used
+
+- **CTF Correction**:
+  - *[To be completed]*
+- **Particle Handling**:
+  - *[To be completed]*
+- **3D Visualization and Validation**:
+  - *[To be completed]*
+- **Postprocessing**:
+  - *[To be completed]*
 
 
-Example: HER2-TZB project
-------------------------------
+.. figure:: /_static/images/ClpC1.png
+   :alt: spike view
+   :width: 300
+
+
+Project: HER2-TZB 
+--------------------
 
 .. admonition:: Project Summary
 
