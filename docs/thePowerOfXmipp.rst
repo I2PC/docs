@@ -15,7 +15,7 @@ Example: SARS-CoV-2 spike
 
 .. admonition:: Project Summary
 
-   - **Protein**: *[To be completed]*
+   - **Sample**: *SARS-CoV-2 spike*
    - **EMDB ID**: * EMD-11328, EMD-11336, EMD-11337, EMD-11341*
    - **Resolution Method**: *[To be completed]*
    - **Final Resolution**: * 2.96 A˚ *
@@ -37,6 +37,10 @@ Example: SARS-CoV-2 spike
   - `XmippProtDeepVolPostProc (EMhancer)`
 
 
+.. figure:: /_static/images/spike.png
+   :alt: spike view
+   :width: 300
+
 
 
 Example: HER2-TZB project
@@ -44,11 +48,12 @@ Example: HER2-TZB project
 
 .. admonition:: Project Summary
 
-   - **Protein**: *[To be completed]*
-   - **Final Resolution**: *[To be completed]*
+   - **Sample**: *[To be completed]*
    - **EMDB ID**: *[To be completed]*
    - **Resolution Method**: *[To be completed]*
+   - **Final Resolution**: *[To be completed]*
    - **Xmipp Version**: *[To be completed]*
+   - **Publication**:
 
 .. rubric:: Protocols Used
 
