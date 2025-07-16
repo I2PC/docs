@@ -8,7 +8,7 @@ The power of Xmipp
 
 Xmipp is a key software suite in the image processing workflow for cryo-electron microscopy (cryo-EM) single-particle analysis. Its modular protocols and deep integration with Scipion enable users to handle the complexity of cryo-EM data and achieve high-resolution 3D reconstructions.
 
-This page highlights the relevance of Xmipp through three concrete examples: **SARS-CoV-2 spike**,  **ClpC1** and **HER2-TZB**. In both cases, Xmipp protocols played a critical role in various stages of data processing, from preprocessing and particle selection to final 3D refinement and validation.
+This page highlights the relevance of Xmipp through three concrete examples: **SARS-CoV-2 spike**,  **ClpC1** and **HER2-TZB**. In all cases, Xmipp protocols played a critical role in various stages of data processing, from preprocessing and particle selection to final 3D refinement and validation.
 
 Project: SARS-CoV-2 spike
 ------------------------------
