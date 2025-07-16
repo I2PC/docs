@@ -100,6 +100,6 @@ the main repository is required and also the installation of the plugins.
     :hidden:
     :caption: Others
     
-    Others/enhancingXmipp
-    Others/contact
-    Others/license
+    Others/enhancingXmipp/index
+    Others/contact/index
+    Others/license/index
