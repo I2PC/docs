@@ -17,7 +17,7 @@ This guide explains the standalone installation of Xmipp and the process to link
 
 .. note::
 
-   This `list of libraries <https://i2pc.github.io/docs/Installation/Requirements/index.html#dependencies-automatically-installed-via-scipion>`_ are required in standlone installation and you can install it in the Scipion eviroment if you consider
+   This `list of libraries <https://i2pc.github.io/docs/Installation/Requirements/index.html#dependencies-automatically-installed-via-scipion>`_ are required in standlone installation and you can install it in the Scipion eviroment if you consider or in the system
 
 Installation
 """"""""""""""""""
