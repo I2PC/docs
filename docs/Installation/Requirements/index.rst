@@ -83,10 +83,7 @@ Ubuntu/Debian
 
 .. code-block:: bash
 
-   sudo apt install -y gcc g++ cmake git \
-       libfftw3-dev libopenmpi-dev libhdf5-dev \
-       libtiff5-dev libsqlite3-dev libjpeg-dev \
-       python3-dev python3-numpy default-jdk zlib1g-dev
+   sudo apt install -y gcc g++ cmake git libfftw3-dev libopenmpi-dev libhdf5-dev libtiff5-dev libsqlite3-dev libjpeg-dev python3-dev python3-numpy default-jdk zlib1g-dev
 
 CentOS/RHEL
 """""""""""
@@ -112,10 +109,7 @@ Install dependencies with:
 
 .. code-block:: bash
 
-   yum install -y gcc gcc-c++ cmake git \
-       fftw-devel openmpi-devel hdf5-devel \
-       libtiff-devel sqlite-devel libjpeg-turbo-devel \
-       python3-devel python3-numpy java-11-openjdk-devel zlib-devel
+   yum install -y gcc gcc-c++ cmake git fftw-devel openmpi-devel hdf5-devel libtiff-devel sqlite-devel libjpeg-turbo-devel python3-devel python3-numpy java-11-openjdk-devel zlib-devel
 
 Final notes
 ^^^^^^^^^^^
