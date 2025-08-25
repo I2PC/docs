@@ -35,17 +35,10 @@ SARS-CoV-2 spike
   - `XmippProtDeepVolPostProc (EMhancer)`
 
 
-.. container:: images-inline
-
-   .. figure:: /_static/images/spike_2.png
-      :alt: micrographs view
-      :width: 300
-      :align: left
-
-   .. figure:: /_static/images/spike.png
-      :alt: spike view
-      :width: 300
-      :align: left
+.. figure:: /_static/images/spike.png
+  :alt: spike view
+  :width: 300
+  :align: left
 
 CLP-C1  (Mycobacterium tuberculosis)
 ----------------------------------------------------
@@ -66,10 +59,15 @@ CLP-C1  (Mycobacterium tuberculosis)
   - `XmippProtDeepVolPostProc (EMhancer)`
 
 
-.. figure:: /_static/images/ClpC1.png
-   :alt: A, cryo-EM map of the apo MtbClpC1 hexamer bound to a substrate peptide in top
-   :width: 600
+.. figure:: /_static/images/mic.png
+  :alt: micrographs view
+  :width: 300
+  :align: left
 
+.. figure:: /_static/images/ClpC1.png
+  :alt: A, cryo-EM map of the apo MtbClpC1 hexamer bound to a substrate peptide in top
+  :width: 300
+  :align: left
 
 HER2-TZB 
 --------------------
