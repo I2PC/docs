@@ -13,12 +13,12 @@ SARS-CoV-2 spike
 
 .. admonition:: Project Summary
 
-   - **Project**: *Structure of the drug target ClpC1 unfoldase in action provides insights on antibiotic mechanism of action.*
+   - **Project**: *Continuous flexibility analysis of SARS-CoV-2 spike prefusion structures*
    - **Sample**: *SARS-CoV-2 spike*
    - **EMDB ID**: *EMD-11328, EMD-11336, EMD-11337, EMD-11341*
    - **Final Resolution**: *2.96 A˚*
    - **Xmipp Version**: *3.20.07 - Boreas*
-   - **Publication** `Melero R, Sorzano COS, Foster B, Vilas JL, Martínez M, Marabini R, Ramírez-Aportela E, Sanchez-Garcia R, Herreros D, Del Caño L, Losana P, Fonseca-Reyna YC, Conesa P, Wrapp D, Chacon P, McLellan JS, Tagare HD, Carazo JM. Continuous flexibility analysis of SARS-CoV-2 spike prefusion structures. IUCrJ. 2020 Sep 29;7(Pt 6):1059–69. doi: 10.1107/S2052252520012725. Epub ahead of print. PMID: 33063791; PMCID: PMC7553147. <https://europepmc.org/article/MED/36208775>`_ 
+   - **Publication** `Melero R, Sorzano COS, Foster B, Vilas JL, Martínez M, Marabini R, Ramírez-Aportela E, Sanchez-Garcia R, Herreros D, Del Caño L, Losana P, Fonseca-Reyna YC, Conesa P, Wrapp D, Chacon P, McLellan JS, Tagare HD, Carazo JM. Continuous flexibility analysis of SARS-CoV-2 spike prefusion structures. IUCrJ. 2020 Sep 29;7(Pt 6):1059–69. doi: 10.1107/S2052252520012725. Epub ahead of print. PMID: 33063791; PMCID: PMC7553147. <https://pmc.ncbi.nlm.nih.gov/articles/PMC7553147/>`_ 
 
 
 .. rubric:: Protocols Used
@@ -43,7 +43,7 @@ CLP-C1  (Mycobacterium tuberculosis)
 ----------------------------------------------------
 .. admonition:: Project Summary
 
-   - **Project**: *Structure of the drug target ClpC1 unfoldase in action provides insights on antibiotic mechanism of action *
+   - **Project**: *Structure of the drug target ClpC1 unfoldase in action provides insights on antibiotic mechanism of action*
    - **Sample**: *ClpC1*
    - **EMDB ID**: *EMD-15240, EMD-15242, EMD-15243, EMD-15241*
    - **Final Resolution**: *2.96 A˚*
