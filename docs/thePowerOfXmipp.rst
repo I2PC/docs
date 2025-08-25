@@ -8,11 +8,12 @@ Xmipp is a key software suite in the image processing workflow for cryo-electron
 
 This page highlights the relevance of Xmipp through three concrete examples: **SARS-CoV-2 spike**,  **ClpC1** and **HER2-TZB**. In all cases, Xmipp protocols played a critical role in various stages of data processing, from preprocessing and particle selection to final 3D refinement and validation.
 
-Project: SARS-CoV-2 spike
+SARS-CoV-2 spike
 ------------------------------
 
 .. admonition:: Project Summary
 
+   - **Project**: *Structure of the drug target ClpC1 unfoldase in action provides insights on antibiotic mechanism of action.*
    - **Sample**: *SARS-CoV-2 spike*
    - **EMDB ID**: *EMD-11328, EMD-11336, EMD-11337, EMD-11341*
    - **Final Resolution**: *2.96 A˚*
@@ -38,10 +39,11 @@ Project: SARS-CoV-2 spike
    :alt: spike view
    :width: 300
 
-Project: CLP-C1  (Mycobacterium tuberculosis)
+CLP-C1  (Mycobacterium tuberculosis)
 ----------------------------------------------------
 .. admonition:: Project Summary
 
+   - **Project**: *Structure of the drug target ClpC1 unfoldase in action provides insights on antibiotic mechanism of action *
    - **Sample**: *ClpC1*
    - **EMDB ID**: *EMD-15240, EMD-15242, EMD-15243, EMD-15241*
    - **Final Resolution**: *2.96 A˚*
@@ -61,11 +63,12 @@ Project: CLP-C1  (Mycobacterium tuberculosis)
    :width: 600
 
 
-Project: HER2-TZB 
+HER2-TZB 
 --------------------
 
 .. admonition:: Project Summary
 
+   - **Project**: *Structural analysis of HER2-trastuzumab complex reveals receptor conformational adaptation*
    - **Sample**: *HER2-TZB (HER2-trastuzumab)*
    - **EMDB ID**: *EMD-52999*
    - **Final Resolution**: *3.77 A˚*
