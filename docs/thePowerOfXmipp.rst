@@ -64,7 +64,7 @@ CLP-C1  (Mycobacterium tuberculosis)
 
 .. figure:: /_static/images/ClpC1.png
   :alt: A, cryo-EM map of the apo MtbClpC1 hexamer bound to a substrate peptide in top
-  :width: 600
+  :width: 700
 
 
 HER2-TZB 
