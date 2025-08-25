@@ -99,6 +99,13 @@ Project: HER2-TZB
 - **Model Integration**:
   - `XmippProtConvertPdb`
 
+.. figure:: /_static/images/Her2-TZB_1.png
+   :alt: A, cryo-EM map of the apo MtbClpC1 hexamer bound to a substrate peptide in top
+   :width: 600
+
+.. figure:: /_static/images/Her2-TZB_2.png
+   :alt: A, cryo-EM map of the apo MtbClpC1 hexamer bound to a substrate peptide in top
+   :width: 600
 
 Conclusion
 ------------------------------
