@@ -45,7 +45,7 @@ Project: CLP-C1  (Mycobacterium tuberculosis)
    - **Sample**: *ClpC1*
    - **EMDB ID**: *EMD-15240, EMD-15242, EMD-15243, EMD-15241*
    - **Final Resolution**: *2.96 A˚*
-   - **Xmipp Version**: *3.22.04 - Gaia (Mainly) *
+   - **Xmipp Version**: * 3.22.04 - Gaia (Mainly) *
    - **Publication** `Weinhäupl K, Gragera M, Bueno-Carrasco MT, et al. Structure of the drug target ClpC1 unfoldase in action provides insights on antibiotic mechanism of action. The Journal of Biological Chemistry. 2022 Nov;298(11):102553. DOI: 10.1016/j.jbc.2022.102553. PMID: 36208775; PMCID: PMC9661721 <https://pubmed.ncbi.nlm.nih.gov/36208775/>`_
 
 .. rubric:: Protocols Used
@@ -69,7 +69,7 @@ Project: HER2-TZB
    - **Sample**: * HER2-TZB (HER2-trastuzumab) *
    - **EMDB ID**: * EMD-52999 *
    - **Final Resolution**: * 3.77 A˚*
-   - **Xmipp Version**: * 3.24.06 - Oceanus (Mainly)*
+   - **Xmipp Version**: * 3.24.06 - Oceanus (Mainly) *
    - **Publication**: `Santiago Vacca  and Marcos Gragera  and Alejandro Buschiazzo  and David Herreros  and James M. Krieger  and Santiago Bonn-Garcia  and Roberto Melero  and Carlos OS. Sorzano  and Jose M. Carazo  and Ohad Medalia  and Andreas Plückthun  <https://www.science.org/doi/full/10.1126/sciadv.adu9945>`_
 
 .. rubric:: Protocols Used
