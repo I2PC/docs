@@ -70,7 +70,7 @@ Project: HER2-TZB
    - **EMDB ID**: *[To be completed]*
    - **Final Resolution**: *[To be completed]*
    - **Xmipp Version**: *[To be completed]*
-   - **Publication**:
+   - **Publication**: `Santiago Vacca  and Marcos Gragera  and Alejandro Buschiazzo  and David Herreros  and James M. Krieger  and Santiago Bonn-Garcia  and Roberto Melero  and Carlos OS. Sorzano  and Jose M. Carazo  and Ohad Medalia  and Andreas Plückthun  <https://www.science.org/doi/full/10.1126/sciadv.adu9945>`_
 
 .. rubric:: Protocols Used
 
