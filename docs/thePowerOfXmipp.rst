@@ -104,11 +104,11 @@ HER2-TZB
 
 .. figure:: /_static/images/Her2-TZB_1.png
    :alt: A, cryo-EM map of the apo MtbClpC1 hexamer bound to a substrate peptide in top
-   :width: 600
+   :width: 400
 
 .. figure:: /_static/images/Her2-TZB_2.png
    :alt: A, cryo-EM map of the apo MtbClpC1 hexamer bound to a substrate peptide in top
-   :width: 600
+   :width: 700
 
 Conclusion
 ------------------------------
