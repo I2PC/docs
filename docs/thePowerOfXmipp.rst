@@ -35,9 +35,17 @@ SARS-CoV-2 spike
   - `XmippProtDeepVolPostProc (EMhancer)`
 
 
-.. figure:: /_static/images/spike.png
-   :alt: spike view
-   :width: 300
+.. container:: images-inline
+
+   .. figure:: /_static/images/spike_2.png
+      :alt: micrographs view
+      :width: 300
+      :align: left
+
+   .. figure:: /_static/images/spike.png
+      :alt: spike view
+      :width: 300
+      :align: left
 
 CLP-C1  (Mycobacterium tuberculosis)
 ----------------------------------------------------
