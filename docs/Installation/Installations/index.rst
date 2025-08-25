@@ -17,7 +17,7 @@ This guide explains the standalone installation of Xmipp and the process to link
 
 .. note::
 
-   This `list of libraries <https://i2pc.github.io/docs/Installation/Requirements/index.html#dependencies>`_ are required for Xmipp.
+   This `list of libraries <https://i2pc.github.io/docs/Installation/Requirements/index.html#dependencies>`_ are required for Xmipp, please install it before continue the installation steps
 
 Installation
 """"""""""""""""""
