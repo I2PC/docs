@@ -37,7 +37,7 @@ SARS-CoV-2 spike
 
 .. figure:: /_static/images/spike.png
   :alt: spike view
-  :width: 300
+  :width: 400
 
 CLP-C1  (Mycobacterium tuberculosis)
 ----------------------------------------------------
