@@ -173,8 +173,14 @@ d3.json("protocolsInfo.json").then(data => {
     .force("center", d3.forceCenter(window.innerWidth/2, window.innerHeight/2))
     .force("collide", d3.forceCollide().radius(d=>d.type==="protocol"?12:25))
     .force("x", d3.forceX(window.innerWidth/2).strength(0.01))
-    .force("y", d3.forceY(window.innerHeight/2).strength(0.01));
-
+    .force("y", d3.forceY(window.innerHeight/2).strength(0.01))
+    .force("x", d3.forceX(d => {
+        if(d.type==="lvl1") return window.innerWidth/2;
+        if(d.type==="lvl2") return window.innerWidth/2 + 100;
+        if(d.type==="lvl3") return window.innerWidth/2 + 200;
+        return window.innerWidth/2;
+    }).strength(0.05));
+    
   simulation.on("tick",()=>{
     link.attr("x1",d=>d.source.x).attr("y1",d=>d.source.y)
         .attr("x2",d=>d.target.x).attr("y2",d=>d.target.y);
