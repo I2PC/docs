@@ -97,6 +97,10 @@ d3.json("protocolsInfo.json").then(data => {
   const g = svg.append("g");
   svg.call(d3.zoom().on("zoom", (event)=>{ g.attr("transform", event.transform); }));
 
+  // --- Ajuste del zoom inicial ---
+  const initialTransform = d3.zoomIdentity.translate(0, 0).scale(0.8);
+  svg.call(d3.zoom().transform, initialTransform);
+
   const tooltip = d3.select("#tooltip");
 
   const link = g.append("g")
@@ -180,7 +184,7 @@ d3.json("protocolsInfo.json").then(data => {
         if(d.type==="lvl3") return window.innerWidth/2 + 200;
         return window.innerWidth/2;
     }).strength(0.05));
-    
+
   simulation.on("tick",()=>{
     link.attr("x1",d=>d.source.x).attr("y1",d=>d.source.y)
         .attr("x2",d=>d.target.x).attr("y2",d=>d.target.y);
