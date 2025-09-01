@@ -67,7 +67,11 @@ d3.json("protocolsInfo.json").then(data => {
       const lvl1 = tags[0], lvl2 = tags[1], lvl3 = tags[2];
 
       if (!level1Set.has(lvl1)) { nodes.push({id:`lvl1-${lvl1}`, type:"lvl1", nombre:lvl1}); level1Set.add(lvl1); }
-
+      if (lvl2 && !level2Set.has(lvl1+"-"+lvl2)) {
+        nodes.push({id:`lvl2-${lvl1}-${lvl2}`, type:"lvl2", nombre:lvl2});
+        links.push({source:`lvl1-${lvl1}`, target:`lvl2-${lvl1}-${lvl2}`});
+        level2Set.add(lvl1+"-"+lvl2);
+      }
       if (lvl3 && !level3Set.has(lvl1+"-"+lvl2+"-"+lvl3)) {
         nodes.push({id:`lvl3-${lvl1}-${lvl2}-${lvl3}`, type:"lvl3", nombre:lvl3});
         links.push({source:`lvl2-${lvl1}-${lvl2}`, target:`lvl3-${lvl1}-${lvl2}-${lvl3}`});
