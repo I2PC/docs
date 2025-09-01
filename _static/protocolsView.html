@@ -27,32 +27,18 @@
       left: 10px;
       background: rgba(255,255,255,0.9);
       border: 1px solid #ccc;
-      padding: 12px;
+      padding: 10px;
       border-radius: 6px;
       font-size: 12px;
       max-height: 90vh;
       overflow-y: auto;
       z-index: 10;
     }
-    .legend button {
-      margin-top: 8px;
-      padding: 6px 12px;
-      font-size: 12px;
-      background: #eee;
-      border: 1px solid #aaa;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .legend button:hover { background: #ddd; }
     text { pointer-events: none; user-select: none; }
   </style>
 </head>
 <body>
-
-<div id="graph"></div>
-<div id="tooltip" class="tooltip"></div>
-
-<div id="legend" class="legend">
+<div class="legend">
   <strong>Instructions:</strong>
   <ul style="margin:5px 0 0 15px; padding:0;">
     <li>Use the mouse to <strong>zoom</strong> and move the graph.</li>
@@ -60,8 +46,10 @@
     <li><strong>Click</strong> on a node to highlight its connections.</li>
     <li><strong>Click and drag</strong> the mouse to move around the map.</li>
   </ul>
-  <button id="resetBtn">🔄 Reset diagram</button>
 </div>
+
+<div id="graph"></div>
+<div id="tooltip" class="tooltip"></div>
 
 <script>
 d3.json("protocolsInfo.json").then(data => {
@@ -123,19 +111,30 @@ d3.json("protocolsInfo.json").then(data => {
     .attr("fill", d=>color(d.type))
     .call(d3.drag().on("start", dragstarted).on("drag", dragged).on("end", dragended));
 
-  const labelsProto = g.append("g").selectAll("text")
-    .data(graph.nodes.filter(d => d.type === "protocol"))
+  // Labels para todos los nodos
+  const labels = g.append("g").selectAll("text")
+    .data(graph.nodes)
     .join("text")
     .text(d => d.nombre)
-    .attr("font-size", "7px")
-    .attr("fill", "#444")
+    .attr("font-size", d => d.type==="lvl1"?15 : d.type==="lvl2"?12 : d.type==="lvl3"?10:7)
+    .attr("fill", d => d.type==="protocol"?"#444":"#000")
     .attr("text-anchor", "start")
     .attr("dy", "0.35em");
 
   // Tooltips
   node.on("mouseover", (event, d) => {
     tooltip.transition().duration(200).style("opacity", 0.95);
-    tooltip.html(d.type==="protocol"? `<strong>${d.nombre}</strong><br/><br/>${d.descripcion}` : d.nombre);
+    if (d.type === "protocol") {
+      tooltip.html(`<strong>${d.nombre}</strong><br/><br/>${d.descripcion}`);
+    } else if (d.type === "lvl3") {
+      const childProtocols = graph.links
+        .filter(l => l.source.id === d.id)
+        .map(l => graph.nodes.find(n => n.id === l.target.id && n.type==="protocol"))
+        .filter(n => n).map(n => n.nombre);
+      tooltip.html(`${d.nombre}<br/><br><strong>Protocols:</strong><br>${childProtocols.join("<br>")}`);
+    } else {
+      tooltip.html(`${d.nombre}`);
+    }
     tooltip.style("left", (event.pageX+15)+"px").style("top",(event.pageY+15)+"px");
   }).on("mousemove", (event) => {
     tooltip.style("left", (event.pageX+15)+"px").style("top",(event.pageY+15)+"px");
@@ -146,10 +145,12 @@ d3.json("protocolsInfo.json").then(data => {
     event.stopPropagation();
     link.classed("highlight", false).classed("dimmed", true);
     node.classed("dimmed", true);
+
     function getDescendants(nodeId){
       const children = graph.links.filter(l=>l.source.id===nodeId).map(l=>l.target.id);
       return children.concat(children.flatMap(getDescendants));
     }
+
     const descendants = getDescendants(d.id);
     link.filter(l=>descendants.includes(l.target.id)).classed("highlight",true).classed("dimmed",false);
     node.filter(n=>descendants.includes(n.id)||n.id===d.id).classed("dimmed",false);
@@ -177,18 +178,17 @@ d3.json("protocolsInfo.json").then(data => {
     link.attr("x1",d=>d.source.x).attr("y1",d=>d.source.y)
         .attr("x2",d=>d.target.x).attr("y2",d=>d.target.y);
     node.attr("cx",d=>d.x).attr("cy",d=>d.y);
-    labelsProto.attr("x",d=>d.x+8).attr("y",d=>d.y);
+    labels.attr("x", d => {
+      if(d.type==="lvl1") return d.x + 22;
+      else if(d.type==="lvl2") return d.x + 18;
+      else if(d.type==="lvl3") return d.x + 14;
+      else return d.x + 8;
+    }).attr("y", d => d.y);
   });
 
   function dragstarted(event,d){if(!event.active) simulation.alphaTarget(0.3).restart(); d.fx=d.x; d.fy=d.y;}
   function dragged(event,d){d.fx=event.x; d.fy=event.y;}
   function dragended(event,d){if(!event.active) simulation.alphaTarget(0); d.fx=null; d.fy=null;}
-
-  // Reset button
-  d3.select("#resetBtn").on("click", () => {
-    simulation.alpha(1).restart();
-    svg.transition().duration(750).call(d3.zoom().transform, d3.zoomIdentity);
-  });
 
 }).catch(error => { console.error("Error al cargar JSON:", error); });
 </script>
