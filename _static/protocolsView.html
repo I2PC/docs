@@ -74,8 +74,18 @@
 
 <div id="graph"></div>
 <div id="tooltip" class="tooltip"></div>
-<div id="legend" class="legend"></div>
-
+<div id="legend" class="legend" style="margin-top:10px;">
+  <button id="resetBtn" style="
+    margin-top: 8px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #f0f0f0;
+    cursor: pointer;
+  ">
+    🔄 Reset diagram
+  </button>
+</div>
 <script>
 d3.json("protocolsInfo.json").then(data => {
 
@@ -262,14 +272,14 @@ d3.json("protocolsInfo.json").then(data => {
     entry.append("span").style("background", color(d.type));
     entry.append("text").text(d.nombre);
   });
-    // Botón para reiniciar diagrama
-  legend.append("div")
-    .append("button")
-    .text("Reiniciar diagrama")
-    .on("click", () => {
-      // Reiniciar fuerzas y recolocar
-      simulation.alpha(1).restart();
-    });
+  // Botón de reinicio
+  d3.select("#resetBtn").on("click", () => {
+    simulation.alpha(1).restart(); // reinicia la simulación
+    svg.transition().duration(750).call(
+      d3.zoom().transform,
+      d3.zoomIdentity // zoom/pan al estado inicial
+    );
+});
 
 }).catch(error => {
   console.error("Error al cargar el JSON:", error);
