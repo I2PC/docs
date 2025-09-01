@@ -37,10 +37,15 @@
   border: 1px solid #aaa;
   border-radius: 4px;
   cursor: pointer;
-}
-.legend button:hover {
-  background: #ddd;
-}
+  }
+  .legend button:hover {
+    background: #ddd;
+  }
+  text {
+    pointer-events: none;
+    user-select: none; /* evita que se pueda seleccionar el texto */
+  }
+
 
   </style>
 </head>
