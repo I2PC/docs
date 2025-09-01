@@ -132,18 +132,21 @@ d3.json("protocolsInfo.json").then(data => {
 node.on("mouseover", (event, d) => {
   tooltip.transition().duration(200).style("opacity", 0.95);
 
-  if(d.type === "protocol") {
-    // Nodo protocolo: mostrar su descripción
+  if (d.type === "protocol") {
+    // Nodo protocolo → mostrar descripción
     tooltip.html(`<strong>${d.nombre}</strong><br/><br/>${d.descripcion}`);
-  } else {
-    // Nodo de nivel 1, 2 o 3: mostrar protocolos hijos
+  } else if (d.type === "lvl3") {
+    // Nodo nivel 3 → mostrar protocolos hijos
     const childProtocols = graph.links
       .filter(link => link.source.id === d.id)   // todos los links desde este nodo
       .map(link => graph.nodes.find(n => n.id === link.target.id && n.type === "protocol"))
-      .filter(n => n)                             // descartar nulls si hay
+      .filter(n => n)                            // quitar nulls
       .map(n => n.nombre);
 
-    tooltip.html(`<strong>Protocols:</strong><br>${childProtocols.join("<br>")}`);
+    tooltip.html(`<strong>${d.type}:</strong> ${d.nombre}<br/><br/><strong>Protocols:</strong><br>${childProtocols.join("<br>")}`);
+  } else {
+    // Nivel 1 y nivel 2 → solo mostrar el nombre
+    tooltip.html(`<strong>${d.type}:</strong> ${d.nombre}`);
   }
 
   tooltip.style("left", (event.pageX + 15) + "px")
@@ -154,6 +157,7 @@ node.on("mouseover", (event, d) => {
          .style("top", (event.pageY + 15) + "px");
 })
 .on("mouseout", () => tooltip.transition().duration(200).style("opacity", 0));
+
 
   const chargeForce = d3.forceManyBody()
     .strength(d => d.type==="lvl1"? -200 : d.type==="lvl2"? -50 : d.type==="lvl3"? -20 : -20);
