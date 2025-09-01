@@ -141,7 +141,7 @@ d3.json("protocolsInfo.json").then(data => {
     .attr("fill", "#444")
     .attr("text-anchor", "start")
     .attr("dy", "0.35em");
-    
+
   // --- Tooltips ---
   node.on("mouseover", (event, d) => {
     tooltip.transition().duration(200).style("opacity", 0.95);
@@ -216,12 +216,12 @@ d3.json("protocolsInfo.json").then(data => {
   simulation.on("tick",()=>{
     link.attr("x1",d=>d.source.x).attr("y1",d=>d.source.y)
         .attr("x2",d=>d.target.x).attr("y2",d=>d.target.y);
-
     node.attr("cx",d=>d.x).attr("cy",d=>d.y);
 
     labels1.attr("x", d => d.x + 22).attr("y", d => d.y);
     labels2.attr("x", d => d.x + 18).attr("y", d => d.y);
     labels3.attr("x", d => d.x + 14).attr("y", d => d.y);
+    labelsProto.attr("x", d => d.x + 8).attr("y", d => d.y);
   });
 
   function dragstarted(event,d){if(!event.active) simulation.alphaTarget(0.3).restart(); d.fx=d.x; d.fy=d.y;}
