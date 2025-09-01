@@ -116,7 +116,7 @@ d3.json("protocolsInfo.json").then(data => {
     .data(graph.nodes)
     .join("text")
     .text(d => d.nombre)
-    .attr("font-size", d => d.type==="lvl1"?16 : d.type==="lvl2"?12 : d.type==="lvl3"?10:7)
+    .attr("font-size", d => d.type==="lvl1"?18 : d.type==="lvl2"?12 : d.type==="lvl3"?10:7)
     .attr("fill", d => d.type==="protocol"?"#444":"#000")
     .attr("font-weight", d => d.type==="lvl1"?"bold":"normal")  // ← Nivel 1 en negrita
     .attr("text-anchor", "start")
