@@ -106,7 +106,7 @@ d3.json("protocolsInfo.json").then(data => {
   const tooltip = d3.select("#tooltip");
 
   const link = g.append("g")
-    .attr("stroke","#aaa").attr("stroke-opacity",0.6)
+    .attr("stroke","black").attr("stroke-opacity",0.6)
     .selectAll("line").data(graph.links)
     .join("line").attr("stroke-width",1);
 
