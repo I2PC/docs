@@ -28,6 +28,20 @@
     .dimmed {
       opacity: 0.2;
     }
+
+    .legend button {
+  margin-top: 8px;
+  padding: 4px 8px;
+  font-size: 12px;
+  background: #eee;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.legend button:hover {
+  background: #ddd;
+}
+
   </style>
 </head>
 <body>
@@ -243,6 +257,14 @@ d3.json("protocolsInfo.json").then(data => {
     entry.append("span").style("background", color(d.type));
     entry.append("text").text(d.nombre);
   });
+    // Botón para reiniciar diagrama
+  legend.append("div")
+    .append("button")
+    .text("Reiniciar diagrama")
+    .on("click", () => {
+      // Reiniciar fuerzas y recolocar
+      simulation.alpha(1).restart();
+    });
 
 }).catch(error => {
   console.error("Error al cargar el JSON:", error);
