@@ -132,6 +132,16 @@ d3.json("protocolsInfo.json").then(data => {
     .text(d=>d.nombre).attr("font-size","10px").attr("fill","#333")
     .attr("text-anchor","start").attr("dy","0.35em");
 
+      // Etiquetas para protocolos
+  const labelsProto = g.append("g").selectAll("text")
+    .data(graph.nodes.filter(d => d.type === "protocol"))
+    .join("text")
+    .text(d => d.nombre)
+    .attr("font-size", "9px")
+    .attr("fill", "#444")
+    .attr("text-anchor", "start")
+    .attr("dy", "0.35em");
+    
   // --- Tooltips ---
   node.on("mouseover", (event, d) => {
     tooltip.transition().duration(200).style("opacity", 0.95);
