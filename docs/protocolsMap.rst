@@ -3,7 +3,7 @@ Protocols Map
 
 .. raw:: html
 
-   <iframe src="_static/protocolsView.html" width="100%" height="800px" style="border:none;">
+   <iframe src="../_static/protocolsView.html" width="100%" height="800px" style="border:none;">
    </iframe>
 
 
