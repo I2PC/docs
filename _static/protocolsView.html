@@ -19,34 +19,15 @@
       pointer-events: none;
       opacity: 0;
     }
-
-    /* Estilos para resaltado */
-    .highlight {
-      stroke: orange !important;
-      stroke-width: 3px;
-    }
-    .dimmed {
-      opacity: 0.2;
-    }
-
-    .legend button {
-  margin-top: 8px;
-  padding: 4px 8px;
-  font-size: 12px;
-  background: #eee;
-  border: 1px solid #aaa;
-  border-radius: 4px;
-  cursor: pointer;
-  }
-  .legend button:hover {
-    background: #ddd;
-  }
-  text {
-    pointer-events: none;
-    user-select: none; /* evita que se pueda seleccionar el texto */
-  }
-
-
+    .highlight { stroke: black !important; stroke-width: 3px; }
+    .dimmed { opacity: 0.2; }
+    .legend { position: absolute; top: 10px; left: 10px; background: rgba(255,255,255,0.9);
+              border: 1px solid #ccc; padding: 8px; border-radius: 6px; font-size: 12px;
+              max-height: 90vh; overflow-y: auto; pointer-events: auto; }
+    .legend button { margin-top: 8px; padding: 4px 8px; font-size: 12px; background: #eee;
+                     border: 1px solid #aaa; border-radius: 4px; cursor: pointer; }
+    .legend button:hover { background: #ddd; }
+    text { pointer-events: none; user-select: none; }
   </style>
 </head>
 <body>
@@ -61,10 +42,9 @@
     font-size: 11px;
     max-width: 300px;
     box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
-    z-index: 10;
-">
+    z-index: 10;">
   <strong>Instructions:</strong>
-  <ul style="margin: 5px 0 0 15px; padding:0;">
+  <ul style="margin:5px 0 0 15px; padding:0;">
     <li>Use the mouse to <strong>zoom</strong> and move the graph.</li>
     <li><strong>Hover</strong> over a protocol node to see more information.</li>
     <li><strong>Click</strong> on a node to highlight its connections.</li>
@@ -74,18 +54,8 @@
 
 <div id="graph"></div>
 <div id="tooltip" class="tooltip"></div>
-<div id="legend" class="legend" style="margin-top:10px;">
-  <button id="resetBtn" style="
-    margin-top: 8px;
-    padding: 5px 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    background: #f0f0f0;
-    cursor: pointer;
-  ">
-    🔄 Reset diagram
-  </button>
-</div>
+<div id="legend" class="legend"></div>
+
 <script>
 d3.json("protocolsInfo.json").then(data => {
 
@@ -128,7 +98,6 @@ d3.json("protocolsInfo.json").then(data => {
 
   const svg = d3.select("#graph").append("svg")
     .attr("width","100%").attr("height","100%");
-
   const g = svg.append("g");
   svg.call(d3.zoom().on("zoom", (event)=>{ g.attr("transform", event.transform); }));
 
@@ -146,6 +115,7 @@ d3.json("protocolsInfo.json").then(data => {
     .attr("fill", d=>color(d.type))
     .call(d3.drag().on("start", dragstarted).on("drag", dragged).on("end", dragended));
 
+  // Labels
   const labels1 = g.append("g").selectAll("text")
     .data(graph.nodes.filter(d=>d.type==="lvl1")).join("text")
     .text(d=>d.nombre).attr("font-size","15px").attr("font-weight","bold").attr("fill","#000")
@@ -161,7 +131,6 @@ d3.json("protocolsInfo.json").then(data => {
     .text(d=>d.nombre).attr("font-size","10px").attr("fill","#333")
     .attr("text-anchor","start").attr("dy","0.35em");
 
-      // Etiquetas para protocolos
   const labelsProto = g.append("g").selectAll("text")
     .data(graph.nodes.filter(d => d.type === "protocol"))
     .join("text")
@@ -171,7 +140,7 @@ d3.json("protocolsInfo.json").then(data => {
     .attr("text-anchor", "start")
     .attr("dy", "0.35em");
 
-  // --- Tooltips ---
+  // Tooltips solo en protocolos y nivel3
   node.on("mouseover", (event, d) => {
     tooltip.transition().duration(200).style("opacity", 0.95);
 
@@ -184,7 +153,7 @@ d3.json("protocolsInfo.json").then(data => {
         .filter(n => n)
         .map(n => n.nombre);
 
-      tooltip.html(` ${d.nombre}<br/><br/><strong>Protocols:</strong><br>${childProtocols.join("<br>")}`);
+      tooltip.html(` ${d.nombre}<br/><br><strong>Protocols:</strong><br>${childProtocols.join("<br>")}`);
     } else {
       tooltip.html(` ${d.nombre}`);
     }
@@ -198,11 +167,9 @@ d3.json("protocolsInfo.json").then(data => {
   })
   .on("mouseout", () => tooltip.transition().duration(200).style("opacity", 0));
 
-  // --- Click para resaltar conexiones ---
+  // Click para resaltar conexiones
   node.on("click", (event, d) => {
     event.stopPropagation();
-
-    // Resetear estilos
     link.classed("highlight", false).classed("dimmed", true);
     node.classed("dimmed", true);
 
@@ -223,7 +190,6 @@ d3.json("protocolsInfo.json").then(data => {
         .classed("dimmed", false);
   });
 
-  // Click en fondo → limpiar
   svg.on("click", (event) => {
     if (event.target === svg.node()) {
       link.classed("highlight", false).classed("dimmed", false);
@@ -232,7 +198,7 @@ d3.json("protocolsInfo.json").then(data => {
   });
 
   const chargeForce = d3.forceManyBody()
-    .strength(d => d.type==="lvl1"? -200 : d.type==="lvl2"? -50 : d.type==="lvl3"? -20 : -20);
+    .strength(d => d.type==="lvl1"? -200 : d.type==="lvl2"? -50 : d.type==="lvl3"? -40 : -20);
 
   const simulation = d3.forceSimulation(graph.nodes)
     .force("link", d3.forceLink(graph.links).id(d=>d.id).distance(50))
@@ -257,8 +223,7 @@ d3.json("protocolsInfo.json").then(data => {
   function dragged(event,d){d.fx=event.x; d.fy=event.y;}
   function dragended(event,d){if(!event.active) simulation.alphaTarget(0); d.fx=null; d.fy=null;}
 
-  // Leyenda
-  const legend = d3.select("#legend");
+  // Leyenda con botón
   legend.append("strong").text("Level 1");
   graph.nodes.filter(d=>d.type==="lvl1").forEach(d=>{
     const entry = legend.append("div");
@@ -272,18 +237,21 @@ d3.json("protocolsInfo.json").then(data => {
     entry.append("span").style("background", color(d.type));
     entry.append("text").text(d.nombre);
   });
-  // Botón de reinicio
-  d3.select("#resetBtn").on("click", () => {
-    simulation.alpha(1).restart(); // reinicia la simulación
-    svg.transition().duration(750).call(
-      d3.zoom().transform,
-      d3.zoomIdentity // zoom/pan al estado inicial
-    );
-});
 
-}).catch(error => {
-  console.error("Error al cargar el JSON:", error);
-});
+  legend.append("div")
+    .style("margin-top", "8px")
+    .append("button")
+    .attr("id","resetBtn")
+    .text("🔄 Reset diagram")
+    .on("click", () => {
+      simulation.alpha(1).restart();
+      svg.transition().duration(750).call(
+        d3.zoom().transform,
+        d3.zoomIdentity
+      );
+    });
+
+}).catch(error => console.error("Error al cargar JSON:", error));
 </script>
 </body>
 </html>
