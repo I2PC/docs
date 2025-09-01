@@ -143,10 +143,10 @@ node.on("mouseover", (event, d) => {
       .filter(n => n)                            // quitar nulls
       .map(n => n.nombre);
 
-    tooltip.html(`<strong>${d.type}:</strong> ${d.nombre}<br/><br/><strong>Protocols:</strong><br>${childProtocols.join("<br>")}`);
+    tooltip.html(` ${d.nombre}<br/><br/><strong>Protocols:</strong><br>${childProtocols.join("<br>")}`);
   } else {
     // Nivel 1 y nivel 2 → solo mostrar el nombre
-    tooltip.html(`<strong>${d.type}:</strong> ${d.nombre}`);
+    tooltip.html(` ${d.nombre}`);
   }
 
   tooltip.style("left", (event.pageX + 15) + "px")
