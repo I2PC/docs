@@ -21,11 +21,28 @@
     }
     .highlight { stroke: black !important; stroke-width: 3px; }
     .dimmed { opacity: 0.2; }
-    .legend { position: absolute; top: 10px; left: 10px; background: rgba(255,255,255,0.9);
-              border: 1px solid #ccc; padding: 8px; border-radius: 6px; font-size: 12px;
-              max-height: 90vh; overflow-y: auto; pointer-events: auto; }
-    .legend button { margin-top: 8px; padding: 4px 8px; font-size: 12px; background: #eee;
-                     border: 1px solid #aaa; border-radius: 4px; cursor: pointer; }
+    .legend {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(255,255,255,0.9);
+      border: 1px solid #ccc;
+      padding: 8px;
+      border-radius: 6px;
+      font-size: 12px;
+      max-height: 90vh;
+      overflow-y: auto;
+      z-index: 10;
+    }
+    .legend button {
+      margin-top: 8px;
+      padding: 4px 8px;
+      font-size: 12px;
+      background: #eee;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      cursor: pointer;
+    }
     .legend button:hover { background: #ddd; }
     text { pointer-events: none; user-select: none; }
   </style>
@@ -44,7 +61,7 @@
     box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
     z-index: 10;">
   <strong>Instructions:</strong>
-  <ul style="margin:5px 0 0 15px; padding:0;">
+  <ul style="margin: 5px 0 0 15px; padding:0;">
     <li>Use the mouse to <strong>zoom</strong> and move the graph.</li>
     <li><strong>Hover</strong> over a protocol node to see more information.</li>
     <li><strong>Click</strong> on a node to highlight its connections.</li>
@@ -53,8 +70,12 @@
 </div>
 
 <div id="graph"></div>
+
 <div id="tooltip" class="tooltip"></div>
-<div id="legend" class="legend"></div>
+
+<div id="legend" class="legend">
+  <button id="resetBtn">🔄 Reset diagram</button>
+</div>
 
 <script>
 d3.json("protocolsInfo.json").then(data => {
@@ -98,6 +119,7 @@ d3.json("protocolsInfo.json").then(data => {
 
   const svg = d3.select("#graph").append("svg")
     .attr("width","100%").attr("height","100%");
+
   const g = svg.append("g");
   svg.call(d3.zoom().on("zoom", (event)=>{ g.attr("transform", event.transform); }));
 
@@ -140,65 +162,50 @@ d3.json("protocolsInfo.json").then(data => {
     .attr("text-anchor", "start")
     .attr("dy", "0.35em");
 
-  // Tooltips solo en protocolos y nivel3
+  // Tooltips
   node.on("mouseover", (event, d) => {
     tooltip.transition().duration(200).style("opacity", 0.95);
-
     if (d.type === "protocol") {
       tooltip.html(`<strong>${d.nombre}</strong><br/><br/>${d.descripcion}`);
     } else if (d.type === "lvl3") {
       const childProtocols = graph.links
-        .filter(link => link.source.id === d.id)
-        .map(link => graph.nodes.find(n => n.id === link.target.id && n.type === "protocol"))
-        .filter(n => n)
-        .map(n => n.nombre);
-
-      tooltip.html(` ${d.nombre}<br/><br><strong>Protocols:</strong><br>${childProtocols.join("<br>")}`);
+        .filter(l => l.source.id === d.id)
+        .map(l => graph.nodes.find(n => n.id === l.target.id && n.type==="protocol"))
+        .filter(n => n).map(n => n.nombre);
+      tooltip.html(`${d.nombre}<br/><br><strong>Protocols:</strong><br>${childProtocols.join("<br>")}`);
     } else {
-      tooltip.html(` ${d.nombre}`);
+      tooltip.html(`${d.nombre}`);
     }
+    tooltip.style("left", (event.pageX+15)+"px").style("top",(event.pageY+15)+"px");
+  }).on("mousemove", (event) => {
+    tooltip.style("left", (event.pageX+15)+"px").style("top",(event.pageY+15)+"px");
+  }).on("mouseout", () => tooltip.transition().duration(200).style("opacity",0));
 
-    tooltip.style("left", (event.pageX + 15) + "px")
-           .style("top", (event.pageY + 15) + "px");
-  })
-  .on("mousemove", (event) => {
-    tooltip.style("left", (event.pageX + 15) + "px")
-           .style("top", (event.pageY + 15) + "px");
-  })
-  .on("mouseout", () => tooltip.transition().duration(200).style("opacity", 0));
-
-  // Click para resaltar conexiones
-  node.on("click", (event, d) => {
+  // Click highlight
+  node.on("click", (event,d) => {
     event.stopPropagation();
     link.classed("highlight", false).classed("dimmed", true);
     node.classed("dimmed", true);
 
-    function getDescendants(nodeId) {
-      const children = graph.links
-        .filter(l => l.source.id === nodeId)
-        .map(l => l.target.id);
+    function getDescendants(nodeId){
+      const children = graph.links.filter(l=>l.source.id===nodeId).map(l=>l.target.id);
       return children.concat(children.flatMap(getDescendants));
     }
 
     const descendants = getDescendants(d.id);
-
-    link.filter(l => descendants.includes(l.target.id))
-        .classed("highlight", true)
-        .classed("dimmed", false);
-
-    node.filter(n => descendants.includes(n.id) || n.id === d.id)
-        .classed("dimmed", false);
+    link.filter(l=>descendants.includes(l.target.id)).classed("highlight",true).classed("dimmed",false);
+    node.filter(n=>descendants.includes(n.id)||n.id===d.id).classed("dimmed",false);
   });
 
-  svg.on("click", (event) => {
-    if (event.target === svg.node()) {
-      link.classed("highlight", false).classed("dimmed", false);
-      node.classed("dimmed", false);
+  svg.on("click", (event)=>{
+    if(event.target===svg.node()){
+      link.classed("highlight",false).classed("dimmed",false);
+      node.classed("dimmed",false);
     }
   });
 
   const chargeForce = d3.forceManyBody()
-    .strength(d => d.type==="lvl1"? -200 : d.type==="lvl2"? -50 : d.type==="lvl3"? -40 : -20);
+    .strength(d => d.type==="lvl1"? -200 : d.type==="lvl2"? -50 : d.type==="lvl3"? -20 : -20);
 
   const simulation = d3.forceSimulation(graph.nodes)
     .force("link", d3.forceLink(graph.links).id(d=>d.id).distance(50))
@@ -212,46 +219,44 @@ d3.json("protocolsInfo.json").then(data => {
     link.attr("x1",d=>d.source.x).attr("y1",d=>d.source.y)
         .attr("x2",d=>d.target.x).attr("y2",d=>d.target.y);
     node.attr("cx",d=>d.x).attr("cy",d=>d.y);
-
-    labels1.attr("x", d => d.x + 22).attr("y", d => d.y);
-    labels2.attr("x", d => d.x + 18).attr("y", d => d.y);
-    labels3.attr("x", d => d.x + 14).attr("y", d => d.y);
-    labelsProto.attr("x", d => d.x + 8).attr("y", d => d.y);
+    labels1.attr("x",d=>d.x+22).attr("y",d=>d.y);
+    labels2.attr("x",d=>d.x+18).attr("y",d=>d.y);
+    labels3.attr("x",d=>d.x+14).attr("y",d=>d.y);
+    labelsProto.attr("x",d=>d.x+8).attr("y",d=>d.y);
   });
 
   function dragstarted(event,d){if(!event.active) simulation.alphaTarget(0.3).restart(); d.fx=d.x; d.fy=d.y;}
   function dragged(event,d){d.fx=event.x; d.fy=event.y;}
   function dragended(event,d){if(!event.active) simulation.alphaTarget(0); d.fx=null; d.fy=null;}
 
-  // Leyenda con botón
+  // Legend entries
+  const legend = d3.select("#legend");
+
+  // Level 1
   legend.append("strong").text("Level 1");
   graph.nodes.filter(d=>d.type==="lvl1").forEach(d=>{
     const entry = legend.append("div");
-    entry.append("span").style("background", color(d.type));
+    entry.append("span").style("background", color(d.type))
+         .style("display","inline-block").style("width","12px").style("height","12px").style("margin-right","4px");
     entry.append("text").text(d.nombre);
   });
 
+  // Level 2
   legend.append("strong").text("Level 2");
   graph.nodes.filter(d=>d.type==="lvl2").forEach(d=>{
     const entry = legend.append("div");
-    entry.append("span").style("background", color(d.type));
+    entry.append("span").style("background", color(d.type))
+         .style("display","inline-block").style("width","12px").style("height","12px").style("margin-right","4px");
     entry.append("text").text(d.nombre);
   });
 
-  legend.append("div")
-    .style("margin-top", "8px")
-    .append("button")
-    .attr("id","resetBtn")
-    .text("🔄 Reset diagram")
-    .on("click", () => {
-      simulation.alpha(1).restart();
-      svg.transition().duration(750).call(
-        d3.zoom().transform,
-        d3.zoomIdentity
-      );
-    });
+  // Reset button
+  d3.select("#resetBtn").on("click", () => {
+    simulation.alpha(1).restart();
+    svg.transition().duration(750).call(d3.zoom().transform, d3.zoomIdentity);
+  });
 
-}).catch(error => console.error("Error al cargar JSON:", error));
+}).catch(error => { console.error("Error al cargar JSON:", error); });
 </script>
 </body>
 </html>
