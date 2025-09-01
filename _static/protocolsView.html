@@ -98,7 +98,7 @@ d3.json("protocolsInfo.json").then(data => {
   svg.call(d3.zoom().on("zoom", (event)=>{ g.attr("transform", event.transform); }));
 
   // --- Ajuste del zoom inicial ---
-  const initialTransform = d3.zoomIdentity.translate(0, 0).scale(0.8);
+  const initialTransform = d3.zoomIdentity.translate(0, 0).scale(0.7);
   svg.call(d3.zoom().transform, initialTransform);
 
   const tooltip = d3.select("#tooltip");
