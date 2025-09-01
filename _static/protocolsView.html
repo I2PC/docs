@@ -165,7 +165,7 @@ d3.json("protocolsInfo.json").then(data => {
   });
 
   const chargeForce = d3.forceManyBody()
-    .strength(d => d.type==="lvl1"? -180 : d.type==="lvl2"? -80 : d.type==="lvl3"? -40 : -40);
+    .strength(d => d.type==="lvl1"? -250 : d.type==="lvl2"? -120 : d.type==="lvl3"? -50 : -30);
 
   const simulation = d3.forceSimulation(graph.nodes)
     .force("link", d3.forceLink(graph.links).id(d=>d.id).distance(50))
