@@ -133,7 +133,7 @@ d3.json("protocolsInfo.json").then(data => {
 
   const labels1 = g.append("g").selectAll("text")
     .data(graph.nodes.filter(d=>d.type==="lvl1")).join("text")
-    .text(d=>d.nombre).attr("font-size","14px").attr("font-weight","bold").attr("fill","#000")
+    .text(d=>d.nombre).attr("font-size","15px").attr("font-weight","bold").attr("fill","#000")
     .attr("text-anchor","start").attr("dy","0.35em");
 
   const labels2 = g.append("g").selectAll("text")
@@ -151,7 +151,7 @@ d3.json("protocolsInfo.json").then(data => {
     .data(graph.nodes.filter(d => d.type === "protocol"))
     .join("text")
     .text(d => d.nombre)
-    .attr("font-size", "9px")
+    .attr("font-size", "7px")
     .attr("fill", "#444")
     .attr("text-anchor", "start")
     .attr("dy", "0.35em");
