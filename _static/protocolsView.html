@@ -38,12 +38,11 @@
     box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
     z-index: 10;
 ">
-  <strong>Instctions:</strong>
+  <strong>Instructions:</strong>
   <ul style="margin: 5px 0 0 15px; padding:0;">
-    Hover over a protocol node to see more information.
     <li>Use the mouse to <strong>zoom</strong> and move the graph.</li>
     <li><strong>Hover</strong> over a protocol node to see more information.</li>
-    <li></li><strong>Click and drag</strong> the mouse to move around the map.</li>
+    <li><strong>Click and drag</strong> the mouse to move around the map.</li>
   </ul>
 </div>
 
@@ -130,15 +129,31 @@ d3.json("protocolsInfo.json").then(data => {
     .text(d=>d.nombre).attr("font-size","10px").attr("fill","#333")
     .attr("text-anchor","start").attr("dy","0.35em");
 
-  node.on("mouseover",(event,d)=>{
-    tooltip.transition().duration(200).style("opacity",0.95);
-    if(d.type==="protocol"){
-      tooltip.html(`<strong>${d.nombre}</strong><br/><br/>${d.descripcion}`);
-    } else { tooltip.html(`<strong>${d.type}:</strong> ${d.nombre}`); }
-    tooltip.style("left",(event.pageX+15)+"px").style("top",(event.pageY+15)+"px");
-  }).on("mousemove",(event)=>{
-    tooltip.style("left",(event.pageX+15)+"px").style("top",(event.pageY+15)+"px");
-  }).on("mouseout",()=>tooltip.transition().duration(200).style("opacity",0));
+node.on("mouseover", (event, d) => {
+  tooltip.transition().duration(200).style("opacity", 0.95);
+
+  if(d.type === "protocol") {
+    // Nodo protocolo: mostrar su descripción
+    tooltip.html(`<strong>${d.nombre}</strong><br/><br/>${d.descripcion}`);
+  } else {
+    // Nodo de nivel 1, 2 o 3: mostrar protocolos hijos
+    const childProtocols = graph.links
+      .filter(link => link.source.id === d.id)   // todos los links desde este nodo
+      .map(link => graph.nodes.find(n => n.id === link.target.id && n.type === "protocol"))
+      .filter(n => n)                             // descartar nulls si hay
+      .map(n => n.nombre);
+
+    tooltip.html(`<strong>${d.type}:</strong> ${d.nombre}<br/><br/><strong>Protocols:</strong><br>${childProtocols.join("<br>")}`);
+  }
+
+  tooltip.style("left", (event.pageX + 15) + "px")
+         .style("top", (event.pageY + 15) + "px");
+})
+.on("mousemove", (event) => {
+  tooltip.style("left", (event.pageX + 15) + "px")
+         .style("top", (event.pageY + 15) + "px");
+})
+.on("mouseout", () => tooltip.transition().duration(200).style("opacity", 0));
 
   const chargeForce = d3.forceManyBody()
     .strength(d => d.type==="lvl1"? -200 : d.type==="lvl2"? -50 : d.type==="lvl3"? -20 : -20);
