@@ -37,7 +37,7 @@
     text { pointer-events: none; user-select: none; }
     .bold-label {
       font-weight: bold;
-      fill: black;
+      fill: black;  /* opcional, por si quieres resaltar más */
     }
   </style>
 </head>
@@ -182,11 +182,11 @@ node.on("click", (event, d) => {
     .filter(n => related.has(n.id))
     .classed("dimmed", false);
 
-  if (d.type === "protocol") {
-    d3.selectAll("text")
-      .filter(t => t.id === d.id)
-      .classed("bold-label", true);
-  }
+if (d.type === "protocol") {
+  label
+    .filter(t => t.id === d.id)
+    .classed("bold-label", true);
+}
 });
 
 
