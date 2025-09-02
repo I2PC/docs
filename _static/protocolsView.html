@@ -145,28 +145,40 @@ d3.json("protocolsInfo.json").then(data => {
     tooltip.style("left", (event.pageX+15)+"px").style("top",(event.pageY+15)+"px");
   }).on("mouseout", () => tooltip.transition().duration(200).style("opacity",0));
 
-  // Click highlight
-  node.on("click", (event,d) => {
-    event.stopPropagation();
-    link.classed("highlight", false).classed("dimmed", true);
-    node.classed("dimmed", true);
+// Click highlight
+node.on("click", (event, d) => {
+  event.stopPropagation();
+  link.classed("highlight", false).classed("dimmed", true);
+  node.classed("dimmed", true);
 
-    function getDescendants(nodeId){
-      const children = graph.links.filter(l=>l.source.id===nodeId).map(l=>l.target.id);
-      return children.concat(children.flatMap(getDescendants));
-    }
+  function getDescendants(nodeId) {
+    const children = graph.links
+      .filter(l => l.source.id === nodeId)
+      .map(l => l.target.id);
+    return children.concat(children.flatMap(getDescendants));
+  }
 
-    const descendants = getDescendants(d.id);
-    link.filter(l=>descendants.includes(l.target.id)).classed("highlight",true).classed("dimmed",false);
-    node.filter(n=>descendants.includes(n.id)||n.id===d.id).classed("dimmed",false);
-  });
+  function getAncestors(nodeId) {
+    const parents = graph.links
+      .filter(l => l.target.id === nodeId)
+      .map(l => l.source.id);
+    return parents.concat(parents.flatMap(getAncestors));
+  }
 
-  svg.on("click", (event)=>{
-    if(event.target===svg.node()){
-      link.classed("highlight",false).classed("dimmed",false);
-      node.classed("dimmed",false);
-    }
-  });
+  const descendants = getDescendants(d.id);
+  const ancestors = getAncestors(d.id);
+  const related = new Set([d.id, ...descendants, ...ancestors]);
+
+  link
+    .filter(l => related.has(l.source.id) && related.has(l.target.id))
+    .classed("highlight", true)
+    .classed("dimmed", false);
+
+  node
+    .filter(n => related.has(n.id))
+    .classed("dimmed", false);
+});
+
 
   const chargeForce = d3.forceManyBody()
     .strength(d => d.type==="lvl1"? -250 : d.type==="lvl2"? -120 : d.type==="lvl3"? -50 : -30);
