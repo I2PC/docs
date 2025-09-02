@@ -177,6 +177,12 @@ node.on("click", (event, d) => {
   node
     .filter(n => related.has(n.id))
     .classed("dimmed", false);
+
+  if (d.type === "protocol") {
+    d3.selectAll("text")
+      .filter(t => t.id === d.id)
+      .classed("bold-label", true);
+  }
 });
 
 
