@@ -149,6 +149,8 @@ d3.json("protocolsInfo.json").then(data => {
 // Click highlight
 node.on("click", (event, d) => {
   event.stopPropagation();
+
+  
   link.classed("highlight", false).classed("dimmed", true);
   node.classed("dimmed", true);
 
@@ -181,6 +183,12 @@ node.on("click", (event, d) => {
 
 });
 
+// Reset al hacer click en el fondo
+svg.on("click", () => {
+  link.classed("highlight", false).classed("dimmed", false);
+  node.classed("dimmed", false);
+  labels.classed("bold-label", false); // si también quieres limpiar negritas
+});
 
   const chargeForce = d3.forceManyBody()
     .strength(d => d.type==="lvl1"? -250 : d.type==="lvl2"? -120 : d.type==="lvl3"? -50 : -30);

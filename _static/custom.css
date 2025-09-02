@@ -31,7 +31,6 @@
     border-color: #F3CBCB;
   }
   
-  
   html.writer-html4 .rst-content dl:not(.docutils)>dt,
   html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.glossary):not(.simple)>dt {
     background: #F3CBCB;
