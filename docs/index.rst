@@ -22,9 +22,6 @@ the main repository is required and also the installation of the plugins.
 
 
 
-
-
-
 .. _Installation-docs:
 
 .. toctree::
