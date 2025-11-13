@@ -6,13 +6,13 @@ Creating a Xmipp Release (new insataller)
 
 Dependencies diagram
 ---------------------
-.. figure:: ../../_static/images/XmippDiagram.png
+.. figure:: ../../../_static/images/XmippDiagram.png
    :alt: Repositories dependencies diagram
    :width: 400
 
 
-🧬 Structural and Functional Protein Catalog for Xmipp releases  🧬
--------------------------------------------------------------------
+🧬  Protein Catalog for Xmipp releases naming 🧬
+----------------------------------------------------
 
 A
 ~
