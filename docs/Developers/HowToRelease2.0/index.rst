@@ -1,7 +1,7 @@
 
-=================================
-Creating an Xmipp Release
-=================================
+==========================================
+Creating a Xmipp Release (new insataller)
+==========================================
 
 
 Dependencies diagram
