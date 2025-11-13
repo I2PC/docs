@@ -6,10 +6,13 @@ Creating an Xmipp Release
 
 Dependencies diagram
 ---------------------
-.. figure:: ../_static/images/XmippDiagram.png
+.. figure:: ../../_static/images/XmippDiagram.png
    :alt: Repositories dependencies diagram
    :width: 400
 
+
+🧬 Structural and Functional Protein Catalog for Xmipp releases  🧬
+-------------------------------------------------------------------
 
 A
 ~
