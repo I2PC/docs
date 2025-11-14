@@ -18,14 +18,13 @@ xmipp3, xmippCore and xmippViz.
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 80
+   :widths: 20 100
 
    * - Repository
      - Steps to Create a New Version
    * - 📦 xmipp3-installer
-     - - Trigger GitHub manual action: ``Generate release (Pypi, tag, & GitHub Release)``  
-       - Uploads automatically to PyPI  
-         (https://pypi.org/project/xmipp3-installer/)  
+     - - Trigger GitHub manual action  
+       - Uploads automatically to `PyPI <https://pypi.org/project/xmipp3-installer/>`_  
        - Scipion installs it via ``xmipp3-installer==1.*``
    * - 📦 scipion-em-xmipp
      - - Update ``changelog.md``  
@@ -37,7 +36,7 @@ xmipp3, xmippCore and xmippViz.
          - ``version_number``  
          - ``release_date``  
          - ``version_name`` (only if major changes)  
-       - Update dependency versions for ``xmippCore`` / ``xmippViz`` if their **major** version changes  
+       - Update dependency versions for ``xmippCore`` / ``xmippViz`` if **major** version changes  
        - Update ``changelog.md``  
        - Trigger GitHub ``Release`` action → creates tag and release
    * - 📦 xmippCore
@@ -46,7 +45,7 @@ xmipp3, xmippCore and xmippViz.
    * - 📦 xmippViz
      - - Add new version and changes in ``changeLOG.md``  
        - Trigger GitHub ``Release`` action → creates new tag
-       
+
 
 xmipp3-installer 🗃️
 -------------------
