@@ -34,7 +34,7 @@ xmipp3, xmippCore and xmippViz.
    * - xmipp3
      - - Edit ``xmipp/version-info.json``: ``version_number``, ``release_date``  
        - Edit ``version_name`` (only if major changes)  
-       - Update dependency versions for ``xmippCore`` / ``xmippViz`` if **major** version changes  
+       - Update dependency versions for ``xmippCore`` / ``xmippViz`` if **major** changes  
        - Update ``changelog.md``  
        - Trigger GitHub ``Release`` action → creates tag and release
    * - xmippCore
