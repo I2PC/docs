@@ -16,8 +16,8 @@ xmipp3, xmippCore and xmippViz.
 xmipp3-installer 🗃️
 -------------------
 
-``xmipp3-installer`` packages the Xmipp binaries and is published on PyPI.
-It is automatically installed by the Scipion plugin ``scipion-em-xmipp``.
+xmipp3-installer packages the Xmipp binaries and is published on PyPI.
+It is automatically installed by the Scipion plugin scipion-em-xmipp.
 
 Release Generation
 ~~~~~~~~~~~~~~~~~~
@@ -32,7 +32,7 @@ Executing this action will:
 
 Installation Through Scipion
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The ``scipion-em-xmipp`` plugin installs it using its ``requirements.txt``:
+The scipion-em-xmipp plugin installs it using its ``requirements.txt``:
 
 .. code-block:: text
 
@@ -80,8 +80,8 @@ If the **major version of Xmipp** changes, update these fields:
 xmipp3 🗃️
 -----------
 
-Top-level Xmipp distribution, bundling submodules such as ``xmippCore`` and
-``xmippViz``.
+Top-level Xmipp distribution, bundling submodules such as xmippCore and
+xmippViz.
 
 Version Updates
 ~~~~~~~~~~~~~~~
@@ -97,7 +97,7 @@ The fields to modify are:
 - ``version_name`` (only when the **major version** changes. Use the `Protein cataloge for Xmipp releases name <https://i2pc.github.io/docs/Developers/HowToRelease2.0/index.html#protein-catalog-for-xmipp-releases-naming>`_)
 - ``release_date``
 
-If ``xmippCore`` or ``xmippViz`` increase their **major** version, update their
+If xmippCore or xmippViz increase their **major** version, update their
 version references inside ``version-info.json``.
 
 Release Procedure
