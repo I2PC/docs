@@ -4,7 +4,7 @@ Creating a Xmipp Release (new insataller)
 ==========================================
 
 Xmipp Installation & Release Procedures
-======================================
+==========================================
 
 This document describes how to manage versions and releases for the different
 components of the Xmipp ecosystem: ``xmipp3-installer``, ``scipion-em-xmipp``,
@@ -169,8 +169,10 @@ Dependencies diagram
 
 
 
+
+
 🧬 Protein Catalog for Xmipp releases naming 🧬
-----------------------------------------------------
+====================================================
 
 A
 ~
