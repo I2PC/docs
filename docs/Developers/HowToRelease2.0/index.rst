@@ -13,8 +13,8 @@ components of the Xmipp ecosystem: ``xmipp3-installer``, ``scipion-em-xmipp``,
    :width: 400
    :align: center
 
-xmipp3-installer
-----------------
+xmipp3-installer 🗃️
+-------------------
 
 ``xmipp3-installer`` packages the Xmipp binaries and is published on PyPI.
 It is automatically installed by the Scipion plugin ``scipion-em-xmipp``.
@@ -40,8 +40,8 @@ The ``scipion-em-xmipp`` plugin installs it using its ``requirements.txt``:
    xmipp3-installer==1.*
 
 
-scipion-em-xmipp
-----------------
+scipion-em-xmipp 🗃️
+-------------------
 
 This is the Scipion plugin that integrates Xmipp into Scipion.
 
@@ -79,8 +79,8 @@ If the **major version of Xmipp** changes, update these fields:
        _binTagVersion
 
 
-xmipp3
-------
+xmipp3 🗃️
+-----------
 
 Top-level Xmipp distribution, bundling submodules such as ``xmippCore`` and
 ``xmippViz``.
@@ -111,8 +111,8 @@ Release Procedure
    - Publish a GitHub Release
 
 
-xmippCore
----------
+xmippCore 🗃️
+------------
 
 Core Xmipp libraries and algorithms.
 
@@ -129,8 +129,8 @@ Steps to Create a New Release
    - A GitHub Release
 
 
-xmippViz
---------
+xmippViz 🗃️
+-----------
 
 Purpose
 ~~~~~~~
