@@ -13,7 +13,7 @@ xmipp3, xmippCore and xmippViz.
    :width: 400
    :align: center
 
-   Summary of Repositories and Release Procedures
+   Repositories dependencies
 ==============================================
 
 .. list-table::
