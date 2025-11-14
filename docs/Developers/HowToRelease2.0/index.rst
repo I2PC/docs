@@ -25,10 +25,7 @@ Releases are produced via the GitHub manual action:
 
 ``Generate release (Pypi, tag, & GitHub Release)``
 
-Executing this action will:
-
-- Upload a new version to PyPI `<https://pypi.org/project/xmipp3-installer/>`_
-- Create the corresponding Git tag and GitHub Release.
+Executing this action will upload a new version to PyPI `<https://pypi.org/project/xmipp3-installer/>`_ and create the corresponding Git tag and GitHub Release.
 
 Installation Through Scipion
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -60,11 +57,7 @@ Steps to Create a New Release
 
 3. **Run the GitHub Release action**
 
-   Trigger the manual action ``Release``.
-   This will:
-
-   - Upload the new version to `PyPI <https://pypi.org/project/scipion-em-xmipp/>`_
-   - Create a new Git tag and GitHub Release.
+   Trigger the manual action ``Release``. This will upload the new version to `PyPI <https://pypi.org/project/scipion-em-xmipp/>`_ and create a new Git tag and GitHub Release.
 
 Major Xmipp Version Changes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
