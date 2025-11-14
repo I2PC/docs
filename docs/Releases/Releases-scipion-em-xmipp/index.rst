@@ -1,5 +1,25 @@
 Releases scipion-em-xmipp
 =========================
+
+
+4.0.0
+--------------------------
+- Protocols updated
+   - deep_micrograph_screen:  updated enviroment to tensorFlow2 and models updated to  
+   - movie_max_shif: Change the criteria to evaluate the shift
+   - crop_resize: Crop/Resize half maps too, if they are available
+   - resolution3D: The FSC can be computed now using the two halves
+   - align_volume_and_particles: Allow considering mirrors in align volume and particles
+
+- More scipion-em-xmipp
+   - Disable xmippDep by default (the dependencies will not be installed by default in the Scipion environment), but installing just the libstdcxx dependence
+   - Script to generate the `protocols map <https://i2pc.github.io/docs/protocolsMap.html#>`_
+   - Remove Relion dependency from TestXmippDenoiseParticles
+   - parse json to report summary installation errors
+   - View all classes added for XmippProtConsensusClasses
+
+
+
 3.25.06 - Rhea
 --------------------------
 - New protocols

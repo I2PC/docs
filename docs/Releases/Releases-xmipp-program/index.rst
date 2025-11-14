@@ -1,5 +1,28 @@
 Releases xmipp program
 =========================
+
+4.0.0 - Apoferritin
+------------------------
+   - Xmipp Programs 
+      - Programs updated
+         - align volume and particles: Allow considering mirrors
+         - miccCleaner: updated enviroment to tensorflow2
+        
+      - Programs fixed
+         - tranform geometry: Apply geometry program now considers the original geometry in the metadata when the parameter --shift_to is passed.
+         - angular_project_library: Fix indexing problem in angular_project_library
+         - ctf_correct_phase fix and two constants for tomography were added
+         - angular_project_library: Fix indexing bug
+
+   - Installation and user guide
+      - Fixed issue with CUDA 12.5
+     
+   - More Xmipp  
+      - Forced compiler GCC >= 9 
+      - getPSF added to the xmipp binding
+      - replace "conda env export" to avoid deprecation issue.
+      - Fixing read when encountering NaN-s and infinite values
+
 3.25.06 - Rhea
 ------------------------
 Xmipp Programs 
