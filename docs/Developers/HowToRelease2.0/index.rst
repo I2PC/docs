@@ -27,8 +27,7 @@ Releases are produced via the GitHub manual action:
 
 Executing this action will:
 
-- Upload a new version to PyPI:
-  https://pypi.org/project/xmipp3-installer/
+- Upload a new version to PyPI `<https://pypi.org/project/xmipp3-installer/>`_
 - Create the corresponding Git tag and GitHub Release.
 
 Installation Through Scipion
@@ -64,8 +63,7 @@ Steps to Create a New Release
    Trigger the manual action ``Release``.
    This will:
 
-   - Upload the new version to PyPI:
-     https://pypi.org/project/scipion-em-xmipp/
+   - Upload the new version to `PyPI <https://pypi.org/project/scipion-em-xmipp/>`_
    - Create a new Git tag and GitHub Release.
 
 Major Xmipp Version Changes
@@ -96,7 +94,7 @@ Edit the version information in:
 The fields to modify are:
 
 - ``version_number``
-- ``version_name`` (only when the **major version** changes. Use the Protein cataloge for Xmipp releases name)
+- ``version_name`` (only when the **major version** changes. Use the `Protein cataloge for Xmipp releases name <https://i2pc.github.io/docs/Developers/HowToRelease2.0/index.html#protein-catalog-for-xmipp-releases-naming>`_)
 - ``release_date``
 
 If ``xmippCore`` or ``xmippViz`` increase their **major** version, update their
