@@ -16,16 +16,11 @@ xmipp3, xmippCore and xmippViz.
 xmipp3-installer 🗃️
 -------------------
 
-xmipp3-installer packages the Xmipp binaries and is published on PyPI.
-It is automatically installed by the Scipion plugin scipion-em-xmipp.
+xmipp3-installer packages the Xmipp binaries and is published on PyPI. It is automatically installed by the Scipion plugin scipion-em-xmipp.
 
 Release Generation
 ~~~~~~~~~~~~~~~~~~
-Releases are produced via the GitHub manual action:
-
-``Generate release (Pypi, tag, & GitHub Release)``
-
-Executing this action will upload a new version to PyPI `<https://pypi.org/project/xmipp3-installer/>`_ and create the corresponding Git tag and GitHub Release.
+Releases are produced via the GitHub manual action ``Generate release (Pypi, tag, & GitHub Release)``. Executing this action will upload a new `version to PyPI <https://pypi.org/project/xmipp3-installer/>`_ and create the corresponding Git tag and GitHub Release.
 
 Installation Through Scipion
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
