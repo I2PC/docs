@@ -32,10 +32,8 @@ xmipp3, xmippCore and xmippViz.
        - If Xmipp major version changes: update ``_binVersion`` and ``_binTagVersion``  
        - Trigger GitHub ``Release`` action → uploads to PyPI and creates tag
    * - xmipp3
-     - - Edit ``xmipp/version-info.json``:  
-         - ``version_number``  
-         - ``release_date``  
-         - ``version_name`` (only if major changes)  
+     - - Edit ``xmipp/version-info.json``: ``version_number``, ``release_date``  
+       - Edit ``version_name`` (only if major changes)  
        - Update dependency versions for ``xmippCore`` / ``xmippViz`` if **major** version changes  
        - Update ``changelog.md``  
        - Trigger GitHub ``Release`` action → creates tag and release
