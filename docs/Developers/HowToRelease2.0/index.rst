@@ -76,6 +76,7 @@ If the **major version of Xmipp** changes, update these fields:
        _binVersion
        _binTagVersion
 
+Use the `Protein cataloge for Xmipp releases name <https://i2pc.github.io/docs/Developers/HowToRelease2.0/index.html#protein-catalog-for-xmipp-releases-naming>`_
 
 xmipp3 🗃️
 -----------
@@ -94,7 +95,7 @@ Edit the version information in:
 The fields to modify are:
 
 - ``version_number``
-- ``version_name`` (only when the **major version** changes. Use the `Protein cataloge for Xmipp releases name <https://i2pc.github.io/docs/Developers/HowToRelease2.0/index.html#protein-catalog-for-xmipp-releases-naming>`_)
+- ``version_name``: only when the **major version** changes. Use the `Protein cataloge for Xmipp releases name <https://i2pc.github.io/docs/Developers/HowToRelease2.0/index.html#protein-catalog-for-xmipp-releases-naming>`_
 - ``release_date``
 
 If xmippCore or xmippViz increase their **major** version, update their
