@@ -123,9 +123,7 @@ Steps to Create a New Release
 xmippViz 🗃️
 -----------
 
-Purpose
-~~~~~~~
-Visualization module for Xmipp.
+Visualization module for Xmipp and Scipion
 
 Steps to Create a New Release
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
