@@ -25,7 +25,7 @@ xmipp3, xmippCore and xmippViz.
    * - xmipp3-installer
      - - Trigger GitHub manual action  
        - Uploads automatically to `PyPI <https://pypi.org/project/xmipp3-installer/>`_  
-       - Scipion installs it via ``xmipp3-installer==1.*``
+       - Scipion-em-xmipp installs it via requirements.txt ``xmipp3-installer==1.*``
    * - scipion-em-xmipp
      - - Update ``changelog.md``  
        - Update version in ``xmipp3/version.py`` (``__version__``)  
@@ -33,8 +33,8 @@ xmipp3, xmippCore and xmippViz.
        - Trigger GitHub ``Release`` action → uploads to PyPI and creates tag
    * - xmipp3
      - - Edit ``xmipp/version-info.json``: ``version_number``, ``release_date``  
-       - Edit ``version_name`` (only if major changes)  
-       - Update dependency versions for ``xmippCore`` / ``xmippViz`` if **major** changes  
+       - Edit ``version_name`` only if major changes 
+       - Update dependency versions for ``xmippCore`` / ``xmippViz`` if major changes  
        - Update ``changelog.md``  
        - Trigger GitHub ``Release`` action → creates tag and release
    * - xmippCore
