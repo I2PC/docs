@@ -1,19 +1,11 @@
 
 ==========================================
-Creating a Xmipp Release (new insataller)
-==========================================
-
 Xmipp Installation & Release Procedures
 ==========================================
 
 This document describes how to manage versions and releases for the different
 components of the Xmipp ecosystem: ``xmipp3-installer``, ``scipion-em-xmipp``,
 ``xmipp3``, ``xmippCore`` and ``xmippViz``.
-
-.. contents::
-   :local:
-   :depth: 2
-
 
 xmipp3-installer
 ----------------
@@ -104,7 +96,7 @@ Edit the version information in:
 The fields to modify are:
 
 - ``version_number``
-- ``version_name`` (only when the **major version** changes)
+- ``version_name`` (only when the **major version** changes. Use the Protein cataloge for Xmipp releases name)
 - ``release_date``
 
 If ``xmippCore`` or ``xmippViz`` increase their **major** version, update their
@@ -153,6 +145,7 @@ Steps to Create a New Release
 
    - Create the new tag
    - Publish the GitHub Release
+
 
 
 
