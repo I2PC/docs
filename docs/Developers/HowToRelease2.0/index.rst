@@ -3,7 +3,7 @@
 Xmipp Release Procedures
 ==========================================
 
-This document describes how to manage versions and releases for the different
+This document describes how to manage versions following `semantic version standar <https://semver.org/>`_ , and releases for the different
 components of the Xmipp ecosystem: xmipp3-installer, scipion-em-xmipp,
 xmipp3, xmippCore and xmippViz.
 
