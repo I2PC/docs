@@ -3,6 +3,161 @@
 Creating a Xmipp Release (new insataller)
 ==========================================
 
+Xmipp Installation & Release Procedures
+======================================
+
+This document describes how to manage versions and releases for the different
+components of the Xmipp ecosystem: ``xmipp3-installer``, ``scipion-em-xmipp``,
+``xmipp3``, ``xmippCore`` and ``xmippViz``.
+
+.. contents::
+   :local:
+   :depth: 2
+
+
+xmipp3-installer
+----------------
+
+Purpose
+~~~~~~~
+``xmipp3-installer`` packages the Xmipp binaries and is published on PyPI.
+It is automatically installed by the Scipion plugin ``scipion-em-xmipp``.
+
+Release Generation
+~~~~~~~~~~~~~~~~~~
+Releases are produced via the GitHub manual action:
+
+``Generate release (Pypi, tag, & GitHub Release)``
+
+Executing this action will:
+
+- Upload a new version to PyPI:
+  https://pypi.org/project/xmipp3-installer/
+- Create the corresponding Git tag and GitHub Release.
+
+Installation Through Scipion
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The ``scipion-em-xmipp`` plugin installs it using its ``requirements.txt``:
+
+.. code-block:: text
+
+   xmipp3-installer==1.*
+
+
+scipion-em-xmipp
+----------------
+
+Purpose
+~~~~~~~
+This is the Scipion plugin that integrates Xmipp into Scipion.
+
+Steps to Create a New Release
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. **Update the changelog**
+
+   Edit ``changelog.md`` with the new version and a list of changes.
+
+2. **Update the version**
+
+   Modify the ``__version__`` variable in:
+
+   .. code-block:: text
+
+      scipion-em-xmipp/xmipp3/version.py
+
+3. **Run the GitHub Release action**
+
+   Trigger the manual action ``Release``.
+   This will:
+
+   - Upload the new version to PyPI:
+     https://pypi.org/project/scipion-em-xmipp/
+   - Create a new Git tag and GitHub Release.
+
+Major Xmipp Version Changes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+If the **major version of Xmipp** changes, update these fields:
+
+.. code-block:: text
+
+   scipion-em-xmipp/xmipp3/version.py
+       _binVersion
+       _binTagVersion
+
+
+xmipp3
+------
+
+Purpose
+~~~~~~~
+Top-level Xmipp distribution, bundling submodules such as ``xmippCore`` and
+``xmippViz``.
+
+Version Updates
+~~~~~~~~~~~~~~~
+Edit the version information in:
+
+.. code-block:: text
+
+   xmipp/version-info.json
+
+The fields to modify are:
+
+- ``version_number``
+- ``version_name`` (only when the **major version** changes)
+- ``release_date``
+
+If ``xmippCore`` or ``xmippViz`` increase their **major** version, update their
+version references inside ``version-info.json``.
+
+Release Procedure
+~~~~~~~~~~~~~~~~~
+1. Update ``changelog.md`` with the new version and changes.
+2. Trigger the GitHub manual action ``Release`` to:
+
+   - Create a new Git tag
+   - Publish a GitHub Release
+
+
+xmippCore
+---------
+
+Purpose
+~~~~~~~
+Core Xmipp libraries and algorithms.
+
+Steps to Create a New Release
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. Add a new section in ``changeLOG.md`` including:
+
+   - Version number
+   - Description of changes
+
+2. Trigger the ``Release`` GitHub manual action to generate:
+
+   - A new Git tag
+   - A GitHub Release
+
+
+xmippViz
+--------
+
+Purpose
+~~~~~~~
+Visualization module for Xmipp.
+
+Steps to Create a New Release
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. Add the new version and changes to ``changeLOG.md``.
+2. Execute the GitHub manual action ``Release`` to:
+
+   - Create the new tag
+   - Publish the GitHub Release
+
+
+
+
+
 
 Dependencies diagram
 ---------------------
@@ -10,6 +165,7 @@ Dependencies diagram
    :alt: Repositories dependencies diagram
    :width: 400
    :align: center
+
 
 
 
