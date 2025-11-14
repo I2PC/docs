@@ -9,6 +9,8 @@ Dependencies diagram
 .. figure:: ../../../_static/images/DiagramInstaller.png
    :alt: Repositories dependencies diagram
    :width: 400
+   :align: center
+
 
 
 🧬 Protein Catalog for Xmipp releases naming 🧬
