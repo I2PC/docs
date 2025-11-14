@@ -6,12 +6,12 @@ Creating a Xmipp Release (new insataller)
 
 Dependencies diagram
 ---------------------
-.. figure:: ../../../_static/images/XmippDiagram.png
+.. figure:: ../../../_static/images/DiagramInstaller.png
    :alt: Repositories dependencies diagram
    :width: 400
 
 
-🧬  Protein Catalog for Xmipp releases naming 🧬
+🧬 Protein Catalog for Xmipp releases naming 🧬
 ----------------------------------------------------
 
 A
