@@ -7,6 +7,12 @@ This document describes how to manage versions and releases for the different
 components of the Xmipp ecosystem: ``xmipp3-installer``, ``scipion-em-xmipp``,
 ``xmipp3``, ``xmippCore`` and ``xmippViz``.
 
+
+.. figure:: ../../../_static/images/DiagramInstaller.png
+   :alt: Repositories dependencies diagram
+   :width: 400
+   :align: center
+
 xmipp3-installer
 ----------------
 
@@ -145,21 +151,6 @@ Steps to Create a New Release
 
    - Create the new tag
    - Publish the GitHub Release
-
-
-
-
-
-
-
-Dependencies diagram
----------------------
-.. figure:: ../../../_static/images/DiagramInstaller.png
-   :alt: Repositories dependencies diagram
-   :width: 400
-   :align: center
-
-
 
 
 
