@@ -1,6 +1,6 @@
 
 ==========================================
-Xmipp Installation & Release Procedures
+Xmipp Release Procedures
 ==========================================
 
 This document describes how to manage versions and releases for the different
@@ -148,7 +148,7 @@ Steps to Create a New Release
 
 
 🧬 Protein Catalog for Xmipp releases naming 🧬
-====================================================
+-------------------------------------------------------
 
 A
 ~
