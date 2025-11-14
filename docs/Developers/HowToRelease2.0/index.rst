@@ -103,10 +103,7 @@ version references inside ``version-info.json``.
 Release Procedure
 ~~~~~~~~~~~~~~~~~
 1. Update ``changelog.md`` with the new version and changes.
-2. Trigger the GitHub manual action ``Release`` to:
-
-   - Create a new Git tag
-   - Publish a GitHub Release
+2. Trigger the GitHub manual action ``Release`` to Create a new Git tag and Publish a GitHub Release
 
 
 xmippCore 🗃️
@@ -116,15 +113,10 @@ Core Xmipp libraries and algorithms.
 
 Steps to Create a New Release
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-1. Add a new section in ``changeLOG.md`` including:
+1. Add a new section in ``changeLOG.md`` including Version number and Description of changes
 
-   - Version number
-   - Description of changes
-
-2. Trigger the ``Release`` GitHub manual action to generate:
-
-   - A new Git tag
-   - A GitHub Release
+2. Trigger the ``Release`` GitHub manual action to generate a new Git tag
+  
 
 
 xmippViz 🗃️
@@ -136,11 +128,9 @@ Visualization module for Xmipp.
 
 Steps to Create a New Release
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-1. Add the new version and changes to ``changeLOG.md``.
-2. Execute the GitHub manual action ``Release`` to:
-
-   - Create the new tag
-   - Publish the GitHub Release
+1. Add the new version and changes to ``changeLOG.md``  including Version number and Description of changes
+2. Execute the GitHub manual action ``Release`` to create the new tag
+ 
 
 
 
