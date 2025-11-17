@@ -1,11 +1,11 @@
 Releases scipion-em-xmipp
 =========================
-4.0.1
+26.0.1
 --------------------------
 - More scipion-em-xmipp
    -  Fix on xmipp compilation flag
 
-4.0.0
+26.0.0
 --------------------------
 - Protocols updated
    - deep_micrograph_screen:  updated enviroment to tensorFlow2 and models updated to  
@@ -23,7 +23,7 @@ Releases scipion-em-xmipp
 
 
 
-3.25.06 - Rhea
+25.06.0 - Rhea
 --------------------------
 - New protocols
    - compute_likelihood: This protocol computes the likelihood of a set of particles with assigned angles when compared to a set of maps or atomic modelS
@@ -67,7 +67,7 @@ Releases scipion-em-xmipp
    - Improved the help message of more than 60 protocols
 
 
-3.24.12 - Poseidon
+24.12.0 - Poseidon
 --------------------------
 - New protocols
    - apply_tilt_to_ctf: Apply a local deviation to the CTF based on the micrograph's tilt   angle
@@ -105,7 +105,7 @@ Releases scipion-em-xmipp
    - scikit-learn updated to 1.2
    - protocols.conf list completed. All protocols are listed and clustered in Scipion
 
-3.24.06 - Oceanus
+24.06.0 - Oceanus
 --------------------------
 
 - New protocols   
@@ -147,7 +147,7 @@ Releases scipion-em-xmipp
 
 
 
-3.23.11 - Nereus
+23.11.0 - Nereus
 --------------------------
 
 - New protocols
@@ -175,7 +175,7 @@ Releases scipion-em-xmipp
    - Updated Nvidia driver required version
 
 
-3.23.07 - Morpheus
+23.07.0 - Morpheus
 --------------------------
 
 - New protocols
@@ -218,7 +218,7 @@ Releases scipion-em-xmipp
    - monores_viewer: fix histogram
    - viewer_structure_map: Change the label for each volume
 
-3.23.03 - Kratos
+23.03.0 - Kratos
 ------------------------
 
 -  New protocol status: beta, new, production and updated. Will appear
@@ -243,21 +243,21 @@ Releases scipion-em-xmipp
    protocol_metaprotocol_discrete_heterogeneity_scheduler
 
 
-3.22.11 - Iris
+22.11.0 - Iris
 ----------------------
 
-Hot fix 3.22.11.2
+Hot fix 22.11.2
 ^^^^^^^^^^^^^^^^^
 
 -  Align volume and particles works in the absence of tomo plugin.
 
-Hot fix 3.22.11.1
+Hot fix 22.11.1
 ^^^^^^^^^^^^^^^^^
 
 -  Align volume and particles adapted to tomography. Defines possible
    outputs. Optimized. Test more exhaustive for matrices
 
-3.22.11.0
+22.11.0
 ^^^^^^^^^^^^^^^^^
 
 -  Protocol_cl2d_align: The input can now be a set of averages or a set
@@ -296,7 +296,7 @@ Hot fix 3.22.11.1
 
 -  Fixed TestHighres test
 
-3.22.07 - Helios
+22.07.0 - Helios
 ------------------------
 
 -  rotate_volume: New protocol
@@ -322,7 +322,7 @@ Hot fix 3.22.11.1
 -  Excluded tests: test_protocols_zernike3d,
    test_protocols_metaprotocol_heterogeneity
 
-3.22.04 - Gaia
+22.04.0 - Gaia
 ----------------------
 
 -  protocol_core_analysis: New protocol
@@ -341,12 +341,12 @@ Hot fix 3.22.11.1
    trainging and streaming mode
 -  protocol_shift_particles: apply transform is now optional
 
-3.22.01 - Eris
+22.01.0 - Eris
 ----------------------
 
 -  `Visit release xmipp <https://i2pc.github.io/docs/Releases/Releases-xmipp-program/index.html#eris>`_
 
-3.21.06 - Caerus
+21.06.0 - Caerus
 ------------------------
 
 -  CUDA-11 support
@@ -358,7 +358,7 @@ Hot fix 3.22.11.1
 -  Multiple bug fixes
 -  Improved documentation
 
-3.20.07 - Boreas
+20.07.0 - Boreas
 ------------------------
 
 -  New Protocol: MicrographCleaner is a new algorithm that removes
@@ -412,7 +412,7 @@ Hot fix 3.22.11.1
 -  Change the plugin to the new Scipion structure
 -  Migrating the code to python3
 
-3.19.04 
+19.04.0
 -----------------
 
 -  Highres can now take a global alignment performed by any other method
