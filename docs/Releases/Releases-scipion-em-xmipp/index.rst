@@ -1,6 +1,9 @@
 Releases scipion-em-xmipp
 =========================
-
+4.0.1
+--------------------------
+- More scipion-em-xmipp
+   -  Fix on xmipp compilation flag
 
 4.0.0
 --------------------------
