@@ -1,5 +1,10 @@
 Releases scipion-em-xmipp
 =========================
+26.0.2
+--------------------------
+- More scipion-em-xmipp
+   -  Remove app, em, pyworkflow from requirements
+
 26.0.1
 --------------------------
 - More scipion-em-xmipp
