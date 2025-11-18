@@ -181,3 +181,19 @@ Downgrade `libtiff` to a version prior to 4.6.0. For example, with Scipion:
     scipion3 run conda install libtiff=4.5.1
 
 This prevents `libLerc` from being linked and resolves the incompatibility.
+
+
+
+module 'pyworkflow' has no attribute 'VariablesRegistry'
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+That error just appears in v26.0.0 and v26.0.1
+
+To fix it just:
+
+  .. code-block:: bash
+
+    conda activate scipion3
+    pip install xmipp3-installer>=2.0.3
+    pip install --upgrade scipion-em scipion-app scipion-pyworkflow
+
+
