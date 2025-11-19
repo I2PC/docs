@@ -7,7 +7,7 @@ DeepLearningToolkit
 The DeepLearningToolkit (DLTK) is a set of environments equipped with several libraries related to deep learning. It enables running protocols in Scipion that require deep learning tools, available for both GPU and CPU. The installer will automatically detect your configuration. Since xmipp-3.25.06-Rhea all environments except micCleaner (tensorflow-gpu<2 needs anaconda) do not require any private channels (non-free channels for commercial purposes).
 
 .. note::
-  or faster and more efficient dependency resolution in Conda environments, it is highly recommended to use LibMamba. In Conda 24 and later, LibMamba is enabled by default. For earlier versions, it can be `installed and configured manually to achieve faster environment solving <https://www.anaconda.com/blog/a-faster-conda-for-a-growing-community>`_
+  or faster and more efficient dependency resolution in Conda environments, it is highly recommended to use LibMamba. In Conda 23 and later, LibMamba is enabled by default. For earlier versions, it can be `installed and configured manually to achieve faster environment solving <https://www.anaconda.com/blog/a-faster-conda-for-a-growing-community>`_
 
 
 Requirements
