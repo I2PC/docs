@@ -43,7 +43,7 @@ b. Install the develop branch (main) of Xmipp
 
         ./xmipp
 
-   Both methods only compile Xmipp. Linking it to Scipion is explained in the next step. Note. For additional details about the compilation process, run:
+   This methods only compile Xmipp. Linking it to Scipion is explained in the next step. Note. For additional details about the compilation process, run:
 
    .. code-block:: bash
 
