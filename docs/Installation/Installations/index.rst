@@ -22,7 +22,7 @@ This guide explains the manual installation of Xmipp and the process to link it 
 Installation
 """"""""""""""""""
 
-a. Install las release of Xmipp from terminal
+a. Install last release of Xmipp from terminal
 
    .. code-block:: bash
 
