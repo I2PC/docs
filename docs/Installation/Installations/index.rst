@@ -30,17 +30,20 @@ a. Install last release of Xmipp from terminal
 
 b. Install the develop branch (main) of Xmipp
 
+   For manual installation is required to install xmipp3-installer. 
+
     **Option 1:** Compile using the Scipion environment. This method installs Xmipp with dependencies managed by Scipion and is the recomended way.
 
     .. code-block:: bash
 
+        scipion3 run pip install xmipp3-installer
         scipion3 run ./xmipp
 
 
-    **Option 2:** Compile the Xmipp alone. This method installs Xmipp with the required dependencies and versions defined by your environment or defaults.
+    **Option 2:** Compile the Xmipp alone. This method installs Xmipp with the required dependencies and versions defined by your environment or defaults. To install xmipp3-installer is required activate an environment, preferably the Scipion environment. 
 
     .. code-block:: bash
-
+         pip install xmipp3-installer
         ./xmipp
 
    This methods only compile Xmipp. Linking it to Scipion is explained in the next step. Note. For additional details about the compilation process, run:
