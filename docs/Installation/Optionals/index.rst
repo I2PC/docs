@@ -65,13 +65,14 @@ Protocols using this environment: `deepMicrographScreen`
 
 .. code-block:: text
 
-  - python=3.6
-  - micrograph-cleaner-em=0.35
+  - python=3.9
   - libstdcxx-ng # To be compatible with scipion env
+  - cudatoolkit=11.8
+  - cudnn=8.9.*
   - pip
   - pip:
-    - absl-py<0.12
-
+    - micrograph-cleaner-em==1.0.2
+    
 - **xmipp_deepEMhancer**  
 Protocols using this environment: `protocol_deepEMhancer`  
 
