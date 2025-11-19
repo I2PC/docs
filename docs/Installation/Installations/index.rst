@@ -1,7 +1,7 @@
 Installations
 ----------------------
-Installation with Scipion
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Installation with Scipion plugin manager
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The recommended way for users (not developers) to install and use Scipion is via the 
 `Scipion framework <https://scipion-em.github.io/docs/release-3.0.0/docs/scipion-modes/how-to-install.html>`_, 
@@ -10,10 +10,10 @@ where you can use Xmipp with other Cryo-EM-related software.
 Xmipp will not be installed during Scipion installation, to install it use the `plugin manager of Scipion <https://scipion-em.github.io/docs/release-3.0.0/docs/scipion-modes/how-to-install.html#installing-other-plugins>`_
 
 
-Standlone-installation
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Manual Installation of Xmipp 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This guide explains the standalone installation of Xmipp and the process to link it with Scipion. The standalone version allows you to use Xmipp independently of Scipion.
+This guide explains the manual installation of Xmipp and the process to link it with Scipion. The standalone version allows you to use Xmipp independently of Scipion.
 
 .. note::
 
