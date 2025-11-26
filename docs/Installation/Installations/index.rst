@@ -38,7 +38,7 @@ b. Install the develop branch (main) of Xmipp
 
         scipion3 run pip install xmipp3-installer
         git clone https://github.com/I2PC/xmipp3 
-        scipion3 run xmipp3/xmipp getSources
+        scipion3 run xmipp3/xmipp
         cd xmipp3/src
         git clone https://github.com/I2PC/scipion-em-xmipp.git
         scipion3 installp -p scipion-em-xmipp --devel
