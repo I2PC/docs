@@ -197,3 +197,21 @@ To fix it just:
     pip install --upgrade scipion-em scipion-app scipion-pyworkflow
 
 
+
+
+
+Could not find a version that satisfies the requirement xmipp3-installer 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The error is caused because a temporary validation of the installation pakage xmipp3-installer in the pypi hub. To fix it:
+
+  .. code-block:: bash
+    conda activate scipion3
+    git clone <xmipp3-installer>
+    cd xmipp3-installer
+    pip install .
+    cd ..
+    rm -rf ./xmipp3-installer
+
+
+
+
