@@ -207,7 +207,7 @@ The error is caused because a temporary validation of the installation pakage xm
   .. code-block:: bash
     
     conda activate scipion3
-    git clone <xmipp3-installer>
+    git clone https://github.com/I2PC/xmipp3-installer.git
     cd xmipp3-installer
     pip install .
     cd ..
