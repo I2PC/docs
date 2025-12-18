@@ -215,4 +215,19 @@ The error is caused because a temporary validation of the installation pakage xm
 
 
 
+Error installing scipion-em-xmipp in jdk-devel
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+If an error like this arise:
+
+  .. code-block:: bash
+
+    return cls._plugins[name]
+    KeyError: 'xmipp3'
+    Error at main: 'xmipp3'
+
+Is because you tryed to install xmipp in release mode and you abort the installation. To fix the error you have to move to a path similar to:
+
+/miniconda/envs/scipion3/lib/python3.8/site-packages/xmipp3
+
+and remove that 'xmipp3' folder
 
