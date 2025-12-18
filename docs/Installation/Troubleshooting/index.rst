@@ -215,7 +215,7 @@ The error is caused because a temporary validation of the installation pakage xm
 
 
 
-Error installing scipion-em-xmipp in jdk-devel
+Error installing scipion-em-xmipp in devel
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 If an error like this arise:
 
