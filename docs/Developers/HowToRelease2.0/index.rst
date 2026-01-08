@@ -25,7 +25,7 @@ xmipp3, xmippCore and xmippViz.
    * - xmipp3-installer
      - - Trigger GitHub manual action  
        - Uploads automatically to `PyPI <https://pypi.org/project/xmipp3-installer/>`_  
-       - Scipion-em-xmipp installs it via requirements.txt ``xmipp3-installer==1.*``
+       - Scipion-em-xmipp installs it via github release in the `init script <https://github.com/I2PC/scipion-em-xmipp/blob/main/xmipp3/__init__.py>`_ 
    * - scipion-em-xmipp
      - - Update ``changelog.md``  
        - Update version in ``xmipp3/version.py`` (``__version__``)  
