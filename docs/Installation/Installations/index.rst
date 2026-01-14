@@ -1,5 +1,17 @@
 Installations
 ----------------------
+
+Installation Telemetry
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Xmipp collects **basic information about your installation environment** (such as library versions, system architecture, and operating system) to improve compatibility, performance, and stability.
+
+If you prefer **not to send this data**, you can disable collection by setting::
+
+    SEND_INSTALLATION_STATISTICS=OFF
+
+The data is **anonymous and aggregated** and is used only to optimize Xmipp and prioritize new features. More details in `Data collection <https://i2pc.github.io/docs/Others/Enhancing/index.html#data-collection>`_
+
 Installation with Scipion plugin manager
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
