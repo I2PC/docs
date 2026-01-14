@@ -4,9 +4,7 @@ Installations
 Installation Telemetry
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Xmipp collects **basic information about your installation environment** (such as library versions, system architecture, and operating system) to improve compatibility, performance, and stability.
-
-If you prefer **not to send this data**, you can disable collection by setting::
+Xmipp collects **basic information about your installation environment** (such as library versions, system architecture, and operating system) to improve compatibility, performance, and stability. If you prefer **not to send this data**, you can disable collection by setting::
 
     SEND_INSTALLATION_STATISTICS=OFF
 
