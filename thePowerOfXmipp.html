@@ -1,0 +1,274 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The power of Xmipp &mdash; Xmipp 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=8d563738"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="List of Publications" href="listOfPublications.html" />
+    <link rel="prev" title="Protocols Map" href="protocolsMap.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Xmipp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installing Xmipp</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Installation/Requirements/index.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installation/Installations/index.html">Installations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installation/Optionals/index.html">Optional Tools and Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installation/Troubleshooting/index.html">Troubleshooting</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Releases</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Releases/Releases-xmipp-program/index.html">Releases xmipp program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Releases/Releases-scipion-em-xmipp/index.html">Releases scipion-em-xmipp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Releases/Releases-scipion-em-xmippTomo/index.html">Releases scipion-em-xmippTomo</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Xmipp World</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="protocolsMap.html">Protocols Map</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The power of Xmipp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sars-cov-2-spike">SARS-CoV-2 spike</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#clp-c1-mycobacterium-tuberculosis">CLP-C1  (Mycobacterium tuberculosis)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#her2-tzb">HER2-TZB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="listOfPublications.html">List of Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">Timeline of Xmipp</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Utils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Utils/ConfigurationF/index.html">Configuration File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Utils/xmippStructure/index.html">Xmipp structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Utils/Conventions/index.html">Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Utils/Deprecated-programs/index.html">Programs deprecated</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Developers/Welcome-developers/index.html">Welcome Developers! 👋</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Developers/Guidelines/index.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Developers/Tips/index.html">Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Developers/CodeDocumentation/index.html">Code documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Developers/UsefulScripts/index.html">Useful Tricks and Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Developers/HowToRelease2.0/index.html">Xmipp Release Procedures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Developers/How-to-release/index.html">Creating an Xmipp Release (Deprecated on v4)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Others/Enhancing/index.html">Data Collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Others/Contact/index.html">Contact us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Others/License/index.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Xmipp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">The power of Xmipp</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/thePowerOfXmipp.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="the-power-of-xmipp">
+<span id="thepowerofxmipp"></span><h1>The power of Xmipp<a class="headerlink" href="#the-power-of-xmipp" title="Link to this heading"></a></h1>
+<p>Xmipp is a key software suite in the image processing workflow for cryo-electron microscopy (cryo-EM) single-particle analysis. Its modular protocols and deep integration with Scipion enable users to handle the complexity of cryo-EM data and achieve high-resolution 3D reconstructions.</p>
+<p>This page highlights the relevance of Xmipp through three concrete examples: <strong>SARS-CoV-2 spike</strong>,  <strong>ClpC1</strong> and <strong>HER2-TZB</strong>. In all cases, Xmipp protocols played a critical role in various stages of data processing, from preprocessing and particle selection to final 3D refinement and validation.</p>
+<section id="sars-cov-2-spike">
+<h2>SARS-CoV-2 spike<a class="headerlink" href="#sars-cov-2-spike" title="Link to this heading"></a></h2>
+<div class="admonition-project-summary admonition">
+<p class="admonition-title">Project Summary</p>
+<ul class="simple">
+<li><p><strong>Project</strong>: <em>Continuous flexibility analysis of SARS-CoV-2 spike prefusion structures</em></p></li>
+<li><p><strong>Sample</strong>: <em>SARS-CoV-2 spike</em></p></li>
+<li><p><strong>EMDB ID</strong>: <em>EMD-11328, EMD-11336, EMD-11337, EMD-11341</em></p></li>
+<li><p><strong>Final Resolution</strong>: <em>2.96 A˚</em></p></li>
+<li><p><strong>Xmipp Version</strong>: <em>3.20.07 - Boreas</em></p></li>
+<li><p><strong>Publication</strong> <a class="reference external" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7553147/">Melero R, Sorzano COS, Foster B, Vilas JL, Martínez M, Marabini R, Ramírez-Aportela E, Sanchez-Garcia R, Herreros D, Del Caño L, Losana P, Fonseca-Reyna YC, Conesa P, Wrapp D, Chacon P, McLellan JS, Tagare HD, Carazo JM. Continuous flexibility analysis of SARS-CoV-2 spike prefusion structures. IUCrJ. 2020 Sep 29;7(Pt 6):1059–69. doi: 10.1107/S2052252520012725. Epub ahead of print. PMID: 33063791; PMCID: PMC7553147.</a></p></li>
+</ul>
+</div>
+<p class="rubric">Protocols Used</p>
+<ul class="simple">
+<li><p><strong>CTF Correction</strong>:
+- <cite>XmippProtCTFMicrographs</cite></p></li>
+<li><p><strong>Particle Handling</strong>:
+- <cite>XmippProtParticlePicking</cite>
+- <cite>XmippProtConsensusPicking</cite>
+- <cite>XmippProtDeepMicrographScreen (micCleaner)</cite></p></li>
+<li><p><strong>3D Visualization and Validation</strong>:
+- <cite>XmippProtReconstructHighRes</cite></p></li>
+<li><p><strong>Postprocessing</strong>:
+- <cite>XmippProtDeepVolPostProc (EMhancer)</cite></p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="_static/images/spike.png"><img alt="spike view" src="_static/images/spike.png" style="width: 400px;" />
+</a>
+</figure>
+</section>
+<section id="clp-c1-mycobacterium-tuberculosis">
+<h2>CLP-C1  (Mycobacterium tuberculosis)<a class="headerlink" href="#clp-c1-mycobacterium-tuberculosis" title="Link to this heading"></a></h2>
+<div class="admonition-project-summary admonition">
+<p class="admonition-title">Project Summary</p>
+<ul class="simple">
+<li><p><strong>Project</strong>: <em>Structure of the drug target ClpC1 unfoldase in action provides insights on antibiotic mechanism of action</em></p></li>
+<li><p><strong>Sample</strong>: <em>ClpC1</em></p></li>
+<li><p><strong>EMDB ID</strong>: <em>EMD-15240, EMD-15242, EMD-15243, EMD-15241</em></p></li>
+<li><p><strong>Final Resolution</strong>: <em>2.96 A˚</em></p></li>
+<li><p><strong>Xmipp Version</strong>: <em>3.22.04 - Gaia (Mainly)</em></p></li>
+<li><p><strong>Publication</strong> <a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/36208775/">Weinhäupl K, Gragera M, Bueno-Carrasco MT, et al. Structure of the drug target ClpC1 unfoldase in action provides insights on antibiotic mechanism of action. The Journal of Biological Chemistry. 2022 Nov;298(11):102553. DOI: 10.1016/j.jbc.2022.102553. PMID: 36208775; PMCID: PMC9661721</a></p></li>
+</ul>
+</div>
+<p class="rubric">Protocols Used</p>
+<ul class="simple">
+<li><p><strong>Particle Handling</strong>:
+- <cite>XmippProtParticlePicking</cite></p></li>
+<li><p><strong>Postprocessing</strong>:
+- <cite>XmippProtDeepVolPostProc (EMhancer)</cite></p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="_static/images/mic.png"><img alt="micrographs view" src="_static/images/mic.png" style="width: 300px;" />
+</a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="_static/images/ClpC1.png"><img alt="A, cryo-EM map of the apo MtbClpC1 hexamer bound to a substrate peptide in top" src="_static/images/ClpC1.png" style="width: 700px;" />
+</a>
+</figure>
+</section>
+<section id="her2-tzb">
+<h2>HER2-TZB<a class="headerlink" href="#her2-tzb" title="Link to this heading"></a></h2>
+<div class="admonition-project-summary admonition">
+<p class="admonition-title">Project Summary</p>
+<ul class="simple">
+<li><p><strong>Project</strong>: <em>Structural analysis of HER2-trastuzumab complex reveals receptor conformational adaptation</em></p></li>
+<li><p><strong>Sample</strong>: <em>HER2-TZB (HER2-trastuzumab)</em></p></li>
+<li><p><strong>EMDB ID</strong>: <em>EMD-52999</em></p></li>
+<li><p><strong>Final Resolution</strong>: <em>3.77 A˚</em></p></li>
+<li><p><strong>Xmipp Version</strong>: <em>3.24.06 - Oceanus (Mainly)</em></p></li>
+<li><p><strong>Publication</strong>: <a class="reference external" href="https://www.science.org/doi/full/10.1126/sciadv.adu9945">Santiago Vacca  and Marcos Gragera  and Alejandro Buschiazzo  and David Herreros  and James M. Krieger  and Santiago Bonn-Garcia  and Roberto Melero  and Carlos OS. Sorzano  and Jose M. Carazo  and Ohad Medalia  and Andreas Plückthun</a></p></li>
+</ul>
+</div>
+<p class="rubric">Protocols Used</p>
+<ul class="simple">
+<li><p><strong>CTF Correction</strong>:
+- <cite>XmippProtCTFCorrectWiener2D</cite></p></li>
+<li><p><strong>Volume Processing and Refinement</strong>:
+- <cite>XmippProtAlignVolumeParticles</cite>
+- <cite>XmippProtReconstructFourier</cite>
+- <cite>XmippProtPreprocessVolumes</cite>
+- <cite>XmippProtFilterVolumes</cite>
+- <cite>XmippProtMaskVolumes</cite>
+- <cite>XmippProtMonoRes</cite>
+- <cite>XmippProtStructureMap</cite>
+- <cite>XmippProtSubtractProjection</cite></p></li>
+<li><p><strong>Particle Handling</strong>:
+- <cite>XmippProtCropResizeParticles</cite></p></li>
+<li><p><strong>3D Visualization and Validation</strong>:
+- <cite>XmippProtCompareAngles</cite>
+- <cite>XmippProtCompareReprojections</cite>
+- <cite>XmippProtConsensusClasses</cite>
+- <cite>XmippProtCreateGallery</cite>
+- <cite>XmippProtCreateMask3D</cite>
+- <cite>XmippProtFSO</cite></p></li>
+<li><p><strong>Postprocessing</strong>:
+- <cite>XmippProtDeepVolPostProc (deepEMhancer)</cite></p></li>
+<li><p><strong>Model Integration</strong>:
+- <cite>XmippProtConvertPdb</cite></p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="_static/images/Her2-TZB_1.png"><img alt="A, cryo-EM map of the apo MtbClpC1 hexamer bound to a substrate peptide in top" src="_static/images/Her2-TZB_1.png" style="width: 400px;" />
+</a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="_static/images/Her2-TZB_2.png"><img alt="A, cryo-EM map of the apo MtbClpC1 hexamer bound to a substrate peptide in top" src="_static/images/Her2-TZB_2.png" style="width: 700px;" />
+</a>
+</figure>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading"></a></h2>
+<p>The projects presented here demonstrate the transformative power of Xmipp in cryo-EM single-particle analysis. By offering an extensive suite of robust protocols—from early-stage CTF correction to advanced 3D reconstruction and postprocessing—Xmipp streamlines the entire workflow, enabling researchers to achieve exceptional structural resolutions and scientific insight.</p>
+<p>In high-impact studies such as SARS-CoV-2 spike and ClpC1, Xmipp played a decisive role in achieving high resolution and validating structural models, directly contributing to key biological discoveries and impactful publications.</p>
+<p>Using tools like Xmipp doesn’t just simplify data processing—it empowers users to extract the full potential of their data, reduce processing bottlenecks, and ensure reproducibility and scientific rigor. As the field evolves, Xmipp continues to integrate cutting-edge methods like deep learning, adaptive workflows, and hybrid modeling, reinforcing its role as a cornerstone for next-generation cryo-EM research.</p>
+<p>In short, Xmipp is not just a tool—it’s an enabler of breakthrough science.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="protocolsMap.html" class="btn btn-neutral float-left" title="Protocols Map" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="listOfPublications.html" class="btn btn-neutral float-right" title="List of Publications" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Xmipp team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
