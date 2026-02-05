@@ -45,7 +45,6 @@ CUDA is optional but highly recommended. By default, Xmipp will search for your 
 - Installation guide: `CUDA Toolkit Archive <https://developer.nvidia.com/cuda-toolkit-archive>`_
 - CUDA - compiler compatibility (`reference <https://stackoverflow.com/questions/6622454/cuda-incompatible-with-gcc-version>`_)
 
-
 .. list-table:: 
    :header-rows: 0
    :widths: 50 50
