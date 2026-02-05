@@ -46,7 +46,7 @@ CUDA is optional but highly recommended. By default, Xmipp will search for your 
 - CUDA - compiler compatibility (`reference <https://stackoverflow.com/questions/6622454/cuda-incompatible-with-gcc-version>`_)
 
 
-.. list-table:: CUDA vs GCC compatibility
+.. list-table:: 
    :header-rows: 0
    :widths: 50 50
 
@@ -70,7 +70,7 @@ CUDA is optional but highly recommended. By default, Xmipp will search for your 
 
 .. warning::
 
-CUDA 11.5 is not compatible with GCC 9. Please change one of them if you encounter errors.
+   CUDA 11.5 is not compatible with GCC 9. Please change one of them if you encounter errors.
 
 
 Dependencies
