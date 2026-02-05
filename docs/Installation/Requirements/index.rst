@@ -52,8 +52,6 @@ CUDA is optional but highly recommended. By default, Xmipp will search for your 
 
    * - CUDA version
      - Max supported GCC version
-   * - 13.0, 13.1
-     - 15
    * - 12.8, 12.9
      - 14
    * - 12.4, 12.5, 12.6
