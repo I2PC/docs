@@ -40,7 +40,7 @@ CUDA (optional)
 
 CUDA is optional but highly recommended. By default, Xmipp will search for your CUDA installation.  
 
-- Supported versions: **10.2 – 12.9**
+- Supported versions: **11.0 – 12.9**
 - We recommend using the newest version available for your operating system.
 - Installation guide: `CUDA Toolkit Archive <https://developer.nvidia.com/cuda-toolkit-archive>`_
 
