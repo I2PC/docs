@@ -48,6 +48,7 @@ CUDA is optional but highly recommended. By default, Xmipp will search for your 
 .. list-table:: CUDA vs GCC compatibility
    :header-rows: 1
    :widths: 50 50
+   
    * - CUDA version
      - Max supported GCC version
    * - 13.0, 13.1
