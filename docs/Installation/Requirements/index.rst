@@ -45,10 +45,11 @@ CUDA is optional but highly recommended. By default, Xmipp will search for your 
 - Installation guide: `CUDA Toolkit Archive <https://developer.nvidia.com/cuda-toolkit-archive>`_
 - CUDA - compiler compatibility (`reference <https://stackoverflow.com/questions/6622454/cuda-incompatible-with-gcc-version>`_)
 
+
 .. list-table:: CUDA vs GCC compatibility
    :header-rows: 1
    :widths: 50 50
-   
+
    * - CUDA version
      - Max supported GCC version
    * - 13.0, 13.1
@@ -68,8 +69,8 @@ CUDA is optional but highly recommended. By default, Xmipp will search for your 
    * - 11
      - 9
 
-   .. warning::
-   CUDA 11.5 is not compatible with GCC 9. Please change one of them if you encounter errors.
+.. warning::
+CUDA 11.5 is not compatible with GCC 9. Please change one of them if you encounter errors.
 
 
 Dependencies
