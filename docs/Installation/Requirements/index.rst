@@ -47,7 +47,7 @@ CUDA is optional but highly recommended. By default, Xmipp will search for your 
 
 
 .. list-table:: CUDA vs GCC compatibility
-   :header-rows: 1
+   :header-rows: 0
    :widths: 50 50
 
    * - CUDA version
@@ -69,7 +69,9 @@ CUDA is optional but highly recommended. By default, Xmipp will search for your 
    * - 11
      - 9
 
+
 .. warning::
+
 CUDA 11.5 is not compatible with GCC 9. Please change one of them if you encounter errors.
 
 
