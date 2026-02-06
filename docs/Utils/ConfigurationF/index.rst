@@ -32,7 +32,7 @@ After editing the file:
 
        export XMIPP3_XMIPP_USE_CUDA='OFF'
 
-   After that just run:
+   After that just run::
 
        ./xmipp config
 
