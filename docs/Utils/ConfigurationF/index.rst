@@ -24,10 +24,17 @@ After editing the file:
 
   ./xmipp
 
+
 .. note::
 
-  To edit any of the variables in the xmipp.conf file you can also set the variable in the environment adding 'XMIPP3_' as name of the variable:
-  export XMIPP3_XMIPP_USE_CUDA='OFF'. After that just ./xmipp config
+   To edit any of the variables in the xmipp.conf file you can also set the variable 
+   in the environment adding 'XMIPP3_' as name of the variable. For example::
+
+       export XMIPP3_XMIPP_USE_CUDA='OFF'
+
+   After that just run:
+
+       ./xmipp config
 
 
 
