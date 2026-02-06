@@ -6,20 +6,11 @@ Xmipp is a powerful software suite for image processing in electron microscopy, 
 
 This data collection provides crucial insights into the various environments where Xmipp is used, helping the development team identify compatibility issues and optimize performance. It ensures that new features and updates are thoroughly tested and validated across diverse setups, contributing to a more robust and reliable user experience.
 
-We understand some users may have privacy concerns. Therefore, Xmipp includes an option to disable data collection. 
+We understand some users may have privacy concerns. Therefore, Xmipp includes an option to disable data collection. Just set the environment variable as OFF and Xmipp will not send the data.
 
+.. code-block:: bash
 
-1. Locate the Xmipp root directory.
-
-2. In that directory, edit the file ``xmipp.conf``.
-
-3. Ensure the following line appears **once and only once**::
-
-      SEND_INSTALLATION_STATISTICS=OFF
-
-   If the variable already exists and is set to ``ON``, change it to ``OFF``.
-
-4. Re-run the Xmipp installer.
+   export XMIPP3_SEND_INSTALLATION_STATISTICS='OFF'
 
 
 The anonymized and aggregated data helps developers quickly address bugs, understand usage patterns, and optimize the software. It also aids in prioritizing new features based on actual user needs and configurations.
