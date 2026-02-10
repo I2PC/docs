@@ -231,3 +231,22 @@ Is because you tryed to install xmipp in release mode and you abort the installa
 
 and remove that 'xmipp3' folder
 
+
+
+libhdf5_cpp.so: undefined reference to `__cxa_call_terminate@CXXABI_1.3.15'\ncollect2:`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If an error like this arise:
+
+::
+
+ Error 2\n/usr/bin/ld: /home/REDACTED/miniforge3/envs/scipion3/lib/libhdf5_cpp.so: undefined reference to `__cxa_call_terminate@CXXABI_1.3.15'\ncollect2:
+
+Is because hdf5 was installed in a conda environment with the last version and the compiler of the system is older than GCC 13. For this reason, it is **required to explicitly install a compatible HDF5 version** inside the Scipion Conda environment:
+
+.. code-block:: bash
+
+   scipion3 run conda install conda-forge::hdf5==1.12.2
+
+This version is known to be compatible with older GCC compilers commonly found on supported Linux distributions.
+
