@@ -60,24 +60,24 @@ b. Install the develop branch (main) of Xmipp
          pip install xmipp3-installer
         ./xmipp
 
-      This methods only compile Xmipp. Linking it to Scipion is explained in the next step. Note. For additional details about the compilation process, run:
+    This methods only compile Xmipp. Linking it to Scipion is explained in the next step. Note. For additional details about the compilation process, run:
 
    .. code-block:: bash
 
          ./xmipp --help
 
 
-      To use Xmipp within Scipion, link the standalone installation by following these steps:
+   To use Xmipp within Scipion, link the standalone installation by following these steps:
 
-         1. Ensure Scipion is installed (refer to the *Scipion installation guide*).
-         2. Use the `scipion-em-xmipp` repository, located in `src/scipion-em-xmipp`.
-         3. Run the following command to link the binaries:
+      1. Ensure Scipion is installed (refer to the *Scipion installation guide*).
+      2. Use the `scipion-em-xmipp` repository, located in `src/scipion-em-xmipp`.
+      3. Run the following command to link the binaries:
 
-            .. code-block:: bash
+         .. code-block:: bash
 
-               scipion3 installp -p ~/scipion-em-xmipp --devel
+            scipion3 installp -p ~/scipion-em-xmipp --devel
 
-            Replace `~/scipion-em-xmipp` with the path to your `scipion-em-xmipp` folder.
+         Replace `~/scipion-em-xmipp` with the path to your `scipion-em-xmipp` folder.
 
 Using Xmipp in standalone
 """"""""""""""""""""""""""""""
