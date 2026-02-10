@@ -74,9 +74,7 @@ CUDA is optional but highly recommended. By default, Xmipp will search for your 
 
 HDF5 
 ^^^^^^^^^^^^^^^
-Scipion requires the HDF5 library to be available in the system. If HDF5 is installed system-wide using the operating system package manager, there are usually no compatibility issues.
-
-However, when using the default **Scipion Conda environment**, HDF5 is installed automatically from *conda-forge*. By default, this pulls the **latest available version** of HDF5. Versions **newer than 1.12** require **GCC 13 or newer** to be available on the system. If the system compiler is older, this may lead to compilation or runtime errors.
+Scipion requires the HDF5 library. When using the default **Scipion Conda environment**, HDF5 is installed automatically from *conda-forge*. By default, this pulls the **latest available version** of HDF5. Versions **newer than 1.12** require **GCC 13 or newer** to be available on the system. If the system compiler is older, this may lead to compilation or runtime errors.
 
 For this reason, it is **recommended to explicitly install a compatible HDF5 version** inside the Scipion Conda environment:
 
