@@ -72,6 +72,20 @@ CUDA is optional but highly recommended. By default, Xmipp will search for your 
    CUDA 11.5 is not compatible with GCC 9. Please change one of them if you encounter errors.
 
 
+HDF5 
+^^^^^^^^^^^^^^^
+Scipion requires the HDF5 library to be available in the system. If HDF5 is installed system-wide using the operating system package manager, there are usually no compatibility issues.
+
+However, when using the default **Scipion Conda environment**, HDF5 is installed automatically from *conda-forge*. By default, this pulls the **latest available version** of HDF5. Versions **newer than 1.12** require **GCC 13 or newer** to be available on the system. If the system compiler is older, this may lead to compilation or runtime errors.
+
+For this reason, it is **recommended to explicitly install a compatible HDF5 version** inside the Scipion Conda environment:
+
+.. code-block:: bash
+
+   scipion3 run conda install conda-forge::hdf5==1.12.2
+
+This version is known to be compatible with older GCC compilers commonly found on supported Linux distributions.
+
 Dependencies
 ^^^^^^^^^^^^
 
@@ -82,7 +96,7 @@ The following packages must be installed before building Xmipp:
 - ``git`` — version control system
 - ``zlib`` — compression library
 - ``fftw (>=3)`` — FFT library
-- ``hdf5 (>=1.18)`` — HDF5 library
+- ``hdf5 (1.8 <= version <=1.12.2)`` — HDF5 library
 - ``openmpi`` development libraries
 - ``sqlite (>=3)`` — SQLite database
 - ``libtiff`` — TIFF image support
