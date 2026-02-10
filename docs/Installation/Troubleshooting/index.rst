@@ -233,8 +233,8 @@ and remove that 'xmipp3' folder
 
 
 
-libhdf5_cpp.so: undefined reference to `__cxa_call_terminate@CXXABI_1.3.15'\ncollect2:`
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error libhdf5_cpp.so: undefined reference to `__cxa_call_terminate@CXXABI_1.3.15'\ncollect2:`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If an error like this arise:
 
