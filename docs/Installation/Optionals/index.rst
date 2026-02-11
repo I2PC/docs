@@ -29,7 +29,15 @@ To install DLTK, run:
 
    scipion3 installb deepLearningToolkit
 
-If the installation would take over 30 minutes, please accelerate the process using the **libmamba** solver, which can provide up to a 4x speed improvement. Note that libmamba is only available for Conda >=4.12 and must be installed and configured in your Conda environment. For more information, refer to the official guide: `A Faster Conda for a Growing Community <https://www.anaconda.com/blog/a-faster-conda-for-a-growing-community>`_
+If the installation fails and you just need to use one of the environments is possible to install just one of them. 
+Locate the path Xmipp is installed, (by default in /home/USERNAME/scipion3/software/em/xmipp) and locate the .yaml envs folder and run:
+
+::
+
+  conda env create -f .../scipion3/software/em/xmipp/bindings/python/envs_DLTK/xmipp_pyTorch-gpu.yml 
+  mkdir home/USERNAME/scipion3/software/em/deepLearningToolkit
+  conda env export -n xmipp_pyTorch > /home/USERNAME/scipion3/software/em/deepLearningToolkit/xmipp_pyTorch-1.yml
+
 
 List of Environments
 """"""""""""""""""""""""""""""""""""
@@ -48,7 +56,6 @@ Protocols using this environment:  `resolution_deepres`, `screen_deepConsensus`
     - protobuf==3.20.3
 
 - **xmipp_DLTK_v1.0 (GPU version)**  
-Protocol using this environment: `deep_center_predict`
 Program using this enviroment: `deep_misalignment_detection`
 
 .. code-block:: text
