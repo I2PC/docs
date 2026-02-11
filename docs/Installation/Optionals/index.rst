@@ -34,7 +34,7 @@ Locate the path Xmipp is installed, (by default in /home/USERNAME/scipion3/softw
 
 ::
 
-  conda env create -f /home/USERNAME/scipion3/software/em/xmipp/bindings/python/envs_DLTK/xmipp_pyTorch-gpu.yml 
+  conda env create -f /home/USERNAME/scipion3/software/em/xmipp/src/xmipp/bindings/python/envs_DLTK/xmipp_pyTorch-gpu.yml 
   mkdir home/USERNAME/scipion3/software/em/deepLearningToolkit
   conda env export -n xmipp_pyTorch > /home/USERNAME/scipion3/software/em/deepLearningToolkit/xmipp_pyTorch-1.yml
 
