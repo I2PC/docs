@@ -1,0 +1,382 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creating an Xmipp Release (Deprecated on v4) &mdash; Xmipp 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Data Collection" href="../../Others/Enhancing/index.html" />
+    <link rel="prev" title="Xmipp Release Procedures" href="../HowToRelease2.0/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Xmipp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installing Xmipp</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Requirements/index.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Installations/index.html">Installations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Optionals/index.html">Optional Tools and Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Troubleshooting/index.html">Troubleshooting</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Releases</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-xmipp-program/index.html">Releases xmipp program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-scipion-em-xmipp/index.html">Releases scipion-em-xmipp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-scipion-em-xmippTomo/index.html">Releases scipion-em-xmippTomo</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Xmipp World</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../protocolsMap.html">Protocols Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thePowerOfXmipp.html">The power of Xmipp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../listOfPublications.html">List of Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../history.html">Timeline of Xmipp</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Utils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/ConfigurationF/index.html">Configuration File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/xmippStructure/index.html">Xmipp structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/Conventions/index.html">Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/Deprecated-programs/index.html">Programs deprecated</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Welcome-developers/index.html">Welcome Developers! 👋</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Guidelines/index.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tips/index.html">Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CodeDocumentation/index.html">Code documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../UsefulScripts/index.html">Useful Tricks and Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HowToRelease2.0/index.html">Xmipp Release Procedures</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Creating an Xmipp Release (Deprecated on v4)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#step-1-define-the-version-name">Step 1: Define the Version Name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-2-update-the-changelog-md">Step 2: Update the <cite>CHANGELOG.md</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-3-schedule-the-release">Step 3: Schedule the Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-4-check-tests">Step 4: Check Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-5-update-protocol-status">Step 5: Update Protocol Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-6-create-candidate-branches">Step 6: Create Candidate Branches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-7-update-version-information">Step 7: Update Version Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-8-validate-release-branches-locally">Step 8: Validate Release Branches Locally</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#a-simulate-localy">a. Simulate localy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#b-simulate-using-the-plugin-manager">b. Simulate using the plugin manager:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#step-9-create-pull-requests">Step 9: Create Pull Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-10-document-changes">Step 10: Document Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-11-merge-the-pull-requests">Step 11: Merge the Pull Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-12-announce-the-release">Step 12: Announce the Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-13-consider-xmipptomo">Step 13: Consider XmippTomo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-14-pr-from-release-to-devel">Step 14: PR from Release to Devel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#note-scheme-installation-and-versions-name">Note: Scheme installation and versions name</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/Enhancing/index.html">Data Collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/Contact/index.html">Contact us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/License/index.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Xmipp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Creating an Xmipp Release (Deprecated on v4)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/Developers/How-to-release/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="creating-an-xmipp-release-deprecated-on-v4">
+<h1>Creating an Xmipp Release (Deprecated on v4)<a class="headerlink" href="#creating-an-xmipp-release-deprecated-on-v4" title="Link to this heading"></a></h1>
+<section id="step-1-define-the-version-name">
+<h2>Step 1: Define the Version Name<a class="headerlink" href="#step-1-define-the-version-name" title="Link to this heading"></a></h2>
+<p>The version name follows the format <strong>X.YY.ZZ.B</strong> for the binaries (xmipp, xmippCore and xmippViz) and <strong>X.YY.ZZ.P</strong> for the plugin:</p>
+<ul class="simple">
+<li><p><strong>X</strong>: 3
+This keeps the main version number consistent to sort releases and maintain <cite>xmipp3</cite>.</p></li>
+<li><p><strong>YY</strong>: Year of the release.</p></li>
+<li><p><strong>ZZ</strong>: Month of the release.</p></li>
+<li><p><strong>B</strong>: Binaries version.
+Each release starts by 0. If any hotfix is required in any repository (Xmipp, XmippXore, or XmippViz), it has to be increased by +1 in all three repositories.</p></li>
+<li><p><strong>P</strong>: Plugin version.
+Each release starts by 0. If any hotfix is required, it has to be increased by +1. No changes in other repositories are required.</p></li>
+</ul>
+<p>Example: <cite>3.24.12.0.0 - Poseidon</cite> (for a December 2024 release). Additionally, name the release after a Greek god or goddess. <a class="reference external" href="https://www.gods-and-monsters.com/list-of-greek-gods-goddesses.html">Check out the list</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Scipion plugin manager takes the pypi package from <a class="reference external" href="https://pypi.org/project/scipion-em-xmipp/#history">here</a>. This package is created in a <a class="reference external" href="https://github.com/I2PC/scipion-em-xmipp/actions/workflows/release.yml">Github action</a> that takes the __version__ from the setup.py file (in future from the .toml file.)
+The producction installation procedure takes the version._pluginTagVersion variable and checkout to that tag generated in an action of GitHub. After that clone the rest of repositorioes and checkout to the version._binTagVersion generated in a GitHub Action.</p>
+</div>
+</section>
+<section id="step-2-update-the-changelog-md">
+<h2>Step 2: Update the <cite>CHANGELOG.md</cite><a class="headerlink" href="#step-2-update-the-changelog-md" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Go through the changes in CHANGELOG.md file:
+- <strong>xmipp</strong> (includes <cite>xmippcore</cite>).
+- <strong>scipion-em-xmipp</strong>.
+- <strong>xmippViz</strong>.</p></li>
+<li><p>Follow the tittle format used in previous releases.
+- This is crucial because the release automation uses these tags.</p></li>
+<li><p>Use pull requests as a reference to identify changes and describe them clearly.</p></li>
+</ol>
+</section>
+<section id="step-3-schedule-the-release">
+<h2>Step 3: Schedule the Release<a class="headerlink" href="#step-3-schedule-the-release" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Announce at least <strong>two weeks in advance</strong> that no new changes will be merged into <cite>devel</cite>. This stabilization period helps identify potential bugs in the <cite>devel</cite> branch.</p></li>
+<li><p>Prepare all steps in advance.</p></li>
+<li><p>Post the release at the <strong>start of your workday</strong> to address any issues promptly.</p></li>
+</ul>
+</section>
+<section id="step-4-check-tests">
+<h2>Step 4: Check Tests<a class="headerlink" href="#step-4-check-tests" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Verify that <strong>most tests pass</strong>, or at least confirm that failing tests are consistent with previous results.</p></li>
+<li><p>Use tools like <strong>Buildbot</strong> and <strong>Hertz-Cinco</strong> for validation.</p></li>
+</ul>
+</section>
+<section id="step-5-update-protocol-status">
+<h2>Step 5: Update Protocol Status<a class="headerlink" href="#step-5-update-protocol-status" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Review the <cite>_devStatus</cite> of each protocol:
+- Set to <strong>PROD</strong>, <strong>NEW</strong>, or <strong>UPDATED</strong> if applicable.</p></li>
+<li><p>Consider deprecating protocols no longer in use or supported.</p></li>
+</ul>
+</section>
+<section id="step-6-create-candidate-branches">
+<h2>Step 6: Create Candidate Branches<a class="headerlink" href="#step-6-create-candidate-branches" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Name the release branches according to the release version (e.g., <cite>release-3.24.06</cite>).</p></li>
+</ul>
+</section>
+<section id="step-7-update-version-information">
+<h2>Step 7: Update Version Information<a class="headerlink" href="#step-7-update-version-information" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>In Xmipp</strong>:</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Update the name, version, and release date in <a class="reference external" href="https://github.com/I2PC/xmipp/blob/e72e2e9ea0ae824f60ded8b1f00b404d2c99d4d9/installer/constants/versions.py#L31">here</a></p></li>
+<li><p>Update the tag name <a class="reference external" href="https://github.com/I2PC/xmipp/blob/3a0534e3f30daeeeec01e2b71803b0a613d3e426/installer/constants/main.py#L76:">here</a></p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p><strong>In scipion-em-xmipp</strong>:</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Change the <cite>devel</cite> variable to <cite>release</cite> in <a class="reference external" href="https://github.com/I2PC/scipion-em-xmipp/blob/9881da0c6cdec69517e26fc025500d4940d44d0e/xmipp3/version.py#L28">here</a></p></li>
+<li><p>Update <cite>_current_xmipp_tag</cite> (pay attemption the name convention, the tag is generated by the release action and looks lie this: ‘v3.24.12-Poseidon) and <cite>_currentBinVersion</cite> accordingly.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="step-8-validate-release-branches-locally">
+<h2>Step 8: Validate Release Branches Locally<a class="headerlink" href="#step-8-validate-release-branches-locally" title="Link to this heading"></a></h2>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The PR of the release from the Xmipp repository has to be merged in order to have the tag available</p>
+</div>
+</div></blockquote>
+<section id="a-simulate-localy">
+<h3>a. Simulate localy<a class="headerlink" href="#a-simulate-localy" title="Link to this heading"></a></h3>
+<blockquote>
+<div><ul>
+<li><p>Check out the release branches locally or on a test machine.</p></li>
+<li><p>Verify:
+- Installation with Scipion. Downolad the scipion-em-xmipp repo in the release branch.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:I2PC/scipion-em-xmipp.git<span class="w"> </span>--branch<span class="w"> </span>release-3...
+<span class="nb">cd</span><span class="w"> </span>scipion-em-xmipp
+</pre></div>
+</div>
+<p>In your local, change to False <a class="reference external" href="https://github.com/I2PC/scipion-em-xmipp/blob/46d4ef33b2cdc474d756118a3b7ac1fd2c532dc1/xmipp3/__init__.py#L180">develMode</a> . After that, install xmipp and inspect any posible issue</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scipion3<span class="w"> </span>installp<span class="w"> </span>-p<span class="w"> </span>.<span class="w"> </span>--devel
+scipion3<span class="w"> </span>inspect<span class="w"> </span>xmipp3
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Open the scipion gui and execute a few tests.</p></li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="b-simulate-using-the-plugin-manager">
+<h3>b. Simulate using the plugin manager:<a class="headerlink" href="#b-simulate-using-the-plugin-manager" title="Link to this heading"></a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><strong>Install scipion</strong> with the last (the one before the current release) xmipp</p></li>
+<li><p><strong>Create a `plugins.json` file</strong>:</p></li>
+</ol>
+<blockquote>
+<div><p>Use a structure similar to the one at <a class="reference external" href="https://scipion.i2pc.es/getplugins/">https://scipion.i2pc.es/getplugins/</a>, but replace the <cite>scipion-em-xmipp</cite> entry with the following:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;scipion-em-xmipp&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;pipName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;scipion-em-xmipp&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;pluginSourceUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://github.com/i2pc/scipion-em-xmipp.git@release-3.24.12a&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Xmipp3&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p><strong>Update `scipion.conf`</strong>:</p></li>
+</ol>
+<blockquote>
+<div><p>Add the following line to your <cite>scipion.conf</cite> file (adjust the path as needed):</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>SCIPION_PLUGIN_JSON = /home/userName/scipion/config/plugins.json
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p>Install scipion-em-xmipp from the terminal with</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scipion3<span class="w"> </span>installp<span class="w"> </span>scipion-em-xmipp
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>The plugin manager will fetch the repository from GitHub with the specified branch (indicated after <cite>&#64;</cite>).</p></li>
+<li><p>This setup allows you to simulate an update.</p></li>
+<li><p>Ignore the version number, as it may not be properly displayed in this configuration.</p></li>
+</ul>
+</div>
+</div></blockquote>
+</section>
+</section>
+<section id="step-9-create-pull-requests">
+<h2>Step 9: Create Pull Requests<a class="headerlink" href="#step-9-create-pull-requests" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Open four pull requests:
+- <strong>Release to master</strong> for each relevant repository.</p></li>
+</ul>
+</section>
+<section id="step-10-document-changes">
+<h2>Step 10: Document Changes<a class="headerlink" href="#step-10-document-changes" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Compile a list of changed files, lines added, and other details from the PRs. Document this in the Xmipp monitoring file.</p></li>
+</ul>
+</section>
+<section id="step-11-merge-the-pull-requests">
+<h2>Step 11: Merge the Pull Requests<a class="headerlink" href="#step-11-merge-the-pull-requests" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Merge the four PRs.
+- This triggers the creation of release tags on GitHub.
+- In <strong>scipion-em-xmipp</strong>, it will also upload the package to PyPI. Note: This is the most critical step to revert if issues arise.</p></li>
+</ul>
+</section>
+<section id="step-12-announce-the-release">
+<h2>Step 12: Announce the Release<a class="headerlink" href="#step-12-announce-the-release" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Share the release news via:
+- Email lists.
+- Discord.
+- Any other relevant platforms.</p></li>
+</ul>
+</section>
+<section id="step-13-consider-xmipptomo">
+<h2>Step 13: Consider XmippTomo<a class="headerlink" href="#step-13-consider-xmipptomo" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Evaluate whether <strong>XmippTomo</strong> needs a corresponding release.</p></li>
+</ul>
+</section>
+<section id="step-14-pr-from-release-to-devel">
+<h2>Step 14: PR from Release to Devel<a class="headerlink" href="#step-14-pr-from-release-to-devel" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Create a pull request from <cite>master</cite> back to <cite>devel</cite>.</p></li>
+<li><p>Revert the tags for <cite>release</cite> and <cite>devel</cite> in <a class="reference external" href="https://github.com/I2PC/scipion-em-xmipp/blob/835c6fd23bb1004fe63155517c62bbe92b5efadd/xmipp3/version.py#L28">scipion-em-xmipp</a></p></li>
+</ul>
+<p>—</p>
+<p><strong>That’s it!</strong> Now sit back, grab a coffee, and enjoy your shiny new release. 🚀</p>
+</section>
+<section id="note-scheme-installation-and-versions-name">
+<h2>Note: Scheme installation and versions name<a class="headerlink" href="#note-scheme-installation-and-versions-name" title="Link to this heading"></a></h2>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/installationdiagram.png"><img alt="../../_images/installationdiagram.png" src="../../_images/installationdiagram.png" style="width: 600px;" />
+</a>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../HowToRelease2.0/index.html" class="btn btn-neutral float-left" title="Xmipp Release Procedures" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../Others/Enhancing/index.html" class="btn btn-neutral float-right" title="Data Collection" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Xmipp team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
