@@ -99,7 +99,7 @@ The following packages must be installed before building Xmipp:
 - ``sqlite (>=3)`` — SQLite database
 - ``libtiff`` — TIFF image support
 - ``libjpeg`` — JPEG support (Ubuntu: ``libjpeg-dev`` / RHEL: ``libjpeg-turbo-devel``)
-- ``openjdk (>=11)`` — Java Development Kit
+- ``openjdk (<=11)`` — Java Development Kit
 - ``python3-dev`` and ``python3-numpy`` — Python 3 development headers and NumPy
 
 Installing dependencies
