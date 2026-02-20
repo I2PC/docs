@@ -6,7 +6,7 @@ Supported OS
 
 Xmipp has been tested on the following operating systems:
 
-- **Ubuntu**: 18.04, 20.04, 22.04, 24.04
+- **Ubuntu**: 20.04, 22.04, 24.04
 - **CentOS**: 7
 
 Other Linux systems may work but are not officially supported. Compilation and execution might not be straightforward.
