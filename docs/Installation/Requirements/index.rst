@@ -23,7 +23,7 @@ Software dependencies
 Compiler
 ^^^^^^^^
 
-Xmipp requires a **C++17 compatible compiler**. We only officially support GCC and we require **GCC >= 9**
+Xmipp requires a **C++17 compatible compiler**.   We only officially support GCC and we require **GCC >= 9**
 
 Some users have reported successfully compiling xmipp with Clang >= 5.0 but is not officialy supported
 
