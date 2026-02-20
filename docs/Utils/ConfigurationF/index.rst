@@ -65,14 +65,14 @@ These variables define custom paths for the installation of required packages. I
 - **CMAKE_INSTALL_PREFIX**: Directory where the software will be installed. Default value: `dist`.
 - **CMAKE_PREFIX_PATH**: Additional paths for CMake to search for packages. Example: `/home/agarcia/anaconda3`.
 - **MPI_HOME**: Path to the main MPI directory.
-- **CMAKE_CUDA_COMPILER**: Path to the CUDA compiler (`nvcc`). Example: `/usr/local/cuda/bin/nvcc`. Works as the XMIPP_CUDA_BIN variable
 - **Python3_ROOT_DIR**: Main path to the Python 3 installation.
 - **FFTW_ROOT**: Main path to the FFTW library.
 - **TIFF_ROOT**: Main path to the TIFF library.
 - **HDF5_ROOT**: Main path to the HDF5 package. The path must include the *lib* folder and the *libhdf5.so* inside, and the *include* folder with the *hdf5.h* file.
 - **JPEG_ROOT**: Main path to the JPEG library.
 - **SQLite_ROOT**: Main path to the SQLite library.
-- **CMAKE_CUDA_HOST_COMPILER**: Host compiler for CUDA. Works as the XMIPP_CUDA_LIB variable
+- **CMAKE_CUDA_HOST_COMPILER**: Host compiler for CUDA. Example: /usr/bin/gcc
+- **CMAKE_CUDA_COMPILER**: Path to the CUDA compiler (`nvcc`). Example: `/usr/local/cuda/bin/nvcc`. Works as the XMIPP_CUDA_BIN variable in the scipion configuration
 
 Compilation Flags
 ^^^^^^^^^^^^^^^^^^^^
