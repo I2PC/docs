@@ -41,13 +41,11 @@ CUDA (optional)
 By default, Xmipp attempts to automatically detect a CUDA installation. Manual configuration is possible if needed. 
 
 To activate/deactivate CUDA compilation [Examples]:
-
 - XMIPP_USE_CUDA (xmipp.conf) [``XMIPP_USE_CUDA=ON``]
 
 - XMIPP3_XMIPP_USE_CUDA (environment) [``export XMIPP3_XMIPP_USE_CUDA=ON``]
 
 To specify the CUDA compiler (nvcc) [Examples]:
-
 - CMAKE_CUDA_COMPILER (xmipp.conf) [``CMAKE_CUDA_COMPILER=/usr/local/cuda/bin/nvcc``]
 
 - XMIPP_CUDA_BIN (`Scipion configuration file <https://scipion-em.github.io/docs/release-3.0.0/docs/scipion-modes/scipion-configuration.html>`_) [``XMIPP_CUDA_BIN=/usr/local/cuda/bin/nvcc``]
@@ -55,13 +53,11 @@ To specify the CUDA compiler (nvcc) [Examples]:
 - XMIPP3_CMAKE_CUDA_COMPILER (environment) [``export XMIPP3_CMAKE_CUDA_COMPILER``]
 
 To define a specific host compiler [Examples]:
-
 - CMAKE_CUDA_HOST_COMPILER (xmipp.conf) [``CMAKE_CUDA_HOST_COMPILER=/usr/bin/gcc``]
 
 - XMIPP3_CMAKE_CUDA_HOST_COMPILER (environment) [``export XMIPP3_CMAKE_CUDA_HOST_COMPILER=/usr/bin/gcc``]
 
 To manually set CUDA libraries path [Examples]:
-
 - XMIPP_CUDA_LIB (`Scipion configuration file <https://scipion-em.github.io/docs/release-3.0.0/docs/scipion-modes/scipion-configuration.html>`_) [``XMIPP_CUDA_LIB=/usr/local/cuda/lib64``]
 
 Refer to the `configuration page <https://i2pc.github.io/docs/Utils/ConfigurationF/index.html#configuration-file>`_ for additional details.
