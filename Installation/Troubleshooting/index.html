@@ -1,0 +1,352 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Troubleshooting &mdash; Xmipp 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Releases xmipp program" href="../../Releases/Releases-xmipp-program/index.html" />
+    <link rel="prev" title="Optional Tools and Libraries" href="../Optionals/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Xmipp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installing Xmipp</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Requirements/index.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Installations/index.html">Installations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Optionals/index.html">Optional Tools and Libraries</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#general-error-while-installing-compiling-xmipp-non-development-installations">General error while installing/compiling Xmipp (non-development installations)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hdf5-libhdf5-so-undefined-reference-to">HDF5: libhdf5.so: undefined reference to …</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#libstdc-so-version-glibcxx-3-4-30-not-found">libstdc++.so. version GLIBCXX_3.4.30 not found</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cannot-compile-with-java">Cannot compile with Java</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#importerror-cannot-import-name-cmake-from-cmake-unknown-location">ImportError: cannot import name ‘cmake’ from ‘cmake’ (unknown location)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#linker-error-with-liblerc">Linker Error with libLerc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyworkflow-has-no-attribute-variablesregistry">module ‘pyworkflow’ has no attribute ‘VariablesRegistry’</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#could-not-find-a-version-that-satisfies-the-requirement-xmipp3-installer">Could not find a version that satisfies the requirement xmipp3-installer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#error-installing-scipion-em-xmipp-in-devel">Error installing scipion-em-xmipp in devel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#error-libhdf5-cpp-so-undefined-reference-to-cxa-call-terminate-cxxabi-1-3-15-ncollect2">Error libhdf5_cpp.so: undefined reference to <cite>__cxa_call_terminate&#64;CXXABI_1.3.15’ncollect2:</cite></a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Releases</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-xmipp-program/index.html">Releases xmipp program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-scipion-em-xmipp/index.html">Releases scipion-em-xmipp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-scipion-em-xmippTomo/index.html">Releases scipion-em-xmippTomo</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Xmipp World</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../protocolsMap.html">Protocols Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thePowerOfXmipp.html">The power of Xmipp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../listOfPublications.html">List of Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../history.html">Timeline of Xmipp</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Utils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/ConfigurationF/index.html">Configuration File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/xmippStructure/index.html">Xmipp structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/Conventions/index.html">Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/Deprecated-programs/index.html">Programs deprecated</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/Welcome-developers/index.html">Welcome Developers! 👋</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/Guidelines/index.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/Tips/index.html">Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/CodeDocumentation/index.html">Code documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/UsefulScripts/index.html">Useful Tricks and Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/HowToRelease2.0/index.html">Xmipp Release Procedures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/How-to-release/index.html">Creating an Xmipp Release (Deprecated on v4)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/Enhancing/index.html">Data Collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/Contact/index.html">Contact us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/License/index.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Xmipp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Troubleshooting</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/Installation/Troubleshooting/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="troubleshooting">
+<h1>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h1>
+<section id="general-error-while-installing-compiling-xmipp-non-development-installations">
+<h2>General error while installing/compiling Xmipp (non-development installations)<a class="headerlink" href="#general-error-while-installing-compiling-xmipp-non-development-installations" title="Link to this heading"></a></h2>
+<p>If you are getting an error during the Xmipp compilation, consider to read compilationLog.txt file located in the xmipp folder (by default in scipion3/software/em)/xmippSrc). You can also review the  <a class="reference external" href="https://i2pc.github.io/docs/Installation/Requirements/index.html">requirements of Xmipp</a>.</p>
+<p>Alternatively, you can go with the plugin manager or by running</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scipion3</span> <span class="n">installb</span> <span class="n">xmippSrc</span>
+</pre></div>
+</div>
+<p>If <code class="docutils literal notranslate"><span class="pre">ERROR:</span> <span class="pre">Could</span> <span class="pre">not</span> <span class="pre">find</span> <span class="pre">target</span> <span class="pre">xmippSrc</span></code> is gotten, try to run</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scipion3</span> <span class="n">installp</span> <span class="o">-</span><span class="n">p</span> <span class="n">scipion</span><span class="o">-</span><span class="n">em</span><span class="o">-</span><span class="n">xmipp</span>
+</pre></div>
+</div>
+<p>If the problem persist, don’t hesitate to <a class="reference external" href="https://scipion-em.github.io/docs/release-3.0.0/docs/misc/contact-us.html#contact-us">contact us</a>.</p>
+</section>
+<section id="hdf5-libhdf5-so-undefined-reference-to">
+<h2>HDF5: libhdf5.so: undefined reference to …<a class="headerlink" href="#hdf5-libhdf5-so-undefined-reference-to" title="Link to this heading"></a></h2>
+<p>We sometimes see issues regarding the HDF5 dependency related some incompatibility with <em>hdf5</em> and <em>curl</em></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>hdf5/serial/libhdf5.so:<span class="w"> </span>undefined<span class="w"> </span>reference<span class="w"> </span>to<span class="w"> </span><span class="sb">`</span>curl_easy_setopt@CURL_OPENSSL_4
+</pre></div>
+</div>
+<ul>
+<li><p>If hdf5 is installed on the Scipion3 enviroment, remove and reinstall it (it might lead to compile/link time issues caused by incompatible version being fetched)</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scipion3<span class="w"> </span>run<span class="w"> </span>conda<span class="w"> </span>remove<span class="w"> </span>hdf5
+scipion3<span class="w"> </span>run<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>hdf5
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>If you have install hdf5 just in your system, we recommend to install hdf5 in the Scipion enviroment. To do that:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scipion3<span class="w"> </span>run<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>hdf5
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>If you have installed hdf5 in your system and you can not use conda, please remove hdf5 an all files it creates and reinstall it:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>remove<span class="w"> </span>hdf5-devel
+</pre></div>
+</div>
+<p>Remove all files related to hdf5 in /usr/lib64/libhdf5*, /usr/include/hdf5*   /lib/x86_64-linux-gnu/libhdf5_serial.so and …/anaconda3/include/hdf5*.</p>
+<p>We strongy recommend you to install it via your default package manager:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>libhdf5-dev
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="libstdc-so-version-glibcxx-3-4-30-not-found">
+<h2>libstdc++.so. version GLIBCXX_3.4.30 not found<a class="headerlink" href="#libstdc-so-version-glibcxx-3-4-30-not-found" title="Link to this heading"></a></h2>
+<p>When an error like this appear:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>libstdc++.so.6:<span class="w"> </span>version<span class="w"> </span>GLIBCXX_3.4.30<span class="w"> </span>not<span class="w"> </span>found<span class="w"> </span><span class="o">(</span>required<span class="w"> </span>by<span class="w"> </span>/usr/bin/cmake<span class="o">)</span>
+</pre></div>
+</div>
+<p>It is because the version of libstdc++.so.6 found (in scipion3 enviroment) is older than the one of the system. This usually happens when the library is recently installed in the Scipion environment but with an older version.</p>
+<p>The message could be masked by this message</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt;<span class="w"> </span>WARNING:<span class="w"> </span>XmippImage<span class="w"> </span>library<span class="w"> </span>not<span class="w"> </span>found!
+&gt;<span class="w"> </span>Please<span class="w"> </span>install<span class="w"> </span>Xmipp<span class="w"> </span>to<span class="w"> </span>get<span class="w"> </span>full<span class="w"> </span>functionality<span class="w"> </span><span class="k">for</span><span class="w"> </span>cryo<span class="w"> </span>electron<span class="w"> </span>microscopy<span class="w"> </span>workflows.<span class="w"> </span>Otherwise<span class="w"> </span>ignore<span class="w"> </span>this.
+</pre></div>
+</div>
+<p>If this message arise, please run this command to confirm the cause:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./scipion3<span class="w"> </span>python
+import<span class="w"> </span>xmippLib
+</pre></div>
+</div>
+<p>The best way <strong>to resolve</strong> this issue is to update the library in the scipion enviroment.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scipion3<span class="w"> </span>run<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>libstdcxx-ng
+</pre></div>
+</div>
+<p>Another less stable option is</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mv<span class="w"> </span>libstdc++.so.VERSION.<span class="w"> </span>libstdc++.so.VERSION.old
+</pre></div>
+</div>
+</section>
+<section id="cannot-compile-with-java">
+<h2>Cannot compile with Java<a class="headerlink" href="#cannot-compile-with-java" title="Link to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Checking</span> <span class="n">Java</span> <span class="n">configuration</span><span class="o">...</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">jvm</span><span class="o">/</span><span class="n">java</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="n">openjdk</span><span class="o">-</span><span class="n">amd64</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">javac</span> <span class="n">Xmipp</span><span class="o">.</span><span class="n">java</span>
+<span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">sh</span><span class="p">:</span> <span class="mi">1</span><span class="p">:</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">jvm</span><span class="o">/</span><span class="n">java</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="n">openjdk</span><span class="o">-</span><span class="n">amd64</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">javac</span><span class="p">:</span> <span class="ow">not</span> <span class="n">found</span>
+<span class="n">Check</span> <span class="n">the</span> <span class="n">JAVAC</span>
+<span class="n">Cannot</span> <span class="nb">compile</span> <span class="k">with</span> <span class="n">Java</span>
+</pre></div>
+</div>
+<p>Java compiler is missing. Needs to install the jdk-devel version.
+In ubuntu would be like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">default</span><span class="o">-</span><span class="n">jdk</span>
+</pre></div>
+</div>
+<p>or activate a jdk with javac using alternatives.</p>
+<p>If this is not the case, and you have &lt;SCIPION_HOME&gt;/config/scipion.conf (optional),
+review the JAVA_XXX variables there. They might be pointing to a non existing JAVA home.</p>
+</section>
+<section id="importerror-cannot-import-name-cmake-from-cmake-unknown-location">
+<h2>ImportError: cannot import name ‘cmake’ from ‘cmake’ (unknown location)<a class="headerlink" href="#importerror-cannot-import-name-cmake-from-cmake-unknown-location" title="Link to this heading"></a></h2>
+<p>This error occurs because a Python package named <code class="docutils literal notranslate"><span class="pre">cmake</span></code> (installed via <code class="docutils literal notranslate"><span class="pre">pip</span></code>) conflicts with the real system-wide CMake tool. The <code class="docutils literal notranslate"><span class="pre">cmake</span></code> package from <code class="docutils literal notranslate"><span class="pre">pip</span></code> <strong>is not the real CMake</strong>; it is a deprecated wrapper. More <a class="reference external" href="https://github.com/scikit-build/cmake-python-distributions/issues/557">details on</a></p>
+<ol class="arabic">
+<li><p><strong>Check the location of the CMake executable:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>which<span class="w"> </span>cmake
+</pre></div>
+</div>
+<p>If the output shows a path like <code class="docutils literal notranslate"><span class="pre">/home/user/.local/bin/cmake</span></code>,
+it means you are using the incorrect version installed via <code class="docutils literal notranslate"><span class="pre">pip</span></code>.</p>
+</li>
+<li><p><strong>Uninstall the incorrect version:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>uninstall<span class="w"> </span>cmake
+</pre></div>
+</div>
+</li>
+<li><p><strong>Verify that you are now using the correct CMake version:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>which<span class="w"> </span>cmake
+</pre></div>
+</div>
+<p>The binary should be located at <code class="docutils literal notranslate"><span class="pre">/usr/bin/cmake</span></code> or another system directory.</p>
+</li>
+</ol>
+<p>If CMake is not installed, install it from the appropriate source:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>cmake
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="linker-error-with-liblerc">
+<h2>Linker Error with libLerc<a class="headerlink" href="#linker-error-with-liblerc" title="Link to this heading"></a></h2>
+<p><strong>Error</strong> during compilation:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>/usr/bin/ld: .../libLerc.so.4: undefined reference to `std::__throw_bad_array_new_length()@GLIBCXX_3.4.29&#39;
+</pre></div>
+</div>
+<p><strong>Cause</strong>:
+This occurs due to <cite>libLerc</cite> being pulled in by <cite>libtiff &gt;= 4.6.0</cite>, which may have been built against a newer C++ standard or libstdc++ version.</p>
+<p><strong>Fix</strong>:
+Downgrade <cite>libtiff</cite> to a version prior to 4.6.0. For example, with Scipion:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scipion3</span> <span class="n">run</span> <span class="n">conda</span> <span class="n">install</span> <span class="n">libtiff</span><span class="o">=</span><span class="mf">4.5.1</span>
+</pre></div>
+</div>
+<p>This prevents <cite>libLerc</cite> from being linked and resolves the incompatibility.</p>
+</section>
+<section id="module-pyworkflow-has-no-attribute-variablesregistry">
+<h2>module ‘pyworkflow’ has no attribute ‘VariablesRegistry’<a class="headerlink" href="#module-pyworkflow-has-no-attribute-variablesregistry" title="Link to this heading"></a></h2>
+<p>That error just appears in v26.0.0 and v26.0.1</p>
+<p>To fix it just:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>scipion3
+pip<span class="w"> </span>install<span class="w"> </span>xmipp3-installer&gt;<span class="o">=</span><span class="m">2</span>.0.3
+pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>scipion-em<span class="w"> </span>scipion-app<span class="w"> </span>scipion-pyworkflow
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="could-not-find-a-version-that-satisfies-the-requirement-xmipp3-installer">
+<h2>Could not find a version that satisfies the requirement xmipp3-installer<a class="headerlink" href="#could-not-find-a-version-that-satisfies-the-requirement-xmipp3-installer" title="Link to this heading"></a></h2>
+<p>The error is caused because a temporary validation of the installation pakage xmipp3-installer in the pypi hub. To fix it:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>scipion3
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/I2PC/xmipp3-installer.git
+<span class="nb">cd</span><span class="w"> </span>xmipp3-installer
+pip<span class="w"> </span>install<span class="w"> </span>.
+<span class="nb">cd</span><span class="w"> </span>..
+rm<span class="w"> </span>-rf<span class="w"> </span>./xmipp3-installer
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="error-installing-scipion-em-xmipp-in-devel">
+<h2>Error installing scipion-em-xmipp in devel<a class="headerlink" href="#error-installing-scipion-em-xmipp-in-devel" title="Link to this heading"></a></h2>
+<p>If an error like this arise:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">return</span><span class="w"> </span>cls._plugins<span class="o">[</span>name<span class="o">]</span>
+KeyError:<span class="w"> </span><span class="s1">&#39;xmipp3&#39;</span>
+Error<span class="w"> </span>at<span class="w"> </span>main:<span class="w"> </span><span class="s1">&#39;xmipp3&#39;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Is because you tryed to install xmipp in release mode and you abort the installation. To fix the error you have to move to a path similar to:</p>
+<p>/miniconda/envs/scipion3/lib/python3.8/site-packages/xmipp3</p>
+<p>and remove that ‘xmipp3’ folder</p>
+</section>
+<section id="error-libhdf5-cpp-so-undefined-reference-to-cxa-call-terminate-cxxabi-1-3-15-ncollect2">
+<h2>Error libhdf5_cpp.so: undefined reference to <cite>__cxa_call_terminate&#64;CXXABI_1.3.15’ncollect2:</cite><a class="headerlink" href="#error-libhdf5-cpp-so-undefined-reference-to-cxa-call-terminate-cxxabi-1-3-15-ncollect2" title="Link to this heading"></a></h2>
+<p>If an error like this arise:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Error 2\n/usr/bin/ld: /home/REDACTED/miniforge3/envs/scipion3/lib/libhdf5_cpp.so: undefined reference to `__cxa_call_terminate@CXXABI_1.3.15&#39;\ncollect2:
+</pre></div>
+</div>
+<p>Is because hdf5 was installed in a conda environment with the last version and the compiler of the system is older than GCC 13. For this reason, it is <strong>required to explicitly install a compatible HDF5 version</strong> inside the Scipion Conda environment:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scipion3<span class="w"> </span>run<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>conda-forge::hdf5<span class="o">==</span><span class="m">1</span>.12.2
+</pre></div>
+</div>
+<p>This version is known to be compatible with older GCC compilers commonly found on supported Linux distributions.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../Optionals/index.html" class="btn btn-neutral float-left" title="Optional Tools and Libraries" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../Releases/Releases-xmipp-program/index.html" class="btn btn-neutral float-right" title="Releases xmipp program" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Xmipp team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
