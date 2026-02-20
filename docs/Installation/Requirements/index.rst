@@ -38,7 +38,7 @@ Xmipp requires **CMake >= 3.18 and < 4**.
 CUDA (optional)
 ^^^^^^^^^^^^^^^
 
-CUDA is optional but highly recommended. By default, Xmipp will search for your CUDA installation.  
+CUDA is optional but highly recommended. By default, Xmipp will search for your CUDA installation, but you can assign the nvcc exe file in the configuration file with the variable CMAKE_CUDA_COMPILER, is also possible setting the variable XMIPP_CUDA_BIN in the scipion `configuration file <https://scipion-em.github.io/docs/release-3.0.0/docs/scipion-modes/scipion-configuration.html>`_. To assign a specific compiler for CUDA set the variable CMAKE_CUDA_HOST_COMPILER in the configuration file. For more details visit the `configuration page <https://i2pc.github.io/docs/Utils/ConfigurationF/index.html#configuration-file>`_
 
 - Supported versions: **11.0 – 12.9**
 - We recommend using the newest version available for your operating system.
