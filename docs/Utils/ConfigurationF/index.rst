@@ -72,7 +72,7 @@ These variables define custom paths for the installation of required packages. I
 - **JPEG_ROOT**: Main path to the JPEG library.
 - **SQLite_ROOT**: Main path to the SQLite library.
 - **CMAKE_CUDA_HOST_COMPILER**: Host compiler for CUDA. Example: /usr/bin/gcc
-- **CMAKE_CUDA_COMPILER**: Path to the CUDA compiler (`nvcc`). Example: `/usr/local/cuda/bin/nvcc`. You can set this vaule also setting the XMIPP_CUDA_BIN variable in the scipion configuration file.
+- **CMAKE_CUDA_COMPILER**: Path to the CUDA compiler (`nvcc`). Example: `/usr/local/cuda/bin/nvcc`. You can set this vaule also setting the XMIPP_CUDA_BIN variable in the scipion configuration file but pòinting to the path withot the 'nvcc'
 
 Compilation Flags
 ^^^^^^^^^^^^^^^^^^^^
