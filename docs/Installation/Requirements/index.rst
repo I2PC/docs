@@ -52,7 +52,7 @@ To specify the CUDA compiler (nvcc) [Examples]:
 
 - XMIPP_CUDA_BIN (`Scipion configuration file <https://scipion-em.github.io/docs/release-3.0.0/docs/scipion-modes/scipion-configuration.html>`_) [``XMIPP_CUDA_BIN=/usr/local/cuda/bin/nvcc``]
 
-- XMIPP3_CMAKE_CUDA_COMPILER (environment) [``export XMIPP3_CMAKE_CUDA_COMPILER``]
+- XMIPP3_CMAKE_CUDA_COMPILER (environment) [``export XMIPP3_CMAKE_CUDA_COMPILER=/usr/local/cuda/bin/nvcc``]
 
 To define a specific host compiler [Examples]:
 
