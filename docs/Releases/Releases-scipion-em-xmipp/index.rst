@@ -1,5 +1,21 @@
 Releases scipion-em-xmipp
 =========================
+
+28.0.0
+--------------------------
+- New protocols
+   - alignPCA_2D: Performs a 2D classification of particles using PCA. This method is optimized to run in streaming,
+        enabling efficient processing of large datasets
+
+- More scipion-em-xmipp
+   - Incorporated XMIPP_CUDA_LIB and XMIPP_CUDA_BIN variables from scipion.conf
+
+Release 27.0.0
+--------------------------
+- More scipion-em-xmipp
+   - Updated xmipp3-installer dependency (2.1.0 with configuration flags that can be set using environment variables.)
+   - Major version because of deprecated protocol in previous version; DeepCenter
+
 26.0.2
 --------------------------
 - More scipion-em-xmipp

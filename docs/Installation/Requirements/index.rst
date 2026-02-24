@@ -23,7 +23,8 @@ Software dependencies
 Compiler
 ^^^^^^^^
 
-Xmipp requires a **C++17 compatible compiler**.   We only officially support GCC and we require **GCC >= 9**
+Xmipp requires a **C++17 compatible compiler**.  
+We only officially support GCC and we require **GCC >= 9**
 
 Some users have reported successfully compiling xmipp with Clang >= 5.0 but is not officialy supported
 
@@ -67,7 +68,7 @@ To manually set CUDA libraries path [Examples]:
 Refer to the `configuration page <https://i2pc.github.io/docs/Utils/ConfigurationF/index.html#configuration-file>`_ for additional details.
 
 
-- Supported versions: **11.0 – 12.9**
+- Supported versions: **11.0 – 13**
 - We recommend using the newest version available for your operating system.
 - Installation guide: `CUDA Toolkit Archive <https://developer.nvidia.com/cuda-toolkit-archive>`_
 - CUDA - compiler compatibility (`reference <https://stackoverflow.com/questions/6622454/cuda-incompatible-with-gcc-version>`_)
@@ -78,6 +79,8 @@ Refer to the `configuration page <https://i2pc.github.io/docs/Utils/Configuratio
 
    * - CUDA version
      - Max supported GCC version
+   * - 13.0, 13.1
+     - 15
    * - 12.8, 12.9
      - 14
    * - 12.4, 12.5, 12.6
