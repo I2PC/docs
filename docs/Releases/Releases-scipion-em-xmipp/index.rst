@@ -1,5 +1,9 @@
 Releases scipion-em-xmipp
 =========================
+28.0.1
+--------------------------
+- More scipion-em-xmipp
+    - Fixing the XMIPP_CUDA_BIN behaves
 
 28.0.0
 --------------------------
