@@ -29,7 +29,7 @@ xmipp3, xmippCore and xmippViz.
    * - scipion-em-xmipp
      - - Update ``changelog.md``  
        - Update version in ``xmipp3/version.py`` (``__version__``)  
-       - If Xmipp major version changes: update ``_binVersion`` and ``_binTagVersion``  
+       - If Xmipp major version changes: update ``_binVersion`` 
        - Trigger GitHub ``Release`` action → uploads to PyPI and creates tag
    * - xmipp3
      - - Edit ``xmipp/version-info.json``: ``version_number``, ``release_date``  
@@ -94,7 +94,6 @@ If the **major version of Xmipp** changes, update these fields:
 
    scipion-em-xmipp/xmipp3/version.py
        _binVersion
-       _binTagVersion
 
 Use the `Protein cataloge for Xmipp releases name <https://i2pc.github.io/docs/Developers/HowToRelease2.0/index.html#protein-catalog-for-xmipp-releases-naming>`_
 
