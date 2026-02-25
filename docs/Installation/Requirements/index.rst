@@ -39,7 +39,12 @@ Xmipp requires **CMake >= 3.18 and < 4**.
 CUDA (optional)
 ^^^^^^^^^^^^^^^
 
-By default, Xmipp attempts to automatically detect a CUDA installation. Manual configuration is possible if needed. 
+Supported versions: **11.0 – 13**. By default, Xmipp attempts to automatically detect a CUDA installation. 
+- We recommend using the newest version available for your operating system.
+- Installation guide: `CUDA Toolkit Archive <https://developer.nvidia.com/cuda-toolkit-archive>`_
+- CUDA - compiler compatibility (`reference <https://stackoverflow.com/questions/6622454/cuda-incompatible-with-gcc-version>`_)
+
+Manual configuration is possible if needed:
 
 To activate/deactivate CUDA compilation [Examples]:
 
@@ -68,10 +73,7 @@ To manually set CUDA libraries path [Examples]:
 Refer to the `configuration page <https://i2pc.github.io/docs/Utils/ConfigurationF/index.html#configuration-file>`_ for additional details.
 
 
-- Supported versions: **11.0 – 13**
-- We recommend using the newest version available for your operating system.
-- Installation guide: `CUDA Toolkit Archive <https://developer.nvidia.com/cuda-toolkit-archive>`_
-- CUDA - compiler compatibility (`reference <https://stackoverflow.com/questions/6622454/cuda-incompatible-with-gcc-version>`_)
+
 
 .. list-table:: 
    :header-rows: 0
