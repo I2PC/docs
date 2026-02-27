@@ -3,6 +3,7 @@ Releases xmipp program
 
 5.0.0 - Beta-gal 
 ----------------------------
+*[02-2026]*
 Xmipp Programs 
 ~~~~~~~~~~~~~~~
    - New programs
@@ -16,8 +17,9 @@ More Xmipp
 ~~~~~~~~~~~~~~~
    - CUDA 13 is now fully compatible with Xmipp, enabling improved GPU acceleration and performance on modern hardware.
 
-4.0.0 - Apoferritin
-------------------------
+4.0.0 - Apoferritin 
+----------------------------------
+*[11-2025]*
 Xmipp Programs 
 ~~~~~~~~~~~~~~~
    - Programs updated
