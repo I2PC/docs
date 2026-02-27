@@ -4,6 +4,7 @@ Releases xmipp program
 5.0.0 - Beta-gal 
 ----------------------------
 *[02-2026]*
+
 Xmipp Programs 
 ~~~~~~~~~~~~~~~
    - New programs
@@ -20,6 +21,7 @@ More Xmipp
 4.0.0 - Apoferritin 
 ----------------------------------
 *[11-2025]*
+
 Xmipp Programs 
 ~~~~~~~~~~~~~~~
    - Programs updated
