@@ -1,0 +1,341 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guidelines &mdash; Xmipp 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Tips" href="../Tips/index.html" />
+    <link rel="prev" title="Welcome Developers! 👋" href="../Welcome-developers/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Xmipp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installing Xmipp</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Requirements/index.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Installations/index.html">Installations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Optionals/index.html">Optional Tools and Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Troubleshooting/index.html">Troubleshooting</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Releases</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-xmipp-program/index.html">Releases xmipp program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-scipion-em-xmipp/index.html">Releases scipion-em-xmipp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-scipion-em-xmippTomo/index.html">Releases scipion-em-xmippTomo</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Xmipp World</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../protocolsMap.html">Protocols Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thePowerOfXmipp.html">The power of Xmipp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../listOfPublications.html">List of Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../history.html">Timeline of Xmipp</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Utils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/ConfigurationF/index.html">Configuration File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/xmippStructure/index.html">Xmipp structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/Conventions/index.html">Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/Deprecated-programs/index.html">Programs deprecated</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Welcome-developers/index.html">Welcome Developers! 👋</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Guidelines</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#software-development-guide">Software Development Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#programming-handling-images">Programming - Handling images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#coding-c-guidelines">Coding - C++ guidelines</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Tips/index.html">Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CodeDocumentation/index.html">Code documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../UsefulScripts/index.html">Useful Tricks and Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HowToRelease2.0/index.html">Xmipp Release Procedures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../How-to-release/index.html">Creating an Xmipp Release (Deprecated on v4)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/Enhancing/index.html">Data Collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/Contact/index.html">Contact us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/License/index.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Xmipp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Guidelines</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/Developers/Guidelines/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="guidelines">
+<h1>Guidelines<a class="headerlink" href="#guidelines" title="Link to this heading"></a></h1>
+<section id="software-development-guide">
+<h2>Software Development Guide<a class="headerlink" href="#software-development-guide" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Branch Management</p></li>
+<li><p>Naming Conventions</p></li>
+<li><p>Merging to Development Branch</p></li>
+<li><p>Release Management</p></li>
+</ol>
+</section>
+<section id="programming-handling-images">
+<h2>Programming - Handling images<a class="headerlink" href="#programming-handling-images" title="Link to this heading"></a></h2>
+<p>Although Xmipp supports stacks of volumes (4 dimensions arrays) in
+memory, it is recommended to avoid allocate in memory as much images as
+possible at once. If your code is going to iterate over a set of images
+stored in a stack file, then you should try accessing each image at
+once.</p>
+</section>
+<section id="coding-c-guidelines">
+<h2>Coding - C++ guidelines<a class="headerlink" href="#coding-c-guidelines" title="Link to this heading"></a></h2>
+<p>Source code is like the text of a book, it is possible to be understood
+with almost any formatting but much more easier if it is done properly.
+Forcing a certain indentation style is important in free-form languages
+like C or C++, just as publishers and book printers do.</p>
+<p>That said, these are the proposed guidelines for writing C++ code:</p>
+<ol class="arabic simple">
+<li><p>Same language for code and comments, English in this case.</p></li>
+<li><p>Use the header guard standard. The easiest option is the file name,
+in caps, without in-between underscores, and with a =_H= at the end:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#ifndef HASHINFO_H</span>
+<span class="c1">#define HASHINFO_H</span>
+
+<span class="o">//</span> <span class="n">This</span> <span class="n">file</span> <span class="ow">is</span> <span class="n">called</span> <span class="s2">&quot;HashInfo.h&quot;</span>
+
+<span class="c1">#endif</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>Group the system includes (<code class="docutils literal notranslate"><span class="pre">&amp;lt;</span> <span class="pre">&amp;gt;</span></code>), as well as the local ones
+(<code class="docutils literal notranslate"><span class="pre">&quot;</span> <span class="pre">&quot;</span></code>). A blank line should be in between:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &lt;iostream&gt;</span>
+<span class="c1">#include &lt;string&gt;</span>
+<span class="c1">#include &lt;vector&gt;</span>
+
+<span class="c1">#include &quot;Timer.h&quot;</span>
+<span class="c1">#include &quot;HashInfo.h&quot;</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>Do not use more than one blank line to separate sections:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="nb">int</span> <span class="n">globalVar</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="o">//</span> <span class="n">Just</span> <span class="n">one</span> <span class="n">blank</span> <span class="n">line</span>
+<span class="n">struct</span> <span class="n">Foo</span>
+<span class="p">{</span>
+        <span class="o">//</span> <span class="o">...</span>
+<span class="p">};</span>
+
+<span class="o">//</span> <span class="n">Just</span> <span class="n">one</span> <span class="n">blank</span> <span class="n">line</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>Choose a consistent name criteria. The following is very common:</p></li>
+</ol>
+<ul class="simple">
+<li><p>CamelCase notation: use a capital letter when a new word starts.</p></li>
+<li><p>Classes/structs begin with a capital letter.</p></li>
+<li><p>Variables and functions begin in lowercase.</p></li>
+<li><p>Functions have imperative names</p></li>
+<li><p>Use descriptive variable names, the only exception are those with a
+very limited lifespan, like:<code class="docutils literal notranslate"><span class="pre">i</span></code>,<code class="docutils literal notranslate"><span class="pre">j</span></code>,<code class="docutils literal notranslate"><span class="pre">tmp</span></code>,<code class="docutils literal notranslate"><span class="pre">aux</span></code>…</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>Indent with spaces, not with tabs. The recommended value is__4__
+spaces. Most_decent_ editors can convert automatically tabs into
+spaces.</p></li>
+<li><p>Save files with<code class="docutils literal notranslate"><span class="pre">UNIX</span></code> end-of-line characters.</p></li>
+<li><p>Use a pair of files for each class (<code class="docutils literal notranslate"><span class="pre">.cpp</span></code> y<code class="docutils literal notranslate"><span class="pre">.h</span></code>). Avoid inner
+classes.</p></li>
+<li><p>Follow<code class="docutils literal notranslate"><span class="pre">Doxygen</span></code> guidelines for documentation.</p></li>
+<li><p>Position of<code class="docutils literal notranslate"><span class="pre">{}</span></code>:</p></li>
+</ol>
+<ul class="simple">
+<li><p>for</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">limit</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="o">//</span> <span class="n">do</span> <span class="n">something</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>if, else</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">something</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="o">//</span> <span class="n">do</span> <span class="n">something</span>
+<span class="p">}</span>
+<span class="k">else</span>
+<span class="p">{</span>
+    <span class="o">//</span> <span class="n">do</span> <span class="n">something</span> <span class="k">else</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>while</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="p">(</span><span class="n">i</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="o">//</span> <span class="n">do</span> <span class="n">something</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>switch, case</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">switch</span> <span class="p">(</span><span class="n">tmp</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">case</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="o">//</span> <span class="n">do</span> <span class="n">something</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="o">//</span> <span class="n">do</span> <span class="n">something</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="n">default</span><span class="p">:</span>
+        <span class="o">//</span> <span class="n">do</span> <span class="n">something</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>Limit line lenght to__80__ chars (printing). Indent one time
+afterwards.</p></li>
+<li><p>Use methods with few parameters, but on those times when it’s not
+possible, give each parameter a line:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">void</span> <span class="n">functionWithManyParams</span><span class="p">(</span><span class="nb">int</span> <span class="n">par1</span><span class="p">,</span>
+    <span class="nb">float</span> <span class="n">par2</span><span class="p">,</span>
+    <span class="n">char</span><span class="o">*</span> <span class="n">par3</span><span class="p">,</span>
+    <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="n">double</span> <span class="o">&gt;&amp;</span> <span class="n">par4</span><span class="p">,</span>
+    <span class="n">double</span> <span class="n">par5</span><span class="p">);</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>Compile with at least<code class="docutils literal notranslate"><span class="pre">-Wall</span> <span class="pre">-ansi</span></code>. Pay attention to warnings
+too.</p></li>
+<li><p>Make a test program for each class.</p></li>
+<li><p>Do not make optimizations without verifying they are needed. Aim for
+clear code.</p></li>
+<li><p>Do not open namespaces in global scope.</p></li>
+<li><p>Include every header that is needed for the code in that particular
+file. In<code class="docutils literal notranslate"><span class="pre">.h</span></code> files use forward declarations when possible.</p></li>
+<li><p>Use a good editor with the following feature: folding, syntax
+highlighting, autocompletion, line numbers…</p></li>
+<li><p>Do not use<code class="docutils literal notranslate"><span class="pre">malloc</span></code> or<code class="docutils literal notranslate"><span class="pre">free</span></code>, C++ uses<code class="docutils literal notranslate"><span class="pre">new</span></code>
+and<code class="docutils literal notranslate"><span class="pre">delete</span></code>.</p></li>
+<li><p>Use<code class="docutils literal notranslate"><span class="pre">const</span></code> instead of<code class="docutils literal notranslate"><span class="pre">#define</span></code>. Avoid the preprocessor.</p></li>
+<li><p>Use variables as local as possible. Do not group variable
+definitions at the beginning of a method (old<code class="docutils literal notranslate"><span class="pre">ANSI</span> <span class="pre">C</span></code>
+requirement).</p></li>
+<li><p>Always clean up your code of unused variables. ## Code formatting</p></li>
+</ol>
+<p>Automatic code formatting can be achieved using a program like astyle.
+It can reindent and reformat C, C++ and Java code. It can be used from
+the command-line or integrated into another program, like Eclipse or
+Emacs.</p>
+<p>Although not 100% accurate it performs most of the hard work required to
+follow basic style guidelines.</p>
+<p>It accepts several command-line options, or an options file with the
+equivalent entries. Command-line use is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ astyle [options] &lt; !OriginalSourceFile &gt; !BeautifiedSourceFile
+</pre></div>
+</div>
+<p>From the various predefined styles we are currently using ANSI, and the
+full options file<code class="docutils literal notranslate"><span class="pre">.astylerc</span></code> is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">style</span><span class="o">=</span><span class="n">ansi</span>
+<span class="n">brackets</span><span class="o">=</span><span class="k">break</span>
+<span class="n">indent</span><span class="o">-</span><span class="n">preprocessor</span>
+<span class="nb">min</span><span class="o">-</span><span class="n">conditional</span><span class="o">-</span><span class="n">indent</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">unpad</span><span class="o">=</span><span class="n">paren</span>
+<span class="n">pad</span><span class="o">=</span><span class="n">oper</span>
+<span class="n">convert</span><span class="o">-</span><span class="n">tabs</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../Welcome-developers/index.html" class="btn btn-neutral float-left" title="Welcome Developers! 👋" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Tips/index.html" class="btn btn-neutral float-right" title="Tips" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Xmipp team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,332 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Requirements &mdash; Xmipp 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Installations" href="../Installations/index.html" />
+    <link rel="prev" title="Welcome to Xmipp documentation!" href="../../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Xmipp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installing Xmipp</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Requirements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#supported-os">Supported OS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hardware-requirements">Hardware requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#software-dependencies">Software dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#compiler">Compiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cmake">CMake</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cuda-optional">CUDA (optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hdf5">HDF5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dependencies">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-dependencies">Installing dependencies</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ubuntu-debian">Ubuntu/Debian</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#centos-rhel">CentOS/RHEL</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#final-notes">Final notes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Installations/index.html">Installations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Optionals/index.html">Optional Tools and Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/index.html">Troubleshooting</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Releases</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-xmipp-program/index.html">Releases xmipp program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-scipion-em-xmipp/index.html">Releases scipion-em-xmipp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-scipion-em-xmippTomo/index.html">Releases scipion-em-xmippTomo</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Xmipp World</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../protocolsMap.html">Protocols Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thePowerOfXmipp.html">The power of Xmipp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../listOfPublications.html">List of Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../history.html">Timeline of Xmipp</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Utils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/ConfigurationF/index.html">Configuration File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/xmippStructure/index.html">Xmipp structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/Conventions/index.html">Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/Deprecated-programs/index.html">Programs deprecated</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/Welcome-developers/index.html">Welcome Developers! 👋</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/Guidelines/index.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/Tips/index.html">Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/CodeDocumentation/index.html">Code documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/UsefulScripts/index.html">Useful Tricks and Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/HowToRelease2.0/index.html">Xmipp Release Procedures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/How-to-release/index.html">Creating an Xmipp Release (Deprecated on v4)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/Enhancing/index.html">Data Collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/Contact/index.html">Contact us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/License/index.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Xmipp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Requirements</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/Installation/Requirements/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="requirements">
+<h1>Requirements<a class="headerlink" href="#requirements" title="Link to this heading"></a></h1>
+<section id="supported-os">
+<h2>Supported OS<a class="headerlink" href="#supported-os" title="Link to this heading"></a></h2>
+<p>Xmipp has been tested on the following operating systems:</p>
+<ul class="simple">
+<li><p><strong>Ubuntu</strong>: 20.04, 22.04, 24.04</p></li>
+<li><p><strong>CentOS</strong>: 7</p></li>
+</ul>
+<p>Other Linux systems may work but are not officially supported. Compilation and execution might not be straightforward.</p>
+</section>
+<section id="hardware-requirements">
+<h2>Hardware requirements<a class="headerlink" href="#hardware-requirements" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>At least <strong>2 CPU cores</strong> are required.</p></li>
+<li><p>On some virtual machine tools only one is assigned by default. Please check and ensure at least two processors are assigned.</p></li>
+</ul>
+</section>
+<section id="software-dependencies">
+<h2>Software dependencies<a class="headerlink" href="#software-dependencies" title="Link to this heading"></a></h2>
+</section>
+<section id="compiler">
+<h2>Compiler<a class="headerlink" href="#compiler" title="Link to this heading"></a></h2>
+<p>Xmipp requires a <strong>C++17 compatible compiler</strong>.
+We only officially support GCC and we require <strong>GCC &gt;= 9</strong></p>
+<p>Some users have reported successfully compiling xmipp with Clang &gt;= 5.0 but is not officialy supported</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If compiling with CUDA, a <a class="reference external" href="https://gist.github.com/ax3l/9489132">compatible compiler</a> must be available.</p>
+</div>
+</section>
+<section id="cmake">
+<h2>CMake<a class="headerlink" href="#cmake" title="Link to this heading"></a></h2>
+<p>Xmipp requires <strong>CMake &gt;= 3.18 and &lt; 4</strong>.</p>
+</section>
+<section id="cuda-optional">
+<h2>CUDA (optional)<a class="headerlink" href="#cuda-optional" title="Link to this heading"></a></h2>
+<p>Supported versions: <strong>11.0 – 13</strong>. By default, Xmipp attempts to automatically detect a CUDA installation.
+- We recommend using the newest version available for your operating system.
+- Installation guide: <a class="reference external" href="https://developer.nvidia.com/cuda-toolkit-archive">CUDA Toolkit Archive</a>
+- CUDA - compiler compatibility (<a class="reference external" href="https://stackoverflow.com/questions/6622454/cuda-incompatible-with-gcc-version">reference</a>)</p>
+<p>Manual configuration is possible if needed:</p>
+<p>To activate/deactivate CUDA compilation [Examples]:</p>
+<ul class="simple">
+<li><p>XMIPP_USE_CUDA (xmipp.conf) [<code class="docutils literal notranslate"><span class="pre">XMIPP_USE_CUDA=ON</span></code>]</p></li>
+<li><p>XMIPP3_XMIPP_USE_CUDA (environment) [<code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">XMIPP3_XMIPP_USE_CUDA=ON</span></code>]</p></li>
+</ul>
+<p>To specify the CUDA compiler (nvcc) [Examples]:</p>
+<ul class="simple">
+<li><p>CMAKE_CUDA_COMPILER (xmipp.conf) [<code class="docutils literal notranslate"><span class="pre">CMAKE_CUDA_COMPILER=/usr/local/cuda/bin/nvcc</span></code>]</p></li>
+<li><p>XMIPP_CUDA_BIN (<a class="reference external" href="https://scipion-em.github.io/docs/release-3.0.0/docs/scipion-modes/scipion-configuration.html">Scipion configuration file</a>) [<code class="docutils literal notranslate"><span class="pre">XMIPP_CUDA_BIN=/usr/local/cuda/bin/</span></code>]</p></li>
+<li><p>XMIPP3_CMAKE_CUDA_COMPILER (environment) [<code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">XMIPP3_CMAKE_CUDA_COMPILER=/usr/local/cuda/bin/nvcc</span></code>]</p></li>
+</ul>
+<p>To define a specific host compiler [Examples]:</p>
+<ul class="simple">
+<li><p>CMAKE_CUDA_HOST_COMPILER (xmipp.conf) [<code class="docutils literal notranslate"><span class="pre">CMAKE_CUDA_HOST_COMPILER=/usr/bin/gcc</span></code>]</p></li>
+<li><p>XMIPP3_CMAKE_CUDA_HOST_COMPILER (environment) [<code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">XMIPP3_CMAKE_CUDA_HOST_COMPILER=/usr/bin/gcc</span></code>]</p></li>
+</ul>
+<p>To manually set CUDA libraries path [Examples]:</p>
+<ul class="simple">
+<li><p>XMIPP_CUDA_LIB (<a class="reference external" href="https://scipion-em.github.io/docs/release-3.0.0/docs/scipion-modes/scipion-configuration.html">Scipion configuration file</a>) [<code class="docutils literal notranslate"><span class="pre">XMIPP_CUDA_LIB=/usr/local/cuda/lib64</span></code>]</p></li>
+</ul>
+<p>Refer to the <a class="reference external" href="https://i2pc.github.io/docs/Utils/ConfigurationF/index.html#configuration-file">configuration page</a> for additional details.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>CUDA version</p></td>
+<td><p>Max supported GCC version</p></td>
+</tr>
+<tr class="row-even"><td><p>13.0, 13.1</p></td>
+<td><p>15</p></td>
+</tr>
+<tr class="row-odd"><td><p>12.8, 12.9</p></td>
+<td><p>14</p></td>
+</tr>
+<tr class="row-even"><td><p>12.4, 12.5, 12.6</p></td>
+<td><p>13.2</p></td>
+</tr>
+<tr class="row-odd"><td><p>12.1, 12.2, 12.3</p></td>
+<td><p>12.2</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>12.1</p></td>
+</tr>
+<tr class="row-odd"><td><p>11.4.1+, 11.5, 11.6, 11.7, 11.8</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-even"><td><p>11.1, 11.2, 11.3, 11.4.0</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>9</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>CUDA 11.5 is not compatible with GCC 9. Please change one of them if you encounter errors.</p>
+</div>
+</section>
+<section id="hdf5">
+<h2>HDF5<a class="headerlink" href="#hdf5" title="Link to this heading"></a></h2>
+<p>Scipion requires the HDF5 library. When using the default <strong>Scipion Conda environment</strong>, HDF5 is installed automatically from <em>conda-forge</em>. By default, this pulls the <strong>latest available version</strong> of HDF5. Versions <strong>newer than 1.12</strong> require <strong>GCC 13 or newer</strong> to be available on the system. If the system compiler is older, this may lead to compilation or runtime errors.</p>
+<p>For this reason, it is <strong>recommended to explicitly install a compatible HDF5 version</strong> inside the Scipion Conda environment:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scipion3<span class="w"> </span>run<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>conda-forge::hdf5<span class="o">==</span><span class="m">1</span>.12.2
+</pre></div>
+</div>
+<p>This version is known to be compatible with older GCC compilers commonly found on supported Linux distributions.</p>
+</section>
+<section id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading"></a></h2>
+<p>The following packages must be installed before building Xmipp:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">gcc</span></code>, <code class="docutils literal notranslate"><span class="pre">g++</span></code> — C and C++ compilers</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cmake</span> <span class="pre">(&gt;=3.18,&lt;4)</span></code> — cross-platform build system</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span></code> — version control system</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zlib</span></code> — compression library</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fftw</span> <span class="pre">(&gt;=3)</span></code> — FFT library</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hdf5</span> <span class="pre">(1.8</span> <span class="pre">&lt;=</span> <span class="pre">version</span> <span class="pre">&lt;=1.12.2)</span></code> — HDF5 library</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">openmpi</span></code> development libraries</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sqlite</span> <span class="pre">(&gt;=3)</span></code> — SQLite database</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">libtiff</span></code> — TIFF image support</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">libjpeg</span></code> — JPEG support (Ubuntu: <code class="docutils literal notranslate"><span class="pre">libjpeg-dev</span></code> / RHEL: <code class="docutils literal notranslate"><span class="pre">libjpeg-turbo-devel</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">openjdk</span> <span class="pre">(&lt;=11)</span></code> — Java Development Kit</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">python3-dev</span></code> and <code class="docutils literal notranslate"><span class="pre">python3-numpy</span></code> — Python 3 development headers and NumPy</p></li>
+</ul>
+</section>
+<section id="installing-dependencies">
+<h2>Installing dependencies<a class="headerlink" href="#installing-dependencies" title="Link to this heading"></a></h2>
+<section id="ubuntu-debian">
+<h3>Ubuntu/Debian<a class="headerlink" href="#ubuntu-debian" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>gcc<span class="w"> </span>g++<span class="w"> </span>cmake<span class="w"> </span>git<span class="w"> </span>libfftw3-dev<span class="w"> </span>libopenmpi-dev<span class="w"> </span>libhdf5-dev<span class="w"> </span>libtiff5-dev<span class="w"> </span>libsqlite3-dev<span class="w"> </span>libjpeg-dev<span class="w"> </span>python3-dev<span class="w"> </span>python3-numpy<span class="w"> </span>default-jdk<span class="w"> </span>zlib1g-dev
+</pre></div>
+</div>
+</section>
+<section id="centos-rhel">
+<h3>CentOS/RHEL<a class="headerlink" href="#centos-rhel" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On CentOS 7, the default GCC version is not compatible with Xmipp.
+You can enable a newer GCC version with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>yum<span class="w"> </span>install<span class="w"> </span>centos-release-scl
+yum<span class="w"> </span>install<span class="w"> </span>devtoolset-10
+scl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>devtoolset-10<span class="w"> </span>bash
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On some RHEL-based systems, HDF5 may require enabling the <strong>EPEL</strong> repository:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>yum<span class="w"> </span>install<span class="w"> </span>epel-release
+</pre></div>
+</div>
+</div>
+<p>Install dependencies with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>yum<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>gcc<span class="w"> </span>gcc-c++<span class="w"> </span>cmake<span class="w"> </span>git<span class="w"> </span>fftw-devel<span class="w"> </span>openmpi-devel<span class="w"> </span>hdf5-devel<span class="w"> </span>libtiff-devel<span class="w"> </span>sqlite-devel<span class="w"> </span>libjpeg-turbo-devel<span class="w"> </span>python3-devel<span class="w"> </span>python3-numpy<span class="w"> </span>java-11-openjdk-devel<span class="w"> </span>zlib-devel
+</pre></div>
+</div>
+</section>
+</section>
+<section id="final-notes">
+<h2>Final notes<a class="headerlink" href="#final-notes" title="Link to this heading"></a></h2>
+<p>These requirements will ensure your system is ready to build and run Xmipp.
+If you encounter problems, please check known <a class="reference external" href="https://github.com/I2PC/xmipp/issues?q=is%3Aissue">issues</a> or report a new one.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../index.html" class="btn btn-neutral float-left" title="Welcome to Xmipp documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Installations/index.html" class="btn btn-neutral float-right" title="Installations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Xmipp team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,499 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xmipp Release Procedures &mdash; Xmipp 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Creating an Xmipp Release (Deprecated on v4)" href="../How-to-release/index.html" />
+    <link rel="prev" title="Useful Tricks and Scripts" href="../UsefulScripts/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Xmipp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installing Xmipp</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Requirements/index.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Installations/index.html">Installations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Optionals/index.html">Optional Tools and Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Troubleshooting/index.html">Troubleshooting</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Releases</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-xmipp-program/index.html">Releases xmipp program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-scipion-em-xmipp/index.html">Releases scipion-em-xmipp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-scipion-em-xmippTomo/index.html">Releases scipion-em-xmippTomo</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Xmipp World</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../protocolsMap.html">Protocols Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thePowerOfXmipp.html">The power of Xmipp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../listOfPublications.html">List of Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../history.html">Timeline of Xmipp</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Utils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/ConfigurationF/index.html">Configuration File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/xmippStructure/index.html">Xmipp structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/Conventions/index.html">Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/Deprecated-programs/index.html">Programs deprecated</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Welcome-developers/index.html">Welcome Developers! 👋</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Guidelines/index.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tips/index.html">Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CodeDocumentation/index.html">Code documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../UsefulScripts/index.html">Useful Tricks and Scripts</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Xmipp Release Procedures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#xmipp3-installer">xmipp3-installer 🗃️</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#release-generation">Release Generation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-through-scipion">Installation Through Scipion</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#scipion-em-xmipp">scipion-em-xmipp 🗃️</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#steps-to-create-a-new-release">Steps to Create a New Release</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#major-xmipp-version-changes">Major Xmipp Version Changes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#xmipp3">xmipp3 🗃️</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#version-updates">Version Updates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#release-procedure">Release Procedure</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#xmippcore">xmippCore 🗃️</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Steps to Create a New Release</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#xmippviz">xmippViz 🗃️</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Steps to Create a New Release</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#protein-catalog-for-xmipp-releases-naming">🧬 Protein Catalog for Xmipp releases naming 🧬</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#a">A</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#b">B</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#c">C</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#d">D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#e">E</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#f">F</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#g">G</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#h">H</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#i">I</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#k">K</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#l">L</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#m">M</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#n">N</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#o">O</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#p">P</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#r">R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#s">S</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#t">T</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#u">U</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#v">V</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#w">W</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#y">Y</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#z">Z</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../How-to-release/index.html">Creating an Xmipp Release (Deprecated on v4)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/Enhancing/index.html">Data Collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/Contact/index.html">Contact us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/License/index.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Xmipp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Xmipp Release Procedures</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/Developers/HowToRelease2.0/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="xmipp-release-procedures">
+<h1>Xmipp Release Procedures<a class="headerlink" href="#xmipp-release-procedures" title="Link to this heading"></a></h1>
+<p>This document describes how to manage versions following <a class="reference external" href="https://semver.org/">semantic version standar</a> , and releases for the different
+components of the Xmipp ecosystem: xmipp3-installer, scipion-em-xmipp,
+xmipp3, xmippCore and xmippViz.</p>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="../../_images/DiagramInstaller.png"><img alt="Repositories dependencies diagram" src="../../_images/DiagramInstaller.png" style="width: 400px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Repositories dependencies</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<hr class="docutils" />
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 13.0%" />
+<col style="width: 87.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Repository</p></th>
+<th class="head"><p>Steps to Create a New Version</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>xmipp3-installer</p></td>
+<td><ul class="simple">
+<li><p>Trigger GitHub manual action</p></li>
+<li><p>Uploads automatically to <a class="reference external" href="https://pypi.org/project/xmipp3-installer/">PyPI</a></p></li>
+<li><p>Scipion-em-xmipp installs it via github release in the <a class="reference external" href="https://github.com/I2PC/scipion-em-xmipp/blob/main/xmipp3/__init__.py">init script</a></p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>scipion-em-xmipp</p></td>
+<td><ul class="simple">
+<li><p>Update <code class="docutils literal notranslate"><span class="pre">changelog.md</span></code></p></li>
+<li><p>Update version in <code class="docutils literal notranslate"><span class="pre">xmipp3/version.py</span></code> (<code class="docutils literal notranslate"><span class="pre">__version__</span></code>)</p></li>
+<li><p>If Xmipp major version changes: update <code class="docutils literal notranslate"><span class="pre">_binVersion</span></code></p></li>
+<li><p>Trigger GitHub <code class="docutils literal notranslate"><span class="pre">Release</span></code> action → uploads to PyPI and creates tag</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>xmipp3</p></td>
+<td><ul class="simple">
+<li><p>Edit <code class="docutils literal notranslate"><span class="pre">xmipp/version-info.json</span></code>: <code class="docutils literal notranslate"><span class="pre">version_number</span></code>, <code class="docutils literal notranslate"><span class="pre">release_date</span></code></p></li>
+<li><p>Edit <code class="docutils literal notranslate"><span class="pre">version_name</span></code> only if major changes</p></li>
+<li><p>Update dependency versions for <code class="docutils literal notranslate"><span class="pre">xmippCore</span></code> / <code class="docutils literal notranslate"><span class="pre">xmippViz</span></code> if major changes</p></li>
+<li><p>Update <code class="docutils literal notranslate"><span class="pre">changelog.md</span></code></p></li>
+<li><p>Trigger GitHub <code class="docutils literal notranslate"><span class="pre">Release</span></code> action → creates tag and release</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>xmippCore</p></td>
+<td><ul class="simple">
+<li><p>Add new version and changes in <code class="docutils literal notranslate"><span class="pre">changeLOG.md</span></code></p></li>
+<li><p>Trigger GitHub <code class="docutils literal notranslate"><span class="pre">Release</span></code> action → creates new tag</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>xmippViz</p></td>
+<td><ul class="simple">
+<li><p>Add new version and changes in <code class="docutils literal notranslate"><span class="pre">changeLOG.md</span></code></p></li>
+<li><p>Trigger GitHub <code class="docutils literal notranslate"><span class="pre">Release</span></code> action → creates new tag</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<section id="xmipp3-installer">
+<h2>xmipp3-installer 🗃️<a class="headerlink" href="#xmipp3-installer" title="Link to this heading"></a></h2>
+<p>xmipp3-installer packages the Xmipp binaries and is published on PyPI. It is automatically installed by the Scipion plugin scipion-em-xmipp.</p>
+<section id="release-generation">
+<h3>Release Generation<a class="headerlink" href="#release-generation" title="Link to this heading"></a></h3>
+<p>Releases are produced via the GitHub manual action <code class="docutils literal notranslate"><span class="pre">Generate</span> <span class="pre">release</span> <span class="pre">(Pypi,</span> <span class="pre">tag,</span> <span class="pre">&amp;</span> <span class="pre">GitHub</span> <span class="pre">Release)</span></code>. Executing this action will upload a new <a class="reference external" href="https://pypi.org/project/xmipp3-installer/">version to PyPI</a> and create the corresponding Git tag and GitHub Release.</p>
+</section>
+<section id="installation-through-scipion">
+<h3>Installation Through Scipion<a class="headerlink" href="#installation-through-scipion" title="Link to this heading"></a></h3>
+<p>The scipion-em-xmipp plugin installs it using its <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code>:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>xmipp3-installer==1.*
+</pre></div>
+</div>
+</section>
+</section>
+<section id="scipion-em-xmipp">
+<h2>scipion-em-xmipp 🗃️<a class="headerlink" href="#scipion-em-xmipp" title="Link to this heading"></a></h2>
+<p>This is the Scipion plugin that integrates Xmipp into Scipion.</p>
+<section id="steps-to-create-a-new-release">
+<h3>Steps to Create a New Release<a class="headerlink" href="#steps-to-create-a-new-release" title="Link to this heading"></a></h3>
+<ol class="arabic">
+<li><p><strong>Update the changelog</strong></p>
+<p>Edit <code class="docutils literal notranslate"><span class="pre">changelog.md</span></code> with the new version and a list of changes.</p>
+</li>
+<li><p><strong>Update the version</strong></p>
+<p>Modify the <code class="docutils literal notranslate"><span class="pre">__version__</span></code> variable in:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>scipion-em-xmipp/xmipp3/version.py
+</pre></div>
+</div>
+</li>
+<li><p><strong>Run the GitHub Release action</strong></p>
+<p>Trigger the manual action <code class="docutils literal notranslate"><span class="pre">Release</span></code>. This will upload the new version to <a class="reference external" href="https://pypi.org/project/scipion-em-xmipp/">PyPI</a> and create a new Git tag and GitHub Release.</p>
+</li>
+</ol>
+</section>
+<section id="major-xmipp-version-changes">
+<h3>Major Xmipp Version Changes<a class="headerlink" href="#major-xmipp-version-changes" title="Link to this heading"></a></h3>
+<p>If the <strong>major version of Xmipp</strong> changes, update these fields:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>scipion-em-xmipp/xmipp3/version.py
+    _binVersion
+</pre></div>
+</div>
+<p>Use the <a class="reference external" href="https://i2pc.github.io/docs/Developers/HowToRelease2.0/index.html#protein-catalog-for-xmipp-releases-naming">Protein cataloge for Xmipp releases name</a></p>
+</section>
+</section>
+<section id="xmipp3">
+<h2>xmipp3 🗃️<a class="headerlink" href="#xmipp3" title="Link to this heading"></a></h2>
+<p>Top-level Xmipp distribution, bundling submodules such as xmippCore and
+xmippViz.</p>
+<section id="version-updates">
+<h3>Version Updates<a class="headerlink" href="#version-updates" title="Link to this heading"></a></h3>
+<p>Edit the version information in:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>xmipp/version-info.json
+</pre></div>
+</div>
+<p>The fields to modify are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">version_number</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version_name</span></code>: only when the <strong>major version</strong> changes. Use the <a class="reference external" href="https://i2pc.github.io/docs/Developers/HowToRelease2.0/index.html#protein-catalog-for-xmipp-releases-naming">Protein cataloge for Xmipp releases name</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">release_date</span></code></p></li>
+</ul>
+<p>If xmippCore or xmippViz increase their <strong>major</strong> version, update their
+version references inside <code class="docutils literal notranslate"><span class="pre">version-info.json</span></code>.</p>
+</section>
+<section id="release-procedure">
+<h3>Release Procedure<a class="headerlink" href="#release-procedure" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Update <code class="docutils literal notranslate"><span class="pre">changelog.md</span></code> with the new version and changes.</p></li>
+<li><p>Trigger the GitHub manual action <code class="docutils literal notranslate"><span class="pre">Release</span></code> to Create a new Git tag and Publish a GitHub Release</p></li>
+</ol>
+</section>
+</section>
+<section id="xmippcore">
+<h2>xmippCore 🗃️<a class="headerlink" href="#xmippcore" title="Link to this heading"></a></h2>
+<p>Core Xmipp libraries and algorithms.</p>
+<section id="id3">
+<h3>Steps to Create a New Release<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Add a new section in <code class="docutils literal notranslate"><span class="pre">changeLOG.md</span></code> including Version number and Description of changes</p></li>
+<li><p>Trigger the <code class="docutils literal notranslate"><span class="pre">Release</span></code> GitHub manual action to generate a new Git tag</p></li>
+</ol>
+</section>
+</section>
+<section id="xmippviz">
+<h2>xmippViz 🗃️<a class="headerlink" href="#xmippviz" title="Link to this heading"></a></h2>
+<p>Visualization module for Xmipp and Scipion</p>
+<section id="id4">
+<h3>Steps to Create a New Release<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Add the new version and changes to <code class="docutils literal notranslate"><span class="pre">changeLOG.md</span></code>  including Version number and Description of changes</p></li>
+<li><p>Execute the GitHub manual action <code class="docutils literal notranslate"><span class="pre">Release</span></code> to create the new tag</p></li>
+</ol>
+</section>
+</section>
+<section id="protein-catalog-for-xmipp-releases-naming">
+<h2>🧬 Protein Catalog for Xmipp releases naming 🧬<a class="headerlink" href="#protein-catalog-for-xmipp-releases-naming" title="Link to this heading"></a></h2>
+<section id="a">
+<h3>A<a class="headerlink" href="#a" title="Link to this heading"></a></h3>
+<p>Actin – Cell structure and movement</p>
+<p>Apoferritin – Iron storage scaffold protein</p>
+<p>ATP synthase – Produces ATP from ADP</p>
+</section>
+<section id="b">
+<h3>B<a class="headerlink" href="#b" title="Link to this heading"></a></h3>
+<p>Bacteriorhodopsin – Light-driven proton pump</p>
+<p>Beta-tubulin – Microtubule structural protein</p>
+<p>Biotin carboxylase – Catalyzes carboxylation reactions</p>
+</section>
+<section id="c">
+<h3>C<a class="headerlink" href="#c" title="Link to this heading"></a></h3>
+<p>Cas9 – DNA cutting enzyme</p>
+<p>CFTR – Chloride ion channel</p>
+<p>Clathrin – Vesicle formation protein</p>
+</section>
+<section id="d">
+<h3>D<a class="headerlink" href="#d" title="Link to this heading"></a></h3>
+<p>Dynein – Moves cargo along microtubules</p>
+<p>DNA polymerase – DNA replication enzyme</p>
+<p>Dicer – Processes microRNA precursors</p>
+</section>
+<section id="e">
+<h3>E<a class="headerlink" href="#e" title="Link to this heading"></a></h3>
+<p>Elastin – Provides tissue elasticity</p>
+<p>Electron transfer flavoprotein – Transfers electrons in mitochondria</p>
+<p>Elongation factor 2 – Assists protein translation</p>
+</section>
+<section id="f">
+<h3>F<a class="headerlink" href="#f" title="Link to this heading"></a></h3>
+<p>Ferritin – Iron storage protein</p>
+<p>Fibrinogen – Blood clot formation</p>
+<p>Flagellin – Builds bacterial flagella</p>
+</section>
+<section id="g">
+<h3>G<a class="headerlink" href="#g" title="Link to this heading"></a></h3>
+<p>GAPDH – Glycolysis enzyme</p>
+<p>GroEL – Protein folding chaperone</p>
+<p>GPCR – Signal reception and transduction</p>
+</section>
+<section id="h">
+<h3>H<a class="headerlink" href="#h" title="Link to this heading"></a></h3>
+<p>Hemoglobin – Oxygen transport</p>
+<p>Histone – DNA packaging protein</p>
+<p>Hsp90 – Protein folding chaperone</p>
+</section>
+<section id="i">
+<h3>I<a class="headerlink" href="#i" title="Link to this heading"></a></h3>
+<p>Integrin – Cell adhesion receptor</p>
+<p>Immunoglobulin G – Antibody immune defense</p>
+<p>Ion channel TRPV1 – Heat/pain sensor channel</p>
+</section>
+<section id="k">
+<h3>K<a class="headerlink" href="#k" title="Link to this heading"></a></h3>
+<p>Keratin – Structural hair/nail protein</p>
+<p>Kinesin – Microtubule cargo transport</p>
+<p>Kinase (PKA) – Phosphorylates target proteins</p>
+</section>
+<section id="l">
+<h3>L<a class="headerlink" href="#l" title="Link to this heading"></a></h3>
+<p>Lactate dehydrogenase – Converts lactate to pyruvate</p>
+<p>Laminin – Extracellular matrix structural protein</p>
+<p>Lipase – Breaks down fats</p>
+</section>
+<section id="m">
+<h3>M<a class="headerlink" href="#m" title="Link to this heading"></a></h3>
+<p>Myosin – Motor protein for movement</p>
+<p>Myoglobin – Oxygen storage in muscles</p>
+<p>Mitochondrial complex I – Electron transport in mitochondria</p>
+</section>
+<section id="n">
+<h3>N<a class="headerlink" href="#n" title="Link to this heading"></a></h3>
+<p>NADH dehydrogenase – Oxidizes NADH in mitochondria</p>
+<p>Na⁺/K⁺-ATPase – Maintains ion gradients</p>
+<p>Nucleosome – DNA wound around histones</p>
+</section>
+<section id="o">
+<h3>O<a class="headerlink" href="#o" title="Link to this heading"></a></h3>
+<p>Opsin – Light-detecting protein</p>
+<p>Outer membrane porin – Small molecule transport</p>
+<p>Oxytocin – Hormone, induces contractions</p>
+</section>
+<section id="p">
+<h3>P<a class="headerlink" href="#p" title="Link to this heading"></a></h3>
+<p>p53 – Tumor suppressor</p>
+<p>Photosystem II – Splits water in photosynthesis</p>
+<p>Proteasome – Degrades unwanted proteins</p>
+</section>
+<section id="r">
+<h3>R<a class="headerlink" href="#r" title="Link to this heading"></a></h3>
+<p>Ribosome – Protein synthesis machine</p>
+<p>RNA polymerase II – Transcribes mRNA</p>
+<p>Rubisco – Fixes carbon dioxide</p>
+</section>
+<section id="s">
+<h3>S<a class="headerlink" href="#s" title="Link to this heading"></a></h3>
+<p>Spike (SARS-CoV-2) – Virus entry protein</p>
+<p>Sec61 translocon – Inserts proteins into ER</p>
+<p>Synapsin – Regulates neurotransmitter release</p>
+</section>
+<section id="t">
+<h3>T<a class="headerlink" href="#t" title="Link to this heading"></a></h3>
+<p>Tubulin – Microtubule building block</p>
+<p>Troponin – Regulates muscle contraction</p>
+<p>TRPV1 – Heat/pain sensory channel</p>
+</section>
+<section id="u">
+<h3>U<a class="headerlink" href="#u" title="Link to this heading"></a></h3>
+<p>Ubiquitin – Marks proteins for degradation</p>
+<p>Urease – Breaks down urea</p>
+<p>Uncoupling protein – Dissipates mitochondrial proton gradient</p>
+</section>
+<section id="v">
+<h3>V<a class="headerlink" href="#v" title="Link to this heading"></a></h3>
+<p>V-ATPase – Acidifies organelles</p>
+<p>Vinculin – Connects cytoskeleton to membrane</p>
+<p>Voltage-gated sodium channel – Action potential initiation</p>
+</section>
+<section id="w">
+<h3>W<a class="headerlink" href="#w" title="Link to this heading"></a></h3>
+<p>Wnt protein – Cell signaling and development</p>
+<p>Wee1 kinase – Controls cell cycle</p>
+<p>Wilms tumor protein (WT1) – Kidney development regulator</p>
+</section>
+<section id="y">
+<h3>Y<a class="headerlink" href="#y" title="Link to this heading"></a></h3>
+<p>YAP – Transcription coactivator, growth</p>
+<p>Y-box binding protein – Regulates transcription and translation</p>
+</section>
+<section id="z">
+<h3>Z<a class="headerlink" href="#z" title="Link to this heading"></a></h3>
+<p>Zinc finger protein – DNA binding protein</p>
+<p>ZO-1 – Tight junction scaffolding</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../UsefulScripts/index.html" class="btn btn-neutral float-left" title="Useful Tricks and Scripts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../How-to-release/index.html" class="btn btn-neutral float-right" title="Creating an Xmipp Release (Deprecated on v4)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Xmipp team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

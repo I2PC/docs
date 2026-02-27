@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installations &mdash; Xmipp 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Optional Tools and Libraries" href="../Optionals/index.html" />
+    <link rel="prev" title="Requirements" href="../Requirements/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Xmipp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installing Xmipp</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Requirements/index.html">Requirements</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation-with-scipion-plugin-manager">Installation with Scipion plugin manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#manual-installation-of-xmipp">Manual Installation of Xmipp</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-xmipp-in-standalone">Using Xmipp in standalone</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-for-hpc-clusters">Installation for HPC Clusters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#xmipp-on-marenostrum5-cluster-a-successful-installation">Xmipp on MareNostrum5 cluster; a successful Installation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Optionals/index.html">Optional Tools and Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/index.html">Troubleshooting</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Releases</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-xmipp-program/index.html">Releases xmipp program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-scipion-em-xmipp/index.html">Releases scipion-em-xmipp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-scipion-em-xmippTomo/index.html">Releases scipion-em-xmippTomo</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Xmipp World</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../protocolsMap.html">Protocols Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thePowerOfXmipp.html">The power of Xmipp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../listOfPublications.html">List of Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../history.html">Timeline of Xmipp</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Utils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/ConfigurationF/index.html">Configuration File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/xmippStructure/index.html">Xmipp structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/Conventions/index.html">Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/Deprecated-programs/index.html">Programs deprecated</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/Welcome-developers/index.html">Welcome Developers! 👋</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/Guidelines/index.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/Tips/index.html">Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/CodeDocumentation/index.html">Code documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/UsefulScripts/index.html">Useful Tricks and Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/HowToRelease2.0/index.html">Xmipp Release Procedures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/How-to-release/index.html">Creating an Xmipp Release (Deprecated on v4)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/Enhancing/index.html">Data Collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/Contact/index.html">Contact us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/License/index.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Xmipp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Installations</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/Installation/Installations/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installations">
+<h1>Installations<a class="headerlink" href="#installations" title="Link to this heading"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Xmipp collects basic information about your installation environment (such as library versions, system architecture, and operating system) to improve compatibility, performance, and stability. If you prefer <strong>not to send this data</strong> pleas visit <a class="reference external" href="https://i2pc.github.io/docs/Others/Enhancing/index.html#data-collection">Data collection</a></p>
+<p>The data is <strong>anonymous and aggregated</strong> and is used only to optimize Xmipp and prioritize new features.</p>
+</div>
+<section id="installation-with-scipion-plugin-manager">
+<h2>Installation with Scipion plugin manager<a class="headerlink" href="#installation-with-scipion-plugin-manager" title="Link to this heading"></a></h2>
+<p>The recommended way for users (not developers) to install and use Scipion is via the
+<a class="reference external" href="https://scipion-em.github.io/docs/release-3.0.0/docs/scipion-modes/how-to-install.html">Scipion framework</a>,
+where you can use Xmipp with other Cryo-EM-related software.</p>
+<p>Xmipp will not be installed during Scipion installation, to install it use the <a class="reference external" href="https://scipion-em.github.io/docs/release-3.0.0/docs/scipion-modes/how-to-install.html#installing-other-plugins">plugin manager of Scipion</a></p>
+</section>
+<section id="manual-installation-of-xmipp">
+<h2>Manual Installation of Xmipp<a class="headerlink" href="#manual-installation-of-xmipp" title="Link to this heading"></a></h2>
+<p>This guide explains the manual installation of Xmipp and the process to link it with Scipion. The standalone version allows you to use Xmipp independently of Scipion.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Xmipp has a <strong>list of dependencies that are required</strong> to install it. Please review the <a class="reference external" href="https://i2pc.github.io/docs/Installation/Requirements/index.html#dependencies">list of libraries</a></p>
+</div>
+<section id="installation">
+<h3>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h3>
+<ol class="loweralpha">
+<li><p>Install last release of Xmipp from terminal</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scipion3<span class="w"> </span>installp<span class="w"> </span>-p<span class="w"> </span>scipion-em-xmipp
+</pre></div>
+</div>
+</li>
+<li><p>Install the develop branch (main) of Xmipp</p>
+<p>For manual installation is required to install xmipp3-installer.</p>
+<blockquote>
+<div><p><strong>Option 1:</strong> Compile using the Scipion environment. This method installs Xmipp with dependencies managed by Scipion and is the recomended way.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scipion3<span class="w"> </span>run<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>xmipp3-installer
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/I2PC/xmipp3
+scipion3<span class="w"> </span>run<span class="w"> </span>xmipp3/xmipp
+<span class="nb">cd</span><span class="w"> </span>xmipp3/src
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/I2PC/scipion-em-xmipp.git
+scipion3<span class="w"> </span>installp<span class="w"> </span>-p<span class="w"> </span>scipion-em-xmipp<span class="w"> </span>--devel
+</pre></div>
+</div>
+<p><strong>Option 2:</strong> Compile the Xmipp alone. This method installs Xmipp with the required dependencies and versions defined by your environment or defaults. To install xmipp3-installer is required activate an environment, preferably the Scipion environment.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>xmipp3-installer
+./xmipp
+</pre></div>
+</div>
+<p>This methods only compile Xmipp. Linking it to Scipion is explained in the next step. Note. For additional details about the compilation process, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./xmipp<span class="w"> </span>--help
+</pre></div>
+</div>
+</div></blockquote>
+<p>To use Xmipp within Scipion, link the standalone installation by following these steps:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Ensure Scipion is installed (refer to the <em>Scipion installation guide</em>).</p></li>
+<li><p>Use the <cite>scipion-em-xmipp</cite> repository, located in <cite>src/scipion-em-xmipp</cite>.</p></li>
+<li><p>Run the following command to link the binaries:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scipion3<span class="w"> </span>installp<span class="w"> </span>-p<span class="w"> </span>~/scipion-em-xmipp<span class="w"> </span>--devel
+</pre></div>
+</div>
+<p>Replace <cite>~/scipion-em-xmipp</cite> with the path to your <cite>scipion-em-xmipp</cite> folder.</p>
+</li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</section>
+<section id="using-xmipp-in-standalone">
+<h3>Using Xmipp in standalone<a class="headerlink" href="#using-xmipp-in-standalone" title="Link to this heading"></a></h3>
+<p>Xmipp is installed in the build directory located in the same directory where the xmipp script is located. To run Xmipp standalone (without Scipion) and to set all necessary environment variables and paths to all Xmipp programs, you can simply run</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>dist/xmipp.bashrc
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+</section>
+<section id="installation-for-hpc-clusters">
+<h2>Installation for HPC Clusters<a class="headerlink" href="#installation-for-hpc-clusters" title="Link to this heading"></a></h2>
+<p>This guide explains how to install Xmipp on High-Performance Computing (HPC).</p>
+<ol class="arabic">
+<li><p><strong>Install Scipion for HPC</strong>
+Follow the instructions provided in the Scipion for HPC installation guide:
+<a class="reference external" href="https://scipion-em.github.io/docs/release-3.0.0/docs/scipion-modes/how-to-install.html#for-hpc-clusters">Scipion HPC Installation Guide</a>.</p></li>
+<li><p><strong>Install the Scipion Xmipp Plugin</strong>
+Run the following command to install the Xmipp plugin for Scipion:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scipion3<span class="w"> </span>installp<span class="w"> </span>-p<span class="w"> </span>scipion-em-xmipp
+</pre></div>
+</div>
+</li>
+<li><p><strong>Locate and navigate the installation directory</strong> of softwares of Scipion:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/path/to/scipion3/software/em/
+</pre></div>
+</div>
+</li>
+<li><p><strong>Clone the Xmipp Repository</strong>
+Clone there the Xmipp repository and move to the source directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/I2PC/xmipp.git<span class="w"> </span>xmippSrc<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>xmippSrc
+</pre></div>
+</div>
+</li>
+<li><p><strong>Create the Configuration File</strong>
+Generate the initial configuration file by running:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./xmipp<span class="w"> </span>config
+</pre></div>
+</div>
+</li>
+<li><p><strong>Edit the Configuration File</strong>
+Open the <a class="reference external" href="https://i2pc.github.io/docs/Utils/ConfigurationF/index.html#configuration-file">configuration file</a> generated in the previous step and edit the fields as needed. Adjust options such as <cite>CMAKE_C_FLAGS</cite> or <cite>CMAKE_CXX_FLAGS</cite> to match the requirements of your HPC system.</p></li>
+<li><p><strong>Check the Installed Xmipp Version</strong>
+Use the following command to verify the version of the binaries the plugin scipion-em-Xmipp requires (something like “v3.24.12.0-Poseidon”)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scipion3<span class="w"> </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;from xmipp3.version import _binTagVersion; print(_binTagVersion)&quot;</span><span class="w">  </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>v3
+</pre></div>
+</div>
+</li>
+<li><p><strong>Checkout to the specific release</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>v3.24.12.0-Poseidon
+</pre></div>
+</div>
+</li>
+<li><p><strong>Compile and Install Xmipp</strong>
+Compile Xmipp in production mode with the command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scipion3<span class="w"> </span>run<span class="w"> </span>./xmipp<span class="w"> </span>--production<span class="w"> </span>True
+</pre></div>
+</div>
+</li>
+</ol>
+<p>After completing these steps, Xmipp should be successfully installed and configured on your HPC environment. But in any case you can <a class="reference external" href="https://i2pc.github.io/docs/contact.html#contact-us">contact us</a> for advice or support.</p>
+<section id="xmipp-on-marenostrum5-cluster-a-successful-installation">
+<h3>Xmipp on MareNostrum5 cluster; a successful Installation<a class="headerlink" href="#xmipp-on-marenostrum5-cluster-a-successful-installation" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following is a user-contributed installation report from MareNostrum5 (BSC-CNS, Barcelona),
+which may serve as a helpful reference when installing Xmipp on similar HPC systems.</p>
+</div>
+<p>This is a summary of the steps followed to successfully install Xmipp on the <strong>MareNostrum5</strong> cluster.
+Due to the restricted environment (no outgoing requests allowed), some manual pre-fetching and
+modification of build scripts were required.</p>
+<p><strong>Fetch Phase (local, in `xmipp` folder)</strong></p>
+<p>Dependencies are separated based on how they’re used in the build system:</p>
+<ol class="arabic simple">
+<li><p><strong>FetchContent_Declare-based dependencies</strong>: must be placed in the <cite>_deps</cite> folder.</p></li>
+<li><p><strong>ExternalProject_Add-based dependencies</strong>: must be cloned directly in <cite>build</cite>.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>build
+<span class="nb">cd</span><span class="w"> </span>build
+
+<span class="c1"># Case 1: FetchContent_Declare (stored in _deps)</span>
+mkdir<span class="w"> </span>_deps
+<span class="nb">cd</span><span class="w"> </span>_deps
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/MartinSalinas98/libcifpp.git
+mv<span class="w"> </span>libcifpp<span class="w"> </span>libcifpp-src
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/google/googletest.git
+mv<span class="w"> </span>googletest<span class="w"> </span>googletest-src
+
+<span class="c1"># Patch libcifpp to fix valarray constexpr conflict</span>
+nano<span class="w"> </span>libcifpp-src/include/cif++/point.hpp
+<span class="c1"># -&gt; Comment out lines 324–331</span>
+<span class="c1"># -&gt; Replace line 333 with:</span>
+<span class="c1">#    value_type length = std::sqrt(q.a*q.a+q.b*q.b+q.c*q.c+q.d*q.d);</span>
+
+<span class="c1"># Case 2: ExternalProject_Add (cloned in main build directory)</span>
+<span class="nb">cd</span><span class="w"> </span>..
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/HiPerCoRe/cuFFTAdvisor.git
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/cossorzano/libsvm.git
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/vit-vit/CTPL.git
+</pre></div>
+</div>
+<p><strong>Disable Auto-Fetching (local)</strong></p>
+<p>The <cite>cmake/fetch_*.cmake</cite> scripts must be modified to disable network fetching during CMake configuration.
+There are <strong>two types</strong> of fetch scripts:</p>
+<ol class="arabic simple">
+<li><p><strong>FetchContent_Declare-based</strong>: modify inside the macro to indicate dependency is already “POPULATED”.</p></li>
+<li><p><strong>ExternalProject_Add-based</strong>: remove or comment out the full <cite>ExternalProject_Add()</cite> block.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>../cmake
+
+<span class="c1"># Case 1: FetchContent_Declare</span>
+nano<span class="w"> </span>fetch_cifpp.cmake
+nano<span class="w"> </span>fetch_googletest.cmake
+<span class="c1"># -&gt; Inside FetchContent_Declare:</span>
+<span class="c1">#    Comment out GIT_REPOSITORY and GIT_TAG lines</span>
+<span class="c1">#    Add line: POPULATED TRUE</span>
+
+<span class="c1"># Case 2: ExternalProject_Add</span>
+nano<span class="w"> </span>fetch_ctpl.cmake
+nano<span class="w"> </span>fetch_libsvm.cmake
+nano<span class="w"> </span>fetch_cuFFTAdvisor.cmake
+<span class="c1"># -&gt; Comment out or remove the entire ExternalProject_Add() block</span>
+</pre></div>
+</div>
+<p><strong>Prepare Environment (remote, on MareNostrum5)</strong></p>
+<p>Load required modules:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>load<span class="w"> </span>intel
+module<span class="w"> </span>load<span class="w"> </span>mkl
+module<span class="w"> </span>load<span class="w"> </span>python
+module<span class="w"> </span>load<span class="w"> </span>cmake
+module<span class="w"> </span>load<span class="w"> </span>openmpi/4.1.5-gcc
+module<span class="w"> </span>load<span class="w"> </span>eigen/3.3.4-gcc-ompi
+module<span class="w"> </span>load<span class="w"> </span>boost/1.84.0-gcc-ompi
+module<span class="w"> </span>load<span class="w"> </span>nvidia-hpc-sdk
+module<span class="w"> </span>load<span class="w"> </span>hdf5/1.10.11-nvidia-nvhpcx
+module<span class="w"> </span>load<span class="w"> </span>sqlite3/3.45.2-gcc
+module<span class="w"> </span>load<span class="w"> </span>fftw/3.3.10-gcc-ompi
+module<span class="w"> </span>load<span class="w"> </span>java-openjdk/22.0.1
+</pre></div>
+</div>
+<p>Set the Eigen path:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">Eigen3_DIR</span><span class="o">=</span>/apps/ACC/EIGEN/3.3.4/GCC/OPENMPI/share/eigen3/cmake
+</pre></div>
+</div>
+<p><strong>Installation (remote)</strong></p>
+<p>Launch the build process:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./xmipp
+</pre></div>
+</div>
+<p><strong>Remarks</strong></p>
+<ul class="simple">
+<li><p>MareNostrum5 blocks all outgoing HTTP(S) requests, so <strong>all dependencies must be fetched locally and transferred manually</strong> to the build environment.</p></li>
+<li><p>Distinguish between dependencies using <cite>FetchContent_Declare</cite> and those using <cite>ExternalProject_Add</cite>, as their locations and how they are disabled differ.</p></li>
+<li><p>Patching <cite>libcifpp</cite> was necessary to resolve <cite>constexpr</cite>/<cite>valarray</cite> issues during compilation.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../Requirements/index.html" class="btn btn-neutral float-left" title="Requirements" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Optionals/index.html" class="btn btn-neutral float-right" title="Optional Tools and Libraries" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Xmipp team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

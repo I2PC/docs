@@ -1,0 +1,810 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Releases scipion-em-xmipp &mdash; Xmipp 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Releases scipion-em-xmippTomo" href="../Releases-scipion-em-xmippTomo/index.html" />
+    <link rel="prev" title="Releases xmipp program" href="../Releases-xmipp-program/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Xmipp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installing Xmipp</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Requirements/index.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Installations/index.html">Installations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Optionals/index.html">Optional Tools and Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Troubleshooting/index.html">Troubleshooting</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Releases</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Releases-xmipp-program/index.html">Releases xmipp program</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Releases scipion-em-xmipp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">28.0.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">28.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-27-0-0">Release 27.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">26.0.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">26.0.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">26.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rhea">25.06.0 - Rhea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#poseidon">24.12.0 - Poseidon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#oceanus">24.06.0 - Oceanus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nereus">23.11.0 - Nereus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#morpheus">23.07.0 - Morpheus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kratos">23.03.0 - Kratos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#iris">22.11.0 - Iris</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hot-fix-22-11-2">Hot fix 22.11.2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hot-fix-22-11-1">Hot fix 22.11.1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">22.11.0</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#helios">22.07.0 - Helios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gaia">22.04.0 - Gaia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#eris">22.01.0 - Eris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#caerus">21.06.0 - Caerus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#boreas">20.07.0 - Boreas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">19.04.0</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Releases-scipion-em-xmippTomo/index.html">Releases scipion-em-xmippTomo</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Xmipp World</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../protocolsMap.html">Protocols Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thePowerOfXmipp.html">The power of Xmipp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../listOfPublications.html">List of Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../history.html">Timeline of Xmipp</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Utils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/ConfigurationF/index.html">Configuration File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/xmippStructure/index.html">Xmipp structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/Conventions/index.html">Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/Deprecated-programs/index.html">Programs deprecated</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/Welcome-developers/index.html">Welcome Developers! 👋</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/Guidelines/index.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/Tips/index.html">Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/CodeDocumentation/index.html">Code documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/UsefulScripts/index.html">Useful Tricks and Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/HowToRelease2.0/index.html">Xmipp Release Procedures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/How-to-release/index.html">Creating an Xmipp Release (Deprecated on v4)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/Enhancing/index.html">Data Collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/Contact/index.html">Contact us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/License/index.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Xmipp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Releases scipion-em-xmipp</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/Releases/Releases-scipion-em-xmipp/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="releases-scipion-em-xmipp">
+<h1>Releases scipion-em-xmipp<a class="headerlink" href="#releases-scipion-em-xmipp" title="Link to this heading"></a></h1>
+<section id="id1">
+<h2>28.0.1<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>More scipion-em-xmipp</dt><dd><ul>
+<li><p>Fixing the XMIPP_CUDA_BIN behaves</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="id2">
+<h2>28.0.0<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>New protocols</dt><dd><ul>
+<li><dl class="simple">
+<dt>alignPCA_2D: Performs a 2D classification of particles using PCA. This method is optimized to run in streaming,</dt><dd><p>enabling efficient processing of large datasets</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>More scipion-em-xmipp</dt><dd><ul>
+<li><p>Incorporated XMIPP_CUDA_LIB and XMIPP_CUDA_BIN variables from scipion.conf</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="release-27-0-0">
+<h2>Release 27.0.0<a class="headerlink" href="#release-27-0-0" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>More scipion-em-xmipp</dt><dd><ul>
+<li><p>Updated xmipp3-installer dependency (2.1.0 with configuration flags that can be set using environment variables.)</p></li>
+<li><p>Major version because of deprecated protocol in previous version; DeepCenter</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="id3">
+<h2>26.0.2<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>More scipion-em-xmipp</dt><dd><ul>
+<li><p>Remove app, em, pyworkflow from requirements</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="id4">
+<h2>26.0.1<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>More scipion-em-xmipp</dt><dd><ul>
+<li><p>Fix on xmipp compilation flag</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="id5">
+<h2>26.0.0<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Protocols updated</dt><dd><ul>
+<li><p>deep_micrograph_screen:  updated enviroment to tensorFlow2 and models updated to</p></li>
+<li><p>movie_max_shif: Change the criteria to evaluate the shift</p></li>
+<li><p>crop_resize: Crop/Resize half maps too, if they are available</p></li>
+<li><p>resolution3D: The FSC can be computed now using the two halves</p></li>
+<li><p>align_volume_and_particles: Allow considering mirrors in align volume and particles</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>More scipion-em-xmipp</dt><dd><ul>
+<li><p>Disable xmippDep by default (the dependencies will not be installed by default in the Scipion environment), but installing just the libstdcxx dependence</p></li>
+<li><p>Script to generate the <a class="reference external" href="https://i2pc.github.io/docs/protocolsMap.html#">protocols map</a></p></li>
+<li><p>Remove Relion dependency from TestXmippDenoiseParticles</p></li>
+<li><p>parse json to report summary installation errors</p></li>
+<li><p>View all classes added for XmippProtConsensusClasses</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="rhea">
+<h2>25.06.0 - Rhea<a class="headerlink" href="#rhea" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>New protocols</dt><dd><ul>
+<li><p>compute_likelihood: This protocol computes the likelihood of a set of particles with assigned angles when compared to a set of maps or atomic modelS</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Protocols updated</dt><dd><ul>
+<li><p>Max shift: tolerate movies without micrographs associated</p></li>
+<li><p>Highres: test updated</p></li>
+<li><p>substract_projection: update command to boost and subtract to generate only one output stack</p></li>
+<li><p>Movie alignment consensus protocol: enables irregular input sets. Changes in functionality; comparisons between ons between shifts trajectories, and a additional change related to the minimum consensus or threshold for shifts correlation.</p></li>
+<li><p>volume_adjust_sub: better label for volume 1 vs 2</p></li>
+<li><p>convert_pdb: aDD binThreads</p></li>
+<li><p>align_volume: add possible</p></li>
+<li><p>particle_pick_consensus: Fixed ID mismatch when combining coordinate sets; now supports asymmetrical sets without indexing errors.</p></li>
+<li><p>movie_split_frames: now allows testing sum_frames, includes a summary, improved layout, and updated test.</p></li>
+<li><p>deep_Consensus: GPU handling</p></li>
+<li><p>Deep_hand: handling env to avoid system CUDA settings,  erasing cuda things from env[‘LD_LIBRARY_PATH’]</p></li>
+<li><p>Extract particles protocol: force output boxsize</p></li>
+<li><p>Structure map: Adding a dendrogram and removing some intermediate files</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Protocols fixed</dt><dd><ul>
+<li><p>simulate ctf: fix pre-CTF noise np.numpy, init generator for pre and post ctf noise</p></li>
+<li><p>validate FSCQ: test fixed</p></li>
+<li><p>resolution_monogenic_signal: fixing header in MonoRes</p></li>
+<li><p>protocol_process: CropResize halves fix</p></li>
+<li><p>Extract particles test fixed</p></li>
+<li><p>FSO viewer: the fso was failing when the fso did not cross some thresholds</p></li>
+<li><p>reconstruct_significant: fix gpu usage</p></li>
+<li><p>ransac: fix gpu usage</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Protocols deprecated (For more details visit <a class="reference external" href="https://github.com/I2PC/xmipp/wiki/Deprecating-programs-and-protocols](https://i2pc.github.io/docs/Utils/Deprecated-programs/index.html">this</a>)</dt><dd><ul>
+<li><p>XmippProtScreenDeepLearning</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>More scipion-em-xmipp</dt><dd><ul>
+<li><p>Most of the Xmipp dependencies installed on Scipion env</p></li>
+<li><p>Updating version for pypi requirements</p></li>
+<li><p>Bug cloning tag</p></li>
+<li><p>Use toml for installation</p></li>
+<li><p>Bug fixed related to the WriteSetOfParticles and the Missing ExtraLabels (The Oier and Fede Adventures)</p></li>
+<li><p>Handling nvidia drivers error message</p></li>
+<li><p>improving deps installation</p></li>
+<li><p>Improved the help message of more than 60 protocols</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="poseidon">
+<h2>24.12.0 - Poseidon<a class="headerlink" href="#poseidon" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>New protocols</dt><dd><ul>
+<li><p>apply_tilt_to_ctf: Apply a local deviation to the CTF based on the micrograph’s tilt   angle</p></li>
+<li><p>mics_defocus_balancer: It takes as input a certain number of CTFs and makes a balanced sampling of N images based on the defocus U values</p></li>
+<li><p>deep_center_predict: Center a set of particles in 2D using a neural network</p></li>
+<li><p>cl2d_clustering: 2D clustering protocol to group similar images (2D Averages or 2D Classes)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Protocols updated</dt><dd><ul>
+<li><p>flexalign: Added support for reading EER. Add multi-GPU support. Optimized and refactor the streaming, the continue action stabilized.</p></li>
+<li><p>convert_pdb: now can read cif</p></li>
+<li><p>create_gallery: Allow Scipion protocol create gallery to access missing projection options</p></li>
+<li><p>ctf_consensus: optimized and refactor the streaming, the continue action stabilized. Remove parallelization</p></li>
+<li><p>movie_dose_analysis: optimized and refactor the streaming, the continue action stabilized</p></li>
+<li><p>movie_max_shift: optimized and refactor the streaming, the continue action stabilized, Remove parallelization</p></li>
+<li><p>tilt_analysis: optimized and refactor the streaming, the continue action stabilized</p></li>
+<li><p>subtract_projection: Adaptations for new logic in Xmipp program</p></li>
+<li><p>reconstruct_highres: Add GPU use for local angle assignment</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Protocols fixed</dt><dd><ul>
+<li><p>trigger_data: Fix the way we split the output</p></li>
+<li><p>subtract_projection: fnMask sub</p></li>
+<li><p>classify_pca: Bug fix in the validate function</p></li>
+<li><p>reconstruct_fourier: Fourier reconstruction now allows performing the CTF correction inside the same protocol.</p></li>
+<li><p>volume_local_sharpening: local deblur performs now a single iteration by defaul</p></li>
+<li><p>movie_max_shift: fixed with several parallel threads in streaming</p></li>
+<li><p>reconstruct_highres: add unassigned vars fnVol1 fnVol2 to set loop</p></li>
+<li><p>ctf_defocus_group: fix when testing multiple downsampling factors</p></li>
+<li><p>ctf_micrographs: fix when testing multiple downsampling factors</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Protocols deprecated (For more details visit <a class="reference external" href="https://i2pc.github.io/docs/Utils/Deprecated-programs/index.html">this</a>)</dt><dd><ul>
+<li><p>angular_resolution_alignment</p></li>
+<li><p>movie_opticalflow.py</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>More scipion-em-xmipp</dt><dd><ul>
+<li><p>scikit-learn updated to 1.2</p></li>
+<li><p>protocols.conf list completed. All protocols are listed and clustered in Scipion</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="oceanus">
+<h2>24.06.0 - Oceanus<a class="headerlink" href="#oceanus" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>New protocols</dt><dd><ul>
+<li><p>movie_alignment_consensus: protocol for the comparison of two global alignments</p></li>
+<li><p>PCA classification: 2D Classification method that can works in streaming and in static</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Protocols updated</dt><dd><ul>
+<li><p>deep_center: Deep center calculates an approximate center for the particles.</p></li>
+<li><p>validate_fscq: Added cif support</p></li>
+<li><p>reconstruct_fourier: Enable reconstructing with halves in the reconstruct fourier</p></li>
+<li><p>simulate_ctf: Simulate CTF can add noise before and after CTF.</p></li>
+<li><p>extract_particles: Local average added</p></li>
+<li><p>compare_reprojections: Downsampling option,autodown sampling, allows input 2D in several formats, allows input 3D in several formats, ranking option available, extraction option available</p></li>
+<li><p>cl2d: ensuring a save classes creating and adding possible output</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Protocols fixed</dt><dd><ul>
+<li><p>resolution_deepres:now works with queue system</p></li>
+<li><p>ProcessVolumes: Fix header for resize voxels</p></li>
+<li><p>resolution_bfactor:Fix local resolution to local bfactor</p></li>
+<li><p>resolution_bfactor: create output for res bfac</p></li>
+<li><p>extract_particles: Bug fix in the downsampling factor of extract particles</p></li>
+<li><p>core_analysis: define correctly the particles pointer to have indirect pointer</p></li>
+<li><p>tilt_analysis: estimate automatically the window size new option</p></li>
+<li><p>movie_doseanalysis: update correctly the outputSet</p></li>
+<li><p>extract_particles: Check if resizing is enabled</p></li>
+<li><p>particle_pick_remove_duplicates: Remove duplicates coordinates</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Protocols deprecated (For more details visit <a class="reference external" href="https://i2pc.github.io/docs/Utils/Deprecated-programs/index.html">this</a>)</dt><dd><ul>
+<li><p>deep_denoissing</p></li>
+<li><p>metaprotocol_create_subset</p></li>
+<li><p>metaprotocol_golden_highres</p></li>
+<li><p>solid_angle</p></li>
+<li><p>split_volume</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>More scipion-em-xmipp</dt><dd><ul>
+<li><p>Solve Sonar Cloud reported bugs</p></li>
+<li><p>Flexible import of pyQT on chimera script</p></li>
+<li><p>Removing tkAgg matplotlib requirement in viewer_structure_map</p></li>
+<li><p>DLTK installation bug local variable and Fix use gpu</p></li>
+<li><p>updated scikit-learn version</p></li>
+<li><p>metaprotocol_golden_highres</p></li>
+<li><p>solid_angle</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="nereus">
+<h2>23.11.0 - Nereus<a class="headerlink" href="#nereus" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>New protocols</dt><dd><ul>
+<li><p>Volume local adjustment</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Protocols updated</dt><dd><ul>
+<li><p>convert_pdb: Allowed conversion natively from CIFs</p></li>
+<li><p>particle_pick_automatic: The model can now be given by a directory</p></li>
+<li><p>volume_local_adjust: Save occupancy volume</p></li>
+<li><p>extract_particles: Added two different cases for downsampling, by dimensions and by sampling rate</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Protocols fixed</dt><dd><ul>
+<li><p>movie_resize: Fixed movie resize output size</p></li>
+<li><p>movie_gain: Fix update output step by using a generic one from scipion</p></li>
+<li><p>tilt_analysis: Fixes in the generated tilt images and in updating correctly the output sets</p></li>
+<li><p>ctf_consensus: Fix the dependencies of the step</p></li>
+<li><p>preprocess_micrographs: Fixed output size in preprocess micrographs</p></li>
+<li><p>deep_center_assignment: Fixed deep center calls</p></li>
+<li><p>extract_particles_movies: Get coords correctly</p></li>
+<li><p>particle_pick_consensus: Fix MicsPointer</p></li>
+<li><p>trigger_data: fix updateOutput and close correclty the output set</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Protocols deprecated (For more details visit <a class="reference external" href="https://i2pc.github.io/docs/Utils/Deprecated-programs/index.html">this</a>)</dt><dd><ul>
+<li><p>classification_gpuCorr</p></li>
+<li><p>classification_gpuCorr_full</p></li>
+<li><p>classification_gpuCorr_semi</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>More scipion-em-xmipp</dt><dd><ul>
+<li><p>Updated Nvidia driver required version</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="morpheus">
+<h2>23.07.0 - Morpheus<a class="headerlink" href="#morpheus" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>New protocols</dt><dd><ul>
+<li><p>Movie Dose analysis</p></li>
+<li><p>deep_center</p></li>
+<li><p>deep_global_assignment</p></li>
+<li><p>deep_center_predict</p></li>
+<li><p>deep_global_assignment_predict</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Protocols updated</dt><dd><ul>
+<li><p>consensus_classes (Efficient p-value calculation, updated intersection merging process, generalized protocol for other set of classes)</p></li>
+<li><p>Movie Gain: changed _stepsCheckSecs and fixed inputMovies calling, np.asscalar discontinued in numpy 1.16</p></li>
+<li><p>convert_pdb: dont allow set size if template volume, to convert a set of pdbs to volumes, generates an mrc file</p></li>
+<li><p>CTF_consensus: add 4 threads by default</p></li>
+<li><p>process: Better instantiation of Scipion subclasses</p></li>
+<li><p>create_mask3d: Addding a validate in 3dmask, add :mrc to input filename</p></li>
+<li><p>consensus_local_ctf: save defocus in proper fields, compute consensus for local defocus U and V separately, add consensus angle</p></li>
+<li><p>align_volume: Included the label in the volumes</p></li>
+<li><p>crop_resize: Add mask as input. Mask resize is now possible</p></li>
+<li><p>subtract_projection: change pad validation error for warning, parallelized</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Protocols fixed</dt><dd><ul>
+<li><p>Tilt analysis: Close correctly the output sets once finished</p></li>
+<li><p>Deep micrograph cleaner: fix two bugs that occured during streaming implementation bug</p></li>
+<li><p>volume_adjust_sub: fix with :mrc</p></li>
+<li><p>Picking consensus: define correctly the possibleOutputs bug</p></li>
+<li><p>Center particles: streaming bug when definining the outputs bug</p></li>
+<li><p>volume_subtraction: bug fixed in filename</p></li>
+<li><p>compare_reprojections: fix update subtract projection output</p></li>
+<li><p>deep_micrograph_screen: Bug fix that prevents using small GPUs</p></li>
+<li><p>consensus_classes:Fixed manual output generation</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Protocols deprecated (For more details visit <a class="reference external" href="https://github.com/I2PC/xmipp/wiki/Deprecating-programs-and-protocols">this</a>)</dt><dd><ul>
+<li><p>apply_deformation_zernike3d</p></li>
+<li><p>classify_kmeans2d</p></li>
+<li><p>kmeans_clustering</p></li>
+<li><p>particle_boxSize</p></li>
+<li><p>rotational_spectra</p></li>
+<li><p>split_volume_hierarchical_cluster</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Viewers</dt><dd><ul>
+<li><p>viewer_resolution_fs: fixing 0.1 threshold not found</p></li>
+<li><p>viewer_projmatch, viewer_metaprotocol_golden_highres: Fixing viewers, change removed ChimeraClientView to ChimeraView</p></li>
+<li><p>monores_viewer: fix histogram</p></li>
+<li><p>viewer_structure_map: Change the label for each volume</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="kratos">
+<h2>23.03.0 - Kratos<a class="headerlink" href="#kratos" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>New protocol status: beta, new, production and updated. Will appear
+in the left pannel of Scipion</p></li>
+<li><p>Protocol subtract_projection: user experience improvements, no final
+mask by default, apply ciruclar mask in adjustment image to avoid
+edge artifacts, validate same sampling rate with tolerance in third
+decimal</p></li>
+<li><p>Protocol convert_pdb: Allowed to save centered PDB used for
+conversion.</p></li>
+<li><p>Protocol align_volume_and_particles: add alingment validation</p></li>
+<li><p>Protocol FlexAlign: updating protocol to reflect changes in the
+executable, fixed test, removing unused protocol (Movie average)</p></li>
+<li><p>Protocol align_volume_and_particles:Align volume and particles
+adapted to tomography and works in the absence of tomo plugin.</p></li>
+<li><p>Protocol volume_consensus: validate same sampling rate with tolerance
+in third decimal</p></li>
+<li><p>Protocols deprecated (for more details visit the
+<a class="reference external" href="https://github.com/I2PC/xmipp/wiki/Deprecating-programs">wiki</a>):
+protocol_deep _align, reconstruct_heterogeneous,
+protocol_metaprotocol_create_output,
+protocol_metaprotocol_discrete_heterogeneity_scheduler</p></li>
+</ul>
+</section>
+<section id="iris">
+<h2>22.11.0 - Iris<a class="headerlink" href="#iris" title="Link to this heading"></a></h2>
+<section id="hot-fix-22-11-2">
+<h3>Hot fix 22.11.2<a class="headerlink" href="#hot-fix-22-11-2" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Align volume and particles works in the absence of tomo plugin.</p></li>
+</ul>
+</section>
+<section id="hot-fix-22-11-1">
+<h3>Hot fix 22.11.1<a class="headerlink" href="#hot-fix-22-11-1" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Align volume and particles adapted to tomography. Defines possible
+outputs. Optimized. Test more exhaustive for matrices</p></li>
+</ul>
+</section>
+<section id="id6">
+<h3>22.11.0<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Protocol_cl2d_align: The input can now be a set of averages or a set
+of 2D classes</p></li>
+<li><p>Protocol_local_ctf: Default value are now changed for
+maxDefocusChange</p></li>
+<li><p>Protocol_apply_zernike3d: Now accepts either a Volume or SetOfVolumes
+and applies the coefficients in a loop in the deform step</p></li>
+<li><p>Protocol_postProcessing_deepPostProcessing: Managed GPU memory to
+avoid errors</p></li>
+<li><p>Protocol_resolution_deepres: Mandatory mask</p></li>
+<li><p>Protocol center particles and Gl2d (all options): Fix streaming</p></li>
+<li><p>Protocol_create_3d_mask: Allows volume Null=True</p></li>
+<li><p>Protocol_reconstruct_fourier: Set pixel size</p></li>
+<li><p>GL2D static: Bug fixing</p></li>
+<li><p>Protocol_trigger_data: Bug fixing</p></li>
+<li><p>Protocol_crop_resize: Set sampling rate of mrc files when cropping
+resizing volumes or particles</p></li>
+<li><p>subtract_projection: New protocol for boosting particles. Add
+protocol to wizard XmippParticleMaskRadiusWizard as now the protocol
+uses it</p></li>
+<li><p><strong>New tests:</strong> deep_hand, pick_noise, screen_deep_learning,
+resolution_B_factor</p></li>
+<li><p>Fixed TestHighres test</p></li>
+</ul>
+</section>
+</section>
+<section id="helios">
+<h2>22.07.0 - Helios<a class="headerlink" href="#helios" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>rotate_volume: New protocol</p></li>
+<li><p>subtract_projection: New implementation based on adjustment by
+regression instead of POCS and improved performance</p></li>
+<li><p>local_ctf: Add new sameDefocus option + formatting</p></li>
+<li><p>compare_reprojections &amp; protocol_align_volume: Fast Fourier by
+default</p></li>
+<li><p>crop_resize: Allows input pointers</p></li>
+<li><p>resolution_deepres: Resize output to original size</p></li>
+<li><p>denoise_particles: Added setOfAverages as input option</p></li>
+<li><p>process: Change output from stk (spider) to mrcs (mrc)</p></li>
+<li><p>trigger_data: Bug fixed</p></li>
+<li><p>screen_deeplearning: Added descriptive help</p></li>
+<li><p>center_particles: Added summary info</p></li>
+<li><p>align_volume_and_particles: Summary error fixed</p></li>
+<li><p>cl2d: Summary errors solved</p></li>
+<li><p>New tests: test_protocol_reconstruct_fourier,
+test_protocols_local_defocus, test_protocols_local_defocus,
+TestXmippAlignVolumeAndParticles, TestXmippRotateVolume</p></li>
+<li><p>Improved tests: test_protocols_deepVolPostprocessing,
+test_protocols_xmipp_3d, Test ProjSubtracion</p></li>
+<li><p>Excluded tests: test_protocols_zernike3d,
+test_protocols_metaprotocol_heterogeneity</p></li>
+</ul>
+</section>
+<section id="gaia">
+<h2>22.04.0 - Gaia<a class="headerlink" href="#gaia" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>protocol_core_analysis: New protocol</p></li>
+<li><p>protocol_compare_angles: Bug fix in compare angles under some
+conditions</p></li>
+<li><p>protocol_center_particles: protocol simplified (removed
+setofCoordinates as output)</p></li>
+<li><p>protocol_CTF_consensus: concurrency error fixed</p></li>
+<li><p>protocol_convert_pdb: remove size if deactivated</p></li>
+<li><p>protocol_resolution_deepres: binary masked not stored in Extra folder
+and avoiding memory problems on GPUs</p></li>
+<li><p>protocol_add_noise: fixes</p></li>
+<li><p>protocol_compare_reprojections: improve computation of residuals +
+tests + fix + formatting</p></li>
+<li><p>protocol_screen_deepConsensus: multiple fixes in batch processing,
+trainging and streaming mode</p></li>
+<li><p>protocol_shift_particles: apply transform is now optional</p></li>
+</ul>
+</section>
+<section id="eris">
+<h2>22.01.0 - Eris<a class="headerlink" href="#eris" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://i2pc.github.io/docs/Releases/Releases-xmipp-program/index.html#eris">Visit release xmipp</a></p></li>
+</ul>
+</section>
+<section id="caerus">
+<h2>21.06.0 - Caerus<a class="headerlink" href="#caerus" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>CUDA-11 support</p></li>
+<li><p>New protocol: Deep align</p></li>
+<li><p>ChimeraX support</p></li>
+<li><p>Improvements of streaming process</p></li>
+<li><p>Several performance optimizations</p></li>
+<li><p>Build time optimization</p></li>
+<li><p>Multiple bug fixes</p></li>
+<li><p>Improved documentation</p></li>
+</ul>
+</section>
+<section id="boreas">
+<h2>20.07.0 - Boreas<a class="headerlink" href="#boreas" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>New Protocol: MicrographCleaner is a new algorithm that removes
+coordinates picked from carbon edges, aggregations, ice crystals and
+other contaminations</p></li>
+<li><p>New functionality: The protocol compare reprojections can now compute
+the residuals after alignment</p></li>
+<li><p>New protocol: Split frames divide input movies into odd and even
+movies so that they can be processed independently</p></li>
+<li><p>New protocol: Continuous heterogeneity analysis using spherical
+harmonics (not ready to be used)</p></li>
+<li><p>Bug fixing when some micrograph has no coordinates in the
+consensus-picking.</p></li>
+<li><p>New functionalities: Different architectures and training modes</p></li>
+<li><p>Normal Mode Analysis protocols have been moved to the plugin
+ContinuousFlex</p></li>
+<li><p>Fixing MPI version of the Fourier Reconstruction</p></li>
+<li><p>New protocol: local CTF integration and consensus protocol for local
+ctf (also the viewers)</p></li>
+<li><p>Local CTF analysis tools: Not yet ready for general public</p></li>
+<li><p>New functionallity: Introducing the posibility of automatic
+estimation of the gain orientation.</p></li>
+<li><p>Bugs fixings regarding stability on streaming processing</p></li>
+<li><p>Support of heterogeneous movie sets</p></li>
+<li><p>New protocol: Clustering of subtomogram coordinates into connected
+components that can be processed independently</p></li>
+<li><p>New Protocol: Removing duplicated coordinates</p></li>
+<li><p>New protocol: Subtomograms can be projected in several ways to 2D
+images so that 2D clustering tools can be used</p></li>
+<li><p>New protocol: Regions of Interest can be defined in tomograms (e.g.,
+membranes)</p></li>
+<li><p>Bug fixing in mask3d protocol</p></li>
+<li><p>Bug fix: in helical search symmetry protocol</p></li>
+<li><p>Enhanced precision of the FlexAlign program</p></li>
+<li><p>Now, deepLearningToolkit is under its own conda environment</p></li>
+<li><p>Multiple protocols accelerated using GPU</p></li>
+<li><p>New functionality: Xmipp CTF estimation can now take a previous
+defocus and do not change it</p></li>
+<li><p>New functionallity: CTF-consensus is able to take the primary main
+values or an average of the two.</p></li>
+<li><p>New functionallity: CTF-consensus is able to append metadata from the
+secondary input</p></li>
+<li><p>New functionality: Xmipp Highres can now work with non-phase flipped
+images</p></li>
+<li><p>New functionality: Xmipp Preprocess particles can now phase flip the
+images</p></li>
+<li><p>New protocol: Tool to evaluate the quality of a map-model fitting</p></li>
+<li><p>Allowing multi-GPU processing using FlexAlign</p></li>
+<li><p>Improvement in monores and localdeblur</p></li>
+<li><p>Randomize phases also available for images</p></li>
+<li><p>Change the plugin to the new Scipion structure</p></li>
+<li><p>Migrating the code to python3</p></li>
+</ul>
+</section>
+<section id="id7">
+<h2>19.04.0<a class="headerlink" href="#id7" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Highres can now take a global alignment performed by any other method</p></li>
+<li><p>New protocol: 3D bionotes</p></li>
+<li><p>New protocol: Align volume and particles</p></li>
+<li><p>New protocol: Center particles</p></li>
+<li><p>New protocols: GL2D, GL2D streaming and GL2D static</p></li>
+<li><p>New protocol: 2D kmeans clustering</p></li>
+<li><p>New protocol: compare angles</p></li>
+<li><p>New protocol: consensus 3D classes</p></li>
+<li><p>New protocol: CTF consensus</p></li>
+<li><p>New protocol: deep denoising</p></li>
+<li><p>New protocols: Eliminate empty particles and eliminate empty classes</p></li>
+<li><p>New protocol: Extract unit cell</p></li>
+<li><p>New protocol: Generate reprojections</p></li>
+<li><p>New protocol: metaprotocol heterogenety output, metaprotocol
+heterogeneity subset and metaprotocol heterogeneity</p></li>
+<li><p>New protocol: Movie Max Shift</p></li>
+<li><p>New protocol: particle boxsize</p></li>
+<li><p>New protocol: pick noise</p></li>
+<li><p>New protocol: significant heterogeneity</p></li>
+<li><p>New protocol: swarm consensus intial volumes</p></li>
+<li><p>New protocol: directional ResDir</p></li>
+<li><p>New protocol: local monoTomo</p></li>
+<li><p>New protocol: deep consensus picking</p></li>
+<li><p>New protocol: screen deep learning</p></li>
+<li><p>New protocol: split volume hierarchical</p></li>
+<li><p>New protocol: trigger data</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../Releases-xmipp-program/index.html" class="btn btn-neutral float-left" title="Releases xmipp program" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Releases-scipion-em-xmippTomo/index.html" class="btn btn-neutral float-right" title="Releases scipion-em-xmippTomo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Xmipp team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,861 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Releases xmipp program &mdash; Xmipp 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Releases scipion-em-xmipp" href="../Releases-scipion-em-xmipp/index.html" />
+    <link rel="prev" title="Troubleshooting" href="../../Installation/Troubleshooting/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Xmipp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installing Xmipp</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Requirements/index.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Installations/index.html">Installations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Optionals/index.html">Optional Tools and Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Troubleshooting/index.html">Troubleshooting</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Releases</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Releases xmipp program</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#beta-gal">5.0.0 - Beta-gal</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#xmipp-programs">Xmipp Programs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-and-user-guide">Installation and user guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#more-xmipp">More Xmipp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#apoferritin">4.0.0 - Apoferritin</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Xmipp Programs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Installation and user guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">More Xmipp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#rhea">3.25.06 - Rhea</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Xmipp Programs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Installation and user guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">More Xmipp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#poseidon">3.24.12 - Poseidon</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Xmipp Programs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">Installation and user guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">More Xmipp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#oceanus">3.24.06 - Oceanus</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id10">Xmipp Programs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">Installation and user guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">More Xmipp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#nereus">3.23.11 - Nereus</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id13">Xmipp Programs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">Installation and user guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">More Xmipp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#morpheus">3.23.07 - Morpheus</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id16">Xmipp Programs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">Installation and user guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id18">More Xmipp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#kratos">3.23.03 - Kratos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id19">Xmipp Programs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id20">Installation and user guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#others">Others</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#iris">3.22.11 - Iris</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id21">Xmipp Programs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id22">Installation and user guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id23">Others</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#helios">3.22.07 - Helios</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#scripts-xmipp">Scripts Xmipp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id24">Installation and user guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id25">Others</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#gaia">3.22.04 - Gaia</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id26">Installation and user guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#protocols-scipion-em-xmipp">Protocols scipion-em-xmipp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id27">Others</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#eris">3.22.01 - Eris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#caerus">3.21.06 - Caerus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#boreas">3.20.07 - Boreas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Releases-scipion-em-xmipp/index.html">Releases scipion-em-xmipp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Releases-scipion-em-xmippTomo/index.html">Releases scipion-em-xmippTomo</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Xmipp World</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../protocolsMap.html">Protocols Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thePowerOfXmipp.html">The power of Xmipp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../listOfPublications.html">List of Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../history.html">Timeline of Xmipp</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Utils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/ConfigurationF/index.html">Configuration File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/xmippStructure/index.html">Xmipp structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/Conventions/index.html">Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/Deprecated-programs/index.html">Programs deprecated</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/Welcome-developers/index.html">Welcome Developers! 👋</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/Guidelines/index.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/Tips/index.html">Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/CodeDocumentation/index.html">Code documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/UsefulScripts/index.html">Useful Tricks and Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/HowToRelease2.0/index.html">Xmipp Release Procedures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/How-to-release/index.html">Creating an Xmipp Release (Deprecated on v4)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/Enhancing/index.html">Data Collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/Contact/index.html">Contact us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/License/index.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Xmipp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Releases xmipp program</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/Releases/Releases-xmipp-program/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="releases-xmipp-program">
+<h1>Releases xmipp program<a class="headerlink" href="#releases-xmipp-program" title="Link to this heading"></a></h1>
+<section id="beta-gal">
+<h2>5.0.0 - Beta-gal<a class="headerlink" href="#beta-gal" title="Link to this heading"></a></h2>
+<p><em>Date publication: 02-2026</em></p>
+<section id="xmipp-programs">
+<h3>Xmipp Programs<a class="headerlink" href="#xmipp-programs" title="Link to this heading"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>New programs</dt><dd><ul>
+<li><p>alignPCA_2D: an alignment method applied for 2D classification using PCA and Euclidean distance</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="installation-and-user-guide">
+<h3>Installation and user guide<a class="headerlink" href="#installation-and-user-guide" title="Link to this heading"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Redirect all documentation to the official and fancy one: <a class="reference external" href="https://i2pc.github.io/docs/">https://i2pc.github.io/docs/</a></p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="more-xmipp">
+<h3>More Xmipp<a class="headerlink" href="#more-xmipp" title="Link to this heading"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>CUDA 13 is now fully compatible with Xmipp, enabling improved GPU acceleration and performance on modern hardware.</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="apoferritin">
+<h2>4.0.0 - Apoferritin<a class="headerlink" href="#apoferritin" title="Link to this heading"></a></h2>
+<p><em>Date publication: 11-2025</em></p>
+<section id="id1">
+<h3>Xmipp Programs<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>Programs updated</dt><dd><ul>
+<li><p>align volume and particles: Allow considering mirrors</p></li>
+<li><p>miccCleaner: updated enviroment to tensorflow2</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Programs fixed</dt><dd><ul>
+<li><p>tranform geometry: Apply geometry program now considers the original geometry in the metadata when the parameter –shift_to is passed.</p></li>
+<li><p>angular_project_library: Fix indexing problem in angular_project_library</p></li>
+<li><p>ctf_correct_phase fix and two constants for tomography were added</p></li>
+<li><p>angular_project_library: Fix indexing bug</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="id2">
+<h3>Installation and user guide<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Fixed issue with CUDA 12.5</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="id3">
+<h3>More Xmipp<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Forced compiler GCC &gt;= 9</p></li>
+<li><p>getPSF added to the xmipp binding</p></li>
+<li><p>replace “conda env export” to avoid deprecation issue.</p></li>
+<li><p>Fixing read when encountering NaN-s and infinite values</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="rhea">
+<h2>3.25.06 - Rhea<a class="headerlink" href="#rhea" title="Link to this heading"></a></h2>
+<section id="id4">
+<h3>Xmipp Programs<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>New programs</dt><dd><ul>
+<li><p>continuous_create_residuals: Make better residuals by continuous assignment updates to projections</p></li>
+<li><p>tomo_detect_landmarks: to detect landmarks in tilt series (TS)</p></li>
+<li><p>tomo_calculate_landmark_residuals: to calculate residuals in TS</p></li>
+<li><p>tomo_detect_misalignment_residuals: to detect misalignment from residuals in TS</p></li>
+<li><p>batch_tomo_misalignment_resid_statistics: Python script to calculate statistical metrics from a set of residuals</p></li>
+<li><p>tomo_tiltseries_detect_misalignment_corr: (legacy) for calculating relative shifts between tilt images, as a prealignment strategy</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Programs updated</dt><dd><ul>
+<li><p>Particle subtraction: now generates a single stack + includes noise power estimation</p></li>
+<li><p>classify_pca: allows setting CUDA_DEVICE for NVIDIA drivers ≤ 470</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Programs fixed</dt><dd><ul>
+<li><p>Fixed missing b in angular_continuous_assign2_gpu</p></li>
+<li><p>CUDAFFT test fixed</p></li>
+<li><p>Minor compatibility fixes for CUDA 12.6</p></li>
+<li><p>DT_SChar added to micrographs</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="id5">
+<h3>Installation and user guide<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Fixed broken links in documentation</p></li>
+<li><p>Enhanced data collection steps (context suggests improvements in reproducibility or logging)</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="id6">
+<h3>More Xmipp<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>DLTK environments: channels limited to conda-forge and pip. Updated deepEMhancer version and models</p></li>
+<li><p>Allowing to skip sorting in metadata_vec::split</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="poseidon">
+<h2>3.24.12 - Poseidon<a class="headerlink" href="#poseidon" title="Link to this heading"></a></h2>
+<section id="id7">
+<h3>Xmipp Programs<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>New programs</dt><dd><ul>
+<li><p>tomo_average_subtomos: This method carries out a subtomogram averaging. It means, given a set of subtomogram the program will estimate the average map</p></li>
+<li><p>denoising_tv: The program will make denoising using total variation</p></li>
+<li><p>tomo_ctf_wiener2d_correction: This method performs a CTF correction of a tilt series</p></li>
+<li><p>angular_continuous_assign2_gpu: Make a continuous angular assignment with GPU</p></li>
+<li><p>cuda_fourier_projection</p></li>
+<li><p>predict_deep_center</p></li>
+<li><p>cl2d_clustering</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Programs updated</dt><dd><ul>
+<li><p>tomogram_reconstruction:  averaging with gold standard, tigre with internal interpolation, enviroment of tigre updated</p></li>
+<li><p>mpi_subtract_projection / subtract_projection: Improvements on projection subtraction a particle boosting both in MPI and single thread version</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Programs fixed</dt><dd><ul>
+<li><p>resolution_directional</p></li>
+<li><p>ctf_estimate_from_psd: Bug fix with no defocus</p></li>
+<li><p>mpi_subtract_projection / subtract_projection: subtraction a particle boosting both in MPI and single thread version</p></li>
+<li><p>volume_halves_restoration_gpu: Fixed failure when using masks</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="id8">
+<h3>Installation and user guide<a class="headerlink" href="#id8" title="Link to this heading"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Total new installer based on CMake. More robust and simplified</p></li>
+<li><p>New posting of statistics about installations</p></li>
+<li><p>Allow re-compilation without internet</p></li>
+<li><p>Added next generation of libstdcxx to DLTKv0.3 env to enhance compatibility</p></li>
+<li><p>Forcing to compile Xmipp with the libstdc++ availabe in the scipion3 env if exist</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="id9">
+<h3>More Xmipp<a class="headerlink" href="#id9" title="Link to this heading"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Added support for reading EER</p></li>
+<li><p>Handling .gain files correctly</p></li>
+<li><p>Added MADV_HUGEPAGE support check</p></li>
+<li><p>Fix for rare axis orderings in MRC/MAP files</p></li>
+<li><p>Local average label added (used to measure the intensity of the particles in the original micrographs)</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="oceanus">
+<h2>3.24.06 - <a class="reference external" href="https://github.com/I2PC/xmipp/releases/tag/v3.24.06-Oceanus">Oceanus</a><a class="headerlink" href="#oceanus" title="Link to this heading"></a></h2>
+<section id="id10">
+<h3>Xmipp Programs<a class="headerlink" href="#id10" title="Link to this heading"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>New programs</dt><dd><ul>
+<li><p>xtomo tigre reconstruction: This program provides a variety of algorithms to reconstruct tomogram from a set of tilt series</p></li>
+<li><p>graph_max_cut: split volume program</p></li>
+<li><p>tomo_simulate_tilt_series: simualtion of ts, tomograms and coordinates</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Programs updated</dt><dd><ul>
+<li><p>Deep_center: interface simplified, calculate shift for particles</p></li>
+<li><p>deep_misalignment_detection: update model</p></li>
+<li><p>pdb_label_from_volume:Added CIF format support</p></li>
+<li><p>resolution_monotomo: Fast subtomo extraction</p></li>
+<li><p>resolution_monotomo: accelarating monotomo with float</p></li>
+<li><p>tomogram_reconstruction: tigre reconstruction added</p></li>
+<li><p>tomo_extract_subtomograms: solving some bugs and enhancing performance</p></li>
+<li><p>tomo_extract_particlestacks: solving some bugs and enhancing performance</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Programs fixed</dt><dd><ul>
+<li><p>movie_estimate_gain: Initialize sigma values</p></li>
+<li><p>resolution_localfilter: double not integer</p></li>
+<li><p>movie_estimate_gain: Initialize sigma values</p></li>
+<li><p>project_tomography: internal loop</p></li>
+<li><p>pdb: Fixed PDB write function when no categories are present</p></li>
+<li><p>fourier_filter:Fix WEDGE option in FourierFilter</p></li>
+<li><p>resolution_pdb_bfactor:fix unaccounted column in res bfac pdb</p></li>
+<li><p>fourier_filter: Fixing missing cone</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="id11">
+<h3>Installation and user guide<a class="headerlink" href="#id11" title="Link to this heading"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Fixed PyXmipp installation</p></li>
+<li><p>Update pythorch version on DLTK pyTorch enviroment</p></li>
+<li><p>Fix DLTK installation</p></li>
+<li><p>Removed force flag on conda installations (new conda version)</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="id12">
+<h3>More Xmipp<a class="headerlink" href="#id12" title="Link to this heading"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>API for collecting xmipp installation statistics</p></li>
+<li><p>Local average added: Now the micrograph scissor annotates the local intensity value around the particles in the original micrographs.</p></li>
+<li><p>Added support for half precision float micrographs</p></li>
+<li><p>Wipe out memory ouptut in cuFFT</p></li>
+<li><p>Deprecated deep_denoising</p></li>
+<li><p>Fix for rare axis orderings in MRC/MAP files</p></li>
+<li><p>Adding fixed extension to tomo</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="nereus">
+<h2>3.23.11 - <a class="reference external" href="https://github.com/I2PC/xmipp/releases/tag/v3.23.11-Nereus">Nereus</a><a class="headerlink" href="#nereus" title="Link to this heading"></a></h2>
+<section id="id13">
+<h3>Xmipp Programs<a class="headerlink" href="#id13" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>New programs</dt><dd><ul>
+<li><p>local_volume_adjustment: This program modifies a volume in order to adjust its intensity locally to a reference volume</p></li>
+<li><p>subtomo_subtraction: New program with mpi version</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Programs updated</dt><dd><ul>
+<li><p>tomo_extract_subtomogram: Accept target box size</p></li>
+<li><p>convert_from_pdb: Added cif support</p></li>
+<li><p>phantom_movies: Adding more options: circle and cross</p></li>
+<li><p>angular_neighbourhood: Modified to output the result in the best symmetry group</p></li>
+<li><p>batch_deep_misalignment: Detection: GPU option</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Programs fixed</dt><dd><ul>
+<li><p>volume_from_pdb: Bug fix in dealing with orig=0, Detection of contrast inverted maps</p></li>
+<li><p>tomo_extract_particles: Stack fixes, dose fixes</p></li>
+<li><p>image_convert: Fixed issue when providing a metadata file as input</p></li>
+<li><p>volume_substraction: Change NaNs generated by a division between 0 by 0s.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="id14">
+<h3>Installation and user guide<a class="headerlink" href="#id14" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Disabled downloading 380MB file not required</p></li>
+<li><p>Clarifying the requirements</p></li>
+<li><p>More robust thread execution in the installator</p></li>
+<li><p>Fixed bug collecting versions</p></li>
+<li><p>Removed auto updater from libcifpp</p></li>
+</ul>
+</section>
+<section id="id15">
+<h3>More Xmipp<a class="headerlink" href="#id15" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Upgraded CUDA toolkit in DLTK 1.0</p></li>
+<li><p>Fix PDB read: This fixes a bug where pdbs whose atom name start in position 12 (in base 0)</p></li>
+<li><p>CUDA 12.2 supported (not full tested)</p></li>
+<li><p>Fixed PDB reading for shorter PDBs</p></li>
+<li><p>Allow not compiling xmipp to debug changes in python scripts</p></li>
+<li><p>Xmipp will now be able to read any volume with any values of those fields correctly.</p></li>
+<li><p>Fixed pixel size not being properly stored</p></li>
+<li><p>Fixed MetaData to avoid dangling references</p></li>
+<li><p>Added compatibility for undefined axis sequences in MRC files</p></li>
+<li><p>Added option to write mirrors in angularDistance</p></li>
+</ul>
+</section>
+</section>
+<section id="morpheus">
+<h2>3.23.07 - <a class="reference external" href="https://github.com/I2PC/xmipp/releases/tag/v3.23.07-Morpheus">Morpheus</a><a class="headerlink" href="#morpheus" title="Link to this heading"></a></h2>
+<section id="id16">
+<h3>Xmipp Programs<a class="headerlink" href="#id16" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>New programs: image_peak_high_contrast(for detecting high contrast regions in tomographic reconstruction)</p></li>
+<li><p>misaligment_detection (to detect misalignment in tomographic reconstructions from high-contrast regions)</p></li>
+<li><p>deep_global_assignment</p></li>
+<li><p>deep_center</p></li>
+<li><p>Programs updated</p></li>
+<li><p>xmipp_angular_distance: new features - tomo_extract_particles: new features</p></li>
+<li><p>subtract_projection: parallelization with mpi</p></li>
+<li><p>tomo_extract_subtomograms: allow downsampling of features</p></li>
+<li><p>angular_resolution_alignment: Detect misalignment with resolution</p></li>
+<li><p>Programs fixed</p></li>
+<li><p>align_volume_and_particles: Fixed error</p></li>
+<li><p>angular_project_library: Removed deterministic behaviour (mpi)</p></li>
+<li><p>volumen_subtraction: fixed bug - Deprecated programs (For more details <a class="reference external" href="https://github.com/I2PC/xmipp/wiki/Deprecating-programs-and-protocols">visit</a>)</p></li>
+<li><p>classify_kmeans_2D - rotational_spectra - particle_boxsize</p></li>
+</ul>
+</section>
+<section id="id17">
+<h3>Installation and user guide<a class="headerlink" href="#id17" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>New clearer, more intuitive and informative installer. It also creates a file to facilitate user support.</p></li>
+<li><p>Refactored the deep learning toolkit, more robust and new environment with updated tensorflow.</p></li>
+<li><p>Updated requirement.</p></li>
+</ul>
+</section>
+<section id="id18">
+<h3>More Xmipp<a class="headerlink" href="#id18" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Added half precission suport to numpy</p></li>
+<li><p>Added the ability to read and write CIF files</p></li>
+<li><p>Modular design of winner filter</p></li>
+<li><p>Decoupling XmippTomo from XmippSPA</p></li>
+<li><p>Fix Zernike equation - Removed all occurrences of non base-class default destructors</p></li>
+<li><p>Improved MultidimArray performance</p></li>
+<li><p>Added support for half precision floating point numbers in MRCs</p></li>
+<li><p>Assign tiff to gain files - adding half maps labels</p></li>
+</ul>
+</section>
+</section>
+<section id="kratos">
+<h2>3.23.03 - <a class="reference external" href="https://github.com/I2PC/xmipp/releases/tag/v3.23.03-Kratos">Kratos</a><a class="headerlink" href="#kratos" title="Link to this heading"></a></h2>
+<section id="id19">
+<h3>Xmipp Programs<a class="headerlink" href="#id19" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>New programs: tomo_confidence_map, tomo_extract_particlestacks, tomo_extract_subtomograms, tomo_tiltseries_dose_filter, psd_estimatator</p></li>
+<li><p>Deprecated programs (for more details visit the  <a class="reference external" href="https://github.com/I2PC/xmipp/wiki/Deprecating-programs">wiki</a>):
+angular_distribution_show, apropos ctf_correct_idr, ctf_create_ctfdat   , ctf_show , idr_xray_tomo , image_common_lines ,   metadata_convert_to_spider , metadata_selfile_create , mlf_refine_3d,   ml_refine_3d, ml_tomo , mrc_create_metadata ,   pdb_construct_dictionary, pdb_restore_with_dictionary ,   reconstruct_admn , reconstruct_art_pseudo , resolution_ibw ,   resolution_ssnr , score_micrograph , reconstruct_fourier_starpu ,   tomo_align_tilt_series, tomo_align_dual_tilt_series,   tomo_align_refinement, tomo_align_refinement, tomo_extract_subvolume,   tomo_project_main, tomo_remove_fluctuations ,   tomo_align_tilt_series,transform_range_adjust , validation_tilt_pairs   , volume_pca , volume_validate_pca , work_test , 6f4d983 ,   evaulate_coordinates , extract_subset , image_separate_objects ,   volume_enhance_contrast , volume_reslice , xray_import , xray_project   , xray_psf_create , xray_reconstruct_art , gpu_correlation,   gpu_utils, classify_significant, deepAlign.</p></li>
+<li><p>volume_from_pdb: fixing input pdb file being overwritten when ‘-centerPDB’ flag was set</p></li>
+<li><p>xmipp_phantom_movie: adding support for fixed step shift &amp; gain and  dark image generation</p></li>
+<li><p>CTF simulation allows astigmatism</p></li>
+<li><p>xmipp_metadata_utility: Now join operations with an empty set will return a new empty set (previously no output file was generated).</p></li>
+<li><p>xmipp_matrix_dimred: Program help improved. Exception is now thrown when the number of output dimensions is larger than the input dimensions</p></li>
+<li><p>xmipp_angular_distance: Added itemId column to the output</p></li>
+</ul>
+</section>
+<section id="id20">
+<h3>Installation and user guide<a class="headerlink" href="#id20" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Refactor and simplified Readme page.</p></li>
+<li><p>Updating CUDA version compatibility</p></li>
+<li><p>Updating gcc version availables</p></li>
+<li><p>Fixed Matlab installation</p></li>
+<li><p>Added missing array include to fix compilation error with g++12</p></li>
+<li><p>Alert and not block compilation if gcc</p></li>
+<li><p>CUDA are not compatible</p></li>
+<li><p>Avoid compilation warnings</p></li>
+<li><p>Required pyworkflow==3.0.31</p></li>
+</ul>
+</section>
+<section id="others">
+<h3>Others<a class="headerlink" href="#others" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Maintenance: Recovered python binding tests</p></li>
+<li><p>Maintenance: fixing dangling pointer in xmipp_error</p></li>
+<li><p>Maintenance: Cleaned includes in xmipp_image_base</p></li>
+<li><p>PSD estimation: templating function, improving performance</p></li>
+<li><p>Flag cleanDeprecate in the installation; clean all deprecated executables programs</p></li>
+<li><p>python binding: fixed bug when Numpy arrays created by slicing were badly interpretted - Removed “seed” library</p></li>
+<li><p>Fixed memory pinning CUDA bug - Fixed compilation errors on CUDA 9</p></li>
+</ul>
+</section>
+</section>
+<section id="iris">
+<h2>3.22.11 - <a class="reference external" href="https://github.com/I2PC/xmipp/releases/tag/v3.22.11-Iris">Iris</a><a class="headerlink" href="#iris" title="Link to this heading"></a></h2>
+<section id="id21">
+<h3>Xmipp Programs<a class="headerlink" href="#id21" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Speeding up iterations in some xmipp programs (xmipp_ctf_group, xmipp_image_histogram, xmipp_mpi_angular_class_average, xmipp_angular_distance, xmipp_angular_estimate_tilt_axis, xmipp_ctf_create_ctfdat, xmipp_resolution_ssnr)</p></li>
+<li><p>New Zernike3D programs</p></li>
+<li><p>angular_project_library: Reported some error if there are no images in the range</p></li>
+<li><p>angular_discrete_assign.cpp: Removed memory leak and uninitialized values</p></li>
+<li><p>angular_distance: Fixing condition to avoid iteration behind the end of the MD in cases when input data have different sizes. Optimized performance</p></li>
+<li><p>Pdb_reduce_pseudoatoms: Produced pdb is one-based indexed - xmipp_micrograph_automatic_picking: Fixing memory leak</p></li>
+<li><p>subtract_projection: Fixed several bugs (improved results), added circular mask to avoid edge artifacts, added option to boost particles instead of subtract</p></li>
+</ul>
+</section>
+<section id="id22">
+<h3>Installation and user guide<a class="headerlink" href="#id22" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Various bug fixing</p></li>
+<li><p>More information about hdf5 library</p></li>
+<li><p>Updating CUDA</p></li>
+<li><p>GCC compatibility. Added CUDA 11.7 (not tested)</p></li>
+<li><p>Updating Readme</p></li>
+</ul>
+</section>
+<section id="id23">
+<h3>Others<a class="headerlink" href="#id23" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Performance optimization (metadata binding)</p></li>
+<li><p>Python binding: adding methods to directly set / get entire MD row</p></li>
+<li><p>g++ &gt;= 8 required</p></li>
+<li><p>In viewers used pwutils</p></li>
+<li><p>The pdb data library now has all the right fields and should write the record type (“ATOM” or “HETATM”) correctly at the beginning of the line and the atomType (element) and charge (if applicable) correctly at the end of the line.</p></li>
+<li><p>Removal of anartifact of symmetrization related to the z pitch (symmetries.cpp)</p></li>
+<li><p>Using the same identical Deprecated param from pyworkflow.</p></li>
+</ul>
+</section>
+</section>
+<section id="helios">
+<h2>3.22.07 - <a class="reference external" href="https://github.com/I2PC/xmipp/releases/tag/v3.22.07-Helios">Helios</a><a class="headerlink" href="#helios" title="Link to this heading"></a></h2>
+<section id="scripts-xmipp">
+<h3>Scripts Xmipp<a class="headerlink" href="#scripts-xmipp" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>xmipp_image_operate: taked into account non existing files</p></li>
+<li><p>angular_continuous_assign2: Bug fixed</p></li>
+<li><p>volume_consensus: Bug fixed</p></li>
+<li><p>ctf.h and angular_continuous_assign_2: Changes for local defocus   estimation #578</p></li>
+</ul>
+</section>
+<section id="id24">
+<h3>Installation and user guide<a class="headerlink" href="#id24" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Version info printed at the end of the installation</p></li>
+<li><p>Removed empty folder with cleanBin command</p></li>
+<li><p>Clarifing linking to Scipion and removed a bug with the build link</p></li>
+<li><p>New flag (OPENCV_VERSION) in xmipp.config</p></li>
+<li><p>Updated Readme (explain OpenCV-CUDA support)</p></li>
+</ul>
+</section>
+<section id="id25">
+<h3>Others<a class="headerlink" href="#id25" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Validation server: Merged what remains</p></li>
+<li><p>Replaced sincos to sin and cos</p></li>
+<li><p>Handling of pointers in MPI programs</p></li>
+<li><p>“nullptr” used to denote the null pointer not “NULL”</p></li>
+<li><p>Check if nvidiaDriverVer is None</p></li>
+</ul>
+</section>
+</section>
+<section id="gaia">
+<h2>3.22.04 - <a class="reference external" href="https://github.com/I2PC/xmipp/releases/tag/v3.22.04-Gaia">Gaia</a><a class="headerlink" href="#gaia" title="Link to this heading"></a></h2>
+<section id="id26">
+<h3>Installation and user guide<a class="headerlink" href="#id26" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Updated readme</p></li>
+<li><p>Updated hdf5 info troubleshoting</p></li>
+<li><p>Updated Standalone installation</p></li>
+<li><p>Updated Scons installation</p></li>
+<li><p>xmipp get_models: fixing the run and download path</p></li>
+<li><p>Updating xmipp links for Scipion on installation</p></li>
+<li><p>Removed fatal message in installation</p></li>
+<li><p>Reported error if happen on installation - runjob</p></li>
+<li><p>Ensuring that target directory for the libraries exists</p></li>
+</ul>
+</section>
+<section id="protocols-scipion-em-xmipp">
+<h3>Protocols scipion-em-xmipp<a class="headerlink" href="#protocols-scipion-em-xmipp" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>protocol_core_analysis: New protocol</p></li>
+<li><p>protocol_compare_angles: Bug fix in compare angles under some   conditions</p></li>
+<li><p>protocol_center_particles: protocol simplified (removed   setofCoordinates as output)</p></li>
+<li><p>protocol_CTF_consensus: concurrency error fixed</p></li>
+<li><p>protocol_convert_pdb: remove size if deactivated</p></li>
+<li><p>protocol_resolution_deepres: binary masked not stored in Extra   folder and avoiding memory problems on GPUs</p></li>
+<li><p>protocol_add_noise: fixes</p></li>
+<li><p>protocol_compare_reprojections: improve computation of residuals   + tests + fix + formatting</p></li>
+<li><p>protocol_screen_deepConsensus: multiple fixes in batch   processing, trainging and streaming mode</p></li>
+<li><p>protocol_shift_particles: apply transform is now optional</p></li>
+</ul>
+</section>
+<section id="id27">
+<h3>Others<a class="headerlink" href="#id27" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>New XMIPP logo</p></li>
+<li><p>subtract_projection: adding new flag + fix</p></li>
+<li><p>Add intersection size metadata (bindings/python)</p></li>
+<li><p>Fixed unitialized unique pointers (bindings/python)</p></li>
+<li><p>Bug fixing: Resolution directional and anisotropic filtering fixing   the test</p></li>
+<li><p>Removed SonarCloud issues</p></li>
+<li><p>Replaced defines with constexpr</p></li>
+<li><p>Removing Unused funtion parameters</p></li>
+<li><p>Division by zero</p></li>
+<li><p>Memory management</p></li>
+<li><p>Removed field shadowing</p></li>
+<li><p>Destructors should not throw exceptions</p></li>
+</ul>
+</section>
+</section>
+<section id="eris">
+<h2>3.22.01 - Eris<a class="headerlink" href="#eris" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Updating to C++17</p></li>
+<li><p>Support newer versions of CUDA and gcc</p></li>
+<li><p>Zernike programs compatible with Cuda 8.x</p></li>
+<li><p>Fixed Sonar Cloud issues and bugs</p></li>
+<li><p>Matlab compilation Fixed</p></li>
+<li><p>Fixed importing pwem.metadata</p></li>
+<li><p>nma_alignment: Fixed arguments for the   xmipp_angular_projection_matching invocation</p></li>
+<li><p>Fixed test fails: ResolutionSsnr, ReconstructArtMpi, ReconstructArt,   MlfRefine3dMpi, MlfRefine3d, MlRefine3dMpi, MlRefine3d,   xmipp_test_pocs_main &amp; volume_subtraction</p></li>
+<li><p>xmipp_micrograph_automatic_picking: Fixed tests, avoid possible   memory corruption</p></li>
+<li><p>resolution_pdb_bfactor: bug fixed - error with multiple chains</p></li>
+<li><p>FlexAlign: Fixed crash when binning &gt; 1</p></li>
+<li><p>Bug fixed and allowed controlling high sampling rate</p></li>
+<li><p>Volume consensus: Fixed number of levels in the wavelet transform</p></li>
+<li><p>Compilation: Fixed compilation of starpu programs</p></li>
+<li><p>xmipp_transform_dimred: Fixed output metadata in append mode, adding   MDL_DIMRED label</p></li>
+<li><p>Config file generation: Fixed config version detection outside of the   git repo, refactored check_CUDA and managed gcc compiler if it is   installed out of /usr/bin/, check and exit if xmipp.conf does not   exist</p></li>
+<li><p>Compilation: Fixed detection of the last commit changed the config   script</p></li>
+<li><p>Resolution_fso: Bingham test implemented</p></li>
+<li><p>Opencv not detected. Added include to user/include/opencv4 folder on config file</p></li>
+<li><p>Compilation: asking whether to continue with compilation even though the config file is outdated</p></li>
+<li><p>XMIPP install: Linked libsvm to scipion</p></li>
+<li><p>Installation: Referenced ‘global’ xmipp.conf instead of using local copy of it</p></li>
+<li><p>Multiple MPI programs: replaced CREATE_MPI_METADATA_PROGRAM macro by templated class</p></li>
+<li><p>python_constants: add defocus labels</p></li>
+<li><p>Metadata: added new nmaEigenval label</p></li>
+<li><p>Python binding: added new function - correlationAfterAlignment, MDL_RESOLUTION_ANISOTROPY, MDL_RESOLUTION_ANISOTROPY</p></li>
+<li><p>Matlab binding dependencies: set XMIPP as a hard dependency</p></li>
+<li><p>Projections subtraction: new program</p></li>
+<li><p>FFTwT: added mutex for plan handling</p></li>
+<li><p>Multiple programs: Added a common implementation of the rerun</p></li>
+<li><p>Phantom_create: update info link</p></li>
+<li><p>Multiple programs: Added a common implementation of the rerun</p></li>
+<li><p>Transform Geometry: save new shifted coordinates in option “shift to” + enterOfMass to python binding</p></li>
+<li><p>Readme info: add virtual machine info</p></li>
+<li><p>Removal of the SVM from inside the XMIPP repository and downloading it as an external dependence</p></li>
+<li><p>Solved a configuration problem with CUDA</p></li>
+<li><p>ml_tomo: Using .mrc instead of .vol ; volume_align: Addded wrapping during alignment</p></li>
+</ul>
+</section>
+<section id="caerus">
+<h2>3.21.06 - Caerus<a class="headerlink" href="#caerus" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>CUDA-11 support</p></li>
+<li><p>New protocol: Deep align</p></li>
+<li><p>ChimeraX support</p></li>
+<li><p>Improvements of streaming process</p></li>
+<li><p>Several performance optimizations</p></li>
+<li><p>Build time optimization</p></li>
+<li><p>Multiple bug fixes</p></li>
+<li><p>Improved documentation</p></li>
+</ul>
+</section>
+<section id="boreas">
+<h2>3.20.07 - Boreas<a class="headerlink" href="#boreas" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Fast CTF estimation</p></li>
+<li><p>CTF includes phase shifts now</p></li>
+<li><p>Selection of alpha helices or beta sheets from a PDB (xmipp_pdb_select)</p></li>
+<li><p>Centering a PDB (xmipp_pdb_center)</p></li>
+<li><p>New Protocol: MicrographCleaner is a new algorithm that removes coordinates picked from carbon edges, aggregations, ice crystals and other contaminations</p></li>
+<li><p>New functionality: The protocol compare reprojections can now compute the residuals after alignment</p></li>
+<li><p>New protocol: Split frames divide input movies into odd and even movies so that they can be processed independently</p></li>
+<li><p>New protocol: Continuous heterogeneity analysis using spherical harmonics (not ready to be used)</p></li>
+<li><p>Bug fixing when some micrograph has no coordinates in the consensus-picking.</p></li>
+<li><p>New functionalities: Different architectures and training modes</p></li>
+<li><p>Normal Mode Analysis protocols have been moved to the plugin ContinuousFlex</p></li>
+<li><p>Fixing MPI version of the Fourier Reconstruction</p></li>
+<li><p>New protocol: local CTF integration and consensus protocol for local ctf (also the viewers)</p></li>
+<li><p>Local CTF analysis tools: Not yet ready for general public</p></li>
+<li><p>New functionallity: Introducing the posibility of automatic estimation of the gain orientation.</p></li>
+<li><p>Bugs fixings regarding stability on streaming processing</p></li>
+<li><p>Support of heterogeneous movie sets</p></li>
+<li><p>New protocol: Clustering of subtomogram coordinates into connected components that can be processed independently</p></li>
+<li><p>New Protocol: Removing duplicated coordinates</p></li>
+<li><p>New protocol: Subtomograms can be projected in several ways to 2D images so that 2D clustering tools can be used</p></li>
+<li><p>New protocol: Regions of Interest can be defined in tomograms (e.g., membranes)</p></li>
+<li><p>Bug fixing in mask3d protocol</p></li>
+<li><p>Bug fix: in helical search symmetry protocol</p></li>
+<li><p>Enhanced precision of the FlexAlign program</p></li>
+<li><p>Now, deepLearningToolkit is under its own conda environment</p></li>
+<li><p>Multiple protocols accelerated using GPU</p></li>
+<li><p>New functionality: Xmipp CTF estimation can now take a previous defocus and do not change it</p></li>
+<li><p>New functionallity: CTF-consensus is able to take the primary main values or an average of the two.</p></li>
+<li><p>New functionallity: CTF-consensus is able to append metadata from the secondary input</p></li>
+<li><p>New functionality: Xmipp Highres can now work with non-phase flipped images</p></li>
+<li><p>New functionality: Xmipp Preprocess particles can now phase flip the images</p></li>
+<li><p>New protocol: Tool to evaluate the quality of a map-model fitting</p></li>
+<li><p>Allowing multi-GPU processing using FlexAlign</p></li>
+<li><p>Improvement in monores and localdeblur</p></li>
+<li><p>Randomize phases also available for images</p></li>
+<li><p>Change the plugin to the new Scipion structure</p></li>
+<li><p>Migrating the code to python3</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../Installation/Troubleshooting/index.html" class="btn btn-neutral float-left" title="Troubleshooting" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Releases-scipion-em-xmipp/index.html" class="btn btn-neutral float-right" title="Releases scipion-em-xmipp" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Xmipp team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

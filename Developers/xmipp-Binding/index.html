@@ -1,0 +1,391 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python Binding &mdash; Xmipp 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Xmipp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installing Xmipp</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Requirements/index.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Installations/index.html">Installations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Optionals/index.html">Optional Tools and Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Troubleshooting/index.html">Troubleshooting</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Releases</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-xmipp-program/index.html">Releases xmipp program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-scipion-em-xmipp/index.html">Releases scipion-em-xmipp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-scipion-em-xmippTomo/index.html">Releases scipion-em-xmippTomo</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Xmipp World</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../protocolsMap.html">Protocols Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thePowerOfXmipp.html">The power of Xmipp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../listOfPublications.html">List of Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../history.html">Timeline of Xmipp</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Utils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/ConfigurationF/index.html">Configuration File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/xmippStructure/index.html">Xmipp structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/Conventions/index.html">Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/Deprecated-programs/index.html">Programs deprecated</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Welcome-developers/index.html">Welcome Developers! 👋</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Guidelines/index.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tips/index.html">Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CodeDocumentation/index.html">Code documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../UsefulScripts/index.html">Useful Tricks and Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HowToRelease2.0/index.html">Xmipp Release Procedures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../How-to-release/index.html">Creating an Xmipp Release (Deprecated on v4)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/Enhancing/index.html">Data Collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/Contact/index.html">Contact us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/License/index.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Xmipp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Python Binding</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/Developers/xmipp-Binding/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="python-binding">
+<h1>Python Binding<a class="headerlink" href="#python-binding" title="Link to this heading"></a></h1>
+<p><a class="reference external" href="http://www.tutorialspoint.com/python/python_further_extensions.htm">Text borrowed from here</a></p>
+<p>Any code that you write using any compiled language like C, C++ or Java
+can be integrated or imported into a Python script. This code is
+considered as an “extension”. A Python extension module is nothing more
+than a normal C library. On Unix machines, writting extensions, usually
+requires installing a developer-specific package such as python2.5-dev.</p>
+<p>For your first look at a Python extension module, you’ll be grouping
+your code into three parts:</p>
+<ul class="simple">
+<li><p>The C functions you want to expose as the interface from your module.</p></li>
+<li><p>A table mapping the names of your functions as Python developers will
+see them to C functions inside the extension module.</p></li>
+<li><p>An initialization function.</p></li>
+</ul>
+<section id="the-c-functions">
+<h2>The C functions:<a class="headerlink" href="#the-c-functions" title="Link to this heading"></a></h2>
+<p>The signatures of the C implementations of your functions will always
+take one of the following three forms:</p>
+<p>static [[PyObject]] <em>MyFunction( PyObject</em>self, PyObject *args );</p>
+<p>static [[PyObject]] <em>MyFunctionWithKeywords(PyObject</em>self, PyObject
+<em>args, PyObject</em>kw);</p>
+<p>static [[PyObject]] <em>MyFunctionWithNoArgs( PyObject</em>self );</p>
+<p>Each one of the preceding declarations returns a Python object. There’s
+no such thing as a void function in Python as there is in C. If you
+don’t want your functions to return a value, return the C equivalent of
+Python’s None value. The Python headers define a macro, Py_RETURN_NONE,
+that does this for us.</p>
+<p>The names of your C functions can be whatever you like as they will
+never be seen outside of the extension module. So they would be defined
+as static function.</p>
+<p>Your C functions usually are named by combining the Python module and
+function names together, as shown here: static [[PyObject]] *
+[[FileName]] _isImage(PyObject <em>obj, PyObject</em>args, PyObject
+*kwargs) { if (isImage(FileName _Value(obj))) Py_RETURN_TRUE; else
+Py_RETURN_FALSE; }</p>
+<p>This would be a Python function called isImage inside of the module
+[[FileName]]. You’ll be putting pointers to your C functions into the
+method table for the module that usually comes next in your source code.</p>
+</section>
+<section id="the-method-mapping-table">
+<h2>The method mapping table<a class="headerlink" href="#the-method-mapping-table" title="Link to this heading"></a></h2>
+<p>This method table is a simple array of [[PyMethodDef]] structures. That
+structure looks something like this: struct [[PyMethodDef]] { char
+<em>ml_name; [[PyCFunction]] ml_meth; int ml_flags; char</em>ml_doc; };</p>
+<p>Here is the description of the members of this structure:</p>
+<p><code class="docutils literal notranslate"><span class="pre">ml_name:</span></code> This is the name of the function as the Python interpreter
+will present it when it is used in Python programs.</p>
+<p><code class="docutils literal notranslate"><span class="pre">ml_meth:</span></code> This must be the address to a function that has any one of
+the signatures described in previous seection.</p>
+<p><code class="docutils literal notranslate"><span class="pre">ml_flags:</span></code> This tells the interpreter which of the three signatures
+ml_meth is using.</p>
+<p>This flag will usually have a value of METH_VARARGS.</p>
+<p>This flag can be bitwise or’ed with METH_KEYWORDS if you want to allow
+keyword arguments into your function.</p>
+<p>This can also have a value of METH_NOARGS that indicates you don’t want
+to accept any arguments.</p>
+<p><code class="docutils literal notranslate"><span class="pre">ml_doc:</span></code> This is the docstring for the function, which could be NULL
+if you don’t feel like writing one</p>
+<p>This table needs to be terminated with a sentinel that consists of NULL
+and 0 values for the appropriate members.</p>
+<p>Example:</p>
+<p>static[[PyMethodDef]][[FileName]]_methods[] = { { “compose”,
+(PyCFunction) FileName_compose, METH_VARARGS, “Compose from root, number
+and extension OR prefix with number &#64;” }, { “composeBlock”,
+(PyCFunction) FileName_composeBlock, METH_VARARGS, “Compose from
+blockname, number, root and extension” }, { NULL } /* Sentinel */ };</p>
+</section>
+<section id="the-initialization-function">
+<h2>The initialization function<a class="headerlink" href="#the-initialization-function" title="Link to this heading"></a></h2>
+<p>The last part of your extension module is the initialization function.
+This function is called by the Python interpreter when the module is
+loaded. It’s required that the function be named<code class="docutils literal notranslate"><span class="pre">initModule</span></code>, where
+Module is the name of the module (the name is<code class="docutils literal notranslate"><span class="pre">initxmipp</span></code> in our
+case).</p>
+<p>Your C initialization function generally has the following overall
+structure:</p>
+<p>[[PyMODINIT]]<em>FUNC initModule() {
+Py</em><a class="reference external" href="func,%20module_methods,">[InitModule3]</a>; }</p>
+<p>Here is the description of Py_InitModule3 function:</p>
+<p><code class="docutils literal notranslate"><span class="pre">func:</span></code> This is the function to be exported.</p>
+<p><code class="docutils literal notranslate"><span class="pre">module_methods:</span></code> This is the mapping table name defined above.</p>
+<p><code class="docutils literal notranslate"><span class="pre">docstring:</span></code> This is the comment you want to give in your extension.</p>
+<p>Example:</p>
+<p>[[PyMODINIT]]_FUNC initxmipp(void) { //Initialize module
+variable[[PyObject]]* module; module = Py_InitModule3(“xmipp”,
+xmipp_methods, “Xmipp module as a Python extension.”);</p>
+<p>… }</p>
+</section>
+<section id="all-together">
+<h2>All together<a class="headerlink" href="#all-together" title="Link to this heading"></a></h2>
+<p>A simple example that makes use of all the above concepts:</p>
+<p>#include &lt;Python.h&gt;</p>
+<p>static[[PyObject]]* helloworld(PyObject* self) { return
+Py_BuildValue(“s”, “Hello, Python extensions!!”); }</p>
+<p>static char helloworld_docs[] = “helloworld( ): Any message you want to
+put here!!:raw-latex:<cite>n</cite>”;</p>
+<p>static[[PyMethodDef]] helloworld_funcs[] = { {“helloworld”,
+(PyCFunction)helloworld, METH_NOARGS, helloworld_docs}, {NULL} };</p>
+<p>void inithelloworld(void) { Py_InitModule3(“helloworld”,
+helloworld_funcs, “Extension module example!”); }</p>
+</section>
+<section id="passing-function-parameters">
+<h2>Passing Function parameters<a class="headerlink" href="#passing-function-parameters" title="Link to this heading"></a></h2>
+<p>Most of the time you will add functions to an existing module. For
+example, the following function, that accepts some number of parameters,
+would be defined like this:</p>
+<p>static[[PyObject]]<strong>module_func(PyObject self, PyObjectargs) { /</strong>
+Parse args and do something interesting here. */ Py_RETURN_NONE; }</p>
+<p>The method table containing an entry for the new function would look
+like this:</p>
+<p>static[[PyMethodDef]] module_methods[] = {</p>
+<p>{ “func”, module_func, METH_VARARGS, “help message” }, { NULL, NULL, 0,
+NULL } };</p>
+<p>You can use API<code class="docutils literal notranslate"><span class="pre">[[PyArg]]_ParseTuple</span></code> function to extract the
+arguments from the one[[PyObject]] pointer passed into your C function.</p>
+<p>The first argument to<code class="docutils literal notranslate"><span class="pre">[[PyArg]]_ParseTuple</span></code> is the args argument.
+This is the object you’ll be parsing. The second argument is a format
+string describing the arguments as you expect them to appear. Each
+argument is represented by one or more characters in the format string
+as follows.</p>
+<p>static[[PyObject]] <em>module_func(PyObject</em>self, PyObject <em>args) { int
+i; double d; char</em>s;</p>
+<p>if (!PyArg_ParseTuple(args, “ids”, &amp;i, &amp;d, &amp;s)) { return NULL; }</p>
+<p>/* Do something interesting here. */ Py_RETURN_NONE; }</p>
+<p>Compiling the new version of your module and importing it will enable
+you to invoke the new function with any number of arguments of any type:</p>
+</section>
+<section id="the-pyarg-parsetuple-function">
+<h2>The PyArg _ParseTuple Function<a class="headerlink" href="#the-pyarg-parsetuple-function" title="Link to this heading"></a></h2>
+<p>Here is a list of format codes for[[PyArg]] _ParseTuple function:</p>
+<table><tr><td><p>Code</p>
+</td><td><p>C type</p>
+</td><td><p>Meaning</p>
+</td></tr><tr><td><p>c</p>
+</td><td><p>char</p>
+</td><td><p>A Python string of length 1 becomes a C char.</p>
+</td></tr><tr><td><p>d</p>
+</td><td><p>double</p>
+</td><td><p>A Python float becomes a C double.</p>
+</td></tr><tr><td><p>f</p>
+</td><td><p>float</p>
+</td><td><p>A Python float becomes a C float.</p>
+</td></tr><tr><td><p>i</p>
+</td><td><p>int</p>
+</td><td><p>A Python int becomes a C int.</p>
+</td></tr><tr><td><p>l</p>
+</td><td><p>long</p>
+</td><td><p>A Python int becomes a C long.</p>
+</td></tr><tr><td><p>L</p>
+</td><td><p>long long</p>
+</td><td><p>A Python int becomes a C long long</p>
+</td></tr><tr><td><p>O</p>
+</td><td><p>[[PyObject]]*</p>
+</td><td><p>Gets non-NULL borrowed reference to Python argument.</p>
+</td></tr><tr><td><p>s</p>
+</td><td><p>char*</p>
+</td><td><p>Python string without embedded nulls to C char*.</p>
+</td></tr><tr><td><p>s#</p>
+</td><td><p>char*+int</p>
+</td><td><p>Any Python string to C address and length.</p>
+</td></tr><tr><td><p>t#</p>
+</td><td><p>char*+int</p>
+</td><td><p>Read-only single-segment buffer to C address and length.</p>
+</td></tr><tr><td><p>u</p>
+</td><td><p>Py_UNICODE*</p>
+</td><td><p>Python Unicode without embedded nulls to C.</p>
+</td></tr><tr><td><p>u#</p>
+</td><td><p>Py_UNICODE*+int</p>
+</td><td><p>Any Python Unicode C address and length.</p>
+</td></tr><tr><td><p>w#</p>
+</td><td><p>char*+int</p>
+</td><td><p>Read/write single-segment buffer to C address and length.</p>
+</td></tr><tr><td><p>z</p>
+</td><td><p>char*</p>
+</td><td><p>Like s, also accepts None (sets C char* to NULL).</p>
+</td></tr><tr><td><p>z#</p>
+</td><td><p>char*+int</p>
+</td><td><p>Like s#, also accepts None (sets C char* to NULL).</p>
+</td></tr><tr><td><p>(…)</p>
+</td><td><p>as per …</p>
+</td><td><p>A Python sequence is treated as one argument per item.</p>
+</td></tr><tr><td></td><td></td><td><p>The following arguments are optional.</p>
+</td></tr><tr><td><p>:</p>
+</td><td></td><td><p>Format end, followed by function name for error messages.</p>
+</td></tr><tr><td><p>;</p>
+</td><td></td><td><p>Format end, followed by entire error message text.</p>
+</td></tr></table></section>
+<section id="returning-values">
+<h2>Returning Values:<a class="headerlink" href="#returning-values" title="Link to this heading"></a></h2>
+<p>Py_BuildValue takes in a format string much like PyArg _ParseTuple
+does. Instead of passing in the addresses of the values you’re building,
+you pass in the actual values. Here’s an example showing how to
+implement an add function:</p>
+<p>static[[PyObject]] <em>foo_add(PyObject</em>self, PyObject *args) { int a;
+int b;</p>
+<p>if (!PyArg_ParseTuple(args, “ii”, &amp;a, &amp;b)) { return NULL; } return
+Py_BuildValue(“i”, a + b); }</p>
+<p>This is what it would look like if implemented in Python:</p>
+<p>You can return two values from your function as follows, this would be
+cauptured using a list in Python.</p>
+<p>static[[PyObject]] <em>foo_add_subtract(PyObject</em>self, PyObject *args) {
+int a; int b;</p>
+<p>if (!PyArg_ParseTuple(args, “ii”, &amp;a, &amp;b)) { return NULL; } return
+Py_BuildValue(“ii”, a + b, a - b); }</p>
+<p>This is what it would look like if implemented in Python:</p>
+</section>
+<section id="calling-python-numpy-from-c">
+<h2>Calling Python (+numpy) from C<a class="headerlink" href="#calling-python-numpy-from-c" title="Link to this heading"></a></h2>
+<p>Here is an example code to perform the sum of two volumes in Python:</p>
+<p>#include &lt;data/xmipp_image.h&gt;</p>
+<p>#include &lt;Python.h&gt; #include &lt;numpy/ndarrayobject.h&gt;</p>
+<p>void myImport_array() { import_array(); }</p>
+<p>int main() { try { time_config();</p>
+<p>Image I;
+I.read(“/home/coss/temp/BPV_Project/BPV_scale_filtered_windowed.vol”);[[ProcessorTimeStamp]]
+t0; const[[MultidimArray]] &amp;mI=I(); annotate_processor_time(&amp;t0); double
+retval=0.0; FOR_ALL_DIRECT_ELEMENTS_IN_MULTIDIMARRAY(mI)
+retval+=DIRECT_MULTIDIM_ELEM(mI,n)+DIRECT_MULTIDIM_ELEM(mI,n); std::cout
+&lt;&lt; elapsed_time(t0,false) &lt;&lt; std::endl; std::cout &lt;&lt; “In C++:” &lt;&lt; retval
+&lt;&lt; std::endl;</p>
+<p>std::cout &lt;&lt; “Initializing Python:raw-latex:<cite>n</cite>”;
+annotate_processor_time(&amp;t0); Py_Initialize(); myImport_array();
+std::cout &lt;&lt; elapsed_time(t0,false) &lt;&lt; std::endl;</p>
+<p>// Create numpy array in Python with I() std::cout &lt;&lt; “Creating numpy
+array:raw-latex:<cite>n</cite>”; annotate_processor_time(&amp;t0); npy_intp dim[3];
+dim[0]=ZSIZE(I()); dim[1]=YSIZE(I()); dim[2]=XSIZE(I());[[PyObject]]
+<em>pyI=PyArray_SimpleNewFromData(3, dim, NPY_DOUBLE,
+(void</em>)MULTIDIM_ARRAY(I())); std::cout &lt;&lt; elapsed_time(t0,false) &lt;&lt;
+std::endl;</p>
+<p>// Import testPython std::cout &lt;&lt; “Importing module:raw-latex:<cite>n</cite>”;
+annotate_processor_time(&amp;t0);[[PyObject]]* pName
+=[[PyString]]_FromString(“testPython”); // Import testPython PyObject*
+pModule = PyImport_Import(pName); Py_DECREF(pName); std::cout &lt;&lt;
+elapsed_time(t0,false) &lt;&lt; std::endl;</p>
+<p>// Call sum std::cout &lt;&lt; “Calling sum:raw-latex:<cite>n</cite>”;
+annotate_processor_time(&amp;t0); [[PyObject]] <em>arglist =
+Py_BuildValue(“OO”, pyI, pyI); PyObject</em>pFunc =
+PyObject_GetAttrString(pModule, “sum”); PyObject *result =
+PyObject_CallObject(pFunc, arglist); std::cout &lt;&lt; elapsed_time(t0,false)
+&lt;&lt; std::endl; std::cout &lt;&lt; “In Python:” &lt;&lt; PyFloat_AsDouble(result) &lt;&lt;
+std::endl; } catch (XmippError e) { std::cout &lt;&lt; e &lt;&lt; std::endl; }
+return 0; }</p>
+<p>You have to compile with</p>
+<p>xmipp_compile -i myCode.cpp –python</p>
+<p>And the Python code is</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Xmipp team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

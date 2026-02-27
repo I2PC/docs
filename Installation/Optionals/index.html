@@ -1,0 +1,297 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Optional Tools and Libraries &mdash; Xmipp 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Troubleshooting" href="../Troubleshooting/index.html" />
+    <link rel="prev" title="Installations" href="../Installations/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Xmipp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installing Xmipp</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Requirements/index.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Installations/index.html">Installations</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Optional Tools and Libraries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#deeplearningtoolkit">DeepLearningToolkit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-install">How to Install</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#list-of-environments">List of Environments</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#matlab">Matlab</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#run">Run</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/index.html">Troubleshooting</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Releases</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-xmipp-program/index.html">Releases xmipp program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-scipion-em-xmipp/index.html">Releases scipion-em-xmipp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-scipion-em-xmippTomo/index.html">Releases scipion-em-xmippTomo</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Xmipp World</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../protocolsMap.html">Protocols Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thePowerOfXmipp.html">The power of Xmipp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../listOfPublications.html">List of Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../history.html">Timeline of Xmipp</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Utils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/ConfigurationF/index.html">Configuration File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/xmippStructure/index.html">Xmipp structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/Conventions/index.html">Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Utils/Deprecated-programs/index.html">Programs deprecated</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/Welcome-developers/index.html">Welcome Developers! 👋</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/Guidelines/index.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/Tips/index.html">Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/CodeDocumentation/index.html">Code documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/UsefulScripts/index.html">Useful Tricks and Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/HowToRelease2.0/index.html">Xmipp Release Procedures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/How-to-release/index.html">Creating an Xmipp Release (Deprecated on v4)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/Enhancing/index.html">Data Collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/Contact/index.html">Contact us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/License/index.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Xmipp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Optional Tools and Libraries</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/Installation/Optionals/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="optional-tools-and-libraries">
+<h1>Optional Tools and Libraries<a class="headerlink" href="#optional-tools-and-libraries" title="Link to this heading"></a></h1>
+<section id="deeplearningtoolkit">
+<h2>DeepLearningToolkit<a class="headerlink" href="#deeplearningtoolkit" title="Link to this heading"></a></h2>
+<p>The DeepLearningToolkit (DLTK) is a set of environments equipped with several libraries related to deep learning. It enables running protocols in Scipion that require deep learning tools, available for both GPU and CPU. The installer will automatically detect your configuration. Since xmipp-3.25.06-Rhea all environments except micCleaner (tensorflow-gpu&lt;2 needs anaconda) do not require any private channels (non-free channels for commercial purposes).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For faster and more efficient dependency resolution in Conda environments, it is highly recommended to use LibMamba. In Conda 23 and later, LibMamba is enabled by default. For earlier versions, it can be <a class="reference external" href="https://www.anaconda.com/blog/a-faster-conda-for-a-growing-community">installed and configured manually to achieve faster environment solving</a></p>
+</div>
+<section id="requirements">
+<h3>Requirements<a class="headerlink" href="#requirements" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>NVIDIA drivers version <strong>450</strong> or higher are required.</p>
+</div></blockquote>
+<ul>
+<li><p>To check your NVIDIA driver version, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nvidia-smi
+</pre></div>
+</div>
+</li>
+<li><p>If an older version is detected, DLTK will be installed without GPU support.</p></li>
+</ul>
+</section>
+<section id="how-to-install">
+<h3>How to Install<a class="headerlink" href="#how-to-install" title="Link to this heading"></a></h3>
+<p>To install DLTK (DeepLearningToolKit), run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scipion3<span class="w"> </span>installb<span class="w"> </span>deepLearningToolkit
+</pre></div>
+</div>
+<p>If the <strong>installation od DLTKfails</strong> and you just need to use one of the environments is possible to install just one of them.
+Locate the path Xmipp is installed, (by default in /home/USERNAME/scipion3/software/em/xmipp) and locate the .yaml envs folder and run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">-</span><span class="n">f</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">USERNAME</span><span class="o">/</span><span class="n">scipion3</span><span class="o">/</span><span class="n">software</span><span class="o">/</span><span class="n">em</span><span class="o">/</span><span class="n">xmipp</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">xmipp</span><span class="o">/</span><span class="n">bindings</span><span class="o">/</span><span class="n">python</span><span class="o">/</span><span class="n">envs_DLTK</span><span class="o">/</span><span class="n">xmipp_pyTorch</span><span class="o">-</span><span class="n">gpu</span><span class="o">.</span><span class="n">yml</span>
+<span class="n">mkdir</span> <span class="n">home</span><span class="o">/</span><span class="n">USERNAME</span><span class="o">/</span><span class="n">scipion3</span><span class="o">/</span><span class="n">software</span><span class="o">/</span><span class="n">em</span><span class="o">/</span><span class="n">deepLearningToolkit</span>
+<span class="n">conda</span> <span class="n">env</span> <span class="n">export</span> <span class="o">-</span><span class="n">n</span> <span class="n">xmipp_pyTorch</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">USERNAME</span><span class="o">/</span><span class="n">scipion3</span><span class="o">/</span><span class="n">software</span><span class="o">/</span><span class="n">em</span><span class="o">/</span><span class="n">deepLearningToolkit</span><span class="o">/</span><span class="n">xmipp_pyTorch</span><span class="o">-</span><span class="mf">1.</span><span class="n">yml</span>
+</pre></div>
+</div>
+<p>You also needs the models, if it was no installed previously yo can do it with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">xmipp</span> <span class="n">getModels</span>
+</pre></div>
+</div>
+</section>
+<section id="list-of-environments">
+<h3>List of Environments<a class="headerlink" href="#list-of-environments" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>xmipp_DLTK_v0.3 (GPU version)</strong></p></li>
+</ul>
+<p>Protocols using this environment:  <cite>resolution_deepres</cite>, <cite>screen_deepConsensus</cite></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- python=3.7
+- libstdcxx-ng
+- tensorflow==1.15.0
+- numpy==1.19.5
+- h5py==2.10.0
+- keras==2.2.5
+- scikit-learn==0.22
+- protobuf==3.20.3
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>xmipp_DLTK_v1.0 (GPU version)</strong></p></li>
+</ul>
+<p>Program using this enviroment: <cite>deep_misalignment_detection</cite></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- python=3.8
+- libstdcxx-ng
+- tensorflow==2.7
+- numpy==1.22
+- absl-py&lt;0.12
+- protobuf==3.20.3
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>xmipp_MicCleaner</strong></p></li>
+</ul>
+<p>Protocols using this environment: <cite>deepMicrographScreen</cite></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- python=3.9
+- libstdcxx-ng # To be compatible with scipion env
+- cudatoolkit=11.8
+- cudnn=8.9.*
+- pip
+- pip:
+  - micrograph-cleaner-em==1.0.2
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>xmipp_deepEMhancer</strong></p></li>
+</ul>
+<p>Protocols using this environment: <cite>protocol_deepEMhancer</cite></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- python=3.10
+- deepemhancer=0.16 #CUDA &gt; 10 required. Drivers nvidia &gt;= 450.80.02
+- numba
+- h5py
+- libstdcxx-ng
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>xmipp_pyTorch (GPU version)</strong></p></li>
+</ul>
+<p>Protocols using this environment: <cite>deepHand</cite>,  <cite>classify_pca</cite></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- python=3.10
+- numpy=1.23
+- mrcfile=1.4.3
+- kornia=0.6.8
+- starfile=0.4.11
+- requests=2
+- pillow
+- libstdcxx-ng
+- pytorch-gpu=1.13.1
+- torchvision=0.14.0
+- cudatoolkit=11.3
+- libcurl=7
+</pre></div>
+</div>
+</section>
+</section>
+<section id="matlab">
+<h2>Matlab<a class="headerlink" href="#matlab" title="Link to this heading"></a></h2>
+<p>Xmipp has a binding to MATLAB, which allows the user to run specific
+Xmipp functions inside MATLAB. It is required to have a regular MATLAB installation.</p>
+<p>Make sure you have these settings in your <a class="reference external" href="https://i2pc.github.io/docs/Utils/ConfigurationF/index.html">configuration file</a>
+(<code class="docutils literal notranslate"><span class="pre">xmipp-bundle/xmipp.conf</span></code>) before compiling Xmipp:</p>
+<p><code class="docutils literal notranslate"><span class="pre">XMIPP_USE_MATLAB=ON</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">MATLAB_DIR=&lt;path</span> <span class="pre">to</span> <span class="pre">your</span> <span class="pre">MATLAB</span> <span class="pre">instalation&gt;</span></code> (usually something
+like: <code class="docutils literal notranslate"><span class="pre">MATLAB_DIR=/home/user/MATLAB/R2021b</span></code>)</p>
+<section id="run">
+<h3>Run<a class="headerlink" href="#run" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Compile Xmipp normally (once the settings are as above): <code class="docutils literal notranslate"><span class="pre">./xmipp</span></code>
+or <code class="docutils literal notranslate"><span class="pre">scipion</span> <span class="pre">run</span> <span class="pre">./xmipp</span></code></p></li>
+<li><p>Open MATLAB</p></li>
+<li><p>In MATLAB, set the path to Xmipp binding:
+<code class="docutils literal notranslate"><span class="pre">HOME</span> <span class="pre">&gt;</span> <span class="pre">Set</span> <span class="pre">Path</span> <span class="pre">&gt;</span> <span class="pre">Add</span> <span class="pre">Folder...</span></code> and select the path to the
+binding (<code class="docutils literal notranslate"><span class="pre">&lt;path</span> <span class="pre">to</span> <span class="pre">xmipp&gt;/xmipp-bundle/build/bindings/matlab</span></code>),
+then, click in <code class="docutils literal notranslate"><span class="pre">Open</span></code> and <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
+<li><p>Now you should be able to run functions like <code class="docutils literal notranslate"><span class="pre">xmipp_read()</span></code> in
+MATLAB</p></li>
+</ol>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../Installations/index.html" class="btn btn-neutral float-left" title="Installations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Troubleshooting/index.html" class="btn btn-neutral float-right" title="Troubleshooting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Xmipp team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

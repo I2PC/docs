@@ -1,0 +1,681 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conventions &mdash; Xmipp 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Programs deprecated" href="../Deprecated-programs/index.html" />
+    <link rel="prev" title="Xmipp structure" href="../xmippStructure/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Xmipp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installing Xmipp</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Requirements/index.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Installations/index.html">Installations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Optionals/index.html">Optional Tools and Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Troubleshooting/index.html">Troubleshooting</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Releases</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-xmipp-program/index.html">Releases xmipp program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-scipion-em-xmipp/index.html">Releases scipion-em-xmipp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases/Releases-scipion-em-xmippTomo/index.html">Releases scipion-em-xmippTomo</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Xmipp World</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../protocolsMap.html">Protocols Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thePowerOfXmipp.html">The power of Xmipp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../listOfPublications.html">List of Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../history.html">Timeline of Xmipp</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Utils</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../ConfigurationF/index.html">Configuration File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../xmippStructure/index.html">Xmipp structure</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Conventions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#projections-with-euler-angles">Projections with Euler Angles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#moving-the-projection-plane">Moving the projection plane</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#more-euler-angles">More Euler Angles</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#filenames">Filenames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#logical-access">Logical access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#image-center">Image center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#symmetry">Symmetry</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#symmetry-file-format">Symmetry File Format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#symmetry-groups">Symmetry Groups</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#c1">C1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ci">Ci</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cs">Cs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cn">Cn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cnv">Cnv</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cnh">Cnh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sn">Sn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dn">Dn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dnv">Dnv</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dnh">Dnh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#t-tetrahedral">T (Tetrahedral)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#td">Td</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#th">Th</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#o-octahedral">O (Octahedral)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#oh">Oh</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Deprecated-programs/index.html">Programs deprecated</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/Welcome-developers/index.html">Welcome Developers! 👋</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/Guidelines/index.html">Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/Tips/index.html">Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/CodeDocumentation/index.html">Code documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/UsefulScripts/index.html">Useful Tricks and Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/HowToRelease2.0/index.html">Xmipp Release Procedures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developers/How-to-release/index.html">Creating an Xmipp Release (Deprecated on v4)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/Enhancing/index.html">Data Collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/Contact/index.html">Contact us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Others/License/index.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Xmipp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Conventions</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/Utils/Conventions/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="conventions">
+<h1>Conventions<a class="headerlink" href="#conventions" title="Link to this heading"></a></h1>
+<section id="projections-with-euler-angles">
+<h2>Projections with Euler Angles<a class="headerlink" href="#projections-with-euler-angles" title="Link to this heading"></a></h2>
+<p>The problem addressed here is given any set of Euler angles to know what is the projection that Xmipp (and Spider) will associate to them. The Euler angles are defined as follow:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Rotational or azimuthal</p></td>
+<td><p>First rotation</p></td>
+<td><p>Around Z axis</p></td>
+</tr>
+<tr class="row-odd"><td><p>Tilting</p></td>
+<td><p>Second rotation</p></td>
+<td><p>Around new Y axis</p></td>
+</tr>
+<tr class="row-even"><td><p>psi</p></td>
+<td><p>Second rotation</p></td>
+<td><p>Around new Z axis</p></td>
+</tr>
+</tbody>
+</table>
+<p>All angles are measured using the left hand thumb rule (when aligning the left hand thumb with the rotation axis, positive angles are measured according to the direction of the rest of the fingers).</p>
+<p>There is an approach which consists of rotating the volume according to the Euler angles and then projecting from Z-axis. An alternative one, and the one I have followed and found more practical is to move the view point (or better said the projection plane) according to the Euler Angles. Both ways will be explained here.</p>
+<p>First, the way Xmipp define the coordinate axes is like this.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Euler1.gif"><img alt="Euler1" src="../../_images/Euler1.gif" style="width: 200px;" />
+</a>
+</figure>
+<section id="moving-the-projection-plane">
+<h3>Moving the projection plane<a class="headerlink" href="#moving-the-projection-plane" title="Link to this heading"></a></h3>
+<p>The idea is to define a projection plane and move it around the volume until we get the desired point of view. It would seem that we had to make the rotations in the same order as they are defined in the Euler angles but it is not totally true. We can interchange tilt and rotation to make an easiest method to get manually the projection. I will describe a chain of steps in order to get the projection.</p>
+<p><strong>Getting Started</strong></p>
+<p>1)Construct a projection plane: take a little piece of paper and mark on it the image coordinate system will define the orientation of the projection. We will look the projection in the orientation just as it is shown.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Euler2.gif"><img alt="Euler2" src="../../_images/Euler2.gif" style="width: 200px;" />
+</a>
+</figure>
+<ol class="arabic simple" start="2">
+<li><p>Our point of view is defined just now for a little point on the bottom of the sphere, while the projection plane is just on the opposite side.</p></li>
+</ol>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Euler3.gif"><img alt="Euler3" src="../../_images/Euler3.gif" style="width: 200px;" />
+</a>
+</figure>
+<p><strong>We begin now to read eulerian angles</strong>
+3) TILT:
+move the point of view as many degrees as necessary towards right (positive tilting angles) or left (negative tilting angles). Projection plane must move as if the system point_of_view-plane_of_projection were a whole.For example, 90º of tilting would be</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Euler4.gif"><img alt="Euler4" src="../../_images/Euler4.gif" style="width: 200px;" />
+</a>
+</figure>
+<p>4) ROTATIONAL (AZIMUTHAL) ANGLE:
+move the point of view towards you (positive azimuthal angles) or away from you (negative azimuthal  angles) (Notice that this directions are simplifications for when tilting angles are positive, you must keep in mind the direction of turn and not the description of towards or away from you. If tilt angle is negative this directions are reversed in respect to you but not in the direction of turn).  For example from the above situation of tilt=90, now let’s take rotational=90. The new situation would be</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Euler5.gif"><img alt="Euler5" src="../../_images/Euler5.gif" style="width: 200px;" />
+</a>
+</figure>
+<p>5) PSI:
+for taking psi into account we must turn the projection plane together with the point of view. Looking from the point of view positive psi angles turns counterclockwise. For example, psi=90, would give,</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/euler6.gif"><img alt="Euler6" src="../../_images/euler6.gif" style="width: 200px;" />
+</a>
+</figure>
+<p><strong>PROJECTING</strong>
+Now we have to project the volume on the projection plane. As an example I have defined a volume which has got a sphere along y-axis, a larger ellipsoid along z-axis and a cylinder along x-axis as you can see in the next figure. If we project for (tilt=90, rot=90, psi=90) we would obtain the following by direct projection</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Euler7.gif"><img alt="Euler7" src="../../_images/Euler7.gif" style="width: 200px;" />
+</a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Euler8.gif"><img alt="Euler8" src="../../_images/Euler8.gif" style="width: 200px;" />
+</a>
+</figure>
+<p>But as we know that our projection plane always has got its reference with X axis facing to the right and the Y axis looking down, we should rotate the projection obtained until it is well-referenced</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Euler9.gif"><img alt="Euler9" src="../../_images/Euler9.gif" style="width: 200px;" />
+</a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Euler10.gif"><img alt="Euler10" src="../../_images/Euler10.gif" style="width: 200px;" />
+</a>
+</figure>
+<p>In the las figures we can check the consistency of this reasoning. The projection with tilt=90, rot=90, psi=90 has been taken with SPIDER. As we can see the results are identical.</p>
+<p><strong>PROJECTING in a more Euler fashion</strong></p>
+<p>So far we have devised a method to manually compute projections using a piece of paper and a fixed phantom. But this is not the way really they are taken. In this part we will move the phantom and letting the projection plane fixed. We start again from the same initial point as before. Now we will move the internal reference axes in the reverse order (click here for further information for why this is like that).</p>
+<p>Starting Point:</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Euler11.gif"><img alt="Euler11" src="../../_images/Euler11.gif" style="width: 200px;" />
+</a>
+</figure>
+<ol class="arabic simple" start="3">
+<li><p>PSI ANGLE</p></li>
+</ol>
+<p>The rotational angle is the first Euler angle to measure, around Z. It is a left hand angle, so if the left hand thumb is aligned with Z then positive angles are measured in the direction of the rest of the fingers. We will develop the same example as before, so the new internal reference axes are</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Euler12.gif"><img alt="Euler12" src="../../_images/Euler12.gif" style="width: 200px;" />
+</a>
+</figure>
+<ol class="arabic simple" start="4">
+<li><p>TILTING ANGLE</p></li>
+</ol>
+<p>The tilting angle is a left handed turn around Y, but the new Y!!!. Applying tilt=90 in our example we get</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Euler13.gif"><img alt="Euler13" src="../../_images/Euler13.gif" style="width: 200px;" />
+</a>
+</figure>
+<ol class="arabic simple" start="5">
+<li><p>ROTATIONAL ANGLE</p></li>
+</ol>
+<p>Finally the third angle is again a left handed turn around Z, again the new one!!!. Using rot=90 we finally get</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Euler14.gif"><img alt="Euler14" src="../../_images/Euler14.gif" style="width: 200px;" />
+</a>
+</figure>
+<p><strong>FACTS ABOUT THE EULER MATRIX and SPIDER</strong></p>
+<blockquote>
+<div><p>These projections are exactly the same as the ones provided by Spider using the same angles.
+The Euler matrix shown in Euler_angles2matrix(rot,tilt,psi,A) is obtained by RotZ(-psi)*RotY(tilt)*RotZ(-rot)</p>
+</div></blockquote>
+</section>
+<section id="more-euler-angles">
+<h3>More Euler Angles<a class="headerlink" href="#more-euler-angles" title="Link to this heading"></a></h3>
+<p>“Euler angles are a mean of representing the spatial orientation of any
+system of coordinates of the space as a composition of three rotations
+from a reference system of coordinates.”</p>
+<ul class="simple">
+<li><p>the first rotation is denoted by phi and is around the z axis</p></li>
+<li><p>the second rotation is called theta and is around the new y-axis.</p></li>
+<li><p>the third rotation is denoted by psi and is around the new z axis</p></li>
+</ul>
+<p>The three rotations may be expressed as a single 3x3 matrix called Euler
+matrix</p>
+<pre>
+r11 = cos(psi)cos(theta)cos(phi) - sin(psi)sin(phi)
+r12 = cos(psi)cos(theta)sin(phi) + sin(psi)cos(phi)
+r13 = -cos(psi)*sin(theta)
+
+r21 = -sin(psi)cos(theta)cos(phi) - cos(psi)sin(phi)
+r22 = -sin(psi)cos(theta)sin(phi) + cos(psi)cos(phi)
+r23 = sin(psi)*sin(theta)
+
+r31 = sin(theta)cos(phi)
+r32 = sin(theta)sin(phi)
+r33 = cos(theta)
+
+where the first index refers to rows and the second to columns </pre><p>Apositive rotation implies a clockwise rotation of the OBJECT or a
+anti-clockwise rotation of the system of coordinates</p>
+<p>Euler angles in Xmipp complies with the 3DEM standard (see
+<a class="reference external" href="http://www.ebi.ac.uk/pdbe/docs/3dem/test_image/3DEM_compliance">http://www.ebi.ac.uk/pdbe/docs/3dem/test_image/3DEM_compliance</a> for
+details)</p>
+</section>
+</section>
+<section id="filenames">
+<h2>Filenames<a class="headerlink" href="#filenames" title="Link to this heading"></a></h2>
+<p>In general, Xmipp can manage any Filename you can think of. However,
+there are some ideas that could help you to organize your data, and
+which might tell you more about the file only by its name. We could
+divide files in several classes:</p>
+<table><tr><th><p>Data type</p>
+</th><th><p>Suggested extension</p>
+</th><th><p>Suggested filenames</p>
+</th></tr><tr><td><p>Images</p>
+</td><td><p>.xmp</p>
+</td><td><p>g1ta000001.xmp</p>
+</td></tr><tr><td><p>Volumes</p>
+</td><td><p>.vol or .xmp</p>
+</td><td><p>art000001.vol, wbp000001.vol, sirt000001.vol</p>
+</td></tr><tr><td><p>Selection Files</p>
+</td><td><p>.sel</p>
+</td><td><p>g1t.sel</p>
+</td></tr><tr><td><p>Document Files</p>
+</td><td><p>.doc</p>
+</td><td><p>angles.doc</p>
+</td></tr></table><p>The class [[FileName]] assumes a filename structure as in
+g1ta000001.xmp, ie, a filename root (g1ta), a number (000001) and an
+extension (xmp) (“.”); although it can also manage names as g1ta00001 or
+g1ta00001.xmp.bak. To mantain compatibility with Spider it is required
+that image numbers start at 1, and if possible that all images have got
+correlative numbers, but these last conditions are not compulsory within
+Xmipp, it’s just for compatibility with Spider.</p>
+<p>Notice also that Spider requires all data files (volumes, images,
+document files, …) to have the same extension. You might prefer this
+other convention if you don’t want to make copies of the files, or to
+have to rename the files before entering in Spider.</p>
+</section>
+<section id="logical-access">
+<h2>Logical access<a class="headerlink" href="#logical-access" title="Link to this heading"></a></h2>
+<p>The basic multidimensional classes implemented in this library admit two
+kinds of access: physical and logical. The physical positions are those
+indexes of the pixel inside the C matrix. Just an example, suppose we
+have a 65x65 image, then the physical indexes range from 0 to 64, being
+I[0][0] (if this could be written) the first pixel stored. However, we
+might be interested in writing procedures in a more mathematical fashion
+trying to access negative indexes (or even fractional onesSee
+[[ImageOver]]) This conception is very useful when you want to represent
+a discretized plane whose origin is at the center of the image, for
+instance. So, you can express in a simpler way your algorithms without
+having to make a by hand translation from the logical positions to the
+physical ones.</p>
+<p>Suppose now that we are interested to have the logical origin at the
+center of the image 65x65, ie, at physical position [32][32]. This would
+mean that the physical position [0][0] is now at logical position
+(-32,-32), and the logical indexes range now from -32 to 32.</p>
+<p>This logical index defintion is done by means of the starting indexes of
+matrices (see matrix2D) where you can define which logical position is
+occupying the first physical pixel, ie,</p>
+<pre>
+I().startingY()`-32;
+I().startingX()`-32;
+</pre><p>From now on you can start to access to logical positions even with
+negative indexes. The usual way of establishing loops inside this
+logical images is by using the starting and finishing information of its
+axes</p>
+<pre>
+    Image I(65,65);
+    I().init_random();
+    float sum=0;
+    for (int i=STARTINGY(I()); i<=FINISHINGY(I()); i++)
+        for (int j=STARTINGX(I()); j<=FINISHINGX(I()); j++) {
+               sum += I(i,j);
+            // sum += IMGPIXEL(i,j);
+        }
+</pre><p>Although the previous example has been used using the class Image, the
+logical access rely on the classes matrix1D, matrix2D, and matrix3D, and
+all the concepts explained for images are extensible for vectors and
+volumes. The related functions are STARTINGX, STARTINGY, STARTINGZ,
+FINISHINGX, FINISHINGY, FINISHINGZ, IMGPIXEL, DIRECT_IMGPIXEL, VOLVOXEL,
+DIRECT_VOLVOXEL, VEC_ELEM, MAT_ELEM, VOL_ELEM, DIRECT_VEC_ELEM,
+DIRECT_MAT_ELEM, DIRECT_VOL_ELEM</p>
+<p>Pay attention to the index order when pointing to a pixel, first you
+have to give the most outer coordinate (which is the less varying one in
+the actual implementation), and then increase the coordinate. For
+volumes the usual way of making a loop is</p>
+<pre>
+    Volume V(65,65,65);
+    V().init_random();
+    float sum=0;
+    for (int k=STARTINGZ(V()); k<=FINISHINGZ(V()); k++)
+       for (int i=STARTINGY(I()); i<=FINISHINGY(I()); i++)
+           for (int j=STARTINGX(I()); j<=FINISHINGX(I()); j++) {
+               sum +=V(k,i,j);
+        }
+</pre><p>Notice that if you don’t modify the origin of the multidimensional array
+then the physical and logical accesses are the same.</p>
+</section>
+<section id="image-center">
+<h2>Image center<a class="headerlink" href="#image-center" title="Link to this heading"></a></h2>
+<p>There is a special case for the logical access when the origin is set
+just at the center of the image, volume or vector. There are several
+definitions of center of the image, the one used here is the physical
+position ((int)ydim/2, (int)xdim/2). This is the same convention used in
+Spider and has been chosen to mantain compatibility with that package.
+Remember that in C (int) takes the integer part of the number, for
+example, for 2.3 and 2.8 the integer part is 2, while for -2.3 and -2.8
+the integer part is -2.</p>
+<p>This means that for images with an even dimension, the center will be
+“displaced” in that direction. Let’s have a look on the following two
+diagrams of cell indexes.</p>
+</section>
+<section id="symmetry">
+<h2>Symmetry<a class="headerlink" href="#symmetry" title="Link to this heading"></a></h2>
+<p>This page describes the different symmetries that a polyhedron with fixed center may have. There are five fundamental symmetry classes: cyclical, dihedral, tetrahedral, octahedral, and icosahedral, and 17 different symmetry groups. All of them are implemented in Xmipp.</p>
+<p>For each type, we show on this page:</p>
+<ul class="simple">
+<li><p>Surface rendering of a volume with such symmetry.</p></li>
+<li><p>JavaScript model of a volume with such symmetry (viewable with JavaView).</p></li>
+<li><p>The sym file needed by different Xmipp programs to impose a given symmetry.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Symmetry files must have a precision of <strong>10⁻⁶</strong>. That is, in most cases, 6 decimal digits are required (for more complex symmetries such as icosahedral, 7 are needed).
+All Xmipp programs requiring a symmetry file will also work when supplying the symmetry acronym instead of the filename.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Blue axis is Z, yellow axis is Y, and red axis is X.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To repeat the tests, the volume used to generate the symmetries is available at <code class="docutils literal notranslate"><span class="pre">/left_hand.spi</span></code>.</p>
+</div>
+<section id="symmetry-file-format">
+<h3>Symmetry File Format<a class="headerlink" href="#symmetry-file-format" title="Link to this heading"></a></h3>
+<p>Arbitrary symmetry files can be provided using the following syntax:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># The fold is the number of times that the volume can be rotated along
+# the symmetry axis giving the same view from different viewpoints.
+# Structure for rotational axis:
+# rot_axis      &lt;fold&gt; &lt;X0&gt; &lt;Y0&gt; &lt;Z0&gt;
+# mirror_plane         &lt;X0&gt; &lt;Y0&gt; &lt;Z0&gt;
+# P4212
+# inversion
+# Example: 6-fold rotational symmetry along the Z-axis
+rot_axis      6 0 0 1
+mirror_plane    0 0 1
+</pre></div>
+</div>
+</section>
+<section id="symmetry-groups">
+<h3>Symmetry Groups<a class="headerlink" href="#symmetry-groups" title="Link to this heading"></a></h3>
+<section id="c1">
+<h4>C1<a class="headerlink" href="#c1" title="Link to this heading"></a></h4>
+<p>No symmetry.</p>
+<ul>
+<li><p><strong>c1</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>rot_axis 1 0 0 1 (rot=0, tilt=0, psi=0)
+</pre></div>
+</div>
+</li>
+<li><p>Image: <code class="docutils literal notranslate"><span class="pre">/c1.jpg</span></code></p></li>
+</ul>
+</section>
+<section id="ci">
+<h4>Ci<a class="headerlink" href="#ci" title="Link to this heading"></a></h4>
+<p>Inversion symmetry only.</p>
+<ul>
+<li><p><strong>ci</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>inversion
+</pre></div>
+</div>
+</li>
+<li><p>Image: <code class="docutils literal notranslate"><span class="pre">/ci.jpg</span></code></p></li>
+</ul>
+</section>
+<section id="cs">
+<h4>Cs<a class="headerlink" href="#cs" title="Link to this heading"></a></h4>
+<p>Reflection symmetry only.</p>
+<ul>
+<li><p><strong>cs</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>mirror_plane 0 0 1 (rot=0, tilt=0, psi=0)
+</pre></div>
+</div>
+</li>
+<li><p>Image: <code class="docutils literal notranslate"><span class="pre">/cs.jpg</span></code></p></li>
+</ul>
+</section>
+<section id="cn">
+<h4>Cn<a class="headerlink" href="#cn" title="Link to this heading"></a></h4>
+<p>Cyclic rotational symmetry only.</p>
+<ul>
+<li><p><strong>c5</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>rot_axis 5 0 0 1 (rot=0, tilt=0, psi=0)
+</pre></div>
+</div>
+</li>
+<li><p>Image: <code class="docutils literal notranslate"><span class="pre">/c5.jpg</span></code></p></li>
+</ul>
+</section>
+<section id="cnv">
+<h4>Cnv<a class="headerlink" href="#cnv" title="Link to this heading"></a></h4>
+<p>Cyclic rotational symmetry with vertical mirror plane.</p>
+<ul>
+<li><p><strong>c5v</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>rot_axis 5 0 0 1 (rot=0, tilt=0, psi=0)
+mirror_plane 0 1 0 (rot=90, tilt=90, psi=0)
+</pre></div>
+</div>
+</li>
+<li><p>Image: <code class="docutils literal notranslate"><span class="pre">/c5v.jpg</span></code></p></li>
+</ul>
+</section>
+<section id="cnh">
+<h4>Cnh<a class="headerlink" href="#cnh" title="Link to this heading"></a></h4>
+<p>Cyclic rotational symmetry with horizontal mirror plane.</p>
+<ul>
+<li><p><strong>c5h</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>rot_axis 5 0 0 1 (rot=0, tilt=0, psi=0)
+mirror_plane 0 0 1 (rot=0, tilt=0, psi=0)
+</pre></div>
+</div>
+</li>
+<li><p>Image: <code class="docutils literal notranslate"><span class="pre">/c5h.jpg</span></code></p></li>
+</ul>
+</section>
+<section id="sn">
+<h4>Sn<a class="headerlink" href="#sn" title="Link to this heading"></a></h4>
+<p>Cyclic (n/2)-fold symmetry with horizontal mirror.</p>
+<ul>
+<li><p><strong>s10</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>rot_axis 5 0 0 1 (rot=0, tilt=0, psi=0)
+inversion
+</pre></div>
+</div>
+</li>
+<li><p>Image: <code class="docutils literal notranslate"><span class="pre">/s10.jpg</span></code></p></li>
+</ul>
+</section>
+<section id="dn">
+<h4>Dn<a class="headerlink" href="#dn" title="Link to this heading"></a></h4>
+<p>Dihedral rotational symmetry only.</p>
+<ul>
+<li><p><strong>d5</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>rot_axis 5 0 0 1 (rot=0, tilt=0, psi=0)
+rot_axis 2 1 0 0 (rot=0, tilt=90, psi=0)
+</pre></div>
+</div>
+</li>
+<li><p>Image: <code class="docutils literal notranslate"><span class="pre">/d5.jpg</span></code></p></li>
+</ul>
+</section>
+<section id="dnv">
+<h4>Dnv<a class="headerlink" href="#dnv" title="Link to this heading"></a></h4>
+<p>Dihedral symmetry with vertical mirror plane.</p>
+<ul>
+<li><p><strong>d5v</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>rot_axis 5 0 0 1 (rot=0, tilt=0, psi=0)
+rot_axis 2 1 0 0 (rot=0, tilt=90, psi=0)
+mirror_plane 1 0 0 (rot=0, tilt=90, psi=0)
+</pre></div>
+</div>
+</li>
+<li><p>Image: <code class="docutils literal notranslate"><span class="pre">/d5v.jpg</span></code></p></li>
+</ul>
+</section>
+<section id="dnh">
+<h4>Dnh<a class="headerlink" href="#dnh" title="Link to this heading"></a></h4>
+<p>Dihedral symmetry with horizontal mirror plane.</p>
+<ul>
+<li><p><strong>d5h</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>rot_axis 5 0 0 1 (rot=0, tilt=0, psi=0)
+rot_axis 2 1 0 0 (rot=0, tilt=90, psi=0)
+mirror_plane 0 0 1 (rot=0, tilt=0, psi=0)
+</pre></div>
+</div>
+</li>
+<li><p>Image: <code class="docutils literal notranslate"><span class="pre">/d5h.jpg</span></code></p></li>
+</ul>
+</section>
+<section id="t-tetrahedral">
+<h4>T (Tetrahedral)<a class="headerlink" href="#t-tetrahedral" title="Link to this heading"></a></h4>
+<ul>
+<li><p><strong>t</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>rot_axis 3 0 0 1 (rot=0, tilt=0, psi=0)
+rot_axis 2 0 0.816496 0.577350 (rot=90, tilt=54.7356, psi=0)
+</pre></div>
+</div>
+</li>
+<li><p>Image: <code class="docutils literal notranslate"><span class="pre">/t.jpg</span></code></p></li>
+</ul>
+</section>
+<section id="td">
+<h4>Td<a class="headerlink" href="#td" title="Link to this heading"></a></h4>
+<p>Tetrahedral symmetry with reflection.</p>
+<ul>
+<li><p><strong>td</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>rot_axis 3 0 0 1
+rot_axis 2 0 0.816496 0.577350
+mirror_plane 1.4142136 2.4494897 0
+</pre></div>
+</div>
+</li>
+<li><p>Image: <code class="docutils literal notranslate"><span class="pre">/td.jpg</span></code></p></li>
+</ul>
+</section>
+<section id="th">
+<h4>Th<a class="headerlink" href="#th" title="Link to this heading"></a></h4>
+<p>Tetrahedral symmetry with inversion.</p>
+<ul>
+<li><p><strong>th</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>rot_axis 3 0 0 1
+rot_axis 2 0 -0.816496 -0.577350
+inversion
+</pre></div>
+</div>
+</li>
+<li><p>Image: <code class="docutils literal notranslate"><span class="pre">/th.jpg</span></code></p></li>
+</ul>
+</section>
+<section id="o-octahedral">
+<h4>O (Octahedral)<a class="headerlink" href="#o-octahedral" title="Link to this heading"></a></h4>
+<ul>
+<li><p><strong>o</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>rot_axis 3 0.5773502 0.5773502 0.5773502
+rot_axis 4 0 0 1
+</pre></div>
+</div>
+</li>
+<li><p>Image: <code class="docutils literal notranslate"><span class="pre">/o.jpg</span></code></p></li>
+</ul>
+</section>
+<section id="oh">
+<h4>Oh<a class="headerlink" href="#oh" title="Link to this heading"></a></h4>
+<p>Octahedral symmetry with mirror.</p>
+<ul>
+<li><p><strong>oh</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>rot_axis 3 0.5773502 0.5773502 0.5773502
+rot_axis 4 0 0 1
+mirror_plane 0 1 1
+</pre></div>
+</div>
+</li>
+<li><p>Image: <code class="docutils literal notranslate"><span class="pre">/oh.jpg</span></code></p></li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../xmippStructure/index.html" class="btn btn-neutral float-left" title="Xmipp structure" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Deprecated-programs/index.html" class="btn btn-neutral float-right" title="Programs deprecated" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Xmipp team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
