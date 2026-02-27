@@ -41,6 +41,7 @@ Locate the path Xmipp is installed, (by default in /home/USERNAME/scipion3/softw
 You also needs the models, if it was no installed previously yo can do it with:
 
 ::
+  
   ./xmipp getModels
 
 
