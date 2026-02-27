@@ -23,13 +23,13 @@ Requirements
 
 How to Install
 """"""""""""""""""
-To install DLTK, run:
+To install DLTK (DeepLearningToolKit), run:
 
 .. code-block:: bash
 
    scipion3 installb deepLearningToolkit
 
-If the installation fails and you just need to use one of the environments is possible to install just one of them. 
+If the **installation od DLTKfails** and you just need to use one of the environments is possible to install just one of them. 
 Locate the path Xmipp is installed, (by default in /home/USERNAME/scipion3/software/em/xmipp) and locate the .yaml envs folder and run:
 
 ::
@@ -37,6 +37,11 @@ Locate the path Xmipp is installed, (by default in /home/USERNAME/scipion3/softw
   conda env create -f /home/USERNAME/scipion3/software/em/xmipp/src/xmipp/bindings/python/envs_DLTK/xmipp_pyTorch-gpu.yml 
   mkdir home/USERNAME/scipion3/software/em/deepLearningToolkit
   conda env export -n xmipp_pyTorch > /home/USERNAME/scipion3/software/em/deepLearningToolkit/xmipp_pyTorch-1.yml
+
+You also needs the models, if it was no installed previously yo can do it with:
+
+::
+  ./xmipp getModels
 
 
 List of Environments
