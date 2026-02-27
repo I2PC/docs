@@ -20,7 +20,7 @@ More Xmipp
 
 4.0.0 - Apoferritin 
 ----------------------------------
-*Date publication:11-2025*
+*Date publication: 11-2025*
 
 Xmipp Programs 
 ~~~~~~~~~~~~~~~
