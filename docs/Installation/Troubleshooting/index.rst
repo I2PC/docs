@@ -250,3 +250,27 @@ Is because hdf5 was installed in a conda environment with the last version and t
 
 This version is known to be compatible with older GCC compilers commonly found on supported Linux distributions.
 
+
+
+Linker error with ICU / libstdc++ (GLIBCXX / CXXABI symbols)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Compilation fails with errors such as:
+
+::
+
+    undefined reference to `__cxa_call_terminate@CXXABI_1.3.15'
+    undefined reference to `std::condition_variable::wait(...)@GLIBCXX_3.4.30'
+
+**Cause**: ABI incompatibility between the installed ICU version (e.g. 78) and the libstdc++ used to compile Xmipp. Newer ICU builds require newer GLIBCXX/CXXABI symbols.
+
+**Solution**: Xmipp requires ICU 72.
+
+If using Conda:
+
+.. code-block:: bash
+
+    conda install icu=72
+
+If installing through Scipion, the Xmipp plugin should enforce this dependency automatically. Otherwise, install icu=72 manually inside the Scipion environment.
+
+For system installations, downgrade ICU to version 72 or build it manually and ensure it is correctly linked.
