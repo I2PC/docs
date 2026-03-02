@@ -269,7 +269,7 @@ If using Conda:
 
 .. code-block:: bash
 
-    conda install icu=72
+    scipion3 run conda install icu=72
 
 If installing through Scipion, the Xmipp plugin should enforce this dependency automatically. Otherwise, install icu=72 manually inside the Scipion environment.
 
