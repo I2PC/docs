@@ -32,13 +32,13 @@ Installation
 """"""""""""""""""
 There are two options to install Xmipp; in production or in the develop branch
 
-a. Install in production the last release of Xmipp from terminal
+a. Install in **production** the last release of Xmipp from terminal
 
    .. code-block:: bash
 
       scipion3 installp -p scipion-em-xmipp
 
-b. Install the develop branch (main) of Xmipp. You have two options, with Scipion or standlone
+b. Install the **develop** branch (main) of Xmipp. You have two options, with Scipion or standlone
 
     **Option 1:** Compile using the Scipion environment. This method installs Xmipp with dependencies managed by Scipion and is the recomended way.
 
