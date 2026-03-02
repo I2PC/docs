@@ -49,7 +49,7 @@ b. Install the **develop** branch (main) of Xmipp. You have two options, with Sc
         scipion3 run xmipp3/xmipp
         cd xmipp3/src
         git clone https://github.com/I2PC/scipion-em-xmipp.git
-        scipion3 installp -p scipion-em-xmipp --devel
+        scipion3 installp -p scipion-em-xmipp/ --devel
 
 
     **Option 2:** Compile the Xmipp alone. This method installs Xmipp with the required dependencies and versions defined by your environment or defaults. To install xmipp3-installer is required activate an environment, preferably the Scipion environment. 
