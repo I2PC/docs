@@ -32,13 +32,26 @@ Installation
 """"""""""""""""""
 There are two options to install Xmipp; in production or in the develop branch
 
-a. Install in **production** the last release of Xmipp from terminal
+- Install in **production** the last release of Xmipp from terminal
 
-   .. code-block:: bash
+   - Using the scipion3 installed previously:
 
-      scipion3 installp -p scipion-em-xmipp
+      .. code-block:: bash
 
-b. Install the **develop** branch (main) of Xmipp. You have two options, with Scipion or standlone
+         scipion3 installp -p scipion-em-xmipp
+
+   - Standlone
+
+      .. code-block:: bash
+
+         git clone https://github.com/I2PC/xmipp3 
+         cd xmipp3
+         git checkout v5.0.0-Beta-gal #or the release desired: https://github.com/I2PC/xmipp3/tags
+         ./xmipp #review the list of dependencies: https://i2pc.github.io/docs/Installation/Requirements/index.html
+
+
+
+- Install the **develop** branch (main) of Xmipp. You have two options, with Scipion or standlone
 
     **Option 1:** Compile using the Scipion environment. This method installs Xmipp with dependencies managed by Scipion and is the recomended way.
 
@@ -46,6 +59,7 @@ b. Install the **develop** branch (main) of Xmipp. You have two options, with Sc
 
         scipion3 run pip install xmipp3-installer
         git clone https://github.com/I2PC/xmipp3 
+        git checkout main #or the branch you desire
         scipion3 run xmipp3/xmipp
         cd xmipp3/src
         git clone https://github.com/I2PC/scipion-em-xmipp.git
