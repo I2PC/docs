@@ -48,7 +48,7 @@ You also needs the models, if it was no installed previously yo can do it with:
 List of Environments
 """"""""""""""""""""""""""""""""""""
 - **xmipp_DLTK_v0.3 (GPU version)**  
-Protocols using this environment:  `resolution_deepres`, `screen_deepConsensus`  
+Protocols using this environment:  `resolution_deepres`, `deep consensus picking (screen_deepConsensus)`  
 
 .. code-block:: text
   
@@ -87,7 +87,7 @@ Protocols using this environment: `deepMicrographScreen`
     - micrograph-cleaner-em==1.0.2
     
 - **xmipp_deepEMhancer**  
-Protocols using this environment: `protocol_deepEMhancer`  
+Protocols using this environment: `protocol_deepEMhancer (XmippProtDeepVolPostProc)`  
 
 .. code-block:: text
 
