@@ -58,10 +58,10 @@ There are two options to install Xmipp; in production or in the develop branch
     .. code-block:: bash
 
         scipion3 run pip install xmipp3-installer
-        git clone https://github.com/I2PC/xmipp3 
+        git clone https://github.com/I2PC/xmipp3 xmipp-bundle
         git checkout main #or the branch you desire
-        scipion3 run xmipp3/xmipp
-        cd xmipp3/src
+        scipion3 run xmipp-bundle/xmipp
+        cd xmipp-bundle/src
         git clone https://github.com/I2PC/scipion-em-xmipp.git
         scipion3 installp -p scipion-em-xmipp/ --devel
 
