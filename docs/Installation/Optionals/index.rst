@@ -29,14 +29,20 @@ To install DLTK (DeepLearningToolKit), run:
 
    scipion3 installb deepLearningToolkit
 
-If the **installation od DLTKfails** and you just need to use one of the environments is possible to install just one of them. 
-Locate the path Xmipp is installed, (by default in /home/USERNAME/scipion3/software/em/xmipp) and locate the .yaml envs folder and run:
+If the **installation od DLTKfails** use the DLTK_installation.sh script in scipion-em-xmipp/xmipp3 (in develope) Edit the following variables inside ``DLTK_installation.sh``:
 
-::
+- ``USE_GPU``
+- ``CONDA_INIT``
+- ``SCIPION_DIR``
+- ``XMIPP_DIR``
 
-  conda env create -f /home/USERNAME/scipion3/software/em/xmipp/src/xmipp/bindings/python/envs_DLTK/xmipp_pyTorch-gpu.yml 
-  mkdir home/USERNAME/scipion3/software/em/deepLearningToolkit
-  conda env export -n xmipp_pyTorch > /home/USERNAME/scipion3/software/em/deepLearningToolkit/xmipp_pyTorch-1.yml
+
+Then make the script executable and run it:
+
+.. code-block:: bash
+
+    chmod +x DLTK_installation.sh
+    ./DLTK_installation.sh
 
 You also needs the models, if it was no installed previously yo can do it with:
 
