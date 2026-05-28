@@ -43,6 +43,9 @@ xmipp3, xmippCore and xmippViz.
    * - xmippViz
      - - Add new version and changes in ``changeLOG.md``  
        - Trigger GitHub ``Release`` action → creates new tag
+   * - pyXmipp3
+       - Update the url if ``xmipp`` or ``xmippCore`` generates new release `here <https://github.com/I2PC/pyxmipp3/blob/39f287d8e3618a654a8a0d3777bd3af9dab296fc/CMakeLists.txt#L3>`_
+       - Merge a PR on main
 
 
 xmipp3-installer 🗃️
