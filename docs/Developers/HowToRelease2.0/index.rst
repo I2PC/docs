@@ -37,9 +37,11 @@ xmipp3, xmippCore and xmippViz.
        - Update dependency versions for ``xmippCore`` / ``xmippViz`` if major changes  
        - Update ``changelog.md``  
        - Trigger GitHub ``Release`` action → creates tag and release
+       - On pyXmipp3 update the url of the new release `here <https://github.com/I2PC/pyxmipp3/blob/39f287d8e3618a654a8a0d3777bd3af9dab296fc/CMakeLists.txt#L3>`_
    * - xmippCore
-     - - Add new version and changes in ``changeLOG.md``  
+       - Add new version and changes in ``changeLOG.md``  
        - Trigger GitHub ``Release`` action → creates new tag
+       - On pyXmipp3 update the url of the new release `here <https://github.com/I2PC/pyxmipp3/blob/39f287d8e3618a654a8a0d3777bd3af9dab296fc/CMakeLists.txt#L3>`_
    * - xmippViz
      - - Add new version and changes in ``changeLOG.md``  
        - Trigger GitHub ``Release`` action → creates new tag
