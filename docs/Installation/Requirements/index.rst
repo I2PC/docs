@@ -133,6 +133,7 @@ The following packages must be installed before building Xmipp:
 - ``libjpeg`` — JPEG support (Ubuntu: ``libjpeg-dev`` / RHEL: ``libjpeg-turbo-devel``)
 - ``openjdk (<=11)`` — Java Development Kit
 - ``python3-dev`` and ``python3-numpy`` — Python 3 development headers and NumPy
+- ``libcrypt-dev`` — Cryptography library needed for news ubuntu as 26.04 
 
 Installing dependencies
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -142,7 +143,7 @@ Ubuntu/Debian
 
 .. code-block:: bash
 
-   sudo apt install -y gcc g++ cmake git libfftw3-dev libopenmpi-dev libhdf5-dev libtiff5-dev libsqlite3-dev libjpeg-dev python3-dev python3-numpy default-jdk zlib1g-dev
+   sudo apt install -y gcc g++ cmake git libfftw3-dev libopenmpi-dev libhdf5-dev libtiff5-dev libsqlite3-dev libjpeg-dev python3-dev python3-numpy default-jdk zlib1g-dev libcrypt-dev
 
 CentOS/RHEL
 """""""""""
