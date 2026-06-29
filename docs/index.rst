@@ -89,7 +89,7 @@ the main repository is required and also the installation of the plugins.
     Developers/CodeDocumentation/index
     Developers/UsefulScripts/index
     Developers/HowToRelease2.0/index
-    Developers/How-to-release/index
+
 
     
 
