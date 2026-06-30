@@ -23,15 +23,14 @@ Requirements
 
 How to Install
 """"""""""""""""""
-- Mode A: Installattion DLTK (DeepLearningToolKit), run:
+- Mode easy: Installattion DLTK (DeepLearningToolKit), run:
 
 .. code-block:: bash
 
    scipion3 installb deepLearningToolkit
 
 
-
-- Mode B: Installattion DLTK (DeepLearningToolKit), run:
+- Mode manual: Installattion DLTK (DeepLearningToolKit), run:
 
     If the **installation of DLTKfails** use the DLTK_installation.sh script in scipion-em-xmipp/xmipp3 (in develope) Edit the following variables inside ``DLTK_installation.sh``:
 
