@@ -23,32 +23,36 @@ Requirements
 
 How to Install
 """"""""""""""""""
-To install DLTK (DeepLearningToolKit), run:
+- Mode A: Installattion DLTK (DeepLearningToolKit), run:
 
 .. code-block:: bash
 
    scipion3 installb deepLearningToolkit
 
-If the **installation od DLTKfails** use the DLTK_installation.sh script in scipion-em-xmipp/xmipp3 (in develope) Edit the following variables inside ``DLTK_installation.sh``:
-
-- ``USE_GPU``
-- ``CONDA_INIT``
-- ``SCIPION_DIR``
-- ``XMIPP_DIR``
 
 
-Then make the script executable and run it:
+- Mode B: Installattion DLTK (DeepLearningToolKit), run:
 
-.. code-block:: bash
+    If the **installation of DLTKfails** use the DLTK_installation.sh script in scipion-em-xmipp/xmipp3 (in develope) Edit the following variables inside ``DLTK_installation.sh``:
 
-    chmod +x DLTK_installation.sh
-    ./DLTK_installation.sh
+    - ``USE_GPU``
+    - ``CONDA_INIT``
+    - ``SCIPION_DIR``
+    - ``XMIPP_DIR``
 
-You also needs the models, if it was no installed previously yo can do it with:
 
-::
-  
-  ./xmipp getModels
+    Then make the script executable and run it:
+
+    .. code-block:: bash
+
+        chmod +x DLTK_installation.sh
+        ./DLTK_installation.sh
+
+    You also needs the models, if it was no installed previously yo can do it with:
+
+    ::
+      
+      ./xmipp getModels
 
 
 List of Environments
