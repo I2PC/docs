@@ -1,5 +1,20 @@
 Releases scipion-em-xmipp
 =========================
+29.0.0
+--------------------------
+- Protocols updated
+   - extract_particles: Particle evaluation is optional now
+   - resolution_deepres; updated environment (TensorFlow 1.15 to 2.4)
+   - deep consensus picking (screen_deepConsensus) updated environment (TensorFlow 1.15 to 2.4)
+- More scipion-em-xmipp
+
+   - Extended documentation for all protocols
+   - Import xmippProtocol from xmipp3.base and not xmipp3 and removing "imports xmipp3"
+   - Fix TestXmippScreenParticles and Testprotocol_screen_deepConsensus
+   - Remove fragile plugin reload workaround during xmipp3 installation
+   - Manual script to install all DLTK environments jut editing three constant and given execution privileges
+   - Relax test deepConcensus trying to reduce the GPU memory requirements
+
 28.0.1
 --------------------------
 - More scipion-em-xmipp
@@ -14,7 +29,7 @@ Releases scipion-em-xmipp
 - More scipion-em-xmipp
    - Incorporated XMIPP_CUDA_LIB and XMIPP_CUDA_BIN variables from scipion.conf
 
-Release 27.0.0
+27.0.0
 --------------------------
 - More scipion-em-xmipp
    - Updated xmipp3-installer dependency (2.1.0 with configuration flags that can be set using environment variables.)
@@ -45,7 +60,6 @@ Release 27.0.0
    - Remove Relion dependency from TestXmippDenoiseParticles
    - parse json to report summary installation errors
    - View all classes added for XmippProtConsensusClasses
-
 
 
 25.06.0 - Rhea
