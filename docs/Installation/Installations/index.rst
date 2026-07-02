@@ -9,14 +9,22 @@ Installations
    The data is **anonymous and aggregated** and is used only to optimize Xmipp and prioritize new features. 
 
 
-Installation with Scipion plugin manager
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Installation production version  with Scipion 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The recommended way for users (not developers) to install and use Scipion is via the 
-`Scipion framework <https://scipion-em.github.io/docs/release-3.0.0/docs/scipion-modes/how-to-install.html>`_, 
-where you can use Xmipp with other Cryo-EM-related software. 
+- Terminal mode
 
-Xmipp will not be installed during Scipion installation, to install it use the `plugin manager of Scipion <https://scipion-em.github.io/docs/release-3.0.0/docs/scipion-modes/how-to-install.html#installing-other-plugins>`_
+      .. code-block:: bash
+
+         scipion3 installp -p scipion-em-xmipp
+
+- Plugin manager mode 
+
+   The recommended way for users (not developers) to install and use Scipion is via the 
+   `Scipion framework <https://scipion-em.github.io/docs/release-3.0.0/docs/scipion-modes/how-to-install.html>`_, 
+   where you can use Xmipp with other Cryo-EM-related software. 
+
+   Xmipp will not be installed during Scipion installation, to install it use the `plugin manager of Scipion <https://scipion-em.github.io/docs/release-3.0.0/docs/scipion-modes/how-to-install.html#installing-other-plugins>`_
 
 
 Manual Installation of Xmipp 
@@ -32,15 +40,7 @@ Installation
 """"""""""""""""""
 There are two options to install Xmipp; in production or in the develop branch
 
-- Install in **production** the last release of Xmipp from terminal
-
-   - Using the scipion3 installed previously:
-
-      .. code-block:: bash
-
-         scipion3 installp -p scipion-em-xmipp
-
-   - Standlone
+- Install in **production** the last release of Xmipp from terminal in standalone
 
       .. code-block:: bash
 
