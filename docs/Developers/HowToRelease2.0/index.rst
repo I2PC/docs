@@ -48,7 +48,8 @@ xmipp3, xmippCore and xmippViz.
        - Trigger GitHub ``Release`` action → creates new tag
    * - pyXmipp3
      - - Update the url if ``xmipp`` or ``xmippCore`` generates new release `here <https://github.com/I2PC/pyxmipp3/blob/39f287d8e3618a654a8a0d3777bd3af9dab296fc/CMakeLists.txt#L3>`_
-       - Merge a PR on main or/and Trigger GitHub Release action → creates new tag
+       - Merge a PR on main with the new version `here  <https://github.com/I2PC/pyxmipp3/blob/main/VERSION>`_
+       → Create new tag locally: ``git tag v0.X.0``  ``git push origin v0.X.0`` This will launch the pyupi publication
 
 
 
