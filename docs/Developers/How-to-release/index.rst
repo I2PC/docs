@@ -105,14 +105,13 @@ b. Simulate using the plugin manager:
 
     .. code-block:: json
 
-        {
-          "scipion-em-xmipp": {
-              "pipName": "scipion-em-xmipp",
-              "pluginSourceUrl": "https://github.com/i2pc/scipion-em-xmipp.git@release-3.24.12a",
-              "id": 2,
-              "name": "Xmipp3"
-          }
+        "scipion-em-xmipp": {
+            "pipName": "scipion-em-xmipp",
+            "pluginSourceUrl": "https://github.com/i2pc/scipion-em-xmipp.git@v28.0.0",
+            "id": 2,
+            "name": "Xmipp3"
         }
+        
 
   3. **Update `scipion.conf`**:  
     Add the following line to your `scipion.conf` file (adjust the path as needed):  
