@@ -2,8 +2,39 @@
 
 List of Publications
 ===========================
+2026
+-----
+Erney2026
+^^^^^^^^^^^^^^^^^^
+.. code:: text
+
+   - AUTHOR = E. Ramírez-Aportela, O. Lauzirika, Y. Fonseca, T. Ceska, S. Subramaniam, J.M. Carazo
+   - TITLE = AlignPCA-2D: PCA-reduced Euclidean vector alignment for 2D classification in cryo-EM
+
+   - JOURNAL = Acta Crystallographica Section D: Structural Biology,
+   - VOLUME = 82
+   - YEAR = 2026
+   - URL = https://i2pc.es/coss/Articulos/Ramirez2026.pdf
+   - DOI = https://doi.org/10.1107/S2059798326004572 
+
+2025
+-----
+DeIsidroGomez2025
+^^^^^^^^^^^^^^^^^^
+.. code:: text
+
+   - AUTHOR = F.P. de Isidro-Gómez a,b , J.L. Vilas a, J.M. Carazo a , C.O.S. Sorzano 
+   - TITLE = Automatic detection of alignment errors in cryo-electron tomography
+   - JOURNAL = Journal of Structural Biology
+   - VOLUME = 217
+   - YEAR = 2025
+   - NUMBER = 1
+   - URL = https://www.sciencedirect.com/science/article/pii/S1047847724000935
+   - DOI = https://doi.org/10.1016/j.jsb.2024.108153
+
 2024
 -----
+
 DeIsidroGomez2024
 ^^^^^^^^^^^^^^^^^^
 .. code:: text
