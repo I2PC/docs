@@ -765,3 +765,18 @@ Pascual2000
    - author = Pascual-Montano A and Montserrat Bárcena and J.J Merelo and José-María Carazo
    - keywords = Image processing Cluster analysis Neural networks Self-organizing maps Fuzzy logic 
 
+
+1996
+-----
+Marabini
+^^^^^^^^^^
+
+.. code:: text
+
+   - title = Xmipp: An Image Processing Package for Electron Microscopy 
+   - journal = J Struct Biol.
+   - year = 1996
+   - doi = 10.1006/jsbi.1996.0036.
+   - author = Marabini R, Masegosa IM, San Martin MC, Marco S, Fernandez JJ, de la Fraga LG, Vaquerizo C, Carazo JM. 
+
+
