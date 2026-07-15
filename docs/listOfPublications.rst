@@ -674,6 +674,22 @@ Sorzano2004b
 
 .. code:: text
 
+   - title = XMIPP: a new generation of an open-source image processing package for electron microscopy
+   - journal = Journal of Structural Biology
+   - volume = 148
+   - number = 2
+   - pages = 194 - 204
+   - year = 2004
+   - issn = 1047-8477
+   - doi = https://doi.org/10.1016/j.jsb.2004.06.006
+   - url = https://www.sciencedirect.com/science/article/pii/S1047847704001261
+   - author = C.O.S. Sorzano and R. Marabini and J. Velázquez-Muriel and J.R. Bilbao-Castro and S.H.W. Scheres and J.M. Carazo and A. Pascual-Montano
+
+Sorzano2004b
+^^^^^^^^^^
+
+.. code:: text
+
    - title = A multiresolution approach to orientation assignment in 3D electron microscopy of single particles
    - journal = JSB
    - volume = 146
